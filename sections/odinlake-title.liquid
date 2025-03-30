@@ -1,0 +1,185 @@
+{% comment %} Adapt to minimog {% endcomment %}
+{% liquid
+  assign container = section.settings.container
+  if container == 'w-full'
+    assign container = 'container-full'
+  endif
+%}
+{% comment %} Adapt to minimog end  {% endcomment %}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media screen and (max-width: 750px) {
+      .section-{{ section.id }}-padding {
+      padding-top:{{section.settings.padding_top_mb }}px;
+      padding-bottom:{{section.settings.padding_bottom_mb}}px;
+    }
+  }
+  .section-{{ section.id }}-padding{
+    background: {{section.settings.bg_color}};
+  }
+{%- endstyle -%}
+
+<div
+  {% if section.settings.point != blank %}
+    id="{{section.settings.point}}"
+  {% endif %}
+  class="{{ container }}"
+>
+  <div class="section-{{ section.id }}-padding">
+    <div style="text-align:{{section.settings.header_alignment}};">
+      {% if section.settings.subheading != blank %}
+        <p>{{ section.settings.subheading }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 style="font-size:37px; font-weight:700;margin-bottom: 2px;">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+      {% if section.settings.code != blank %}
+        {{ section.settings.code }}
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <div>{{ section.settings.description }}</div>
+      {% endif %}
+      {% if section.settings.description2 != blank %}
+        <div>{{ section.settings.description2 }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "标题",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "container-fluid",
+      "options": [
+        {
+          "value": "container-fluid",
+          "label": "Default"
+        },
+        {
+          "value": "w-full",
+          "label": "Full width"
+        },
+        {
+          "value": "container",
+          "label": "Use container box"
+        }
+      ]
+    },
+
+    {
+      "type": "text",
+      "id": "point",
+      "label": "point"
+    },
+  	{
+        "type": "header",
+        "content": "Section header"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Custom content"
+    },
+    {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading"
+    },
+    {
+          "type": "html",
+          "id": "code",
+          "label": "HTML",
+          "default": "<hr style=\" margin: 0rem 0; height:3px; \">"
+    },
+    {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description"
+    },
+    {
+        "type": "richtext",
+        "id": "description2",
+        "label": "Rich Text"
+    },
+	{
+        "type": "select",
+        "id": "header_alignment",
+        "label": "Text alignment",
+        "default": "left",
+        "options": [
+            {
+                "value": "left",
+                "label": "Left"
+            },
+            {
+                "value": "center",
+                "label": "Center"
+            }
+        ]
+    },
+
+    {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "padding_top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "padding_bottom",
+      "default": 0
+    },
+	 {
+        "type": "range",
+        "id": "padding_top_mb",
+        "label": "Padding top(Mb)",
+        "default": 60,
+        "min": 0,
+        "max": 80,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom_mb",
+        "label": "Padding bottom(Mb)",
+        "default": 0,
+        "min": 0,
+        "max": 80,
+        "step": 1,
+        "unit": "px"
+      }
+  ],
+  "presets": [
+    {
+      "name": "标题"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "what-next-steps": {
+      "type": "what-next-steps",
+      "settings": {
+        "title": "What Next"
+      },
+      "blocks": {
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "title": "Register OdinLake Account",
+            "description": "<p>To register an OdinLake account, follow these simple steps to get started with our services.</p>"
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "title": "Setup Your Profile",
+            "description": "<p>Complete your profile with all necessary information.</p>"
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "title": "Start Using Services",
+            "description": "<p>Begin using all the amazing features and services we offer.</p>"
+          }
+        }
+      },
+      "block_order": ["step-1", "step-2", "step-3"]
+    },
+    "media-testimonials": {
+      "type": "media-testimonials",
+      "settings": {
+        "heading": "What the Globe is Saying",
+        "inactive_logo_opacity": 0.5,
+        "autoplay": true,
+        "autoplay_speed": 5
+      },
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "logo_asset": "com_1.png",
+            "logo_name": "Forbes",
+            "quote": "This ergonomic chair delivers exceptional comfort and support during long working hours. The adjustable features make it easy to find your perfect position."
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "logo_asset": "com_2.png",
+            "logo_name": "TechRadar",
+            "quote": "We've tested dozens of office chairs, and OdinLake stands out with its innovative design and premium quality materials. A top contender in the ergonomic chair market."
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "logo_asset": "com_3.png",
+            "logo_name": "Wired",
+            "quote": "If you're looking for a chair that balances aesthetics with ergonomics, look no further. OdinLake delivers a product that's as stylish as it is comfortable."
+          }
+        }
+      },
+      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3"]
+    }
+  },
+  "order": [
+    "what-next-steps",
+    "media-testimonials"
+  ]
+}

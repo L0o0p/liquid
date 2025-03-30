@@ -1,0 +1,136 @@
+<div class="contact-form-section">
+  <div class="contact-container">
+    <div class="header">
+      <div class="contact-label">{{ section.settings.label_text }}</div>
+      <h1>{{ section.settings.heading_line1 }}</h1>
+      <h1>{{ section.settings.heading_line2 }}</h1>
+    </div>
+
+    {%- form 'contact', id: 'contactForm', class: 'contact-form' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="success-message" id="successMessage">
+          {{ section.settings.success_message }}
+        </div>
+      {%- else -%}
+        {%- if form.errors -%}
+          <div class="form-error-message">
+            <h2 class="form-error-heading">{{ 'templates.contact.form.error_heading' | t }}</h2>
+            <ul>
+              {%- for field in form.errors -%}
+                <li>
+                  {%- if field == 'form' -%}
+                    {{ form.errors.messages[field] }}
+                  {%- else -%}
+                    <a href="#{{ field }}">
+                      {{ form.errors.translated_fields[field] | capitalize }}
+                      {{ form.errors.messages[field] }}
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="name" name="contact[name]" placeholder="{{ section.settings.name_placeholder }}" required>
+            <div class="error" id="nameError">{{ section.settings.name_error }}</div>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" name="contact[email]" placeholder="{{ section.settings.email_placeholder }}" required>
+            <div class="error" id="emailError">{{ section.settings.email_error }}</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <textarea id="message" name="contact[body]" placeholder="{{ section.settings.message_placeholder }}" required></textarea>
+          <div class="error" id="messageError">{{ section.settings.message_error }}</div>
+        </div>
+
+        <button type="submit" class="submit-btn">{{ section.settings.submit_text }}</button>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Form",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label Text",
+      "default": "Contact Us"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Heading Line 1",
+      "default": "We Would Love"
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Heading Line 2",
+      "default": "Hear From You"
+    },
+    {
+      "type": "text",
+      "id": "name_placeholder",
+      "label": "Name Placeholder",
+      "default": "Name"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email Placeholder",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "message_placeholder",
+      "label": "Message Placeholder",
+      "default": "Leave some message here"
+    },
+    {
+      "type": "text",
+      "id": "name_error",
+      "label": "Name Error Message",
+      "default": "Please enter your name"
+    },
+    {
+      "type": "text",
+      "id": "email_error",
+      "label": "Email Error Message",
+      "default": "Please enter a valid email address"
+    },
+    {
+      "type": "text",
+      "id": "message_error",
+      "label": "Message Error Message",
+      "default": "Please enter your message"
+    },
+    {
+      "type": "text",
+      "id": "submit_text",
+      "label": "Submit Button Text",
+      "default": "Submit"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success Message",
+      "default": "Thank you for your message! We'll get back to you soon."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Form",
+      "category": "Forms"
+    }
+  ]
+}
+{% endschema %}

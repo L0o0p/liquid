@@ -1,0 +1,130 @@
+{% comment %}
+  Journey Continued Section
+  - A subscription form with floating animation
+  - Customizable headline, text, and colors
+{% endcomment %}
+
+{{ 'journey-continued.css' | asset_url | stylesheet_tag }}
+
+<div class="journey-continued">
+  <div class="journey-continued__bg-pattern-top"></div>
+  <div class="journey-continued__bg-pattern-bottom"></div>
+
+  <div class="journey-continued__container">
+    <div class="journey-continued__content">
+      <h2 class="journey-continued__heading">{{ section.settings.heading }}</h2>
+      <div class="journey-continued__text">{{ section.settings.text }}</div>
+
+      {%- form 'customer', id: 'JourneySubscribeForm', class: 'journey-continued__form' -%}
+        {% if form.posted_successfully? %}
+          <p class="journey-continued__success">{{ 'newsletter.success' | t }}</p>
+        {% elsif form.errors %}
+          <p class="journey-continued__error">{{ form.errors.messages.email }}</p>
+        {% endif %}
+
+        <div class="journey-continued__form-group">
+          <input
+            type="email"
+            name="contact[email]"
+            id="JourneyEmail"
+            class="journey-continued__input"
+            value="{{ form.email }}"
+            placeholder="{{ section.settings.placeholder }}"
+            aria-required="true"
+            required
+          >
+          <button
+            type="submit"
+            class="journey-continued__button"
+            style="background-color: {{ section.settings.button_color }}"
+          >
+            {{ section.settings.button_text }}
+          </button>
+        </div>
+      {%- endform -%}
+    </div>
+
+    <div class="journey-continued__illustration">
+      <svg class="journey-continued__floating-element" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="{{ section.settings.primary_color }}" d="M160 100c0 33.138-26.862 60-60 60s-60-26.862-60-60 26.862-60 60-60 60 26.862 60 60zm-60-20c11.046 0 20 8.954 20 20s-8.954 20-20 20-20-8.954-20-20 8.954-20 20-20z"/>
+        <circle cx="140" cy="40" r="10" fill="{{ section.settings.accent_color }}"/>
+        <circle cx="160" cy="70" r="8" fill="{{ section.settings.accent_color }}"/>
+        <circle cx="150" cy="90" r="6" fill="{{ section.settings.accent_color }}"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Add floating animation to illustration
+  document.addEventListener('DOMContentLoaded', function () {
+    const floatingElement = document.querySelector('.journey-continued__floating-element');
+    let rotation = 0;
+
+    function animate() {
+      rotation += 0.5;
+      floatingElement.style.transform = `translateY(${Math.sin((rotation * Math.PI) / 180) * 10}px) rotate(${
+        Math.sin((rotation * Math.PI) / 180) * 5
+      }deg)`;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Journey Continued",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Journey Continued"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "We will notify you when update"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Email placeholder",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary color",
+      "default": "#2196f3"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#ffa726"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#666666"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Journey Continued",
+      "category": "Forms"
+    }
+  ]
+}
+{% endschema %}

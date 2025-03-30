@@ -1,0 +1,619 @@
+<style>
+   @media only screen and (max-width:750px) {
+    .downloadContainer {
+          margin-bottom: 70px;
+      }
+      .downloadContainer_top {
+          overflow-x: scroll;
+      width: 100%;
+      }
+     .downloadContainer_top::-webkit-scrollbar {
+      display: none;
+  }
+    .downloadTab_list {
+        display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: max-content;
+      border-bottom: 1px solid #B5B5B5;
+      padding: 25px 0;
+    }
+    .downloadTab_list .tab-button {
+   border: 1px solid #2b2c2c40;
+      width: 100%;
+      text-align: center;
+      border-radius: 4px;
+      font-weight: 400;
+      color: #0F0F0F;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 5px 28px;
+      margin-right: 10px;
+      text-transform: capitalize;
+    }
+     .downloadTab_list .tab-button:last-child {
+      margin-right: 0;
+     }
+
+     .downloadContainer_list .tab-content {
+      border-bottom: 1px solid #B5B5B5;
+      padding: 15px;
+      display: none;
+     }
+
+      .downloadContainer_list .tab-content1 {
+          display: block;
+      }
+      .tabActive {
+          background: #0075E9;
+          color: #fff !important;
+          border: 1px solid #0075e9 !important;
+      }
+      .downloadList_title {
+          font-size: 18px;
+          font-weight: 600;
+          color: #252525;
+          line-height: 1.2;
+      }
+      .downloadList_img {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      }
+      .downloadList_left {
+          width: 29%;
+      }
+      .downloadList_right {
+          width: 67%;
+      }
+      .downloadList_leftImg , .downloadList_rightImg {
+          width: 100%;
+          position: relative;
+      }
+      .downloadList_leftImg a{
+        display: flex;
+        width: 100%;
+      }
+      .downloadList_leftImg a img{
+        width: 100%;
+      }
+
+      .palyIcon {
+         display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   width: 20.125vw;
+      height: 8.125vw;
+      justify-content: center;
+      align-items: center;
+
+      }
+      .palyIcon svg {
+          width: 100%;
+          height: 100%;
+      }
+  .downloadList_left .learnMore {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .downloadList_left .learnMore_icon {
+      display: flex;
+      align-items: center;
+     justify-content: space-between;
+     font-size: 12px;
+      line-height: 1.5;
+      font-weight: 400;
+      text-decoration: underline;
+      color: #0075E9;
+    }
+     .downloadList_left .learnMore_icon svg {
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+     }
+  .downloadVideo_button {
+     display: flex;
+      align-items: center;
+      font-weight: 400;
+      color: #0075E9;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-top: 20px;
+  }
+  .downloadVideo_button svg {
+     width: 20px;
+      height: 20px;
+      margin-right: 5px;
+  }
+  .videoShadow {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1001;
+      background: rgb(0 0 0 / 90%);
+  }
+  .videoBox {
+       display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1002;
+      width: 100%;
+      height: 100%;
+  }
+  .activity_allVideo ,.activity_allIframe{
+      display: none;
+  }
+  .videoConter {
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .closureIcon {
+       position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  }
+  .closureIcon svg {
+  width: 25px;
+      height: 25px;
+  }
+   }
+    @media only screen and (min-width:750px) {
+      .downloadContainer {
+          margin-bottom: 100px;
+      }
+    .downloadTab_list {
+        display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      border-bottom: 1px solid #B5B5B5;
+      padding: 0px 0;
+    }
+    .downloadTab_list .tab-button {
+    border: 1px solid #2b2c2c40;
+      text-align: center;
+      border-radius: 4px;
+      font-weight: 400;
+      color: #0F0F0F;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 10px 0px;
+      margin-right: 13px;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+     .downloadTab_list .tab-button:last-child {
+      margin-right: 0;
+     }
+     .downloadContainer_list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+     }
+     .downloadContainer_list .tab-content {
+      border-bottom: 1px solid #B5B5B5;
+      padding: 53px 27px 53px 59px;
+      display: none;
+     }
+      .downloadContainer_list .tab-content:nth-child(odd) {
+          border-right: 1px solid #B5B5B5;
+      }
+      .downloadContainer_list .tab-content1 {
+          display: block;
+      }
+      .tabActive {
+          background: #0075E9;
+          color: #fff !important;
+          border: 1px solid #0075e9 !important;
+      }
+      .downloadList_title {
+          font-size: 32px;
+          font-weight: 600;
+          color: #252525;
+          line-height: 1.2;
+      }
+      .downloadList_img {
+        display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-top: 48px;
+      }
+      .downloadList_left {
+          width: 29%;
+      }
+       .downloadList_leftImg a {
+          width: 100%;
+          display: flex;
+       }
+        .downloadList_leftImg a img ,.downloadList_rightImg img {
+          width: 100%;
+       }
+      .downloadList_right {
+          width: 67%;
+      }
+      .downloadList_leftImg , .downloadList_rightImg {
+          width: 100%;
+          position: relative;
+      }
+      .palyIcon {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 3.125vw;
+      height: 3.125vw;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      }
+      .palyIcon svg {
+          width: 100%;
+          height: 100%;
+      }
+  .downloadList_left .learnMore {
+      width: 100%;
+      margin-top: 0px;
+    }
+    .downloadList_left .learnMore_icon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+     font-size: 14px;
+      line-height: 1.5;
+      font-weight: 400;
+      text-decoration: underline;
+
+    }
+    .downloadList_left .learnMore_icon:hover {
+     color: #0075E9;
+    }
+    .downloadList_left .learnMore_icon:hover svg path {
+      fill: #0075E9;
+    }
+     .downloadList_left .learnMore_icon svg {
+      margin-right: 11px;
+      width: 35px;
+      height: 25px;
+     }
+  .downloadVideo_button {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 0px;
+      cursor: pointer;
+  }
+  .downloadVideo_button:hover {
+  color: #0075E9;
+  }
+  .downloadVideo_button:hover svg path {
+      fill: #0075E9;
+    }
+  .downloadVideo_button svg {
+      width: 27px;
+      height: 26px;
+      margin-right: 11px;
+  }
+  .videoShadow {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1001;
+      background: rgb(0 0 0 / 90%);
+  }
+  .videoBox {
+       display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1002;
+      width: 100%;
+      height: 100%;
+  }
+  .activity_allVideo ,.activity_allIframe{
+      display: none;
+      width: 100%;
+      height: 100%;
+  }
+  .videoConter {
+     margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 120px;
+      max-height: 670px;
+      max-width: 1150px;
+      padding: 12px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .closureIcon {
+       position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  }
+  .closureIcon svg {
+  width: 40px;
+      height: 40px;
+  }
+    }
+</style>
+{% assign tabList = section.blocks | where: 'type', 'tabList' %}
+{% assign contentList = section.blocks | where: 'type', 'contentList' %}
+<download-list>
+  <div class="downloadContainer container">
+    <div class="downloadContainer_top">
+      <div class="downloadTab_list">
+        {% for block in tabList %}
+          {% assign tabIndex = forloop.index0 %}
+          {%- assign tabName = block.settings.tab | downcase -%}
+          {% if tabName == 'all' %}
+            <div class="tab-button" data-tab="all">{{ block.settings.tab }}</div>
+          {% else %}
+            <div class="tab-button" data-tab="{{ tabIndex }}">{{ block.settings.tab }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="downloadContainer_list">
+      {% for block in contentList %}
+        <div class="tab-content" id="tab{{ block.settings.tabId }}">
+          <div class="downloadList_title">{{ block.settings.title }}</div>
+          <div class="downloadList_img">
+            <div class="downloadList_left">
+              <div class="downloadList_leftImg">
+                <a
+                  href="{{ block.settings.downloadLink }}"
+                  target="_blank"
+                  download="{{ block.settings.downloadLink }}"
+                >
+                  <img
+                    loading="lazy"
+                    src="{{ block.settings.leftImage | img_url: '146x' }}"
+                    alt="{{ block.settings.leftImage.alt }}"
+                ></a>
+              </div>
+            </div>
+            <div
+              class="downloadList_right"
+              data-url="{{ block.settings.video_link }}"
+              data-id="{{ block.settings.activity_video.id }}"
+            >
+              <div
+                class="downloadList_rightImg"
+                data-url="{{ block.settings.video_link }}"
+                data-id="{{ block.settings.activity_video.id }}"
+              >
+                <span class="palyIcon">
+                  <svg
+                    t="1690354384686"
+                    class="icon"
+                    viewBox="0 0 1024 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    p-id="4743"
+                    width="200"
+                    height="200"
+                  >
+                    <path d="M512 41.306c-260.978 0-470.694 209.718-470.694 470.695 0 260.979 209.717 470.693 470.694 470.693 260.978 0 470.695-209.715 470.695-470.693C982.694 251.023 772.978 41.306 512 41.306z m0 899.447c-237.678 0-428.75-191.075-428.75-428.752 0-237.678 191.073-428.75 428.75-428.75 237.678 0 428.75 191.072 428.75 428.75C940.749 749.68 749.678 940.753 512 940.753z" fill="#161616" p-id="4744"></path><path d="M512.06 56.951c-247.423 0-447.999 200.574-447.999 448 0 247.424 200.576 448 447.999 448 247.427 0 448-200.576 448-448 0.001-247.426-200.575-448-448-448zM404.468 702.738V321.264l318.761 190.737-318.761 190.737z" fill="#161616" p-id="4745"></path>
+                  </svg>
+                </span>
+                <img
+                  loading="lazy"
+                  src="{{ block.settings.rightImage | img_url: '1867x' }}"
+                  alt="{{ block.settings.rightImage.alt }}"
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="downloadList_img">
+            <div class="downloadList_left">
+              <div class="learnMore">
+                <a
+                  href="{{ block.settings.downloadLink }}"
+                  target="_blank"
+                  download="{{ block.settings.downloadLink }}"
+                  class="learnMore_icon"
+                >
+                  <svg
+                    t="1690533649739"
+                    class="icon"
+                    viewBox="0 0 1024 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    p-id="2361"
+                    width="200"
+                    height="200"
+                  >
+                    <path d="M802 664v146c0 7.7-6.3 14-14 14H236c-7.7 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5 0-10 4.5-10 10v170c0 33.1 26.9 60 60 60h600c33.1 0 60-26.9 60-60V664c0-5.5-4.5-10-10-10h-50c-5.5 0-10 4.5-10 10z" p-id="2362" fill="#161616"></path><path d="M547 163v449.5l173.6-173.6c13.7-13.7 35.8-13.7 49.5 0 13.7 13.7 13.7 35.8 0 49.5L536.8 721.7c-0.4 0.4-0.8 0.8-1.3 1.2-0.2 0.2-0.4 0.4-0.6 0.5-0.2 0.2-0.4 0.4-0.7 0.6-0.3 0.2-0.5 0.4-0.8 0.6-0.2 0.1-0.4 0.3-0.5 0.4l-0.9 0.6c-0.2 0.1-0.3 0.2-0.5 0.3-0.3 0.2-0.6 0.4-1 0.6-0.2 0.1-0.3 0.2-0.5 0.3-0.3 0.2-0.6 0.4-1 0.5-0.2 0.1-0.4 0.2-0.5 0.3-0.3 0.2-0.6 0.3-0.9 0.5l-0.6 0.3c-0.3 0.1-0.6 0.3-0.8 0.4-0.2 0.1-0.5 0.2-0.7 0.3-0.3 0.1-0.5 0.2-0.8 0.3l-0.9 0.3c-0.2 0.1-0.4 0.2-0.7 0.2-0.3 0.1-0.6 0.2-1 0.3-0.2 0.1-0.4 0.1-0.6 0.2-0.4 0.1-0.7 0.2-1.1 0.3-0.2 0-0.4 0.1-0.6 0.1-0.4 0.1-0.7 0.2-1.1 0.2-0.2 0-0.4 0.1-0.6 0.1-0.4 0.1-0.7 0.1-1.1 0.2-0.2 0-0.4 0.1-0.7 0.1-0.3 0-0.7 0.1-1 0.1-0.3 0-0.6 0-0.9 0.1-0.3 0-0.5 0-0.8 0.1-1.2 0.1-2.3 0.1-3.5 0-0.3 0-0.5 0-0.8-0.1-0.3 0-0.6 0-0.9-0.1-0.3 0-0.7-0.1-1-0.1-0.2 0-0.4-0.1-0.7-0.1-0.4-0.1-0.7-0.1-1.1-0.2-0.2 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z" p-id="2363" fill="#161616"></path>
+                  </svg>
+                  {{ block.settings.button }}
+                </a>
+              </div>
+            </div>
+            <div
+              class="downloadList_right"
+              data-url="{{ block.settings.video_link }}"
+              data-id="{{ block.settings.activity_video.id }}"
+            >
+              <div class="downloadVideo_button">
+                <svg
+                  t="1690350645971"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="4419"
+                  width="200"
+                  height="200"
+                >
+                  <path d="M512 41.306c-260.978 0-470.694 209.718-470.694 470.695 0 260.979 209.717 470.693 470.694 470.693 260.978 0 470.695-209.715 470.695-470.693C982.694 251.023 772.978 41.306 512 41.306z m0 899.447c-237.678 0-428.75-191.075-428.75-428.752 0-237.678 191.073-428.75 428.75-428.75 237.678 0 428.75 191.072 428.75 428.75C940.749 749.68 749.678 940.753 512 940.753z" fill="#0075E9" p-id="4420"></path><path d="M512.06 56.951c-247.423 0-447.999 200.574-447.999 448 0 247.424 200.576 448 447.999 448 247.427 0 448-200.576 448-448 0.001-247.426-200.575-448-448-448zM404.468 702.738V321.264l318.761 190.737-318.761 190.737z" fill="#161616" p-id="4421"></path>
+                </svg>
+                {{ block.settings.button1 }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="videoShadow"></div>
+  <div class="videoBox">
+    <div class="closureIcon">
+      <svg
+        t="1690358452768"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="8324"
+        width="200"
+        height="200"
+      >
+        <path d="M579.392 511.296l429.376 428.544a48.128 48.128 0 0 1-34.176 82.304c-12.8 0-25.088-5.12-34.112-14.208L511.168 579.392 81.792 1008a48.32 48.32 0 0 1-67.648-0.576 48.128 48.128 0 0 1-0.64-67.52L442.88 511.296 13.568 82.752A48.128 48.128 0 0 1 14.08 15.168 48.32 48.32 0 0 1 81.792 14.592l429.376 428.544L940.48 14.592a48.32 48.32 0 0 1 67.648 0.64c18.624 18.56 18.88 48.64 0.64 67.52L579.392 511.296z" fill="#ffffff" p-id="8325"></path>
+      </svg>
+    </div>
+    <div class="videoConter">
+      <video
+        id="activity_allVideo"
+        class="activity_allVideo"
+        width="100%"
+        src=""
+        muted
+        autoplay
+        preload
+        loop
+        x5-video-player-fullscreen="true"
+        x5-playsinline
+        playsinline
+        webkit-playsinline
+      ></video>
+      <iframe
+        id="activity_allIframe"
+        class="activity_allIframe"
+        width="100%"
+        height="200"
+        src=""
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</download-list>
+
+{% schema %}
+{
+  "name": "Download List",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "name": "tab list",
+      "type": "tabList",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab",
+          "label": "tab"
+        }
+      ]
+    },
+     {
+      "name": "content list",
+      "type": "contentList",
+      "settings": [
+          {
+          "type": "text",
+          "id": "tabId",
+          "label": "Classification Id",
+          "info": "1 , 2 , 3"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+       {
+          "type": "image_picker",
+          "id": "leftImage",
+          "label": "Left Image"
+        },
+         {
+          "type": "image_picker",
+          "id": "rightImage",
+          "label": "Right Image"
+        },
+       {
+      "type": "url",
+      "id": "video_link",
+      "label": "Activity Video"
+      },
+      {
+      "type": "video_url",
+      "id": "activity_video",
+      "label": "Youtube Activity Video",
+      "accept": ["youtube"]
+      },
+         {
+          "type": "text",
+          "id": "button1",
+          "label": "video button"
+        },
+         {
+          "type": "url",
+          "id": "downloadLink",
+          "label": "download link"
+        },
+      {
+          "type": "text",
+          "id": "button",
+          "label": "download button"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Download List"
+    }
+  ]
+}
+{% endschema %}

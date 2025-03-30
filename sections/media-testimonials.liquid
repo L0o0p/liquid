@@ -1,0 +1,496 @@
+{%- style -%}
+  .media-testimonials {
+    padding: 80px 160px;
+    background-color: #f0f7fd;
+    text-align: center;
+    height:558px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .media-testimonials__heading {
+    font-size: 28px;
+    color: #0091ff;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
+  .media-testimonials__quote {
+    font-size: 24px;
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0 auto 50px;
+    weight:300
+  }
+
+  .media-testimonials__logos-container{
+    position: relative;
+    height:72px;
+    display:flex;
+  }
+
+  .media-testimonials__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .media-testimonials__logos-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .media-testimonials__logo {
+    height: 60px;
+    margin: 0 20px;
+    flex: 0 0 auto;
+    opacity: {{ section.settings.inactive_logo_opacity }};
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+
+  .media-testimonials__logo.active {
+    opacity: 1;
+  }
+
+  .media-testimonials__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  .media-testimonials__nav-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    pointer-events: auto;
+  }
+
+  .media-testimonials__nav-button svg {
+    width: 12px;
+    height: 12px;
+    fill: #333;
+  }
+
+  .media-testimonials__slides {
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+  }
+
+  .media-testimonials__slide {
+    position: absolute;
+    width: 1280px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .media-testimonials__slide.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  .prev-button{
+      position:absolute;
+      left:0;
+  }
+  .next-button{
+      position:absolute;
+      right:0;
+  }
+
+  @media screen and (max-width: 767px) {
+    .media-testimonials__logos {
+      height:72px;
+      position:relative
+    }
+
+    .media-testimonials__logo {
+      height: 30px;
+      margin: 10px;
+    }
+
+    .media-testimonials__quote {
+      font-size: 16px;
+      padding: 0 20px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="media-testimonials" id="media-testimonials-{{ section.id }}">
+  <div class="page-width">
+<h2 class="media-testimonials__heading">
+  {{ section.settings.heading | default: "What the Globe is Saying" }}
+</h2>
+
+    <div class="media-testimonials__slides">
+      {% for block in section.blocks %}
+        <div
+          class="media-testimonials__slide{% if forloop.first %} active{% endif %}"
+          data-index="{{ forloop.index0 }}"
+        >
+          <p class="media-testimonials__quote">"{{ block.settings.quote }}"</p>
+        </div>
+      {% endfor %}
+
+      <!-- Add placeholder testimonials to match expanded logo list -->
+      <div class="media-testimonials__slide" data-index="{{ section.blocks.size }}">
+        <p class="media-testimonials__quote">
+          "This ergonomic chair delivers exceptional comfort and support during long working hours. The adjustable
+          features make it easy to find your perfect position."
+        </p>
+      </div>
+      <div class="media-testimonials__slide" data-index="{{ section.blocks.size | plus: 1 }}">
+        <p class="media-testimonials__quote">
+          "We've tested dozens of office chairs, and OdinLake stands out with its innovative design and premium quality
+          materials. A top contender in the ergonomic chair market."
+        </p>
+      </div>
+      <div class="media-testimonials__slide" data-index="{{ section.blocks.size | plus: 2 }}">
+        <p class="media-testimonials__quote">
+          "If you're looking for a chair that balances aesthetics with ergonomics, look no further. OdinLake delivers a
+          product that's as stylish as it is comfortable."
+        </p>
+      </div>
+      <div class="media-testimonials__slide" data-index="{{ section.blocks.size | plus: 3 }}">
+        <p class="media-testimonials__quote">
+          "The lumbar support and adjustable headrest on this chair are game-changers for anyone who suffers from back
+          pain after long hours at a desk."
+        </p>
+      </div>
+      <div class="media-testimonials__slide" data-index="{{ section.blocks.size | plus: 4 }}">
+        <p class="media-testimonials__quote">
+          "OdinLake has created a masterpiece of ergonomic design with their latest chair model. The attention to detail
+          and quality construction is evident in every aspect."
+        </p>
+      </div>
+      <div class="media-testimonials__slide" data-index="{{ section.blocks.size | plus: 5 }}">
+        <p class="media-testimonials__quote">
+          "Our office equipped all workstations with OdinLake chairs, and employee satisfaction scores increased by 27%.
+          The investment in quality ergonomic seating has truly paid off."
+        </p>
+      </div>
+      <div class="media-testimonials__slide" data-index="{{ section.blocks.size | plus: 6 }}">
+        <p class="media-testimonials__quote">
+          "After reviewing over 50 ergonomic chairs, OdinLake consistently ranks at the top for comfort, durability, and
+          adjustability. A worthwhile investment for your home office."
+        </p>
+      </div>
+    </div>
+
+    <div class="media-testimonials__logos-container">
+      <div class="media-testimonials__nav">
+        <button class="media-testimonials__nav-button prev" aria-label="Previous">
+          <img src="{{ 'prev.png' | asset_url }}" alt="Previous" width="56" height="56">
+        </button>
+        <button class="media-testimonials__nav-button next" aria-label="Next">
+          <img src="{{ 'next.png' | asset_url }}" alt="Next" width="56" height="56">
+        </button>
+      </div>
+
+      <div class="media-testimonials__logos">
+        <div class="media-testimonials__logos-wrapper">
+          <!-- Original logos from section blocks -->
+          {% for block in section.blocks %}
+            {% if block.settings.logo != blank %}
+              <img
+                src="{{ block.settings.logo | image_url: width: 200 }}"
+                alt="{{ block.settings.logo_name }}"
+                class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
+                data-index="{{ forloop.index0 }}"
+                loading="lazy"
+                width="auto"
+                height="60"
+              >
+            {% elsif block.settings.logo_url != blank %}
+              <img
+                src="{{ block.settings.logo_url }}"
+                alt="{{ block.settings.logo_name }}"
+                class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
+                data-index="{{ forloop.index0 }}"
+                loading="lazy"
+                width="auto"
+                height="60"
+              >
+            {% elsif block.settings.logo_asset != blank %}
+              <img
+                src="{{ block.settings.logo_asset | asset_url }}"
+                alt="{{ block.settings.logo_name }}"
+                class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
+                data-index="{{ forloop.index0 }}"
+                loading="lazy"
+                width="auto"
+                height="60"
+              >
+            {% else %}
+              <!-- Fallback if no logo is set in the block -->
+              <img
+                src="https://via.placeholder.com/180x60?text=Logo {{ forloop.index }}"
+                alt="Media Logo {{ forloop.index }}"
+                class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
+                data-index="{{ forloop.index0 }}"
+                loading="lazy"
+                width="auto"
+                height="60"
+              >
+            {% endif %}
+          {% endfor %}
+
+          <!-- Additional placeholder logos -->
+          <img
+            src="{{ 'com_1.png' | asset_url }}"
+            alt="Forbes"
+            class="media-testimonials__logo"
+            data-index="{{ section.blocks.size }}"
+            loading="lazy"
+            width="auto"
+            height="60"
+          >
+          <img
+            src="{{ 'com_2.png' | asset_url }}"
+            alt="TechRadar"
+            class="media-testimonials__logo"
+            data-index="{{ section.blocks.size | plus: 1 }}"
+            loading="lazy"
+            width="auto"
+            height="60"
+          >
+          <img
+            src="{{ 'com_3.png' | asset_url }}"
+            alt="Wired"
+            class="media-testimonials__logo"
+            data-index="{{ section.blocks.size | plus: 2 }}"
+            loading="lazy"
+            width="auto"
+            height="60"
+          >
+          <img
+            src="{{ 'com_4.png' | asset_url }}"
+            alt="CNN"
+            class="media-testimonials__logo"
+            data-index="{{ section.blocks.size | plus: 3 }}"
+            loading="lazy"
+            width="auto"
+            height="60"
+          >
+          <img
+            src="{{ 'com_5.png' | asset_url }}"
+            alt="Bloomberg"
+            class="media-testimonials__logo"
+            data-index="{{ section.blocks.size | plus: 4 }}"
+            loading="lazy"
+            width="auto"
+            height="60"
+          >
+          <img
+            src="{{ 'com_1.png' | asset_url }}"
+            alt="Fast Company"
+            class="media-testimonials__logo"
+            data-index="{{ section.blocks.size | plus: 5 }}"
+            loading="lazy"
+            width="auto"
+            height="60"
+          >
+          <img
+            src="{{ 'com_1.png' | asset_url }}"
+            alt="Wall Street Journal"
+            class="media-testimonials__logo"
+            data-index="{{ section.blocks.size | plus: 6 }}"
+            loading="lazy"
+            width="auto"
+            height="60"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const testimonialContainer = document.getElementById('media-testimonials-{{ section.id }}');
+    const slides = testimonialContainer.querySelectorAll('.media-testimonials__slide');
+    const logos = testimonialContainer.querySelectorAll('.media-testimonials__logo');
+    const prevButton = testimonialContainer.querySelector('.media-testimonials__nav-button.prev');
+    const nextButton = testimonialContainer.querySelector('.media-testimonials__nav-button.next');
+    const logosWrapper = testimonialContainer.querySelector('.media-testimonials__logos-wrapper');
+    
+    let currentIndex = 0; // Currently displayed testimonial
+    let startPosition = 0; // First logo position in the visible set
+    
+    const visibleLogos = 4; // Number of logos visible at once
+    const logoWidth = 100; // Approximate width of each logo + margins
+    
+    // Initialize with first logo active and first testimonial showing
+    showTestimonial(0);
+    
+    // This function changes which testimonial is displayed
+    function showTestimonial(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      
+      // Update active state for slides
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+      
+      // Update active logo indicator
+      logos.forEach(logo => logo.classList.remove('active'));
+      logos[index].classList.add('active');
+      
+      currentIndex = index;
+    }
+    
+    // This function shifts which logos are visible
+    function updateLogoVisibility() {
+      const translateValue = -startPosition * logoWidth;
+      logosWrapper.style.transform = `translateX(${translateValue}px)`;
+    }
+    
+    // Setup click event for logos
+    logos.forEach(logo => {
+      logo.addEventListener('click', function() {
+        const index = parseInt(this.dataset.index);
+        showTestimonial(index);
+      });
+    });
+    
+    // Setup navigation - ONLY moves the logo slider
+    prevButton.addEventListener('click', function() {
+      if (startPosition > 0) {
+        startPosition--;
+        updateLogoVisibility();
+      }
+    });
+    
+    nextButton.addEventListener('click', function() {
+      if (startPosition < logos.length - visibleLogos) {
+        startPosition++;
+        updateLogoVisibility();
+      }
+    });
+    
+    // Auto rotation if enabled
+    {% if section.settings.autoplay %}
+      let interval = setInterval(function() {
+        showTestimonial(currentIndex + 1);
+      }, {{ section.settings.autoplay_speed | times: 1000 }});
+      
+      testimonialContainer.addEventListener('mouseenter', function() {
+        clearInterval(interval);
+      });
+      
+      testimonialContainer.addEventListener('mouseleave', function() {
+        interval = setInterval(function() {
+          showTestimonial(currentIndex + 1);
+        }, {{ section.settings.autoplay_speed | times: 1000 }});
+      });
+    {% endif %}
+  });
+</script>
+{% schema %}
+{
+  "name": "Media Testimonials",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What the Globe is Saying"
+    },
+    {
+      "type": "range",
+      "id": "inactive_logo_opacity",
+      "label": "Inactive Logo Opacity",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.5
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto-rotate testimonials",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Change slides every x seconds",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "logo_url",
+          "label": "Logo URL (optional)",
+          "info": "Use instead of image upload if needed"
+        },
+        {
+          "type": "text",
+          "id": "logo_asset",
+          "label": "Logo Asset (optional)",
+          "info": "File name in assets folder (e.g. 'logo.png')"
+        },
+        {
+          "type": "text",
+          "id": "logo_name",
+          "label": "Logo Name",
+          "default": "Media Name"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "This ergonomic chair delivers exceptional comfort and support during long working hours."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

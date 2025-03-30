@@ -1,0 +1,194 @@
+<style>
+    @media screen and (max-width: 750px) {
+.structureTab {
+    margin-top: 70px;
+}
+
+.structureTab_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 24px;
+}
+.structureTab_list {
+font-weight: 400;
+    color: #000000;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-right: 70px;
+    position: relative;
+    cursor: pointer;
+}
+.structureTab_list:last-child {
+    margin-right: 0;
+}
+.structureTab_list1 {
+    font-weight: 600;
+color: #1274DD;
+}
+.structureTab_list1::before {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+.structureTab_list::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background: #1274DD;
+     transform: scaleX(0);
+      transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+}
+@media screen and (min-width: 750px)  {
+.structureTab {
+    margin-top: 100px;
+}
+
+
+.structureTab_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 70px;
+    grid-gap: 70px;
+}
+.structureTab_list {
+font-weight: 400;
+    color: #000000;
+    line-height: 24px;
+    font-size: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+ .structureTab_box span {
+    display: flex;
+    width: 1px;
+    height: 22px;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+}
+.structureTab_box span:last-child {
+    display: none;
+}
+
+.structureTab_list1 {
+    font-weight: 600;
+color: #1274DD;
+}
+.structureTab_list1::before {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+.structureTab_list::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background: #1274DD;
+     transform: scaleX(0);
+      transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+}
+</style>
+<div class="structureTab container" id="{{ section.settings.id }}">
+    <div class="structureTab_conter">
+        <div class="structureTab_title odinlake_title">{{ section.settings.header }}</div>
+        <div class="structureTab_box">
+             {% for block in section.blocks %}
+                <div class="structureTab_list" data-id="{{ block.settings.id }}">{{ block.settings.title }}</div>
+                <span></span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script>
+ $(document).ready(function(){
+        $('.structureTab_list:first-child').addClass('structureTab_list1');
+        // 获取第一个结构标签的data-id属性值
+        let defaultTabId = $('.structureTab_list:first-child').attr('data-id');
+        
+        // 根据defaultTabId的值来显示对应的盒子
+        if (defaultTabId === '1') {
+            $('.productMaterial').show();
+            $('.productWeight').hide();
+            $('.productSize').hide();
+        } else if (defaultTabId === '2') {
+            $('.productWeight').show();
+            $('.productMaterial').hide();
+            $('.productSize').hide();
+        } else if (defaultTabId === '3') {
+            $('.productSize').show();
+            $('.productMaterial').hide();
+            $('.productWeight').hide();
+        }
+   
+    })
+    $('.structureTab_list').click(function(){
+       $(this).addClass('structureTab_list1').siblings().removeClass('structureTab_list1')
+        let tabId = $(this).attr('data-id')
+        if (tabId == '1') {
+        $('.productMaterial').show()
+        $('.productWeight').hide()
+        $('.productSize').hide()
+        } else if (tabId == '2') {
+        $('.productWeight').show()
+        $('.productMaterial').hide()
+        $('.productSize').hide()
+        } else if (tabId == '3') {
+        $('.productSize').show()
+        $('.productMaterial').hide()
+        $('.productWeight').hide()
+        }
+     })
+</script>
+{% schema %}
+{
+"name": "Structure Tab",
+"settings": [
+      {
+        "type": "text",
+        "id": "id",
+        "label": "module id"
+      },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "header"
+    }
+],
+"blocks" : [
+{
+"type": "tabList",
+"name": "tab_list",
+"limit": 3,
+"settings":[
+{
+"type": "text",
+"id": "id",
+"label": "Id"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+}
+
+]
+}
+],
+"presets": [
+{
+"name": "Structure Tab"
+}
+]
+}
+{% endschema %}

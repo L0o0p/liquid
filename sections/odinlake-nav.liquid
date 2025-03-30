@@ -1,0 +1,320 @@
+{% comment %} Adapt to minimog {% endcomment %}
+{% liquid
+  assign container = section.settings.container
+  if container == 'w-full'
+    assign container = 'container-full'
+  endif
+%}
+{% comment %} Adapt to minimog end  {% endcomment %}
+<style>
+    @media screen and (max-width: 750px) {
+    .detailsTab_fixed {
+     position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        width: 100%;
+         margin-bottom: 0 !important;
+
+    }
+
+    .detailsTab_box {
+     padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: scroll;
+    width: 100%;
+    }
+    .detailsTab_box::-webkit-scrollbar {
+      display: none;
+    }
+    .detailsTab_lsit {
+    width: max-content;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .detailsTab_text {
+       font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000;
+        margin-right: 15px;
+       display: flex;
+    }
+
+        .detailsTab_active {
+        font-weight: 600;
+    }
+
+    .detailsTab_lsit .detailsTab_text:last-child {
+        margin-right: 0;
+    }
+    .detailsTab_right {
+       display: none;
+    }
+
+    }
+    @media screen and (min-width: 750px) {
+    .detailsTab_fixed {
+     position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        margin: 0 auto !important;
+    }
+    .detailsTab_conter {
+      margin-top: 50px;
+
+    }
+    .detailsTab_box {
+     padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .detailsTab_lsit {
+    width: 60%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .detailsTab_text {
+       font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000;
+        margin-right: 40px;
+        display: flex;
+         position: relative;
+    }
+      .detailsTab_text::before {
+          position: absolute;
+          bottom: -2px;
+          height: 2px;
+          background: #0073F2;
+          left: 50%;
+          margin-left: -50%;
+          width: 100%;
+          content: "";
+          transform: scaleX(0);
+          transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+        }
+        .detailsTab_active {
+        font-weight: 600;
+    }
+            .detailsTab_text:hover::before {
+          opacity: 1 !important;
+          transform: scaleX(1) !important;
+        }
+    .detailsTab_lsit .detailsTab_text:last-child {
+        margin-right: 0;
+    }
+    .detailsTab_right {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .detailsTab_productTitle {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000;
+        width: 60%;
+    }
+    .detailsTab_productButton {
+        background: none;
+        border: 1px solid #0073F2;
+        font-weight: 500;
+        color: #1374DD;
+        line-height: 27px;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        letter-spacing: 0;
+        width: 40%;
+        text-align: center;
+        cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    }
+        .section-{{ section.id }}{
+          background: {{section.settings.bg_color}};
+          border:15px solid {{section.settings.bg_color}};
+          box-shadow: 0px 5px 10px  #ddd;
+        }
+
+    .whenstop
+  {
+    background:red;
+  }
+</style>
+<div class="detailsTab_conter section-{{ section.id }} " style=" z-index: 999;">
+  <div class="{{ container }}">
+    <div class="detailsTab_box">
+      <div class="detailsTab_lsit">
+        {% for block in section.blocks %}
+          <a href="#{{ block.settings.id }}" class="detailsTab_text">{{ block.settings.title }}</a>
+        {% endfor %}
+      </div>
+      {%- comment -%}
+        <div class="detailsTab_right">
+          <div class="detailsTab_productTitle">{{ product.title }}</div>
+          <button
+            type=""
+            name="add"
+            class="m-add-to-cart m-spinner-button m-button m-button--secondary"
+            data-atc-text="Add to cart"
+          >
+            <span class="m-spinner-icon">
+              <svg class="animate-spin m-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            </span>
+            <span class="m-add-to-cart--text">Add to cart</span>
+          </button>
+          <!-- <div class="detailsTab_productButton" onclick="productButton()">add to cart</div> -->
+        </div>
+      {%- endcomment -%}
+    </div>
+  </div>
+</div>
+<div class="whenstop"></div>
+{%- comment -%}
+  <script>
+    $(document).ready(function(){
+      function addMarginToMain() {
+        // 获取要操作的元素
+        const detailsTabContainer = document.querySelector('.detailsTab_conter');
+        const mainElement = document.getElementById('main'); // 将 'yourMainId' 替换为你的main元素的ID
+
+        if (detailsTabContainer && mainElement) {
+          // 检查屏幕宽度是否大于等于某个阈值，这里假设为 750px
+          if (window.innerWidth >= 750) {
+            // 检查 detailsTab_conter 是否包含 detailsTab_fixed 类名
+            if (detailsTabContainer.classList.contains('detailsTab_fixed')) {
+              // 在 PC 端并且包含类名时添加 margin-top
+              mainElement.style.marginTop = '109px';
+            } else {
+              // 如果 detailsTab_conter不包含 detailsTab_fixed 类名，移除 margin-top
+              mainElement.style.marginTop = '0';
+            }
+          } else {
+            // 如果屏幕宽度小于 768px，移除可能添加的 margin-top
+            // 检查 detailsTab_conter 是否包含 detailsTab_fixed 类名
+            if (detailsTabContainer.classList.contains('detailsTab_fixed')) {
+              // 在 PC 端并且包含类名时添加 margin-top
+              mainElement.style.marginTop = '50px';
+            } else {
+              // 如果 detailsTab_conter不包含 detailsTab_fixed 类名，移除 margin-top
+              mainElement.style.marginTop = '0';
+            }
+          }
+        }
+      }
+
+      // 初始加载时运行一次
+      addMarginToMain();
+
+      // 在窗口大小变化时监听并重新检查
+      window.addEventListener('resize', addMarginToMain);
+
+        $('.detailsTab_text:first-child').addClass('detailsTab_active');
+        // 根据窗口宽度调整滚动位置
+        var scrollTab; // 声明一个变量以存储滚动位置
+
+        if (window.innerWidth < 750) {
+            // 如果窗口宽度小于750像素
+            scrollTab = $('.detailsTab_conter').offset().top - 20;
+        } else if (window.innerWidth < 1490) {
+            // 如果窗口宽度小于1490像素
+            scrollTab = $('.detailsTab_conter').offset().top;
+        } else {
+            // 如果窗口宽度大于等于750像素
+            scrollTab = $('.detailsTab_conter').offset().top - 20;
+        }
+
+          // 顶部吸顶效果
+          $(window).bind("scroll", function () {
+            if ($(window).scrollTop() > scrollTab ) {
+              $(".detailsTab_conter").addClass("detailsTab_fixed");
+               // 初始加载时运行一次
+             addMarginToMain();
+            } else {
+              $(".detailsTab_conter").removeClass("detailsTab_fixed");
+              $('.detailsTab_text:first-child').addClass('detailsTab_active')
+               // 初始加载时运行一次
+              addMarginToMain();
+            }
+          })
+    })
+    function productButton(){
+        $('#AddToCart').click()
+    }
+    $('.detailsTab_text').click(function(){
+      $(this).addClass('detailsTab_active').siblings().removeClass('detailsTab_active');
+      $('.detailsTab_conter').addClass('detailsTab_fixed')
+    })
+  </script>
+{%- endcomment -%}
+{% schema %}
+{
+"name": "导航",
+"settings": [
+          {
+        "type": "select",
+        "id": "container",
+        "label": "Container type",
+        "default": "container-fluid",
+        "options": [
+          {
+            "value": "container-fluid",
+            "label": "Default"
+          },
+          {
+            "value": "w-full",
+            "label": "Full width"
+          },
+          {
+            "value": "container",
+            "label": "Use container box"
+          }
+        ]
+      },
+      {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color"
+      }
+],
+"blocks": [
+{
+  "type": "tabList",
+  "name": "tab list",
+  "settings": [
+     {
+      "type": "text",
+      "id": "id",
+      "label": "module id"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+
+  ]
+}
+],
+"presets": [{
+  "name": "导航"
+}]
+}
+{% endschema %}

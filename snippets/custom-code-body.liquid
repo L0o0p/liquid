@@ -1,0 +1,164 @@
+{%- comment -%} 
+  Custom code before </body>
+  All custom code in this file will be kept when updating the theme
+{%- endcomment -%}
+
+<!-- Add by OdinLake: Begin #ADD003 -->
+    <!-- Start Mixpanel Code -->
+      <script>
+      //Mixpanel Snippet
+      mixpanel.track('Page View', {
+        'pageName': '{{ template.name }}',
+        'pageTitle': '{{ page_title }} '
+      });
+
+        {% if template.name == "index" %}
+        mixpanel.track('View Landing Page');
+          {% endif %}
+      
+          {% if template.name == 'collection' %}
+           mixpanel.track('View Collection Page',{
+          'collectionName' : '{{ collection.title }}',
+      
+          'title':'{{ page_title }}'
+           });
+        {% endif %}
+         {% if template.name == 'cart' %}
+           mixpanel.track('View Cart Page')
+         $( document ).ready(function() {
+              $(".checkout-btn").click(function(){
+                mixpanel.track('Checkout Button Clicked');
+              })
+         })
+      
+        {% endif %}
+           {% if template.name == 'product' %}
+             
+           mixpanel.track('View Product Page',{
+      
+          'title':'{{ product.title }}',
+          'type':'{{product.type}}'
+           });
+      
+          $( document ).ready(function() {
+            
+          $(".m-add-to-cart").click(function(){
+      mixpanel.track('Add To Cart', {
+        'title': '{{ product.title }}',
+        'quantity': $("input[name=quantity]").val()
+        // Add more properties as needed
+      });
+    });
+
+
+  $('button[name="checkout"]').click(function(){
+     console.log("hello world")
+  mixpanel.track('Checkout Button Clicked Product Page', {
+    'title': '{{ product.title }}',
+    'quantity': $("input[name=quantity]").val()
+    // Add more properties as needed
+  });
+});
+
+            
+        });
+        {% endif %}
+        
+          $( document ).ready(function() {
+  $('button[name="checkout"]').click(function(){
+
+  mixpanel.track('Checkout Button Clicked', {
+    'title': '{{ product.title }}',
+    'quantity': $("input[name=quantity]").val()
+    // Add more properties as needed
+  });
+});
+            });
+          {% if page_title == 'Refund policy' %}
+            mixpanel.track('View Page Refund Policy');
+            {% endif %}
+             {% if page_title == 'Terms of service' %}
+                 mixpanel.track('View Page Terms of Service');
+              {% endif %}
+            {% if page_title == 'Privacy policy' %}
+                mixpanel.track('View Page Privacy Policy');
+            {% endif %}
+      
+          $( document ).ready(function() {
+      
+             $('#lo-frame-core').click(function(){
+                console.log("reward");
+               mixpanel.track('Rewards Button Clicked');
+            });
+      
+            $('#tidio-chat-code').click(function(){
+               mixpanel.track('Chat Button Clicked');
+            });
+            $('.signup-form__button').click(function(){
+               mixpanel.track('Subscribe Form Submit',{
+                 'Email':$('.signup-form__email').val()
+               });
+            });
+      
+            $('.checkout-btn').click(function(){
+               mixpanel.track('Go to Checkout Page');
+            });
+      
+            });
+          {% if customer %}
+      
+            mixpanel.identify('{{customer.email}}');
+            mixpanel.people.set({
+                  $name : '{{customer.first_name}}',
+                  $email : '{{customer.email}}',
+                  'phone' :'{{customer.phone}}',
+                  'order_count' :'{{customer.orders_count}}',
+                });
+          {% endif %}
+      </script>
+    <!-- End Mixpanel Code -->
+    
+{% if template.name == 'product' %}  
+  <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+  {%else%} 
+  <script data-src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+{%endif%} 
+<script>
+    var klaviyo = klaviyo || [];
+    klaviyo.init({
+      account: "X99vz8",
+      platform: "shopify"
+    });
+    klaviyo.enable("backinstock",{ 
+    trigger: {
+      product_page_text: "Notify Me When Available",
+      product_page_class: "btn",
+      product_page_text_align: "center",
+      product_page_margin: "0px",
+      replace_anchor: false
+    },
+    modal: {
+     headline: "{product_name}",
+     body_content: "Register to receive a notification when this item comes back in stock.",
+     email_field_label: "Email",
+     button_label: "Notify me when available",
+     subscription_success_label: "You're in! We'll let you know when it's back.",
+     footer_content: '',
+     additional_styles: "@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');",
+     drop_background_color: "#000",
+     background_color: "#fff",
+     text_color: "#222",
+     button_text_color: "#fff",
+     button_background_color: "#439fdb",
+     close_button_color: "#ccc",
+     error_background_color: "#fcd6d7",
+     error_text_color: "#C72E2F",
+     success_background_color: "#d3efcd",
+     success_text_color: "#1B9500"
+    }
+  });
+</script>
+<!-- Add by OdinLake: End #ADD003-->
+
+
+<script type="text/javascript" src="https://s.skimresources.com/js/263519X1748425.skimlinks.js"></script>

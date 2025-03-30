@@ -1,0 +1,200 @@
+<!-- BEGIN speedOptimise -->
+<script>
+  (()=>{let e,t=window.location.search,r=navigator.userAgent,l=navigator.platform;var i=window.screen.height<896;let n=(e,t,r)=>{let l="true"===new URLSearchParams(e).get("skipOptimise");return l||!(t.includes("x86_64")&&!r.includes("CrOS")||r.includes("power")||r.includes("rix"))};var o=()=>{e=document.createElement,window.modifiedCreate=!0,document.createElement=function(t,r){let l=e.call(document,t,r);return"script"===t&&Object.defineProperty(l,"src",{value:"",writable:!1}),l}};try{if(!n(t,l,r)){o(),setTimeout(function(){console.log("Lazy loading images"),document.body.querySelectorAll("img").forEach(function(e,t){t>(i?5:15)&&(e.loading="lazy")})},1e3),setTimeout(function(){console.log("Stopping execution"),window.stop()},8e3);var c=Date.now();if(!i&&!(500<Date.now()-c)){if(document.querySelector("body > meta")){var a=document.querySelector("head");document.querySelectorAll("meta, link:not([rel='stylesheet']), title").forEach(e=>{a.append(e)})}else setTimeout(addElementsToHead,5)}setTimeout(function(){document.body&&document.body.classList.add("no-script")},i?500:400)}}catch(s){console.error(s)}})();
+</script>
+<!-- END snippet -->
+
+<style>
+  @media screen and (min-width:750px) {
+      .index_product_banner {
+          height: 100vh;
+          display: flex;
+          overflow: hidden;
+      }
+    .cav_out {
+      width: 100%;
+        }
+       .pictureShadow {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          z-index: 99;
+          height: 100%;
+          background: #000;
+           opacity: 1;
+      }
+        #image-sequence {
+          width: 100%;
+          max-width: 100vw;
+          max-height: 100vh;
+          object-fit: none;
+          }
+
+  }
+  @media screen and (max-width:749px) {
+      .index_product_banner {
+          height: 100vh;
+          /* display: flex; */
+          overflow: hidden;
+          /* background:#000; */
+      }
+
+       #image-sequence {
+        /* aspect-ratio: 9/18; */
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+          }
+       .pictureShadow {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          z-index: 99;
+          height: 100vh;
+          background: #000;
+           opacity: 1;
+      }
+    .cav_out{
+          width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    }
+
+  }
+</style>
+
+<div class="index_product_banner" id="yourElementId">
+  <div class="pictureShadow"></div>
+  <div class="cav_out">
+    <canvas id="image-sequence" width="1920" height="1080" />
+  </div>
+</div>
+<script>
+/*
+  // 在页面加载完毕后执行以下代码
+window.addEventListener("load", function () {
+    // 禁止body滚动
+    
+     document.body.style.overflowY = "auto";
+  document.body.style.overflowX = "clip";
+});
+
+// 如果你需要在某个事件后恢复滚动，例如按钮点击等，可以使用以下代码：
+// 恢复body滚动
+function enableBodyScroll() {
+  document.body.style.overflow = "hidden";
+}
+
+// 调用enableBodyScroll()函数以允许滚动
+// 例如：在某个按钮点击事件中调用
+ enableBodyScroll();
+*/
+
+        // 判断是否是移动设备
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        // 根据不同的环境设置不同的图片路径前缀
+        let frameCount;
+        let urls;
+        let canvas = document.getElementById("image-sequence");
+        if (isMobileDevice()) {
+            frameCount = parseInt(`{{ section.settings.number1 }}`); // 请根据实际情况修改
+            // 要预加载的图像数量
+        urls = new Array(frameCount).fill().map((o, i) => `https://cdn.shopify.com/s/files/1/0603/7431/9272/files/odinlakemb_${(i + 1)}.webp`);
+            canvas.width = 498;  // 移动设备的画布宽度
+            canvas.height = 1080; // 移动设备的画布高度
+        } else {
+            frameCount = parseInt(`{{ section.settings.number }}`); // 请根据实际情况修改
+           
+            // 要预加载的图像数量
+        urls = new Array(frameCount).fill().map((o, i) => `https://cdn.shopify.com/s/files/1/0603/7431/9272/files/odinlakepc2_${(i + 1)}.webp`);
+            canvas.width = 1920;  // 非移动设备（PC）的画布宽度
+            canvas.height = 1080; // 非移动设备（PC）的画布高度
+        }
+  
+
+        imageSequence({
+            urls, // Array of image URLs
+            canvas: "#image-sequence", // <canvas> object to draw images to
+            scrollTrigger: {
+                trigger: "#yourElementId", // 通过指定元素ID来触发滚动
+                start: "top top", // 从元素的顶部中心开始
+                end: '+=2600', // 到元素的底部中心结束
+                pin: true, // 固定容器
+                scrub: true, // 重要！
+            }
+        });
+
+        function imageSequence(config) {
+            let playhead = { frame: 0 },
+                ctx = gsap.utils.toArray(config.canvas)[0].getContext("2d"),
+                onUpdate = config.onUpdate,
+                images,
+                updateImage = function () {
+                    ctx.drawImage(images[Math.round(playhead.frame)], 0, 0);
+                    onUpdate && onUpdate.call(this);
+                };
+            images = config.urls.map((url, i) => {
+                let img = new Image();
+                img.src = url;
+                i || (img.onload = updateImage);
+                return img;
+            });
+            return gsap.to(playhead, {
+                frame: images.length - 1,
+                ease: "none",
+                onUpdate: updateImage,
+               duration: images.length / (config.fps || 30),
+               paused: !!config.paused,
+                scrollTrigger: config.scrollTrigger
+            });
+        }
+        const tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#yourElementId", // 触发容器
+                start: "top-=400px top",
+                end: "top top",
+                scrub: true,
+                // 监测滚动进度，当滚动导致索引变化时，根据新的索引更新显示的图片，以实现滚动时显示不同的图片效果
+                onUpdate: self => { // self 是回调函数的参数，它代表了ScrollTrigger的当前状态和属性
+                    const progress = self.progress; // 表示当前滚动进度，范围从0到1，0表示顶部，1表示底部
+                    // 使用 GSAP 来实现滚动时背景色的动画
+                    gsap.to(".pictureShadow", {
+                        backgroundColor: `rgba(0, 0, 0, ${1 - progress})`, // 动画背景色的透明度从 1 到 0
+                        duration: 0.5, // 动画持续时间
+                    });
+                }
+
+            }
+        });
+</script>
+{% schema %}
+{
+"name": "Product Picture Frame2",
+"class": "product-banner",
+"settings": [
+{
+"type":"text",
+"id":"number",
+"label": "Number of images",
+"default": "250"
+},
+{
+"type":"text",
+"id":"number1",
+"label": "Mobile Number of images",
+"default": "250"
+}
+],
+"blocks": [
+],
+"presets": [
+{
+"name": "Product Picture Frame2"
+}
+]
+}
+{% endschema %}

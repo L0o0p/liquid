@@ -1,0 +1,350 @@
+<style>
+  @media screen and (max-width: 741px) {
+    .index_listImage_all {
+      padding-top: 40px;
+      overflow: hidden;
+    }
+    .index_listImage_swiper {
+      width: 100%;
+    }
+    .index_listImage_swiper .swiper-slide {
+      transition: 300ms;
+      transform: scale(0.9);
+      position: relative;
+    }
+    .index_listImage_swiper .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+      transform: scale(1);
+    }
+    .index_listImage_leftBox img {
+      width: 100%;
+    }
+    .index_listImage_title {
+      position: absolute;
+      right: 16px;
+      bottom: 11px;
+      font-size: 50px;
+      line-height: 1.1;
+      font-weight: 600;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      .aboutUs_listImage_title {
+        width: 100%;
+     margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .aboutUs_listImage_title  img{
+      width: 200px;
+    }
+  }
+  @media screen and (min-width: 741px) {
+    /* .index_listImage_all {
+      margin-top: 100px;
+    } */
+    .index_listImage_box {
+      height: 3000px;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+      background: {{ section.settings.background }};
+    }
+    .index_listImage_Box {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .index_listImageBox {
+      height: 100vh;
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      overflow: hidden;
+
+    }
+    .index_listImage_left {
+      width: 30%;
+    }
+    .index_listImage_left img {
+      width: 100%;
+    }
+    .index_listImage_leftBox {
+      width: 100%;
+      position: relative;
+      display: none;
+    }
+    .index_listImage_leftBox:first-child {
+      display: block;
+    }
+    .index_listImage_right1 {
+      width: 67%;
+      overflow: hidden;
+    }
+    .index_listImage_right {
+      width: 100%;
+
+    }
+    .index_listImage_rightBox {
+      z-index: -1;
+      position: relative;
+      display: -moz-inline-box;
+      display: -webkit-inline-box;
+      -moz-box-align: center;
+      align-items: center;
+    }
+    .index_listImage_rightBox_bx {
+      height: auto;
+      margin-right: 24px;
+      width: 32%;
+    }
+    .index_listImage_title {
+      position: absolute;
+      right: 22px;
+      bottom: 37px;
+      font-size: 100px;
+      line-height: 1.1;
+      font-weight: 600;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .listImage_button1,.listImage_button2 {
+      display: none;
+    }
+    .listImage_button,.listImage_button1,.listImage_button2 {
+      padding: 0px 20px;
+    margin-top: 30px;
+    }
+     .listButton .learnMore_icon {
+   display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+   .listButton .learnMore_icon svg {
+    margin-right: 15px;
+    width: 60px;
+    height: 40px;
+   }
+  .listButton .learnMore_icon:hover svg circle:nth-child(1) {
+    transform: translateX(15.5px);
+} 
+.listButton .learnMore_icon:hover svg circle:nth-child(2) {
+    transform: translateX(-15.5px);
+    stroke: #fff;
+    fill: #1274DD;
+}
+.listButton .learnMore_icon svg circle {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+    .aboutUs_listImage_title {
+   position: absolute;
+    right: -83%;
+    bottom: -9%;
+    }
+  }
+   @media screen and (min-width: 750px) and (max-width: 1490px) {
+    .index_listImage_title {
+      font-size: 54px;
+    }
+   }
+</style>
+<image-list class="index_listImage_all">
+  <div class="hidden-phone">
+    <div class="index_listImage_box">
+      <div class="index_listImageBox">
+        <div class="index_listImage_Box">
+          <div class="index_listImage_left">
+            <div class="index_listImage_leftBox index_listImage-leftBox">
+              <img src="{{ section.settings.img | img_url: '640x' }}" alt="">
+              {% if section.settings.title != blank %}
+                 <span class="index_listImage_title">{{ section.settings.title }}</span>
+              {% endif %}
+            </div>
+            <div class="index_listImage_leftBox index_listImage-leftBox1">
+              <img src="{{ section.settings.img1 | img_url: '640x' }}" alt="">
+              {% if section.settings.title1 != blank %}
+                 <span class="index_listImage_title">{{ section.settings.title1 }}</span>
+              {% endif %}
+            </div>
+            <div class="index_listImage_leftBox index_listImage-leftBox2">
+              <img src="{{ section.settings.img2 | img_url: '640x' }}" alt="">
+              {% if section.settings.title2 != blank %}
+                 <span class="index_listImage_title">{{ section.settings.title2 }}</span>
+              {% endif %}
+            </div>
+          </div>
+          <div class="index_listImage_right1">
+            <div class="index_listImage_right">
+              <div class="index_listImage_rightBox">
+                {% for block in section.blocks %}
+                  <div class="index_listImage_rightBox_bx">
+                    <div class="index_listImage_rightBox_bxImg">
+                      <img src="{{ block.settings.img | img_url: '463x' }}" alt="">
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              {% if section.settings.button != blank or section.settings.button1 != blank or section.settings.button2 != blank %}
+                 <div class="listButton">
+                 {% if section.settings.button != blank %}
+                   <div class="listImage_button"><a class="learnMore_icon" href=" {% if section.settings.link != blank %}  {{ section.settings.link }} {% else %} javascript:;{% endif %}">  <svg width="79px" height="48px" viewBox="0 0 79 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>编组 32</title><g id="椅子" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="椅子首页" transform="translate(-1565.000000, -12306.000000)"><g id="编组-32" transform="translate(1565.000000, 12306.000000)"> <circle id="椭圆形" fill="#1274DD" cx="24" cy="24" r="24"></circle><circle id="椭圆形备份-12" stroke="#1274DD" fill="#FFFFFF" cx="55" cy="24" r="23.5"></circle></g></g></g></svg> {{ section.settings.button }}</a></div>
+                 {% endif %}
+                 {% if section.settings.button1 != blank %}
+                    <div class="listImage_button1"><a class="learnMore_icon" href=" {% if section.settings.link1 != blank %}  {{ section.settings.link1 }} {% else %} javascript:;{% endif %}">  <svg width="79px" height="48px" viewBox="0 0 79 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>编组 32</title><g id="椅子" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="椅子首页" transform="translate(-1565.000000, -12306.000000)"><g id="编组-32" transform="translate(1565.000000, 12306.000000)"> <circle id="椭圆形" fill="#1274DD" cx="24" cy="24" r="24"></circle><circle id="椭圆形备份-12" stroke="#1274DD" fill="#FFFFFF" cx="55" cy="24" r="23.5"></circle></g></g></g></svg> {{ section.settings.button1 }}</a></div>
+                 {% endif %}
+                 {% if section.settings.button2 != blank %}
+                  <div class="listImage_button2"><a class="learnMore_icon" href=" {% if section.settings.link2 != blank %}  {{ section.settings.link2 }} {% else %} javascript:;{% endif %}">  <svg width="79px" height="48px" viewBox="0 0 79 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>编组 32</title><g id="椅子" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="椅子首页" transform="translate(-1565.000000, -12306.000000)"><g id="编组-32" transform="translate(1565.000000, 12306.000000)"> <circle id="椭圆形" fill="#1274DD" cx="24" cy="24" r="24"></circle><circle id="椭圆形备份-12" stroke="#1274DD" fill="#FFFFFF" cx="55" cy="24" r="23.5"></circle></g></g></g></svg> {{ section.settings.button2 }}</a></div>
+                 {% endif %}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden-tablet-and-up">
+    <div class="index_listImage_box1 swiper index_listImage_swiper">
+      <div class="index_listImage_left swiper-wrapper">
+        <div class="index_listImage_leftBox swiper-slide">
+          <img src="{{ section.settings.img | img_url: '593x' }}" alt="">
+          {% if section.settings.title != blank %}
+            <span class="index_listImage_title">{{ section.settings.title }}</span>
+          {% endif %}
+        </div>
+        <div class="index_listImage_leftBox swiper-slide">
+          <img src="{{ section.settings.img1 | img_url: '593x' }}" alt="">
+          {% if section.settings.title1 != blank %}
+             <span class="index_listImage_title">{{ section.settings.title1 }}</span>
+          {% endif %}
+        </div>
+        <div class="index_listImage_leftBox swiper-slide">
+          <img src="{{ section.settings.img2 | img_url: '593x' }}" alt="">
+           {% if section.settings.title2 != blank %}
+            <span class="index_listImage_title">{{ section.settings.title2 }}</span>
+           {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</image-list>
+{% schema %}
+  {
+    "name": "Image List",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "background",
+        "default": "#F5F5F5"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "img"
+      },
+      {
+        "type": "image_picker",
+        "id": "M_img",
+        "label": "M img"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "label": "button text"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "link"
+      },
+      {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "img"
+      },
+      {
+        "type": "image_picker",
+        "id": "M_img1",
+        "label": "M img"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "title"
+      },
+      {
+        "type": "text",
+        "id": "button1",
+        "label": "button text"
+      },
+      {
+        "type": "url",
+        "id": "link1",
+        "label": "link"
+      },
+      {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "img"
+      }, 
+      {
+        "type": "image_picker",
+        "id": "M_img2",
+        "label": "M img"
+      }, 
+      {
+        "type": "text",
+        "id": "title2",
+        "label": "title"
+      },
+      {
+        "type": "text",
+        "id": "button2",
+        "label": "button text"
+      },
+      {
+        "type": "url",
+        "id": "link2",
+        "label": "link"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Column",
+        "type": "item",
+        "limit": 9,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "img"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image List"
+      }
+    ]
+  }
+{% endschema %}

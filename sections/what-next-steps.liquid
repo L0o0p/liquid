@@ -1,0 +1,123 @@
+<div class="container" id="steps-guide-{{ section.id }}">
+  <div class="description-header">
+    <svg class="description-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 14H20M4 14V17M20 14V17M4 17V20H20V17M4 17H20" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <span class="description-text">Description</span>
+  </div>
+
+  <h1 class="title">{{ section.settings.title }}</h1>
+
+  <div class="slider-container">
+    <div class="slides-wrapper" id="slides-wrapper-{{ section.id }}">
+      {% for block in section.blocks %}
+        {% if block.type == 'step' %}
+          <div class="slide" {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | img_url: 'master' }}"
+                alt="Step {{ forloop.index }}: {{ block.settings.title }}"
+                class="slide-image"
+                loading="lazy"
+              >
+            {% else %}
+              <div class="slide-image placeholder-image">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            {% endif %}
+            <div class="slide-content">
+              <h2 class="step-number">Step {{ forloop.index }}:</h2>
+              <h3 class="step-title">{{ block.settings.title }}</h3>
+              <div class="step-description">{{ block.settings.description }}</div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="navigation">
+    <button class="nav-button prev" aria-label="Previous slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <div class="indicators" id="indicators-{{ section.id }}">
+      {% for block in section.blocks %}
+        {% if block.type == 'step' %}
+          <div
+            class="indicator{% if forloop.first %} active{% endif %}"
+            data-index="{{ forloop.index0 }}"
+            aria-label="Go to slide {{ forloop.index }}"
+          ></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <button class="nav-button next" aria-label="Next slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "What Next Steps",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "What Next"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Step Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Register OdinLake Account"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Step Description",
+          "default": "<p>To register an OdinLake account, follow these simple steps to get started with our services. By creating an account, you'll gain access to personalized features, exclusive updates, and seamless management of your preferences. Enjoy a tailored experience designed to enhance your interaction with our platform.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "What Next Steps",
+      "blocks": [
+        {
+          "type": "step"
+        },
+        {
+          "type": "step"
+        },
+        {
+          "type": "step"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{{ 'what-next-steps.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'what-next-steps.js' | asset_url }}" defer></script>

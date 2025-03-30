@@ -1,0 +1,176 @@
+.container {
+    max-width: 1280px;
+    height: 1208px;
+    margin: 0 auto;
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    justify-content:center;
+}
+
+.description-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.description-icon {
+    color: #f97316;
+    width: 24px;
+    height: 24px;
+}
+
+.description-text {
+    color: #f97316;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.slider-container {
+    position: relative;
+    background: #f8fafc;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 620px;
+}
+
+.slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* aspect-ratio: 16/9; */
+
+  object-fit: cover;     /* 覆盖整个区域，可能裁剪部分图片 */
+  /* 或者 object-fit: contain; 完整显示图片，可能有空白区域 */
+  object-position: center; /* 控制图片的焦点位置 */
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e8f0;
+}
+
+.placeholder-svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.5;
+}
+
+.slide-content {
+    padding: 48px;
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.step-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.step-description {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.step-description p {
+    margin-bottom: 1em;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.nav-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #f1f5f9;
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 48px;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background: #3b82f6;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        grid-template-columns: 1fr;
+    }
+
+    .slide-content {
+        padding: 24px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .step-number {
+        font-size: 1.5rem;
+    }
+    
+    .step-title {
+        font-size: 1.25rem;
+    }
+}
