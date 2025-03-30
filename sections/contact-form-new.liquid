@@ -1,7 +1,10 @@
 <div class="contact-form-section">
   <div class="contact-container">
     <div class="header">
-      <div class="contact-label">{{ section.settings.label_text }}</div>
+      <div class="contact-label">
+          <img src="{{ 'video.png' | asset_url }}" alt="Previous" width="32" height="32">
+        {{ section.settings.label_text }}
+      </div>
       <h1>{{ section.settings.heading_line1 }}</h1>
       <h1>{{ section.settings.heading_line2 }}</h1>
     </div>

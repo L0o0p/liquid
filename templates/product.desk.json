@@ -1,1 +1,1318 @@
-{"sections":{"breadcrumb":{"type":"breadcrumb","settings":{"container":"container-fluid","text_alignment":"left","hide_current":false,"hide_on_mb":false,"animations":"inherit"}},"main":{"type":"main-product","blocks":{"0a4f43af-783e-4c2c-a99c-fdd292bbc495":{"type":"custom_liquid","settings":{"custom_liquid":"<div>\n<ul class=\"mixxgallery-tags\"> <li class=\"mixxgallery-tags__tag black\">30 Days Return<\/li> <li class=\"mixxgallery-tags__tag white\">15 Years Warranty<\/li>\n<\/ul>\n\n<style>\n  .mixxgallery-tags {\n    z-index: 20;\n    list-style: none;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 14px;\n    line-height: 12px;\n    text-transform: uppercase;\n    font-weight: 600;\n    margin-bottom: 10px;\n}\nul, ol {\n    margin: 0;\n    padding: 0;\n}\n*, *:before, *:after {\n    box-sizing: border-box;\n}\nuser agent stylesheet\nul {\n    display: block;\n    list-style-type: disc;\n}\n.mixxgallery-tags .mixxgallery-tags__tag.white {\n    background: #fff;\n    border: 1px solid #000;\n    color: #000;\n}\n.mixxgallery-tags .mixxgallery-tags__tag.black {\n    background: #000;\n    color: #fff;\n    border: 1px solid #000;\n}\n.mixxgallery-tags .mixxgallery-tags__tag {\n    padding: 5px 10px;\n}\n<\/style>\n<\/div>"}},"title":{"type":"title","settings":{}},"4697a8e9-bdd8-45b1-ac07-88ccd1be6995":{"type":"shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723","settings":{"use_metafields":false,"sku_tagtype":"sku","is_featured_product":false,"featured_product_handle":""}},"price":{"type":"price","settings":{"show_saving":true,"sale_badge_type":"percentage"}},"90dc1f7c-db93-4484-81bd-f9329e3af95d":{"type":"shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e","settings":{"data_key":"credit-promotion-badge","locale_option":"geolocation","locale_fallback":"","theme":"light","topPadding":"0","bottomPadding":"0","messagePrefix":""}},"variant_picker":{"type":"variant_picker","settings":{"size_title":"Size"}},"buy_buttons":{"type":"buy_buttons","settings":{"show_quantity_selector":true,"show_atc_button":true,"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c":{"type":"shipping","settings":{"show_delivery_times":true,"deliver_text":"Estimated Delivery:","deliver_days":"5","date_format":"%b %d","show_shipping_text":true,"shipping_text":"<p><strong>Free Shipping & Easy Returns: <\/strong>On all orders<\/p>"}},"a7a72482-beac-4db8-a4ca-15072a0840a0":{"type":"custom_liquid","settings":{"custom_liquid":"<style>\n.odin-module {\njustify-content: space-between;\nalign-items: center!important;\n\n }\n.odin-block {\nflex: 1;\ntext-align: center;\npadding: 1px;\nmargin: 0px;   \n}\n.icons-odin-row, .text-odin-row {\n display: flex;\n justify-content: space-between;\n width: 100%;\n}\n .odin-icon img {\n height: 40px;\n margin:0 auto;\n }\n <\/style>\n<div class=\"odin-module\">\n <div class=\"icons-odin-row\">\n <div class=\"odin-block odin-icon\">\n <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/30_Day_Price_Guarantee.png?v=1693965849\" alt=\"30 Days Price Guarantee\">\n <\/div>\n <div class=\"odin-block odin-icon\">\n <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/30_Day_Free_Return.png?v=1693964226\" alt=\"30 Days Easy Return\">\n <\/div>\n <div class=\"odin-block odin-icon\">\n <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/Free-shipping.png?v=1693964226\" alt=\"Free Shipping\">\n <\/div>\n <\/div>\n <div class=\"text-odin-row\">\n <div class=\"odin-block\">\n <p>30 Days<br>Price Guarantee<\/p>\n <\/div>\n <div class=\"odin-block\">\n <p>30 Days<br>Easy Return<\/p>\n <\/div>\n <div class=\"odin-block\">\n <p>Super Fast<br>Free shipping<\/p>\n <\/div>\n <\/div>\n<\/div>"}},"62aed578-bf73-4c71-81d1-3ffc43d0c306":{"type":"custom_liquid","settings":{"custom_liquid":"<div style=\"padding:20px; background:#f5f5f5;\">\n<div class=\"logo-lockup\" target=\"_blank\">\n    <img class=\"header-lockupLogo\" src=\"https:\/\/a300.stripecdn.com\/climate-statics-srv\/assets\/img\/climate_logo-7e2de8ca7243c666c6b0.svg\" height=\"22\" width=\"22\">\n    <p>OdinLake is Stripe Climate member<\/p> \n<\/div>\n<p style=\"margin-top: 0px;\">We contribute 0.25% of our revenue to carbon removal. <a href=\"https:\/\/climate.stripe.com\/HIsCPv\"><u>Learn More<\/u><\/a><\/p>\n<style>\n  div.logo-lockup {\n    align-items: center;\n    display: flex;\n}\n.header-lockupLogo {\n    margin-right: 6px;\n}\n<\/style>\n<\/div>"}},"addons":{"type":"addons","settings":{"show_atcp":false,"show_ask_a_question":true,"show_social":true}},"e022ae71-4b2b-45d5-b186-a5a8aa7af5a4":{"type":"trust_badge","settings":{"trust_badges_text":"<p>Guarantee safe & secure checkout<\/p>","trust_badges_image_width":"100%","position":"below"}}},"block_order":["0a4f43af-783e-4c2c-a99c-fdd292bbc495","title","4697a8e9-bdd8-45b1-ac07-88ccd1be6995","price","90dc1f7c-db93-4484-81bd-f9329e3af95d","variant_picker","buy_buttons","b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c","a7a72482-beac-4db8-a4ca-15072a0840a0","62aed578-bf73-4c71-81d1-3ffc43d0c306","addons","e022ae71-4b2b-45d5-b186-a5a8aa7af5a4"],"custom_css":[".main-product__block {margin-top: 15px;}",".main-product__block {margin-top: 10px;}"],"settings":{"container":"container-fluid","layout":"layout-6","show_atwl":false,"enable_history_state":false,"enable_variant_group_images":true,"show_featured_media":true,"show_zoom_button":false,"enable_video_autoplay":true,"show_nav_media_mobile":true,"show_pagination_mobile":false,"use_sticky_atc":false,"use_sticky_atc_on_mobile":true,"enable_dynamic_checkout":false,"sticky_atc_wishtlist":false,"sticky_atc_compare":false}},"product-details-tabs":{"type":"product-details-tabs","blocks":{"description":{"type":"description","settings":{"header":"Product description"}},"tab":{"type":"tab","settings":{"header":"Shipping & Return","content":"<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>","content_page":""}},"863844cf-2363-4638-9738-9fdef938678c":{"type":"tab","settings":{"header":"Shipping & Return","content":"<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>","content_page":""}}},"block_order":["description","tab","863844cf-2363-4638-9738-9fdef938678c"],"disabled":true,"settings":{"container":"container","default_open":false,"animations":"inherit"}},"ab67b24d-7db3-41dd-b6e0-2a19c0041fa8":{"type":"odinlake-nav","blocks":{"929fa863-ee60-44fa-b456-086682bc46d9":{"type":"tabList","settings":{"id":"Overview","title":"Overview"}},"969a4275-fc5c-4d64-a4cd-4aa69b11c48a":{"type":"tabList","settings":{"id":"Details","title":"Details"}},"0395baad-38ec-451d-a7de-99141191f970":{"type":"tabList","settings":{"id":"Specs","title":"Specs"}},"82eba803-5c28-4f60-b14e-9c2f51647862":{"type":"tabList","settings":{"id":"Instructions","title":"Instructions"}},"b97da34e-2dfb-44cd-bd6c-0219f3eb366d":{"type":"tabList","settings":{"id":"Reviews","title":"Reviews"}}},"block_order":["929fa863-ee60-44fa-b456-086682bc46d9","969a4275-fc5c-4d64-a4cd-4aa69b11c48a","0395baad-38ec-451d-a7de-99141191f970","82eba803-5c28-4f60-b14e-9c2f51647862","b97da34e-2dfb-44cd-bd6c-0219f3eb366d"],"settings":{"container":"container-fluid","bg_color":"#f5f5f5"}},"bcba6450-eca9-4631-86af-0e8dde3ba74c":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Overview","heading":"","subheading":"","code":"","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":31,"padding_bottom":27,"padding_top_mb":30,"padding_bottom_mb":20}},"3a8db962-80eb-48eb-9c21-d1a00ac3f7ab":{"type":"video","settings":{"container":"container-fluid","video_type":"external","video_link":"https:\/\/www.youtube.com\/watch?v=A0fLYG34reA","ratio":"16:9","image":"shopify:\/\/shop_images\/0dbad939-6746-4f95-9074-bbec7cd45ff7_b3179453-b05d-4c50-a509-b799f2b3fc25.png","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","width":"1200px","autoplay":false,"loop":false,"muted":false,"show_controls":false,"padding_top":48,"padding_bottom":54,"custom_class":"","animations":"fade-in"}},"92020a03-0125-4779-b0d4-76969489eb53":{"type":"icon-box","blocks":{"template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-1":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_1.png","image_by_url":"","title":"","description":"<p>Height Adjustable Backrest<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-2":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_2.png","image_by_url":"","title":"","description":"<p>Dynamic Lumbar Support<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-3":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_4.png","image_by_url":"","title":"","description":"<p>4D Adjustbale Armrest<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"3af9049c-2155-4d0f-94df-789fc1e4f86f":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_3.png","image_by_url":"","title":"","description":"<p>135° Recline Angle<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"eb3e0c81-95ae-4daa-b5bf-b1029c589b15":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_5.png","image_by_url":"","title":"","description":"<p>2D Adjustable Headrest<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"2e1510cf-09f9-4dce-baa8-84b63f00c3e4":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_6.png","image_by_url":"","title":"","description":"<p>Depth Adjustable Seat<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}}},"block_order":["template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-1","template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-2","template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-3","3af9049c-2155-4d0f-94df-789fc1e4f86f","eb3e0c81-95ae-4daa-b5bf-b1029c589b15","2e1510cf-09f9-4dce-baa8-84b63f00c3e4"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","item_per_row":6,"item_gap":16,"item_gap_mobile":6,"card_style":"vertical","image_max_width":"50px","content_alignment":"center","hover_effect":"scaling-up","enable_slider":false,"show_pagination":false,"show_navigation":false,"use_scroll_mobile":false,"use_grid_column_mb":true,"padding_top":38,"padding_bottom":28,"custom_class":"","animations":"inherit"}},"88279309-7787-487d-bcca-86a836fde1e9":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Details","heading":"Details","subheading":"","code":"<hr style=\" margin: 0rem 0; height:3px; \">","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":80,"padding_bottom":23,"padding_top_mb":41,"padding_bottom_mb":13}},"3971d5f7-9c84-46e8-a111-99ef50a004a8":{"type":"custom-content","blocks":{"ce09aa30-851f-4e75-bda7-a91d4f14bc68":{"type":"video","settings":{"video_type":"shopify","shopify_video":"shopify:\/\/files\/videos\/743-wirecontrol-video.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}},"87978908-0a8c-4a0d-a8d2-f727e562f077":{"type":"text","settings":{"title":"WireControl™ Mechanism","subheading":"","text":"<p>Our chair revolutionizes adjustability with a unique control method inspired by bicycle brake lines. This innovative design eliminates the hassle of searching for adjustment levers. Now, you can easily make adjustments without bending over, offering a seamless, labor-saving experience. It's all about convenience and efficiency, tailored for the modern user.<\/p>","od-icon":true,"html1":"<p><strong>Seat Height<\/strong><\/p>\n<p>18.5-22.5 inches<\/p>","html2":"<p><strong>Backrest Tilt<\/strong><\/p>\n<p><\/p><p>90°-135°<\/p>","html3":"<p><strong>Seat Depth<\/strong><\/p>\n<p><\/p><p>2 inches<\/p>","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"","animations":"inherit"}}},"block_order":["ce09aa30-851f-4e75-bda7-a91d4f14bc68","87978908-0a8c-4a0d-a8d2-f727e562f077"],"custom_css":[],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","gap":70,"gap_mobile":33,"use_scroll_mobile":false,"padding_top":50,"padding_bottom":100,"custom_class":""}},"fbd7fb5b-2b9a-40ee-8353-1a087b0195e3":{"type":"custom-content","blocks":{"a88e5c36-4773-434d-a82c-35a21028901c":{"type":"text","settings":{"title":"Sturdy Metal Chassis","subheading":"","text":"<p>Every chair in the OdinLake 7 series boasts a robust metal chassis, ensuring both stability and durability. This solid foundation not only enhances the chair's longevity but also provides a reliable, sturdy base for everyday use. Experience the perfect blend of strength and lasting quality with our 7 series chairs, designed to deliver consistent performance year after year.<\/p>","od-icon":true,"html1":"<strong>Long Life<\/strong>\n<p>Up to 15 years<\/p>","html2":"<strong>All Metal<\/strong>\n<p>Aluminum alloy<\/p>","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"white","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"odinlake_order_1","animations":"inherit"}},"e220c5ad-1353-408f-ae62-1bdd0fdaf529":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-chassis_eb923f9b-9851-4d2c-9a2a-09ea101171ea.jpg","link":"","width":"50%","alignment":"center","block_custom_class":"odinlake_order_0","animations":"inherit"}},"22be9d4a-0013-4822-a4d9-11a929c593bd":{"type":"video","disabled":true,"settings":{"video_type":"shopify","shopify_video":"shopify:\/\/files\/videos\/743-wirecontrol-video.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}}},"block_order":["a88e5c36-4773-434d-a82c-35a21028901c","e220c5ad-1353-408f-ae62-1bdd0fdaf529","22be9d4a-0013-4822-a4d9-11a929c593bd"],"custom_css":["div,p {color: #fff !important;}"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","gap":70,"gap_mobile":33,"use_scroll_mobile":false,"padding_top":100,"padding_bottom":100,"custom_class":""}},"b87ea3f6-1bcd-47ef-af97-03c9690a6fef":{"type":"custom-content","blocks":{"536623c6-f850-4dd7-97f2-9039ebac15bf":{"type":"video","disabled":true,"settings":{"video_type":"shopify","shopify_video":"shopify:\/\/files\/videos\/743-wirecontrol-video.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}},"d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-chair-tilt.jpg","link":"","width":"50%","alignment":"center","block_custom_class":"","animations":"inherit"}},"7f967583-8d43-4fcd-b2f9-eea196a53524":{"type":"text","settings":{"title":"Lock Backrest at Any Angle","subheading":"","text":"<p>Our ergonomic chair features a cutting-edge tilt mechanism, enabling you to lock the backrest at virtually any angle between 90 and 135 degrees. This flexibility, combined with the integrated leg rests, ensures an exceptionally comfortable experience, whether you're working or taking a moment to relax. Experience the perfect blend of functionality and comfort, tailored to your needs.<\/p>","od-icon":true,"html1":"<strong>Any angle<\/strong>\n<p>Lockable<\/p>","html2":"<strong>90°-135°<\/strong>\n<p>Wide Range<\/p>","html3":"<strong>Footrest<\/strong>\n<p>Optional<\/p>","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"","animations":"inherit"}}},"block_order":["536623c6-f850-4dd7-97f2-9039ebac15bf","d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73","7f967583-8d43-4fcd-b2f9-eea196a53524"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","gap":70,"gap_mobile":33,"use_scroll_mobile":false,"padding_top":94,"padding_bottom":100,"custom_class":""}},"3559e629-5448-4dec-866e-5a80bfb6eb51":{"type":"custom-content","blocks":{"88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4":{"type":"text","settings":{"title":"FlexBreath™ Mesh","subheading":"","text":"<p>Experience the ultimate in comfort and durability with our Korean mesh material. Designed for breathability, it ensures you stay comfortable even during long hours of use. Remarkably long-lasting, this premium mesh maintains its form and function for up to 15 years, offering you consistent comfort and support year after year. It's the perfect blend of style, comfort, and longevity for your seating needs.<\/p>","od-icon":false,"html1":"<p><strong>Seat Height<\/strong><\/p>\n<p>18.5-22.5 inches<\/p>","html2":"<p><strong>Backrest Tilt<\/strong><\/p>\n<p><\/p><p>90°-135°<\/p>","html3":"<p><strong>Seat Depth<\/strong><\/p>\n<p><\/p><p>2 inches<\/p>","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"white","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"odinlake_order_1","animations":"inherit"}},"0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-mesh.jpg","link":"","width":"50%","alignment":"center","block_custom_class":"odinlake_order_0","animations":"inherit"}},"cf0016ed-90c7-4bd5-b115-337b1839a82f":{"type":"video","disabled":true,"settings":{"video_type":"shopify","shopify_video":"shopify:\/\/files\/videos\/743-wirecontrol-video.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}}},"block_order":["88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4","0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee","cf0016ed-90c7-4bd5-b115-337b1839a82f"],"custom_css":["div,p {color: #fff !important;}"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","gap":70,"gap_mobile":33,"use_scroll_mobile":false,"padding_top":100,"padding_bottom":100,"custom_class":""}},"832e5c71-a6c3-4015-adbb-22101576c556":{"type":"icon-box","blocks":{"template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-1":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/4D_4636d9f2-a164-45f8-8e0c-d203406071a9.jpg","image_by_url":"","title":"4D Adjustable Armrest","description":"<p>4D adjustable armrest give you the flexibility to adjust based on your movements and keep your arms fully supported at all times with the premium PU soft padding.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-2":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-headrest.jpg","image_by_url":"","title":"2D Headrest","description":"<p>Large surface headrest can fully support your head. The angle of the headrest can be adjusted to fit your neck and relieve neck stress. The height of the headrest is also adjustable.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-3":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-lumbar-support.jpg","image_by_url":"","title":"Dynamic Lumbar Support","description":"<p>C-shape lumbar support that fits the natural curve of your spine. It's quite smart that it will always follow your movement to adjust the lumbar position, reducing any extra stress on your spine.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"65d3a0bb-8fdc-4600-b43f-ef52a72ced01":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/88dac4e8a3fe7ea7ba022fd1ce9a627f.jpg","image_by_url":"","title":"Silent Caster","description":"<p>Experience the pinnacle of smooth, silent movement with our revolutionary casters, expertly designed for the OdInLake ergonomic chair. Embrace the freedom to glide across any surface without a whisper.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"4a921b0a-1b44-45f7-a815-a6eee4c620c5":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/2efe449f50d6f8bd36a36bc73aae18ce.jpg","image_by_url":"","title":"Class 4 Gas Lift","description":"<p>Designed to support and endure, our Class 4 Gas Lift is engineered for exceptional strength. It accommodates a wide range of weights, ensuring stability and longevity, even under extensive use.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}}},"block_order":["template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-1","template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-2","template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-3","65d3a0bb-8fdc-4600-b43f-ef52a72ced01","4a921b0a-1b44-45f7-a815-a6eee4c620c5"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","item_per_row":3,"item_gap":30,"item_gap_mobile":10,"card_style":"vertical","image_max_width":"","content_alignment":"start","hover_effect":"none","enable_slider":true,"show_pagination":true,"show_navigation":true,"use_scroll_mobile":true,"use_grid_column_mb":false,"padding_top":50,"padding_bottom":50,"custom_class":"","animations":"inherit"}},"ab3808d2-e290-4dd3-a358-440f551a0a8d":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Specs","heading":"Specs","subheading":"","code":"<hr style=\" margin: 0rem 0; height:3px;\">","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":80,"padding_bottom":0,"padding_top_mb":60,"padding_bottom_mb":0}},"31b05af6-fa95-4fde-93f9-cc3bf3caf5af":{"type":"custom-content","blocks":{"template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-image-1":{"type":"image","settings":{"link":"","width":"50%","alignment":"center","block_custom_class":"","animations":"inherit"}},"template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-text-1":{"type":"text","settings":{"title":"Talk about your brand","subheading":"","text":"<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>","od-icon":false,"html1":"","html2":"","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"","animations":"inherit"}}},"block_order":["template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-image-1","template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-text-1"],"disabled":true,"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container","gap":30,"gap_mobile":16,"use_scroll_mobile":false,"padding_top":50,"padding_bottom":50,"custom_class":""}},"71e11a33-1b82-4e81-8a6d-0609dd81faf8":{"type":"jd-structure-tab","blocks":{"f107fe56-75e4-4252-93fd-2cfda8fc5dc0":{"type":"tabList","settings":{"id":"1","title":"Material"}},"4239c4f2-11d4-4e46-b0d6-fc4038921adc":{"type":"tabList","settings":{"id":"2","title":"Frame Specs"}},"63e15df5-4a38-4f75-b46a-af43b4f60cdf":{"type":"tabList","disabled":true,"settings":{"id":"3","title":"Desktop Specs"}}},"block_order":["f107fe56-75e4-4252-93fd-2cfda8fc5dc0","4239c4f2-11d4-4e46-b0d6-fc4038921adc","63e15df5-4a38-4f75-b46a-af43b4f60cdf"],"settings":{"id":"","header":""}},"bdc157e6-50e3-490f-a740-87a64df85c7a":{"type":"jd-product-material","blocks":{"e915be50-2596-4d1b-a900-e20e21dc7018":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-part-1.jpg","structureList_title":"Headrest","structureList_text":"<p>Up, down, rotation adjustment<\/p>","structureList_title1":"Material","structureList_text1":"<p>FlexBreath™ Mesh<\/p>","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"top","range":10,"m_location":"top","m_range":10,"location1":"left","range1":40,"m_location1":"left","m_range1":40}},"35a73c62-f7ac-4aff-a42a-ae640007d658":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-part-2.jpg","structureList_title":"Backrest","structureList_text":"<p>5 levels of up and down adjustment<\/p>","structureList_title1":"Back dimensions (with headrest)","structureList_text1":"<p>Follow lumbar support<\/p>","structureList_title2":"Tilt range","structureList_text2":"<p>90°-135°<\/p>","background":"#0075ea","outside":"#0075ea","location":"top","range":28,"m_location":"top","m_range":28,"location1":"left","range1":40,"m_location1":"left","m_range1":40}},"717b3e07-f515-493d-93bd-266715bf49ac":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-part-3.jpg","structureList_title":"Armrest","structureList_text":"<p>4D adjustment<\/p>","structureList_title1":"Height","structureList_text1":"<p>25.8” - 32.7”<\/p>","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"top","range":43,"m_location":"top","m_range":43,"location1":"left","range1":35,"m_location1":"left","m_range1":35}},"3c625d36-2df7-404d-aa9d-11b6b2dc8a0f":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-part-4.jpg","structureList_title":"Seat","structureList_text":"<p>2” forwards &. backwards<\/p>","structureList_title1":"","structureList_text1":"","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"bottom","range":39,"m_location":"bottom","m_range":39,"location1":"right","range1":40,"m_location1":"right","m_range1":40}},"98044adc-02b9-4c02-b809-06f19a98f34c":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-part-5.jpg","structureList_title":"Gaslift","structureList_text":"<p>Class 4<\/p>","structureList_title1":"Service life","structureList_text1":"<p>150,000 times<\/p>","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"bottom","range":17,"m_location":"bottom","m_range":17,"location1":"right","range1":48,"m_location1":"right","m_range1":48}},"2552fc14-7049-4fc9-8894-c611fdb4c9b5":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-part-6.jpg","structureList_title":"Caster","structureList_text":"<p>2.5 inches<\/p>","structureList_title1":"Silent sheath","structureList_text1":"<p>Yes<\/p>","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"bottom","range":6,"m_location":"bottom","m_range":6,"location1":"right","range1":30,"m_location1":"right","m_range1":30}}},"block_order":["e915be50-2596-4d1b-a900-e20e21dc7018","35a73c62-f7ac-4aff-a42a-ae640007d658","717b3e07-f515-493d-93bd-266715bf49ac","3c625d36-2df7-404d-aa9d-11b6b2dc8a0f","98044adc-02b9-4c02-b809-06f19a98f34c","2552fc14-7049-4fc9-8894-c611fdb4c9b5"],"settings":{"structure_img":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-part.jpg","structure_img1":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-part.jpg"}},"69aa2c88-28cd-4106-8e6a-5501839b403b":{"type":"jd-product-weight","blocks":{"00c64ec8-610c-4d61-a640-6b26ad7dd586":{"type":"structureList","settings":{"structureList_title":"Dimensions","structureList_text":"<p>25.2” - 27.5”L x 27.5”W x 45.5” - 52.4”H<\/p>","structureList_title1":"Certification","structureList_text1":"<p>BIFMA X5.1-2017(R2022)<\/p>","structureList_title2":"Weight capacity","structureList_text2":"<p>350 lbs<\/p>"}},"4c4fea9f-f423-47d9-8b96-ade30af67cbe":{"type":"structureList","settings":{"structureList_title":"Seat height","structureList_text":"<p>18.5” - 22.5”<\/p>","structureList_title1":"Back dimensions","structureList_text1":"<p>20”W x 21”-22.6”H<\/p>","structureList_title2":"Tilt range","structureList_text2":"<p>45°<\/p>"}},"e9709a61-265d-47b9-9ba3-17121829d447":{"type":"structureList","settings":{"structureList_title":"Easy returns","structureList_text":"<p>30 days<\/p>","structureList_title1":"Warranty","structureList_text1":"<p>15 years<\/p>","structureList_title2":"Item weight","structureList_text2":"<p>68 lbs<\/p>"}}},"block_order":["00c64ec8-610c-4d61-a640-6b26ad7dd586","4c4fea9f-f423-47d9-8b96-ade30af67cbe","e9709a61-265d-47b9-9ba3-17121829d447"],"settings":{"structure_img":"shopify:\/\/shop_images\/57418546-9f7e-4eaa-9026-2de3e64a5fa9.jpg"}},"ef4ea5d8-e378-4fb5-bef1-f51adf961720":{"type":"jd-product-size","disabled":true,"settings":{}},"840249ae-921a-495b-b02a-e47b2524f0da":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Instructions","heading":"Instructions","subheading":"","code":"<hr style=\" margin: 0rem 0; height:3px;\">","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":80,"padding_bottom":20,"padding_top_mb":60,"padding_bottom_mb":20}},"57761bd2-9d0c-4a8e-a651-070365291ca9":{"type":"custom-content","blocks":{"740fc7f1-4f4b-4b90-9e71-820101785358":{"type":"video","settings":{"video_type":"external","video_link":"https:\/\/www.youtube.com\/watch?v=23wexUWM4C4","ratio":"16:9","image":"shopify:\/\/shop_images\/1._-743.jpg","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":false,"loop":false,"muted":false,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}},"0d1e4754-ae40-425f-8616-707e692539b0":{"type":"text","settings":{"title":"Installation Manual","subheading":"","text":"<p><strong>Installation Manual:<\/strong> <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/OdinLake-A743-Installation-manual.pdf?v=1661418955\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/OdinLake-A743-Installation-manual.pdf?v=1661418955\">Download<\/a><\/p><p>You can install your {{ product.title }} chair according to this video and installation manual, if you have any installation questions please contact us at customers@odinlake.com<\/p>","od-icon":false,"html1":"","html2":"","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"","animations":"inherit"}}},"block_order":["740fc7f1-4f4b-4b90-9e71-820101785358","0d1e4754-ae40-425f-8616-707e692539b0"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container","gap":70,"gap_mobile":16,"use_scroll_mobile":false,"padding_top":50,"padding_bottom":50,"custom_class":""}},"2a855bd1-af06-4cb7-b58e-d250f3597ef8":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Reviews","heading":"Reviews","subheading":"","code":"<hr style=\" margin: 0rem 0; height:3px;\">","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":80,"padding_bottom":20,"padding_top_mb":60,"padding_bottom_mb":20}},"170253203295be7cb8":{"type":"apps","blocks":{"6d198e95-118c-4c22-812b-23a518a47db6":{"type":"shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723","settings":{"animation":true,"tags_exclude":"","tags_include":"","search":"","linkify":true,"use_metafields":false,"sku_tagtype":"sku"}}},"block_order":["6d198e95-118c-4c22-812b-23a518a47db6"],"settings":{"heading":"","heading_size":"h3","subheading":"","header_alignment":"center","container":"container-fluid","background_color":"","padding_top":50,"padding_bottom":50,"custom_class":""}}},"order":["breadcrumb","main","product-details-tabs","ab67b24d-7db3-41dd-b6e0-2a19c0041fa8","bcba6450-eca9-4631-86af-0e8dde3ba74c","3a8db962-80eb-48eb-9c21-d1a00ac3f7ab","92020a03-0125-4779-b0d4-76969489eb53","88279309-7787-487d-bcca-86a836fde1e9","3971d5f7-9c84-46e8-a111-99ef50a004a8","fbd7fb5b-2b9a-40ee-8353-1a087b0195e3","b87ea3f6-1bcd-47ef-af97-03c9690a6fef","3559e629-5448-4dec-866e-5a80bfb6eb51","832e5c71-a6c3-4015-adbb-22101576c556","ab3808d2-e290-4dd3-a358-440f551a0a8d","31b05af6-fa95-4fde-93f9-cc3bf3caf5af","71e11a33-1b82-4e81-8a6d-0609dd81faf8","bdc157e6-50e3-490f-a740-87a64df85c7a","69aa2c88-28cd-4106-8e6a-5501839b403b","ef4ea5d8-e378-4fb5-bef1-f51adf961720","840249ae-921a-495b-b02a-e47b2524f0da","57761bd2-9d0c-4a8e-a651-070365291ca9","2a855bd1-af06-4cb7-b58e-d250f3597ef8","170253203295be7cb8"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "settings": {
+        "container": "container-fluid",
+        "text_alignment": "left",
+        "hide_current": false,
+        "hide_on_mb": false,
+        "animations": "inherit"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "0a4f43af-783e-4c2c-a99c-fdd292bbc495": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div>\n<ul class=\"mixxgallery-tags\"> <li class=\"mixxgallery-tags__tag black\">30 Days Return</li> <li class=\"mixxgallery-tags__tag white\">15 Years Warranty</li>\n</ul>\n\n<style>\n  .mixxgallery-tags {\n    z-index: 20;\n    list-style: none;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    font-size: 14px;\n    line-height: 12px;\n    text-transform: uppercase;\n    font-weight: 600;\n    margin-bottom: 10px;\n}\nul, ol {\n    margin: 0;\n    padding: 0;\n}\n*, *:before, *:after {\n    box-sizing: border-box;\n}\nuser agent stylesheet\nul {\n    display: block;\n    list-style-type: disc;\n}\n.mixxgallery-tags .mixxgallery-tags__tag.white {\n    background: #fff;\n    border: 1px solid #000;\n    color: #000;\n}\n.mixxgallery-tags .mixxgallery-tags__tag.black {\n    background: #000;\n    color: #fff;\n    border: 1px solid #000;\n}\n.mixxgallery-tags .mixxgallery-tags__tag {\n    padding: 5px 10px;\n}\n</style>\n</div>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "4697a8e9-bdd8-45b1-ac07-88ccd1be6995": {
+          "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "use_metafields": false,
+            "sku_tagtype": "sku",
+            "is_featured_product": false,
+            "featured_product_handle": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_saving": true,
+            "sale_badge_type": "percentage"
+          }
+        },
+        "90dc1f7c-db93-4484-81bd-f9329e3af95d": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_title": "Size"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_atc_button": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c": {
+          "type": "shipping",
+          "settings": {
+            "show_delivery_times": true,
+            "deliver_text": "Estimated Delivery:",
+            "deliver_days": "5",
+            "date_format": "%b %d",
+            "show_shipping_text": true,
+            "shipping_text": "<p><strong>Free Shipping & Easy Returns: </strong>On all orders</p>"
+          }
+        },
+        "a7a72482-beac-4db8-a4ca-15072a0840a0": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n.odin-module {\njustify-content: space-between;\nalign-items: center!important;\n\n }\n.odin-block {\nflex: 1;\ntext-align: center;\npadding: 1px;\nmargin: 0px;   \n}\n.icons-odin-row, .text-odin-row {\n display: flex;\n justify-content: space-between;\n width: 100%;\n}\n .odin-icon img {\n height: 40px;\n margin:0 auto;\n }\n </style>\n<div class=\"odin-module\">\n <div class=\"icons-odin-row\">\n <div class=\"odin-block odin-icon\">\n <img src=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/30_Day_Price_Guarantee.png?v=1693965849\" alt=\"30 Days Price Guarantee\">\n </div>\n <div class=\"odin-block odin-icon\">\n <img src=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/30_Day_Free_Return.png?v=1693964226\" alt=\"30 Days Easy Return\">\n </div>\n <div class=\"odin-block odin-icon\">\n <img src=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/Free-shipping.png?v=1693964226\" alt=\"Free Shipping\">\n </div>\n </div>\n <div class=\"text-odin-row\">\n <div class=\"odin-block\">\n <p>30 Days<br>Price Guarantee</p>\n </div>\n <div class=\"odin-block\">\n <p>30 Days<br>Easy Return</p>\n </div>\n <div class=\"odin-block\">\n <p>Super Fast<br>Free shipping</p>\n </div>\n </div>\n</div>"
+          }
+        },
+        "62aed578-bf73-4c71-81d1-3ffc43d0c306": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"padding:20px; background:#f5f5f5;\">\n<div class=\"logo-lockup\" target=\"_blank\">\n    <img class=\"header-lockupLogo\" src=\"https://a300.stripecdn.com/climate-statics-srv/assets/img/climate_logo-7e2de8ca7243c666c6b0.svg\" height=\"22\" width=\"22\">\n    <p>OdinLake is Stripe Climate member</p> \n</div>\n<p style=\"margin-top: 0px;\">We contribute 0.25% of our revenue to carbon removal. <a href=\"https://climate.stripe.com/HIsCPv\"><u>Learn More</u></a></p>\n<style>\n  div.logo-lockup {\n    align-items: center;\n    display: flex;\n}\n.header-lockupLogo {\n    margin-right: 6px;\n}\n</style>\n</div>"
+          }
+        },
+        "addons": {
+          "type": "addons",
+          "settings": {
+            "show_atcp": false,
+            "show_ask_a_question": true,
+            "show_social": true
+          }
+        },
+        "e022ae71-4b2b-45d5-b186-a5a8aa7af5a4": {
+          "type": "trust_badge",
+          "settings": {
+            "trust_badges_text": "<p>Guarantee safe & secure checkout</p>",
+            "trust_badges_image_width": "100%",
+            "position": "below"
+          }
+        }
+      },
+      "block_order": [
+        "0a4f43af-783e-4c2c-a99c-fdd292bbc495",
+        "title",
+        "4697a8e9-bdd8-45b1-ac07-88ccd1be6995",
+        "price",
+        "90dc1f7c-db93-4484-81bd-f9329e3af95d",
+        "variant_picker",
+        "buy_buttons",
+        "b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c",
+        "a7a72482-beac-4db8-a4ca-15072a0840a0",
+        "62aed578-bf73-4c71-81d1-3ffc43d0c306",
+        "addons",
+        "e022ae71-4b2b-45d5-b186-a5a8aa7af5a4"
+      ],
+      "custom_css": [
+        ".main-product__block {margin-top: 15px;}",
+        ".main-product__block {margin-top: 10px;}"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "layout": "layout-6",
+        "show_atwl": false,
+        "enable_history_state": false,
+        "enable_variant_group_images": true,
+        "show_featured_media": true,
+        "show_zoom_button": false,
+        "enable_video_autoplay": true,
+        "show_nav_media_mobile": true,
+        "show_pagination_mobile": false,
+        "use_sticky_atc": false,
+        "use_sticky_atc_on_mobile": true,
+        "enable_dynamic_checkout": false,
+        "sticky_atc_wishtlist": false,
+        "sticky_atc_compare": false
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "header": "Product description"
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "header": "Shipping & Return",
+            "content": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.</p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.</p>",
+            "content_page": ""
+          }
+        },
+        "863844cf-2363-4638-9738-9fdef938678c": {
+          "type": "tab",
+          "settings": {
+            "header": "Shipping & Return",
+            "content": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.</p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.</p>",
+            "content_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "863844cf-2363-4638-9738-9fdef938678c"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "default_open": false,
+        "animations": "inherit"
+      }
+    },
+    "ab67b24d-7db3-41dd-b6e0-2a19c0041fa8": {
+      "type": "odinlake-nav",
+      "blocks": {
+        "929fa863-ee60-44fa-b456-086682bc46d9": {
+          "type": "tabList",
+          "settings": {
+            "id": "Overview",
+            "title": "Overview"
+          }
+        },
+        "969a4275-fc5c-4d64-a4cd-4aa69b11c48a": {
+          "type": "tabList",
+          "settings": {
+            "id": "Details",
+            "title": "Details"
+          }
+        },
+        "0395baad-38ec-451d-a7de-99141191f970": {
+          "type": "tabList",
+          "settings": {
+            "id": "Specs",
+            "title": "Specs"
+          }
+        },
+        "82eba803-5c28-4f60-b14e-9c2f51647862": {
+          "type": "tabList",
+          "settings": {
+            "id": "Instructions",
+            "title": "Instructions"
+          }
+        },
+        "b97da34e-2dfb-44cd-bd6c-0219f3eb366d": {
+          "type": "tabList",
+          "settings": {
+            "id": "Reviews",
+            "title": "Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "929fa863-ee60-44fa-b456-086682bc46d9",
+        "969a4275-fc5c-4d64-a4cd-4aa69b11c48a",
+        "0395baad-38ec-451d-a7de-99141191f970",
+        "82eba803-5c28-4f60-b14e-9c2f51647862",
+        "b97da34e-2dfb-44cd-bd6c-0219f3eb366d"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "bg_color": "#f5f5f5"
+      }
+    },
+    "bcba6450-eca9-4631-86af-0e8dde3ba74c": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Overview",
+        "heading": "",
+        "subheading": "",
+        "code": "",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 31,
+        "padding_bottom": 27,
+        "padding_top_mb": 30,
+        "padding_bottom_mb": 20
+      }
+    },
+    "3a8db962-80eb-48eb-9c21-d1a00ac3f7ab": {
+      "type": "video",
+      "settings": {
+        "container": "container-fluid",
+        "video_type": "external",
+        "video_link": "https://www.youtube.com/watch?v=A0fLYG34reA",
+        "ratio": "16:9",
+        "image": "shopify://shop_images/0dbad939-6746-4f95-9074-bbec7cd45ff7_b3179453-b05d-4c50-a509-b799f2b3fc25.png",
+        "video_title": "",
+        "text_size": "medium",
+        "text_color": "white",
+        "play_style": "solid",
+        "play_size": "medium",
+        "width": "1200px",
+        "autoplay": false,
+        "loop": false,
+        "muted": false,
+        "show_controls": false,
+        "padding_top": 48,
+        "padding_bottom": 54,
+        "custom_class": "",
+        "animations": "fade-in"
+      }
+    },
+    "92020a03-0125-4779-b0d4-76969489eb53": {
+      "type": "icon-box",
+      "blocks": {
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-1": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_1.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>Height Adjustable Backrest</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-2": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_2.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>Dynamic Lumbar Support</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-3": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_4.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>4D Adjustbale Armrest</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "3af9049c-2155-4d0f-94df-789fc1e4f86f": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_3.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>135° Recline Angle</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "eb3e0c81-95ae-4daa-b5bf-b1029c589b15": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_5.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>2D Adjustable Headrest</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "2e1510cf-09f9-4dce-baa8-84b63f00c3e4": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_6.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>Depth Adjustable Seat</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-1",
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-2",
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-3",
+        "3af9049c-2155-4d0f-94df-789fc1e4f86f",
+        "eb3e0c81-95ae-4daa-b5bf-b1029c589b15",
+        "2e1510cf-09f9-4dce-baa8-84b63f00c3e4"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "item_per_row": 6,
+        "item_gap": 16,
+        "item_gap_mobile": 6,
+        "card_style": "vertical",
+        "image_max_width": "50px",
+        "content_alignment": "center",
+        "hover_effect": "scaling-up",
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "use_scroll_mobile": false,
+        "use_grid_column_mb": true,
+        "padding_top": 38,
+        "padding_bottom": 28,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "88279309-7787-487d-bcca-86a836fde1e9": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Details",
+        "heading": "Details",
+        "subheading": "",
+        "code": "<hr style=\" margin: 0rem 0; height:3px; \">",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 23,
+        "padding_top_mb": 41,
+        "padding_bottom_mb": 13
+      }
+    },
+    "3971d5f7-9c84-46e8-a111-99ef50a004a8": {
+      "type": "custom-content",
+      "blocks": {
+        "ce09aa30-851f-4e75-bda7-a91d4f14bc68": {
+          "type": "video",
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "87978908-0a8c-4a0d-a8d2-f727e562f077": {
+          "type": "text",
+          "settings": {
+            "title": "WireControl™ Mechanism",
+            "subheading": "",
+            "text": "<p>Our chair revolutionizes adjustability with a unique control method inspired by bicycle brake lines. This innovative design eliminates the hassle of searching for adjustment levers. Now, you can easily make adjustments without bending over, offering a seamless, labor-saving experience. It's all about convenience and efficiency, tailored for the modern user.</p>",
+            "od-icon": true,
+            "html1": "<p><strong>Seat Height</strong></p>\n<p>18.5-22.5 inches</p>",
+            "html2": "<p><strong>Backrest Tilt</strong></p>\n<p></p><p>90°-135°</p>",
+            "html3": "<p><strong>Seat Depth</strong></p>\n<p></p><p>2 inches</p>",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "ce09aa30-851f-4e75-bda7-a91d4f14bc68",
+        "87978908-0a8c-4a0d-a8d2-f727e562f077"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "gap": 70,
+        "gap_mobile": 33,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 100,
+        "custom_class": ""
+      }
+    },
+    "fbd7fb5b-2b9a-40ee-8353-1a087b0195e3": {
+      "type": "custom-content",
+      "blocks": {
+        "a88e5c36-4773-434d-a82c-35a21028901c": {
+          "type": "text",
+          "settings": {
+            "title": "Sturdy Metal Chassis",
+            "subheading": "",
+            "text": "<p>Every chair in the OdinLake 7 series boasts a robust metal chassis, ensuring both stability and durability. This solid foundation not only enhances the chair's longevity but also provides a reliable, sturdy base for everyday use. Experience the perfect blend of strength and lasting quality with our 7 series chairs, designed to deliver consistent performance year after year.</p>",
+            "od-icon": true,
+            "html1": "<strong>Long Life</strong>\n<p>Up to 15 years</p>",
+            "html2": "<strong>All Metal</strong>\n<p>Aluminum alloy</p>",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "odinlake_order_1",
+            "animations": "inherit"
+          }
+        },
+        "e220c5ad-1353-408f-ae62-1bdd0fdaf529": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-chassis_eb923f9b-9851-4d2c-9a2a-09ea101171ea.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "odinlake_order_0",
+            "animations": "inherit"
+          }
+        },
+        "22be9d4a-0013-4822-a4d9-11a929c593bd": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "a88e5c36-4773-434d-a82c-35a21028901c",
+        "e220c5ad-1353-408f-ae62-1bdd0fdaf529",
+        "22be9d4a-0013-4822-a4d9-11a929c593bd"
+      ],
+      "custom_css": [
+        "div,p {color: #fff !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "gap": 70,
+        "gap_mobile": 33,
+        "use_scroll_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": ""
+      }
+    },
+    "b87ea3f6-1bcd-47ef-af97-03c9690a6fef": {
+      "type": "custom-content",
+      "blocks": {
+        "536623c6-f850-4dd7-97f2-9039ebac15bf": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-chair-tilt.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "7f967583-8d43-4fcd-b2f9-eea196a53524": {
+          "type": "text",
+          "settings": {
+            "title": "Lock Backrest at Any Angle",
+            "subheading": "",
+            "text": "<p>Our ergonomic chair features a cutting-edge tilt mechanism, enabling you to lock the backrest at virtually any angle between 90 and 135 degrees. This flexibility, combined with the integrated leg rests, ensures an exceptionally comfortable experience, whether you're working or taking a moment to relax. Experience the perfect blend of functionality and comfort, tailored to your needs.</p>",
+            "od-icon": true,
+            "html1": "<strong>Any angle</strong>\n<p>Lockable</p>",
+            "html2": "<strong>90°-135°</strong>\n<p>Wide Range</p>",
+            "html3": "<strong>Footrest</strong>\n<p>Optional</p>",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "536623c6-f850-4dd7-97f2-9039ebac15bf",
+        "d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73",
+        "7f967583-8d43-4fcd-b2f9-eea196a53524"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "gap": 70,
+        "gap_mobile": 33,
+        "use_scroll_mobile": false,
+        "padding_top": 94,
+        "padding_bottom": 100,
+        "custom_class": ""
+      }
+    },
+    "3559e629-5448-4dec-866e-5a80bfb6eb51": {
+      "type": "custom-content",
+      "blocks": {
+        "88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4": {
+          "type": "text",
+          "settings": {
+            "title": "FlexBreath™ Mesh",
+            "subheading": "",
+            "text": "<p>Experience the ultimate in comfort and durability with our Korean mesh material. Designed for breathability, it ensures you stay comfortable even during long hours of use. Remarkably long-lasting, this premium mesh maintains its form and function for up to 15 years, offering you consistent comfort and support year after year. It's the perfect blend of style, comfort, and longevity for your seating needs.</p>",
+            "od-icon": false,
+            "html1": "<p><strong>Seat Height</strong></p>\n<p>18.5-22.5 inches</p>",
+            "html2": "<p><strong>Backrest Tilt</strong></p>\n<p></p><p>90°-135°</p>",
+            "html3": "<p><strong>Seat Depth</strong></p>\n<p></p><p>2 inches</p>",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "odinlake_order_1",
+            "animations": "inherit"
+          }
+        },
+        "0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-mesh.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "odinlake_order_0",
+            "animations": "inherit"
+          }
+        },
+        "cf0016ed-90c7-4bd5-b115-337b1839a82f": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4",
+        "0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee",
+        "cf0016ed-90c7-4bd5-b115-337b1839a82f"
+      ],
+      "custom_css": [
+        "div,p {color: #fff !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "gap": 70,
+        "gap_mobile": 33,
+        "use_scroll_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": ""
+      }
+    },
+    "832e5c71-a6c3-4015-adbb-22101576c556": {
+      "type": "icon-box",
+      "blocks": {
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-1": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/4D_4636d9f2-a164-45f8-8e0c-d203406071a9.jpg",
+            "image_by_url": "",
+            "title": "4D Adjustable Armrest",
+            "description": "<p>4D adjustable armrest give you the flexibility to adjust based on your movements and keep your arms fully supported at all times with the premium PU soft padding.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-2": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-headrest.jpg",
+            "image_by_url": "",
+            "title": "2D Headrest",
+            "description": "<p>Large surface headrest can fully support your head. The angle of the headrest can be adjusted to fit your neck and relieve neck stress. The height of the headrest is also adjustable.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-3": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-lumbar-support.jpg",
+            "image_by_url": "",
+            "title": "Dynamic Lumbar Support",
+            "description": "<p>C-shape lumbar support that fits the natural curve of your spine. It's quite smart that it will always follow your movement to adjust the lumbar position, reducing any extra stress on your spine.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "65d3a0bb-8fdc-4600-b43f-ef52a72ced01": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/88dac4e8a3fe7ea7ba022fd1ce9a627f.jpg",
+            "image_by_url": "",
+            "title": "Silent Caster",
+            "description": "<p>Experience the pinnacle of smooth, silent movement with our revolutionary casters, expertly designed for the OdInLake ergonomic chair. Embrace the freedom to glide across any surface without a whisper.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "4a921b0a-1b44-45f7-a815-a6eee4c620c5": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/2efe449f50d6f8bd36a36bc73aae18ce.jpg",
+            "image_by_url": "",
+            "title": "Class 4 Gas Lift",
+            "description": "<p>Designed to support and endure, our Class 4 Gas Lift is engineered for exceptional strength. It accommodates a wide range of weights, ensuring stability and longevity, even under extensive use.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-1",
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-2",
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-3",
+        "65d3a0bb-8fdc-4600-b43f-ef52a72ced01",
+        "4a921b0a-1b44-45f7-a815-a6eee4c620c5"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "item_per_row": 3,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_style": "vertical",
+        "image_max_width": "",
+        "content_alignment": "start",
+        "hover_effect": "none",
+        "enable_slider": true,
+        "show_pagination": true,
+        "show_navigation": true,
+        "use_scroll_mobile": true,
+        "use_grid_column_mb": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "ab3808d2-e290-4dd3-a358-440f551a0a8d": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Specs",
+        "heading": "Specs",
+        "subheading": "",
+        "code": "<hr style=\" margin: 0rem 0; height:3px;\">",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "padding_top_mb": 60,
+        "padding_bottom_mb": 0
+      }
+    },
+    "31b05af6-fa95-4fde-93f9-cc3bf3caf5af": {
+      "type": "custom-content",
+      "blocks": {
+        "template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-image-1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Talk about your brand",
+            "subheading": "",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "od-icon": false,
+            "html1": "",
+            "html2": "",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-image-1",
+        "template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "71e11a33-1b82-4e81-8a6d-0609dd81faf8": {
+      "type": "jd-structure-tab",
+      "blocks": {
+        "f107fe56-75e4-4252-93fd-2cfda8fc5dc0": {
+          "type": "tabList",
+          "settings": {
+            "id": "1",
+            "title": "Material"
+          }
+        },
+        "4239c4f2-11d4-4e46-b0d6-fc4038921adc": {
+          "type": "tabList",
+          "settings": {
+            "id": "2",
+            "title": "Frame Specs"
+          }
+        },
+        "63e15df5-4a38-4f75-b46a-af43b4f60cdf": {
+          "type": "tabList",
+          "disabled": true,
+          "settings": {
+            "id": "3",
+            "title": "Desktop Specs"
+          }
+        }
+      },
+      "block_order": [
+        "f107fe56-75e4-4252-93fd-2cfda8fc5dc0",
+        "4239c4f2-11d4-4e46-b0d6-fc4038921adc",
+        "63e15df5-4a38-4f75-b46a-af43b4f60cdf"
+      ],
+      "settings": {
+        "id": "",
+        "header": ""
+      }
+    },
+    "bdc157e6-50e3-490f-a740-87a64df85c7a": {
+      "type": "jd-product-material",
+      "blocks": {
+        "e915be50-2596-4d1b-a900-e20e21dc7018": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-part-1.jpg",
+            "structureList_title": "Headrest",
+            "structureList_text": "<p>Up, down, rotation adjustment</p>",
+            "structureList_title1": "Material",
+            "structureList_text1": "<p>FlexBreath™ Mesh</p>",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "top",
+            "range": 10,
+            "m_location": "top",
+            "m_range": 10,
+            "location1": "left",
+            "range1": 40,
+            "m_location1": "left",
+            "m_range1": 40
+          }
+        },
+        "35a73c62-f7ac-4aff-a42a-ae640007d658": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-part-2.jpg",
+            "structureList_title": "Backrest",
+            "structureList_text": "<p>5 levels of up and down adjustment</p>",
+            "structureList_title1": "Back dimensions (with headrest)",
+            "structureList_text1": "<p>Follow lumbar support</p>",
+            "structureList_title2": "Tilt range",
+            "structureList_text2": "<p>90°-135°</p>",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "top",
+            "range": 28,
+            "m_location": "top",
+            "m_range": 28,
+            "location1": "left",
+            "range1": 40,
+            "m_location1": "left",
+            "m_range1": 40
+          }
+        },
+        "717b3e07-f515-493d-93bd-266715bf49ac": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-part-3.jpg",
+            "structureList_title": "Armrest",
+            "structureList_text": "<p>4D adjustment</p>",
+            "structureList_title1": "Height",
+            "structureList_text1": "<p>25.8” - 32.7”</p>",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "top",
+            "range": 43,
+            "m_location": "top",
+            "m_range": 43,
+            "location1": "left",
+            "range1": 35,
+            "m_location1": "left",
+            "m_range1": 35
+          }
+        },
+        "3c625d36-2df7-404d-aa9d-11b6b2dc8a0f": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-part-4.jpg",
+            "structureList_title": "Seat",
+            "structureList_text": "<p>2” forwards &. backwards</p>",
+            "structureList_title1": "",
+            "structureList_text1": "",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "bottom",
+            "range": 39,
+            "m_location": "bottom",
+            "m_range": 39,
+            "location1": "right",
+            "range1": 40,
+            "m_location1": "right",
+            "m_range1": 40
+          }
+        },
+        "98044adc-02b9-4c02-b809-06f19a98f34c": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-part-5.jpg",
+            "structureList_title": "Gaslift",
+            "structureList_text": "<p>Class 4</p>",
+            "structureList_title1": "Service life",
+            "structureList_text1": "<p>150,000 times</p>",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "bottom",
+            "range": 17,
+            "m_location": "bottom",
+            "m_range": 17,
+            "location1": "right",
+            "range1": 48,
+            "m_location1": "right",
+            "m_range1": 48
+          }
+        },
+        "2552fc14-7049-4fc9-8894-c611fdb4c9b5": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-part-6.jpg",
+            "structureList_title": "Caster",
+            "structureList_text": "<p>2.5 inches</p>",
+            "structureList_title1": "Silent sheath",
+            "structureList_text1": "<p>Yes</p>",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "bottom",
+            "range": 6,
+            "m_location": "bottom",
+            "m_range": 6,
+            "location1": "right",
+            "range1": 30,
+            "m_location1": "right",
+            "m_range1": 30
+          }
+        }
+      },
+      "block_order": [
+        "e915be50-2596-4d1b-a900-e20e21dc7018",
+        "35a73c62-f7ac-4aff-a42a-ae640007d658",
+        "717b3e07-f515-493d-93bd-266715bf49ac",
+        "3c625d36-2df7-404d-aa9d-11b6b2dc8a0f",
+        "98044adc-02b9-4c02-b809-06f19a98f34c",
+        "2552fc14-7049-4fc9-8894-c611fdb4c9b5"
+      ],
+      "settings": {
+        "structure_img": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-part.jpg",
+        "structure_img1": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-part.jpg"
+      }
+    },
+    "69aa2c88-28cd-4106-8e6a-5501839b403b": {
+      "type": "jd-product-weight",
+      "blocks": {
+        "00c64ec8-610c-4d61-a640-6b26ad7dd586": {
+          "type": "structureList",
+          "settings": {
+            "structureList_title": "Dimensions",
+            "structureList_text": "<p>25.2” - 27.5”L x 27.5”W x 45.5” - 52.4”H</p>",
+            "structureList_title1": "Certification",
+            "structureList_text1": "<p>BIFMA X5.1-2017(R2022)</p>",
+            "structureList_title2": "Weight capacity",
+            "structureList_text2": "<p>350 lbs</p>"
+          }
+        },
+        "4c4fea9f-f423-47d9-8b96-ade30af67cbe": {
+          "type": "structureList",
+          "settings": {
+            "structureList_title": "Seat height",
+            "structureList_text": "<p>18.5” - 22.5”</p>",
+            "structureList_title1": "Back dimensions",
+            "structureList_text1": "<p>20”W x 21”-22.6”H</p>",
+            "structureList_title2": "Tilt range",
+            "structureList_text2": "<p>45°</p>"
+          }
+        },
+        "e9709a61-265d-47b9-9ba3-17121829d447": {
+          "type": "structureList",
+          "settings": {
+            "structureList_title": "Easy returns",
+            "structureList_text": "<p>30 days</p>",
+            "structureList_title1": "Warranty",
+            "structureList_text1": "<p>15 years</p>",
+            "structureList_title2": "Item weight",
+            "structureList_text2": "<p>68 lbs</p>"
+          }
+        }
+      },
+      "block_order": [
+        "00c64ec8-610c-4d61-a640-6b26ad7dd586",
+        "4c4fea9f-f423-47d9-8b96-ade30af67cbe",
+        "e9709a61-265d-47b9-9ba3-17121829d447"
+      ],
+      "settings": {
+        "structure_img": "shopify://shop_images/57418546-9f7e-4eaa-9026-2de3e64a5fa9.jpg"
+      }
+    },
+    "ef4ea5d8-e378-4fb5-bef1-f51adf961720": {
+      "type": "jd-product-size",
+      "disabled": true,
+      "settings": {}
+    },
+    "840249ae-921a-495b-b02a-e47b2524f0da": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Instructions",
+        "heading": "Instructions",
+        "subheading": "",
+        "code": "<hr style=\" margin: 0rem 0; height:3px;\">",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 20,
+        "padding_top_mb": 60,
+        "padding_bottom_mb": 20
+      }
+    },
+    "57761bd2-9d0c-4a8e-a651-070365291ca9": {
+      "type": "custom-content",
+      "blocks": {
+        "740fc7f1-4f4b-4b90-9e71-820101785358": {
+          "type": "video",
+          "settings": {
+            "video_type": "external",
+            "video_link": "https://www.youtube.com/watch?v=23wexUWM4C4",
+            "ratio": "16:9",
+            "image": "shopify://shop_images/1._-743.jpg",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "0d1e4754-ae40-425f-8616-707e692539b0": {
+          "type": "text",
+          "settings": {
+            "title": "Installation Manual",
+            "subheading": "",
+            "text": "<p><strong>Installation Manual:</strong> <a href=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/OdinLake-A743-Installation-manual.pdf?v=1661418955\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/OdinLake-A743-Installation-manual.pdf?v=1661418955\">Download</a></p><p>You can install your {{ product.title }} chair according to this video and installation manual, if you have any installation questions please contact us at customers@odinlake.com</p>",
+            "od-icon": false,
+            "html1": "",
+            "html2": "",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "740fc7f1-4f4b-4b90-9e71-820101785358",
+        "0d1e4754-ae40-425f-8616-707e692539b0"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "gap": 70,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "2a855bd1-af06-4cb7-b58e-d250f3597ef8": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Reviews",
+        "heading": "Reviews",
+        "subheading": "",
+        "code": "<hr style=\" margin: 0rem 0; height:3px;\">",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 20,
+        "padding_top_mb": 60,
+        "padding_bottom_mb": 20
+      }
+    },
+    "170253203295be7cb8": {
+      "type": "apps",
+      "blocks": {
+        "6d198e95-118c-4c22-812b-23a518a47db6": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "6d198e95-118c-4c22-812b-23a518a47db6"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "product-details-tabs",
+    "ab67b24d-7db3-41dd-b6e0-2a19c0041fa8",
+    "bcba6450-eca9-4631-86af-0e8dde3ba74c",
+    "3a8db962-80eb-48eb-9c21-d1a00ac3f7ab",
+    "92020a03-0125-4779-b0d4-76969489eb53",
+    "88279309-7787-487d-bcca-86a836fde1e9",
+    "3971d5f7-9c84-46e8-a111-99ef50a004a8",
+    "fbd7fb5b-2b9a-40ee-8353-1a087b0195e3",
+    "b87ea3f6-1bcd-47ef-af97-03c9690a6fef",
+    "3559e629-5448-4dec-866e-5a80bfb6eb51",
+    "832e5c71-a6c3-4015-adbb-22101576c556",
+    "ab3808d2-e290-4dd3-a358-440f551a0a8d",
+    "31b05af6-fa95-4fde-93f9-cc3bf3caf5af",
+    "71e11a33-1b82-4e81-8a6d-0609dd81faf8",
+    "bdc157e6-50e3-490f-a740-87a64df85c7a",
+    "69aa2c88-28cd-4106-8e6a-5501839b403b",
+    "ef4ea5d8-e378-4fb5-bef1-f51adf961720",
+    "840249ae-921a-495b-b02a-e47b2524f0da",
+    "57761bd2-9d0c-4a8e-a651-070365291ca9",
+    "2a855bd1-af06-4cb7-b58e-d250f3597ef8",
+    "170253203295be7cb8"
+  ]
+}

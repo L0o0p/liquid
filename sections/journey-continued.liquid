@@ -5,10 +5,53 @@
 {% endcomment %}
 
 {{ 'journey-continued.css' | asset_url | stylesheet_tag }}
+<style>
+  .journey-continued {
+    position: relative;
+    overflow: hidden; /* 添加这行确保超出部分被隐藏 */
+    /* 其他现有样式... */
+  }
 
+  .journey-continued__bg-pattern-top,
+  .journey-continued__bg-pattern-bottom {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    overflow: visible; /* 改为visible允许SVG超出div边界 */
+  }
+
+  .journey-continued__bg-pattern-top {
+    top: 0;
+    height: 255px; /* 调整为您SVG的实际高度 */
+  }
+
+  .journey-continued__bg-pattern-bottom {
+    bottom: 0;
+    height: 231px; /* 调整为您SVG的实际高度 */
+  }
+
+  /* 新增：控制SVG位置的样式 */
+  .journey-continued__bg-pattern-top svg {
+    position: absolute;
+    left: -30%; /* 负值使SVG向左移动 */
+    width: 120%; /* 略微放大以确保覆盖 */
+    height: 100%;
+  }
+
+  .journey-continued__bg-pattern-bottom svg {
+    position: absolute;
+    right: -25%; /* 负值使SVG向右移动 */
+    width: 100%; /* 略微放大以确保覆盖 */
+    height: 100%;
+  }
+</style>
 <div class="journey-continued">
-  <div class="journey-continued__bg-pattern-top"></div>
-  <div class="journey-continued__bg-pattern-bottom"></div>
+  <div class="journey-continued__bg-pattern-top">
+    {% render 'wave-top-svg' %}
+  </div>
+  <div class="journey-continued__bg-pattern-bottom">
+    {% render 'wave-bottom-svg' %}
+  </div>
 
   <div class="journey-continued__container">
     <div class="journey-continued__content">
@@ -45,12 +88,14 @@
     </div>
 
     <div class="journey-continued__illustration">
-      <svg class="journey-continued__floating-element" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path fill="{{ section.settings.primary_color }}" d="M160 100c0 33.138-26.862 60-60 60s-60-26.862-60-60 26.862-60 60-60 60 26.862 60 60zm-60-20c11.046 0 20 8.954 20 20s-8.954 20-20 20-20-8.954-20-20 8.954-20 20-20z"/>
-        <circle cx="140" cy="40" r="10" fill="{{ section.settings.accent_color }}"/>
-        <circle cx="160" cy="70" r="8" fill="{{ section.settings.accent_color }}"/>
-        <circle cx="150" cy="90" r="6" fill="{{ section.settings.accent_color }}"/>
-      </svg>
+      <img
+        src="{{ 'journey.png' | asset_url }}"
+        alt="Journey Illustration"
+        class="journey-continued__image"
+        loading="lazy"
+        width="692px"
+        height="692px"
+      >
     </div>
   </div>
 </div>

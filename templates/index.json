@@ -1,10 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "media-testimonials": {
+      "type": "media-testimonials",
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "com_1.png",
+            "logo_name": "Forbes",
+            "quote": "This ergonomic chair delivers exceptional comfort and support during long working hours. The adjustable features make it easy to find your perfect position."
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "com_2.png",
+            "logo_name": "TechRadar",
+            "quote": "We've tested dozens of office chairs, and OdinLake stands out with its innovative design and premium quality materials. A top contender in the ergonomic chair market."
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "com_3.png",
+            "logo_name": "Wired",
+            "quote": "If you're looking for a chair that balances aesthetics with ergonomics, look no further. OdinLake delivers a product that's as stylish as it is comfortable."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3"
+      ],
+      "settings": {
+        "heading": "What the Globe is Saying",
+        "inactive_logo_opacity": 0.5,
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "what-next-steps": {
       "type": "what-next-steps",
-      "settings": {
-        "title": "What Next"
-      },
       "blocks": {
         "step-1": {
           "type": "step",
@@ -28,47 +77,130 @@
           }
         }
       },
-      "block_order": ["step-1", "step-2", "step-3"]
-    },
-    "media-testimonials": {
-      "type": "media-testimonials",
+      "block_order": [
+        "step-1",
+        "step-2",
+        "step-3"
+      ],
       "settings": {
-        "heading": "What the Globe is Saying",
-        "inactive_logo_opacity": 0.5,
-        "autoplay": true,
-        "autoplay_speed": 5
-      },
+        "title": "What Next"
+      }
+    },
+    "faq_qBUVeN": {
+      "type": "faq",
       "blocks": {
-        "testimonial-1": {
-          "type": "testimonial",
+        "item_PzqrPz": {
+          "type": "item",
           "settings": {
-            "logo_asset": "com_1.png",
-            "logo_name": "Forbes",
-            "quote": "This ergonomic chair delivers exceptional comfort and support during long working hours. The adjustable features make it easy to find your perfect position."
+            "header": "What is your question?",
+            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
+            "content_page": ""
           }
         },
-        "testimonial-2": {
-          "type": "testimonial",
+        "item_CYjfFD": {
+          "type": "item",
           "settings": {
-            "logo_asset": "com_2.png",
-            "logo_name": "TechRadar",
-            "quote": "We've tested dozens of office chairs, and OdinLake stands out with its innovative design and premium quality materials. A top contender in the ergonomic chair market."
+            "header": "What is your question?",
+            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
+            "content_page": ""
           }
         },
-        "testimonial-3": {
-          "type": "testimonial",
+        "item_CdNHtL": {
+          "type": "item",
           "settings": {
-            "logo_asset": "com_3.png",
-            "logo_name": "Wired",
-            "quote": "If you're looking for a chair that balances aesthetics with ergonomics, look no further. OdinLake delivers a product that's as stylish as it is comfortable."
+            "header": "What is your question?",
+            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
+            "content_page": ""
+          }
+        },
+        "item_6JjjTg": {
+          "type": "item",
+          "settings": {
+            "header": "What is your question?",
+            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
+            "content_page": ""
+          }
+        },
+        "item_XzMNkx": {
+          "type": "item",
+          "settings": {
+            "header": "What is your question?",
+            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
+            "content_page": ""
+          }
+        },
+        "item_ECmAhF": {
+          "type": "item",
+          "settings": {
+            "header": "What is your question?",
+            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
+            "content_page": ""
+          }
+        },
+        "item_XbDmwr": {
+          "type": "item",
+          "settings": {
+            "header": "What is your question?",
+            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
+            "content_page": ""
           }
         }
       },
-      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3"]
+      "block_order": [
+        "item_PzqrPz",
+        "item_CYjfFD",
+        "item_CdNHtL",
+        "item_6JjjTg",
+        "item_XzMNkx",
+        "item_ECmAhF",
+        "item_XbDmwr"
+      ],
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "image_position": "left",
+        "column_gap": 100,
+        "heading": "Frequently Asked Questions",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animations": "inherit",
+        "custom_class": ""
+      }
+    },
+    "contact_form_new_HbjYa3": {
+      "type": "contact-form-new",
+      "settings": {
+        "label_text": "Contact Us",
+        "heading_line1": "We Would Love",
+        "heading_line2": "Hear From You",
+        "name_placeholder": "Name",
+        "email_placeholder": "Email",
+        "message_placeholder": "Leave some message here",
+        "name_error": "Please enter your name",
+        "email_error": "Please enter a valid email address",
+        "message_error": "Please enter your message",
+        "submit_text": "Submit",
+        "success_message": "Thank you for your message! We'll get back to you soon."
+      }
+    },
+    "journey_continued_BrtNff": {
+      "type": "journey-continued",
+      "settings": {
+        "heading": "Journey Continued",
+        "text": "We will notify you when update",
+        "placeholder": "Email",
+        "button_text": "Subscribe",
+        "primary_color": "#2196f3",
+        "accent_color": "#ffa726",
+        "button_color": "#666666"
+      }
     }
   },
   "order": [
+    "media-testimonials",
     "what-next-steps",
-    "media-testimonials"
+    "faq_qBUVeN",
+    "contact_form_new_HbjYa3",
+    "journey_continued_BrtNff"
   ]
 }

@@ -1,6 +1,6 @@
 .journey-continued {
   position: relative;
-  min-height: 100vh;
+  min-height: 1000px;
   display: flex;
   align-items: center;
   background: #ffffff;
@@ -15,7 +15,7 @@
   left: 0;
   right: 0;
   height: 300px;
-  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='300' viewBox='0 0 1440 300' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H1440V180C1314.5 240 1100.5 300 890.5 300C680.5 300 459 240 0 180V0Z' fill='%23f0f7ff'/%3E%3C/svg%3E");
+  background-image: url("{{ 'wave-top.svg' | asset_url }}");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -28,7 +28,7 @@
   left: 0;
   right: 0;
   height: 300px;
-  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='300' viewBox='0 0 1440 300' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 300H1440V120C1314.5 60 1100.5 0 890.5 0C680.5 0 459 60 0 120V300Z' fill='%23f0f7ff'/%3E%3C/svg%3E");
+  background-image: url("{{ 'wave-buttom.svg' | asset_url }}");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -48,7 +48,7 @@
 
 .journey-continued__content {
   flex: 1;
-  max-width: 500px;
+  max-width: 1000px;
 }
 
 .journey-continued__heading {
@@ -59,14 +59,17 @@
 
 .journey-continued__text {
   font-size: 24px;
-  color: #666;
+  color:#000000;
   margin-bottom: 30px;
+    font-weight: 500;
+
 }
 
 .journey-continued__form-group {
   display: flex;
   gap: 10px;
   max-width: 400px;
+  max-height: 48px;
 }
 
 .journey-continued__input {
@@ -94,7 +97,7 @@
 
 .journey-continued__illustration {
   flex: 1;
-  max-width: 400px;
+  max-width: 692px;
   position: relative;
 }
 

@@ -1,0 +1,452 @@
+{%- liquid
+  assign animation_effect = settings.animations
+  assign animated = false
+  if animation_effect != 'none'
+    assign animated = true
+    if section.settings.animations != 'inherit'
+      assign animation_effect = section.settings.animations
+    endif
+  endif
+
+  assign container = section.settings.container
+  if container == 'w-full'
+    assign container = 'container-full'
+  endif
+
+  assign classes = 'm-section m-collapsible-section'
+  if section.settings.custom_class != blank
+    assign classes = classes | append: ' ' | append: section.settings.custom_class
+  endif
+  assign classes = classes | append: ' m-gradient' | append: ' m-color-' | append: section.settings.color_scheme
+
+  assign image = section.settings.image
+  assign image_position = section.settings.image_position
+-%}
+<style>
+  #m-collapsible--{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  .m-collapsible__wrapper {
+    display: grid;
+  }
+  .m-collapsible--image-right .m-collapsible__image {
+    order: 1;
+  }
+  @media (min-width: 768px) {
+    .m-collapsible__wrapper {
+      grid-template-columns: 1fr 1fr;
+      column-gap: var(--column-gap);
+      align-items: center;
+    }
+  }
+  @media (max-width: 767px) {
+    .m-collapsible__image {
+      margin-bottom: 24px;
+    }
+    .m-collapsible--image-right .m-collapsible__image {
+      margin-bottom: 0;
+      margin-top: 24px;
+    }
+  }
+
+  /* FAQ Specific Styles */
+  .faq-container {
+    max-width: 100%;
+    display: flex;
+    gap: 60px;
+  }
+
+  .faq-title {
+    font-size: 42px;
+    font-weight: bold;
+    flex: 0 0 400px;
+  }
+
+  .faq-list {
+    flex: 1;
+  }
+
+  .faq-item {
+    /* Removed border-bottom */
+    padding: 12px 0;
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 0;
+  }
+
+  .faq-question h3 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    line-height: 1.6;
+    color: #666;
+  }
+
+  .faq-answer.active {
+    max-height: 500px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-icon::after {
+    content: '>';
+    font-size: 20px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .faq-icon.active::after {
+    transform: rotate(-90deg);
+  }
+
+  @media (max-width: 768px) {
+    .faq-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .faq-title {
+      flex: none;
+      font-size: 32px;
+    }
+  }
+</style>
+
+{% if section.blocks.size > 0 %}
+  <section
+    id="m-collapsible--{{ section.id }}"
+    class="{{ classes }}"
+    data-section-type="m-collapsible"
+    data-section-id="{{ section.id }}"
+  >
+    <div class="{{ container }} m-section-my m-section-py">
+      {% if image != blank %}
+        <div
+          class="m-collapsible__wrapper m-collapsible--image-{{ image_position }}"
+          style="--column-gap: {{ section.settings.column_gap }}px;"
+        >
+      {% endif %}
+      
+      {% if image != blank %}
+        {% liquid
+          assign image_height = image.width | divided_by: image.aspect_ratio | round
+        %}
+        <div class="m-collapsible__image">
+          {{
+            image
+            | image_url: width: 3840
+            | image_tag:
+              loading: 'lazy',
+              width: image.width,
+              height: image_height,
+              sizes: '100vw',
+              widths: '375, 550, 750, 1100, 1500',
+              alt: image.alt
+            | escape
+          }}
+        </div>
+      {% endif %}
+      
+      {% if image != blank %}<div class="m-collapsible__content-wrapper">{% endif %}
+      
+      <!-- FAQ Style Layout -->
+      <div class="faq-container">
+        <h2 class="faq-title">{{ section.settings.heading }}</h2>
+        
+        <div class="faq-list">
+          {% for block in section.blocks %}
+            <div class="faq-item" {{ block.shopify_attributes }}>
+              <div class="faq-question" data-block-id="faq-question-{{ block.id }}">
+                <h3>{{ block.settings.header }}</h3>
+                <div class="faq-icon"></div>
+              </div>
+              <div class="faq-answer">
+                {% case block.type %}
+                  {% when 'item' %}
+                    <div class="rte">
+                      {{ block.settings.content }}
+                      {{ block.settings.content_page.content }}
+                    </div>
+                  {% when 'liquid' %}
+                    {{ block.settings.custom_liquid }}
+                  {% else %}
+                {% endcase %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- End FAQ Style Layout -->
+      
+      {% if image != blank %}</div>{% endif %}
+      {% if image != blank %}</div>{% endif %}
+    </div>
+  </section>
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('.faq-icon');
+        
+        answer.classList.toggle('active');
+        icon.classList.toggle('active');
+
+        questions.forEach(q => {
+          if (q !== question) {
+            q.nextElementSibling.classList.remove('active');
+            q.querySelector('.faq-icon').classList.remove('active');
+          }
+        });
+      });
+    });
+
+    // Support for Shopify's section rendering events
+    if (typeof Shopify !== 'undefined' && Shopify.designMode) {
+      document.addEventListener('shopify:section:load', function(event) {
+        const sectionQuestions = event.detail.sectionContainer.querySelectorAll('.faq-question');
+        
+        sectionQuestions.forEach(question => {
+          question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('.faq-icon');
+            
+            answer.classList.toggle('active');
+            icon.classList.toggle('active');
+
+            sectionQuestions.forEach(q => {
+              if (q !== question) {
+                q.nextElementSibling.classList.remove('active');
+                q.querySelector('.faq-icon').classList.remove('active');
+              }
+            });
+          });
+        });
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "Fixed width"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Stretched width"
+        },
+        {
+          "value": "container-narrow",
+          "label": "Narrow width"
+        }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "Column gap",
+      "min": 0,
+      "max": 150,
+      "step": 2,
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "FAQ Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "FAQ Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Animations"
+    },
+    {
+      "type": "select",
+      "id": "animations",
+      "label": "Visible in the view animation",
+      "default": "inherit",
+      "options": [
+        {
+          "value": "inherit",
+          "label": "Inherit global setting"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade in"
+        },
+        {
+          "value": "fade-in-up",
+          "label": "Fade in up"
+        },
+        {
+          "value": "fade-in-left",
+          "label": "Fade in left"
+        },
+        {
+          "value": "fade-in-right",
+          "label": "Fade in right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom Attributes"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom classes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Question",
+          "default": "What is your question?"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Answer",
+          "default": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>"
+        },
+        {
+          "type": "page",
+          "id": "content_page",
+          "label": "Or use content from page"
+        }
+      ]
+    },
+    {
+      "type": "liquid",
+      "name": "Custom liquid",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Question",
+          "default": "Custom question with liquid"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom liquid"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Section",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

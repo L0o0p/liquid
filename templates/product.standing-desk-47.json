@@ -1,1 +1,1495 @@
-{"sections":{"breadcrumb":{"type":"breadcrumb","settings":{"container":"container-fluid","text_alignment":"left","hide_current":false,"hide_on_mb":false,"animations":"inherit"}},"main":{"type":"main-product","blocks":{"custom_text_mCPTqX":{"type":"custom_text","settings":{"content":"<p>⚡<strong>Flash Sale: <\/strong>lowest price since launch<\/p>"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{"show_saving":true,"sale_badge_type":"fixed_amount"}},"90dc1f7c-db93-4484-81bd-f9329e3af95d":{"type":"shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e","settings":{"data_key":"credit-promotion-badge","locale_option":"geolocation","locale_fallback":"","theme":"light","topPadding":"0","bottomPadding":"0","messagePrefix":""}},"variant_picker":{"type":"variant_picker","settings":{"size_title":"Size"}},"foxkit_sales_boost_stock_countdown_htAFLX":{"type":"shopify:\/\/apps\/foxkit-sales-boost\/blocks\/stock-countdown\/13f41957-6b79-47c1-99a2-e52431f06fff","settings":{"product":"{{product}}"}},"buy_buttons":{"type":"buy_buttons","settings":{"show_quantity_selector":true,"show_atc_button":true,"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"foxkit_sales_boost_countdown_timer_yHKczx":{"type":"shopify:\/\/apps\/foxkit-sales-boost\/blocks\/countdown-timer\/13f41957-6b79-47c1-99a2-e52431f06fff","settings":{"product":"{{product}}"}},"custom_liquid_4B78TX":{"type":"custom_liquid","disabled":true,"settings":{"custom_liquid":"<div> <span style=\"font-size:16px; \">🌳 One order placed, One tree planted<\/span> \n  <span style=\"font-size:16px\" ><a href=\"https:\/\/odinlake.myshopify.com\/pages\/plant-a-tree\"><u> Learn more<\/u><\/a><\/span><\/div>"}},"b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c":{"type":"shipping","settings":{"show_delivery_times":true,"deliver_text":"Estimated Delivery:","deliver_days":"5","date_format":"%b %d","show_shipping_text":true,"shipping_text":"<p><strong>Free Shipping & Returns: <\/strong>On all orders<\/p>"}},"a7a72482-beac-4db8-a4ca-15072a0840a0":{"type":"custom_liquid","settings":{"custom_liquid":"<style>\n.odin-module {\njustify-content: space-between;\nalign-items: center!important;\n\n }\n.odin-block {\nflex: 1;\ntext-align: center;\npadding: 1px;\nmargin: 0px;   \n}\n.icons-odin-row, .text-odin-row {\n display: flex;\n justify-content: space-between;\n width: 100%;\n}\n .odin-icon img {\n height: 40px;\n margin:0 auto;\n }\n <\/style>\n<div class=\"odin-module\">\n <div class=\"icons-odin-row\">\n <div class=\"odin-block odin-icon\">\n <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/30_Day_Price_Guarantee.png?v=1693965849\" alt=\"30 Days Price Guarantee\">\n <\/div>\n <div class=\"odin-block odin-icon\">\n <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/30_Day_Free_Return.png?v=1693964226\" alt=\"30 Days Free Return\">\n <\/div>\n <div class=\"odin-block odin-icon\">\n <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/Free-shipping.png?v=1693964226\" alt=\"Free Shipping\">\n <\/div>\n <\/div>\n <div class=\"text-odin-row\">\n <div class=\"odin-block\">\n <p>30 Days<br>Price Guarantee<\/p>\n <\/div>\n <div class=\"odin-block\">\n <p>30 Days<br>Free Return<\/p>\n <\/div>\n <div class=\"odin-block\">\n <p>Super Fast<br>Free shipping<\/p>\n <\/div>\n <\/div>\n<\/div>"}},"62aed578-bf73-4c71-81d1-3ffc43d0c306":{"type":"custom_liquid","settings":{"custom_liquid":"<div style=\"padding:20px; background:#f5f5f5;\">\n<div class=\"logo-lockup\" target=\"_blank\">\n    <img class=\"header-lockupLogo\" src=\"https:\/\/a300.stripecdn.com\/climate-statics-srv\/assets\/img\/climate_logo-7e2de8ca7243c666c6b0.svg\" height=\"22\" width=\"22\">\n    <p>OdinLake is Stripe Climate member<\/p> \n<\/div>\n<p style=\"margin-top: 0px;\">We contribute 0.25% of our revenue to carbon removal. <a href=\"https:\/\/climate.stripe.com\/HIsCPv\"><u>Learn More<\/u><\/a><\/p>\n<style>\n  div.logo-lockup {\n    align-items: center;\n    display: flex;\n}\n.header-lockupLogo {\n    margin-right: 6px;\n}\n<\/style>\n<\/div>"}},"addons":{"type":"addons","settings":{"show_atcp":false,"show_ask_a_question":true,"show_social":true}},"custom_liquid_cPPGJJ":{"type":"custom_liquid","disabled":true,"settings":{"custom_liquid":"<div><img src=\"https:\/\/cdn.shopifycdn.net\/s\/files\/1\/0603\/7431\/9272\/files\/google-store.svg?v=1710492872\" style=\"height: 16px;width: 16px;vertical-align:middle;display:inline;\"> <span style=\"font-size:16px; \"> Top Quality Store 4.9\/5 <\/span> \n  <span style=\"font-size:12px\" ><a href=\"https:\/\/customerreviews.google.com\/v\/merchant?q=odinlake.com&c=US&v=19&hl=en\"><u>Certified by Google<\/u><\/a><\/span><\/div>"}},"e8ae8341-2909-4728-b3a1-62456e37964f":{"type":"trust_badge","settings":{"show_trustpilot":true,"trust_badges_text":"<p>Guarantee safe & secure checkout<\/p>","trust_badges_image_width":"100%","position":"below"}}},"block_order":["custom_text_mCPTqX","title","price","90dc1f7c-db93-4484-81bd-f9329e3af95d","variant_picker","foxkit_sales_boost_stock_countdown_htAFLX","buy_buttons","foxkit_sales_boost_countdown_timer_yHKczx","custom_liquid_4B78TX","b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c","a7a72482-beac-4db8-a4ca-15072a0840a0","62aed578-bf73-4c71-81d1-3ffc43d0c306","addons","custom_liquid_cPPGJJ","e8ae8341-2909-4728-b3a1-62456e37964f"],"custom_css":[".main-product__block {margin-top: 15px;}",".main-product__block {margin-top: 10px;}"],"settings":{"container":"container-fluid","layout":"layout-6","show_atwl":false,"enable_history_state":false,"enable_variant_group_images":true,"disable_selected_variant_default":false,"show_featured_media":true,"show_zoom_button":false,"enable_video_autoplay":true,"show_nav_media_mobile":true,"show_pagination_mobile":false,"use_sticky_atc":false,"use_sticky_atc_on_mobile":false,"enable_dynamic_checkout":false,"sticky_atc_wishtlist":false,"sticky_atc_compare":false}},"product-details-tabs":{"type":"product-details-tabs","blocks":{"description":{"type":"description","settings":{"header":"Product description"}},"tab":{"type":"tab","settings":{"header":"Shipping & Return","content":"<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>","content_page":""}},"863844cf-2363-4638-9738-9fdef938678c":{"type":"tab","settings":{"header":"Shipping & Return","content":"<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>","content_page":""}}},"block_order":["description","tab","863844cf-2363-4638-9738-9fdef938678c"],"disabled":true,"settings":{"container":"container","color_scheme":"","default_open":false,"padding_top":0,"padding_bottom":0,"custom_class":"","animations":"inherit"}},"ab67b24d-7db3-41dd-b6e0-2a19c0041fa8":{"type":"odinlake-nav","blocks":{"929fa863-ee60-44fa-b456-086682bc46d9":{"type":"tabList","settings":{"id":"Overview","title":"Overview"}},"969a4275-fc5c-4d64-a4cd-4aa69b11c48a":{"type":"tabList","settings":{"id":"Details","title":"Details"}},"0395baad-38ec-451d-a7de-99141191f970":{"type":"tabList","settings":{"id":"Specs","title":"Specs"}},"82eba803-5c28-4f60-b14e-9c2f51647862":{"type":"tabList","settings":{"id":"Instructions","title":"Instructions"}},"b97da34e-2dfb-44cd-bd6c-0219f3eb366d":{"type":"tabList","disabled":true,"settings":{"id":"Reviews","title":"Reviews"}}},"block_order":["929fa863-ee60-44fa-b456-086682bc46d9","969a4275-fc5c-4d64-a4cd-4aa69b11c48a","0395baad-38ec-451d-a7de-99141191f970","82eba803-5c28-4f60-b14e-9c2f51647862","b97da34e-2dfb-44cd-bd6c-0219f3eb366d"],"settings":{"container":"container-fluid","bg_color":"#f5f5f5"}},"bcba6450-eca9-4631-86af-0e8dde3ba74c":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Overview","heading":"","subheading":"","code":"","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":31,"padding_bottom":27,"padding_top_mb":30,"padding_bottom_mb":20}},"b87ea3f6-1bcd-47ef-af97-03c9690a6fef":{"type":"custom-content","blocks":{"536623c6-f850-4dd7-97f2-9039ebac15bf":{"type":"video","settings":{"video_type":"shopify","shopify_video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2ca8ea282541484db24045474360be83.mp4","shopify_video":"shopify:\/\/files\/videos\/743-wirecontrol-video.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}},"7f967583-8d43-4fcd-b2f9-eea196a53524":{"type":"text","settings":{"title":"Full Adjustments & Full Support","subheading":"","text":"<p>Customizable Comfort & Ergonomic Movement<\/p>","od-icon":true,"html1":"<strong>6 Adjustments<\/strong>\n<p>Ergonomic Setting<\/p>","html2":"<strong>UP TO 135°<\/strong>\n<p>Wide Range<\/p>","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"large","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"odinlake_order_1","animations":"inherit"}},"d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/A_1-PC.jpg","link":"","width":"50%","alignment":"center","block_custom_class":"odinlake_order_0","animations":"inherit"}}},"block_order":["536623c6-f850-4dd7-97f2-9039ebac15bf","7f967583-8d43-4fcd-b2f9-eea196a53524","d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73"],"disabled":true,"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","color_scheme":"","content_color_scheme":"","enable_parallax":false,"parallax_direction":"vertical","gap":30,"gap_mobile":33,"use_scroll_mobile":false,"padding_top":100,"padding_bottom":100,"custom_class":""}},"3a8db962-80eb-48eb-9c21-d1a00ac3f7ab":{"type":"video","settings":{"container":"container-fluid","color_scheme":"","video_type":"external","video_link":"https:\/\/youtu.be\/Ga2uBTLveYA","ratio":"16:9","image":"shopify:\/\/shop_images\/maxresdefault_10.jpg","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","width":"1200px","autoplay":false,"loop":false,"muted":false,"show_controls":false,"padding_top":48,"padding_bottom":54,"custom_class":"","animations":"fade-in"}},"92020a03-0125-4779-b0d4-76969489eb53":{"type":"icon-box","blocks":{"template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-1":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_1.png","image_by_url":"","title":"","description":"<p>Height Adjustable Backrest<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-2":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_2.png","image_by_url":"","title":"","description":"<p>Dynamic Lumbar Support<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-3":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_4.png","image_by_url":"","title":"","description":"<p>3D Adjustbale Armrest<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"3af9049c-2155-4d0f-94df-789fc1e4f86f":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_3.png","image_by_url":"","title":"","description":"<p>135° Recline Angle<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"eb3e0c81-95ae-4daa-b5bf-b1029c589b15":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_5.png","image_by_url":"","title":"","description":"<p>2D Adjustable Headrest<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"2e1510cf-09f9-4dce-baa8-84b63f00c3e4":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/odinlake-icon_6.png","image_by_url":"","title":"","description":"<p>Depth Adjustable Seat<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}}},"block_order":["template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-1","template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-2","template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-3","3af9049c-2155-4d0f-94df-789fc1e4f86f","eb3e0c81-95ae-4daa-b5bf-b1029c589b15","2e1510cf-09f9-4dce-baa8-84b63f00c3e4"],"disabled":true,"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","color_scheme":"","item_per_row":6,"item_gap":16,"item_gap_mobile":6,"card_color_scheme":"","card_style":"vertical","image_max_width":"50px","content_alignment":"center","hover_effect":"scaling-up","enable_slider":false,"show_pagination":false,"show_navigation":false,"use_scroll_mobile":false,"use_grid_column_mb":true,"padding_top":38,"padding_bottom":28,"custom_class":"","animations":"inherit"}},"88279309-7787-487d-bcca-86a836fde1e9":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Details","heading":"Details","subheading":"","code":"<hr style=\" margin: 0rem 0; height:3px; \">","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":80,"padding_bottom":23,"padding_top_mb":41,"padding_bottom_mb":13}},"fbd7fb5b-2b9a-40ee-8353-1a087b0195e3":{"type":"custom-content","blocks":{"100e9b49-40b4-4f5c-ba79-88ff896f1029":{"type":"video","settings":{"video_type":"shopify","shopify_video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/07758e13b0d0414091740a35c22b7d3d.mp4","shopify_video":"shopify:\/\/files\/videos\/odinlake-electric-standing-desk-s450-rebound-when-encountering-resistance.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"odinlake_order_0","animations":"inherit"}},"a88e5c36-4773-434d-a82c-35a21028901c":{"type":"text","settings":{"title":"Multi-protection Alerts","subheading":"","text":"<p>Experience the pinnacle of workspace safety with the OdinLake Standing Desk S450. Equipped with cutting-edge collision, overload, and overheating protections, this desk ensures a secure and efficient work environment. Embrace a worry-free, productive workday with the S450's advanced safety features.<\/p>","od-icon":true,"html1":"<p><strong>Crash protection<\/strong><\/p>","html2":"<p><strong>Overload protection<\/strong><\/p>","html3":"<p><strong>Over hot protection<\/strong><\/p>","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"odinlake_order_1","animations":"inherit"}},"1bc6721a-ea2a-4f88-90a8-60ec9570cc21":{"type":"text","settings":{"title":"Heavy-duty Steel Construction","subheading":"","text":"<p>S450 masterfully crafted with heavy-duty steel for unmatched durability and stability. Designed to endure, this desk stands as a testament to robust construction, meeting the demands of dynamic work environments with ease and reliability.<\/p>","od-icon":true,"html1":"<p><strong>Load bearing<\/strong><\/p>\n<p>275 lbs<\/p>","html2":"<p><strong>Legs<\/strong><\/p>\n<p>3-section legs<\/p>","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"odinlake_order_3","animations":"inherit"}},"fecc26b8-f306-4046-9b1a-f47ef3184598":{"type":"video","settings":{"video_type":"shopify","shopify_video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c8cfcc732b1b4a27a5603b0a33448b90.mp4","shopify_video":"shopify:\/\/files\/videos\/odinlake-electric-standing-desk-s450-frame.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"odinlake_order_2","animations":"inherit"}},"5b124e87-9fb4-4432-920f-8f00e8ce2ef1":{"type":"video","settings":{"video_type":"shopify","shopify_video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fcb3b0850eb74f4f8ce46206df2fd610.mp4","shopify_video":"shopify:\/\/files\/videos\/odinlake-electric-standing-desk-s450-led-controller.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"odinlake_order_4","animations":"inherit"}},"7012a69f-1017-4c29-b8d3-875f8baa94cf":{"type":"text","settings":{"title":"Advanced Keypad","subheading":"","text":"<p>Elevate your workspace with the OdinLake Standing Desk S450, featuring a state-of-the-art LED backpad keyboard. This intuitive interface offers three preset height options for effortless customization, along with a silent mode setting for undisturbed work. Experience the perfect blend of technology and ergonomics, tailored for your comfort and efficiency.<\/p>","od-icon":true,"html1":"<p><strong>LED backlight<\/strong><\/p>","html2":"<p><strong>Silent design<\/strong><\/p>","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"odinlake_order_5","animations":"inherit"}}},"block_order":["100e9b49-40b4-4f5c-ba79-88ff896f1029","a88e5c36-4773-434d-a82c-35a21028901c","1bc6721a-ea2a-4f88-90a8-60ec9570cc21","fecc26b8-f306-4046-9b1a-f47ef3184598","5b124e87-9fb4-4432-920f-8f00e8ce2ef1","7012a69f-1017-4c29-b8d3-875f8baa94cf"],"custom_css":[],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","color_scheme":"scheme-cee058e4-58e3-46aa-9af9-219dadc79066","content_color_scheme":"scheme-cee058e4-58e3-46aa-9af9-219dadc79066","enable_parallax":false,"parallax_direction":"vertical","gap":70,"gap_mobile":33,"use_scroll_mobile":false,"padding_top":100,"padding_bottom":100,"custom_class":""}},"3971d5f7-9c84-46e8-a111-99ef50a004a8":{"type":"custom-content","blocks":{"ce09aa30-851f-4e75-bda7-a91d4f14bc68":{"type":"video","settings":{"video_type":"shopify","shopify_video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2ca8ea282541484db24045474360be83.mp4","shopify_video":"shopify:\/\/files\/videos\/743-wirecontrol-video.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}},"87978908-0a8c-4a0d-a8d2-f727e562f077":{"type":"text","settings":{"title":"WireControl™ Mechanism","subheading":"","text":"<p>Our chair revolutionizes adjustability with a unique control method inspired by bicycle brake lines. This innovative design eliminates the hassle of searching for adjustment levers. Now, you can easily make adjustments without bending over, offering a seamless, labor-saving experience. It's all about convenience and efficiency, tailored for the modern user.<\/p>","od-icon":true,"html1":"<p><strong>Seat Height<\/strong><\/p>\n<p>18.5-22.5 inches<\/p>","html2":"<p><strong>Backrest Tilt<\/strong><\/p>\n<p><\/p><p>90°-135°<\/p>","html3":"<p><strong>Seat Depth<\/strong><\/p>\n<p><\/p><p>2 inches<\/p>","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"","animations":"inherit"}}},"block_order":["ce09aa30-851f-4e75-bda7-a91d4f14bc68","87978908-0a8c-4a0d-a8d2-f727e562f077"],"disabled":true,"custom_css":[],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","color_scheme":"","content_color_scheme":"","enable_parallax":false,"parallax_direction":"vertical","gap":70,"gap_mobile":33,"use_scroll_mobile":false,"padding_top":50,"padding_bottom":100,"custom_class":""}},"3559e629-5448-4dec-866e-5a80bfb6eb51":{"type":"custom-content","blocks":{"88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4":{"type":"text","settings":{"title":"FlexBreath™ Mesh","subheading":"","text":"<p>Experience the ultimate in comfort and durability with our Korean mesh material. Designed for breathability, it ensures you stay comfortable even during long hours of use. Remarkably long-lasting, this premium mesh maintains its form and function for up to 15 years, offering you consistent comfort and support year after year. It's the perfect blend of style, comfort, and longevity for your seating needs.<\/p>","od-icon":false,"html1":"<p><strong>Seat Height<\/strong><\/p>\n<p>18.5-22.5 inches<\/p>","html2":"<p><strong>Backrest Tilt<\/strong><\/p>\n<p><\/p><p>90°-135°<\/p>","html3":"<p><strong>Seat Depth<\/strong><\/p>\n<p><\/p><p>2 inches<\/p>","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"white","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"odinlake_order_1","animations":"inherit"}},"0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/odinlake-ergo-plus-743-product-page-1024V1-mesh.jpg","link":"","width":"50%","alignment":"center","block_custom_class":"odinlake_order_0","animations":"inherit"}},"cf0016ed-90c7-4bd5-b115-337b1839a82f":{"type":"video","disabled":true,"settings":{"video_type":"shopify","shopify_video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2ca8ea282541484db24045474360be83.mp4","shopify_video":"shopify:\/\/files\/videos\/743-wirecontrol-video.mp4","video_link":"","ratio":"16:9","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":true,"loop":true,"muted":true,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}}},"block_order":["88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4","0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee","cf0016ed-90c7-4bd5-b115-337b1839a82f"],"disabled":true,"custom_css":["div,p {color: #fff !important;}"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","color_scheme":"","content_color_scheme":"","enable_parallax":false,"parallax_direction":"vertical","gap":70,"gap_mobile":33,"use_scroll_mobile":false,"padding_top":100,"padding_bottom":100,"custom_class":""}},"832e5c71-a6c3-4015-adbb-22101576c556":{"type":"icon-box","blocks":{"template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-1":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/A_6-2.jpg","image_by_url":"","title":"Four Gear Reclining Freedom","description":"<p>OdinLake 518 presents a four-gear reclining system, granting users the autonomy to define their comfort. Seamlessly transition between upright work modes or reclined relaxation, with settings reaching up to 135 degrees. Adapt to any task or break with this tailored back-angle flexibility.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-2":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/A_6-1.jpg","image_by_url":"","title":"Universal Height Customization","description":"<p>With the 518, achieve the perfect seating elevation using its 4-inch height adjustment range. Designed to cater to a broad spectrum of users, it ensures an ergonomically sound position for most individuals. Fine-tune your seating height for optimal comfort and posture alignment.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-3":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/A_7_74ab3f31-00fd-4bce-8838-9838e404e49a.jpg","image_by_url":"","title":"3D Customization Armrest","description":"<p>Elevate your arm support with the OdinLake 518's 3D armrest. It offers dynamic adjustability in three dimensions: up and down, rotation, and back and forth. This feature ensures personalized comfort, allowing users to find the perfect arm position for any task or relaxation moment.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"65d3a0bb-8fdc-4600-b43f-ef52a72ced01":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/A_5-1_565dd12b-45f5-4133-8010-622fe9c6c884.jpg","image_by_url":"","title":"5-Gear Adjustable Backrest","description":"<p>The OdinLake 518 boasts a backrest with five distinct adjustment settings over a 2.7-inch range. This allows users to pinpoint their preferred support level, catering to diverse comfort needs. Tailor your sitting experience with precision, ensuring optimal posture and comfort throughout the day.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}},"4a921b0a-1b44-45f7-a815-a6eee4c620c5":{"type":"iconbox","settings":{"image":"shopify:\/\/shop_images\/A_5-2_00cef637-93a9-4e42-b483-6975939e6b2b.jpg","image_by_url":"","title":"Seat Cushion Adjustment","description":"<p>Optimize your seating depth with the OdinLake 518's front and rear seat cushion adjustment. This feature allows users to slide the cushion to achieve the ideal leg support, accommodating varying leg lengths and seating preferences. Tailored comfort ensures reduced leg fatigue during extended periods.<\/p>","link":"","button_label":"","button_link":"","button_style":"m-button--link","button_size":""}}},"block_order":["template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-1","template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-2","template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-3","65d3a0bb-8fdc-4600-b43f-ef52a72ced01","4a921b0a-1b44-45f7-a815-a6eee4c620c5"],"disabled":true,"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","color_scheme":"","item_per_row":3,"item_gap":30,"item_gap_mobile":10,"card_color_scheme":"","card_style":"vertical","image_max_width":"","content_alignment":"start","hover_effect":"none","enable_slider":true,"show_pagination":true,"show_navigation":true,"use_scroll_mobile":true,"use_grid_column_mb":false,"padding_top":50,"padding_bottom":50,"custom_class":"","animations":"inherit"}},"31b05af6-fa95-4fde-93f9-cc3bf3caf5af":{"type":"custom-content","blocks":{"template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-image-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/OdinLake-Standing-Desk-S450-product-page-1024V1-motor4-1.jpg","link":"","width":"50%","alignment":"center","block_custom_class":"","animations":"inherit"}},"template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-text-1":{"type":"text","settings":{"title":"Powerful Dual Motors for Superior Performance","subheading":"","text":"<p>These powerful engines provide an impressive lifting capacity of 275lbs, ensuring smooth, reliable adjustments for a wide range of setups. Coupled with a promise of long service life, the S450's motor system is designed for both strength and durability, making it an ideal choice for dynamic and demanding work environments.<\/p>","od-icon":true,"html1":"<strong>Long Life<\/strong>\n<p>Up to 15 years<\/p>","html2":"<strong>Load<\/strong>\n<p>800 N x 2<\/p>","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"white","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"","animations":"inherit"}}},"block_order":["template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-image-1","template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-text-1"],"custom_css":["div,p {color: #fff !important;}"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","color_scheme":"scheme-5c9c1015-f301-42c5-9629-a7cbf0ebabbe","content_color_scheme":"scheme-5c9c1015-f301-42c5-9629-a7cbf0ebabbe","enable_parallax":false,"parallax_direction":"vertical","gap":30,"gap_mobile":16,"use_scroll_mobile":false,"padding_top":50,"padding_bottom":50,"custom_class":""}},"69b7c485-a28e-4b57-8df9-bd11029536e3":{"type":"custom-content","blocks":{"template--16571974353064__69b7c485-a28e-4b57-8df9-bd11029536e3-text-1":{"type":"text","settings":{"title":"Diverse Colors, Premium Quality","subheading":"","text":"<p>OdinLake electric standing desk S450 provides 4 colors desktop. The desktop of S450 is 1\" thick, durable and easy to clean.<\/p>","od-icon":true,"html1":"<strong>Colors<\/strong>\n<p>4 varieties<\/p>","html2":"<strong>Desk Thick<\/strong>\n<p>1 inch<\/p>","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"odinlake_order_0","animations":"inherit"}},"template--16571974353064__69b7c485-a28e-4b57-8df9-bd11029536e3-image-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/OdinLake-Standing-Desk-S450-product-page-1024V1-deaktop-color1_488c48d7-2272-4b1a-846c-25c0ed04b092.jpg","link":"","width":"50%","alignment":"center","block_custom_class":"odinlake_order_1","animations":"inherit"}}},"block_order":["template--16571974353064__69b7c485-a28e-4b57-8df9-bd11029536e3-text-1","template--16571974353064__69b7c485-a28e-4b57-8df9-bd11029536e3-image-1"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container-fluid","color_scheme":"","content_color_scheme":"","enable_parallax":false,"parallax_direction":"vertical","gap":30,"gap_mobile":16,"use_scroll_mobile":false,"padding_top":50,"padding_bottom":50,"custom_class":""}},"ab3808d2-e290-4dd3-a358-440f551a0a8d":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Specs","heading":"Specs","subheading":"","code":"<hr style=\" margin: 0rem 0; height:3px;\">","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":80,"padding_bottom":0,"padding_top_mb":60,"padding_bottom_mb":0}},"71e11a33-1b82-4e81-8a6d-0609dd81faf8":{"type":"jd-structure-tab","blocks":{"f107fe56-75e4-4252-93fd-2cfda8fc5dc0":{"type":"tabList","settings":{"id":"1","title":"Parts"}},"4239c4f2-11d4-4e46-b0d6-fc4038921adc":{"type":"tabList","settings":{"id":"2","title":"Frame Specs"}},"63e15df5-4a38-4f75-b46a-af43b4f60cdf":{"type":"tabList","settings":{"id":"3","title":"Desktop Specs"}}},"block_order":["f107fe56-75e4-4252-93fd-2cfda8fc5dc0","4239c4f2-11d4-4e46-b0d6-fc4038921adc","63e15df5-4a38-4f75-b46a-af43b4f60cdf"],"settings":{"id":"","header":""}},"bdc157e6-50e3-490f-a740-87a64df85c7a":{"type":"jd-product-material","blocks":{"e915be50-2596-4d1b-a900-e20e21dc7018":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/OdinLake-Standing-Desk-S450-product-page-1024V1-part-2.jpg","structureList_title":"Desk Top","structureList_text":"<p>Warp-proof MDF wood<\/p>","structureList_title1":"Thick","structureList_text1":"<p>1 Inch<\/p>","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"top","range":39,"m_location":"top","m_range":39,"location1":"left","range1":40,"m_location1":"left","m_range1":40}},"35a73c62-f7ac-4aff-a42a-ae640007d658":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/OdinLake-Standing-Desk-S450-product-page-1024V1-part-1.jpg","structureList_title":"Leg","structureList_text":"<p>3 Stage Leg<\/p>","structureList_title1":"","structureList_text1":"","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"top","range":70,"m_location":"top","m_range":70,"location1":"left","range1":25,"m_location1":"left","m_range1":25}},"717b3e07-f515-493d-93bd-266715bf49ac":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/OdinLake-Standing-Desk-S450-product-page-1024V1-part-4.jpg","structureList_title":"Motor","structureList_text":"<p>Dual<\/p>","structureList_title1":"Load","structureList_text1":"<p>800 N x 2<\/p>","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"bottom","range":59,"m_location":"bottom","m_range":43,"location1":"right","range1":32,"m_location1":"right","m_range1":32}},"98044adc-02b9-4c02-b809-06f19a98f34c":{"type":"structureList","settings":{"structureList_img":"shopify:\/\/shop_images\/OdinLake-Standing-Desk-S450-product-page-1024V1-part-3.jpg","structureList_title":"Keypad","structureList_text":"<p>3 preset heights<\/p>","structureList_title1":"","structureList_text1":"","structureList_title2":"","structureList_text2":"","background":"#0075ea","outside":"#0075ea","location":"bottom","range":54,"m_location":"bottom","m_range":54,"location1":"right","range1":20,"m_location1":"right","m_range1":20}}},"block_order":["e915be50-2596-4d1b-a900-e20e21dc7018","35a73c62-f7ac-4aff-a42a-ae640007d658","717b3e07-f515-493d-93bd-266715bf49ac","98044adc-02b9-4c02-b809-06f19a98f34c"],"settings":{"structure_img":"shopify:\/\/shop_images\/1_3.jpg","structure_img1":"shopify:\/\/shop_images\/1_3.jpg"}},"69aa2c88-28cd-4106-8e6a-5501839b403b":{"type":"jd-product-weight","blocks":{"00c64ec8-610c-4d61-a640-6b26ad7dd586":{"type":"structureList","settings":{"structureList_title":"Lifting speed","structureList_text":"<p>1.2\"\/sec<\/p>","structureList_title1":"Lifting capacity","structureList_text1":"<p>275 lbs<\/p>","structureList_title2":"Noise level","structureList_text2":"<p>50dB<\/p>"}},"4c4fea9f-f423-47d9-8b96-ade30af67cbe":{"type":"structureList","settings":{"structureList_title":"Applicable desktop","structureList_text":"<p>43\"-72\"<\/p>","structureList_title1":"Frame foot width","structureList_text1":"<p>25.4\"<\/p>","structureList_title2":"Material","structureList_text2":"<p>SPCC steel<\/p>"}}},"block_order":["00c64ec8-610c-4d61-a640-6b26ad7dd586","4c4fea9f-f423-47d9-8b96-ade30af67cbe"],"settings":{"structure_img":"shopify:\/\/shop_images\/odinlake-standing-desk-specs_933f4664-5b02-4dc9-b79b-5f06cb0787ff.jpg"}},"ef4ea5d8-e378-4fb5-bef1-f51adf961720":{"type":"jd-product-size","blocks":{"db802867-7512-4fcc-a927-64ca64814f00":{"type":"structureList","settings":{"structureList_title":"Dimensions","structureList_text":"<p>47\"L x 24\"W x 1\"H<br\/>55\"L x 27.5\"W x 1\"H<br\/>60\"L x 30\"W x 1\"H<\/p>","structureList_title1":"Material","structureList_text1":"<p>Warp-proof MDF wood<\/p>","structureList_title2":"Shipping Weight","structureList_text2":"<p>47\"x24\" : 30 lbs<br\/>55\"x27.5\" : 41 lbs<br\/>60\"x30\" : 47 lbs<\/p>","background":"#0075ea","outside":"#0075ea","location":"top","range":0,"location1":"left","range1":0}}},"block_order":["db802867-7512-4fcc-a927-64ca64814f00"],"settings":{"structure_img":"shopify:\/\/shop_images\/OdinLake_Standing_Desktop_Size_56ad1055-291e-49e1-91e6-18c0697c59b4.jpg"}},"840249ae-921a-495b-b02a-e47b2524f0da":{"type":"odinlake-title","settings":{"container":"container-fluid","point":"Instructions","heading":"Instructions","subheading":"","code":"<hr style=\" margin: 0rem 0; height:3px;\">","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":80,"padding_bottom":20,"padding_top_mb":60,"padding_bottom_mb":20}},"57761bd2-9d0c-4a8e-a651-070365291ca9":{"type":"custom-content","blocks":{"740fc7f1-4f4b-4b90-9e71-820101785358":{"type":"video","settings":{"video_type":"external","shopify_video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2ca8ea282541484db24045474360be83.mp4","video_link":"https:\/\/www.youtube.com\/watch?v=2sHV3gRmP4o","ratio":"16:9","image":"shopify:\/\/shop_images\/OdinLake_Standing_Desk_S450_Assembly_Video_Cover.jpg","video_title":"","text_size":"medium","text_color":"white","play_style":"solid","play_size":"medium","autoplay":false,"loop":false,"muted":false,"show_controls":false,"width":"50%","alignment":"start","block_custom_class":"","animations":"inherit"}},"0d1e4754-ae40-425f-8616-707e692539b0":{"type":"text","settings":{"title":"Installation Manual","subheading":"","text":"<p><strong>Installation Manual:<\/strong> <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/OdinLake_Standing_Desk_S450_Installation_Manual_01152024.pdf?v=1705307432\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0603\/7431\/9272\/files\/OdinLake_Standing_Desk_S450_Installation_Manual_01152024.pdf?v=1705307432\">Download<\/a><\/p><p>You can install your {{ product.title }} according to this video and installation manual, if you have any installation questions please contact us at customers@odinlake.com<\/p>","od-icon":false,"html1":"","html2":"","html3":"","width":"50%","alignment":"center","align_text":"left","text_size":"medium","text_color":"black","button_label":"","button_link":"","button_style":"m-button--primary","button_size":"","block_custom_class":"","animations":"inherit"}}},"block_order":["740fc7f1-4f4b-4b90-9e71-820101785358","0d1e4754-ae40-425f-8616-707e692539b0"],"settings":{"heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","container":"container","color_scheme":"","content_color_scheme":"","enable_parallax":false,"parallax_direction":"vertical","gap":70,"gap_mobile":16,"use_scroll_mobile":false,"padding_top":50,"padding_bottom":50,"custom_class":""}},"2a855bd1-af06-4cb7-b58e-d250f3597ef8":{"type":"odinlake-title","disabled":true,"settings":{"container":"container-fluid","point":"Reviews","heading":"Reviews","subheading":"","code":"<hr style=\" margin: 0rem 0; height:3px;\">","description":"","description2":"","header_alignment":"left","bg_color":"","padding_top":80,"padding_bottom":20,"padding_top_mb":60,"padding_bottom_mb":20}},"170253203295be7cb8":{"type":"apps","blocks":{"6d198e95-118c-4c22-812b-23a518a47db6":{"type":"shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723","settings":{"animation":true,"tags_exclude":"","tags_include":"","search":"","linkify":true,"use_metafields":false,"sku_tagtype":"sku"}}},"block_order":["6d198e95-118c-4c22-812b-23a518a47db6"],"disabled":true,"settings":{"heading":"","heading_size":"h3","subheading":"","header_alignment":"center","container":"container-fluid","background_color":"","padding_top":50,"padding_bottom":50,"custom_class":""}}},"order":["breadcrumb","main","product-details-tabs","ab67b24d-7db3-41dd-b6e0-2a19c0041fa8","bcba6450-eca9-4631-86af-0e8dde3ba74c","b87ea3f6-1bcd-47ef-af97-03c9690a6fef","3a8db962-80eb-48eb-9c21-d1a00ac3f7ab","92020a03-0125-4779-b0d4-76969489eb53","88279309-7787-487d-bcca-86a836fde1e9","fbd7fb5b-2b9a-40ee-8353-1a087b0195e3","3971d5f7-9c84-46e8-a111-99ef50a004a8","3559e629-5448-4dec-866e-5a80bfb6eb51","832e5c71-a6c3-4015-adbb-22101576c556","31b05af6-fa95-4fde-93f9-cc3bf3caf5af","69b7c485-a28e-4b57-8df9-bd11029536e3","ab3808d2-e290-4dd3-a358-440f551a0a8d","71e11a33-1b82-4e81-8a6d-0609dd81faf8","bdc157e6-50e3-490f-a740-87a64df85c7a","69aa2c88-28cd-4106-8e6a-5501839b403b","ef4ea5d8-e378-4fb5-bef1-f51adf961720","840249ae-921a-495b-b02a-e47b2524f0da","57761bd2-9d0c-4a8e-a651-070365291ca9","2a855bd1-af06-4cb7-b58e-d250f3597ef8","170253203295be7cb8"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "settings": {
+        "container": "container-fluid",
+        "text_alignment": "left",
+        "hide_current": false,
+        "hide_on_mb": false,
+        "animations": "inherit"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_text_mCPTqX": {
+          "type": "custom_text",
+          "settings": {
+            "content": "<p>⚡<strong>Flash Sale: </strong>lowest price since launch</p>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_saving": true,
+            "sale_badge_type": "fixed_amount"
+          }
+        },
+        "90dc1f7c-db93-4484-81bd-f9329e3af95d": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_title": "Size"
+          }
+        },
+        "foxkit_sales_boost_stock_countdown_htAFLX": {
+          "type": "shopify://apps/foxkit-aio-upsell/blocks/stock-countdown/13f41957-6b79-47c1-99a2-e52431f06fff",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_atc_button": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "foxkit_sales_boost_countdown_timer_yHKczx": {
+          "type": "shopify://apps/foxkit-aio-upsell/blocks/countdown-timer/13f41957-6b79-47c1-99a2-e52431f06fff",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "custom_liquid_4B78TX": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div> <span style=\"font-size:16px; \">🌳 One order placed, One tree planted</span> \n  <span style=\"font-size:16px\" ><a href=\"https://odinlake.myshopify.com/pages/plant-a-tree\"><u> Learn more</u></a></span></div>"
+          }
+        },
+        "b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c": {
+          "type": "shipping",
+          "settings": {
+            "show_delivery_times": true,
+            "deliver_text": "Estimated Delivery:",
+            "deliver_days": "5",
+            "date_format": "%b %d",
+            "show_shipping_text": true,
+            "shipping_text": "<p><strong>Free Shipping & Returns: </strong>On all orders</p>"
+          }
+        },
+        "a7a72482-beac-4db8-a4ca-15072a0840a0": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n.odin-module {\njustify-content: space-between;\nalign-items: center!important;\n\n }\n.odin-block {\nflex: 1;\ntext-align: center;\npadding: 1px;\nmargin: 0px;   \n}\n.icons-odin-row, .text-odin-row {\n display: flex;\n justify-content: space-between;\n width: 100%;\n}\n .odin-icon img {\n height: 40px;\n margin:0 auto;\n }\n </style>\n<div class=\"odin-module\">\n <div class=\"icons-odin-row\">\n <div class=\"odin-block odin-icon\">\n <img src=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/30_Day_Price_Guarantee.png?v=1693965849\" alt=\"30 Days Price Guarantee\">\n </div>\n <div class=\"odin-block odin-icon\">\n <img src=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/30_Day_Free_Return.png?v=1693964226\" alt=\"30 Days Free Return\">\n </div>\n <div class=\"odin-block odin-icon\">\n <img src=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/Free-shipping.png?v=1693964226\" alt=\"Free Shipping\">\n </div>\n </div>\n <div class=\"text-odin-row\">\n <div class=\"odin-block\">\n <p>30 Days<br>Price Guarantee</p>\n </div>\n <div class=\"odin-block\">\n <p>30 Days<br>Free Return</p>\n </div>\n <div class=\"odin-block\">\n <p>Super Fast<br>Free shipping</p>\n </div>\n </div>\n</div>"
+          }
+        },
+        "62aed578-bf73-4c71-81d1-3ffc43d0c306": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"padding:20px; background:#f5f5f5;\">\n<div class=\"logo-lockup\" target=\"_blank\">\n    <img class=\"header-lockupLogo\" src=\"https://a300.stripecdn.com/climate-statics-srv/assets/img/climate_logo-7e2de8ca7243c666c6b0.svg\" height=\"22\" width=\"22\">\n    <p>OdinLake is Stripe Climate member</p> \n</div>\n<p style=\"margin-top: 0px;\">We contribute 0.25% of our revenue to carbon removal. <a href=\"https://climate.stripe.com/HIsCPv\"><u>Learn More</u></a></p>\n<style>\n  div.logo-lockup {\n    align-items: center;\n    display: flex;\n}\n.header-lockupLogo {\n    margin-right: 6px;\n}\n</style>\n</div>"
+          }
+        },
+        "addons": {
+          "type": "addons",
+          "settings": {
+            "show_atcp": false,
+            "show_ask_a_question": true,
+            "show_social": true
+          }
+        },
+        "custom_liquid_cPPGJJ": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div><img src=\"https://cdn.shopifycdn.net/s/files/1/0603/7431/9272/files/google-store.svg?v=1710492872\" style=\"height: 16px;width: 16px;vertical-align:middle;display:inline;\"> <span style=\"font-size:16px; \"> Top Quality Store 4.9/5 </span> \n  <span style=\"font-size:12px\" ><a href=\"https://customerreviews.google.com/v/merchant?q=odinlake.com&c=US&v=19&hl=en\"><u>Certified by Google</u></a></span></div>"
+          }
+        },
+        "e8ae8341-2909-4728-b3a1-62456e37964f": {
+          "type": "trust_badge",
+          "settings": {
+            "show_trustpilot": true,
+            "trust_badges_text": "<p>Guarantee safe & secure checkout</p>",
+            "trust_badges_image_width": "100%",
+            "position": "below"
+          }
+        }
+      },
+      "block_order": [
+        "custom_text_mCPTqX",
+        "title",
+        "price",
+        "90dc1f7c-db93-4484-81bd-f9329e3af95d",
+        "variant_picker",
+        "foxkit_sales_boost_stock_countdown_htAFLX",
+        "buy_buttons",
+        "foxkit_sales_boost_countdown_timer_yHKczx",
+        "custom_liquid_4B78TX",
+        "b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c",
+        "a7a72482-beac-4db8-a4ca-15072a0840a0",
+        "62aed578-bf73-4c71-81d1-3ffc43d0c306",
+        "addons",
+        "custom_liquid_cPPGJJ",
+        "e8ae8341-2909-4728-b3a1-62456e37964f"
+      ],
+      "custom_css": [
+        ".main-product__block {margin-top: 15px;}",
+        ".main-product__block {margin-top: 10px;}"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "layout": "layout-6",
+        "show_atwl": false,
+        "enable_history_state": false,
+        "enable_variant_group_images": true,
+        "disable_selected_variant_default": false,
+        "show_featured_media": true,
+        "show_zoom_button": false,
+        "enable_video_autoplay": true,
+        "show_nav_media_mobile": true,
+        "show_pagination_mobile": false,
+        "use_sticky_atc": false,
+        "use_sticky_atc_on_mobile": false,
+        "enable_dynamic_checkout": false,
+        "sticky_atc_wishtlist": false,
+        "sticky_atc_compare": false
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "header": "Product description"
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "header": "Shipping & Return",
+            "content": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.</p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.</p>",
+            "content_page": ""
+          }
+        },
+        "863844cf-2363-4638-9738-9fdef938678c": {
+          "type": "tab",
+          "settings": {
+            "header": "Shipping & Return",
+            "content": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.</p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.</p>",
+            "content_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "863844cf-2363-4638-9738-9fdef938678c"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "default_open": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "ab67b24d-7db3-41dd-b6e0-2a19c0041fa8": {
+      "type": "odinlake-nav",
+      "blocks": {
+        "929fa863-ee60-44fa-b456-086682bc46d9": {
+          "type": "tabList",
+          "settings": {
+            "id": "Overview",
+            "title": "Overview"
+          }
+        },
+        "969a4275-fc5c-4d64-a4cd-4aa69b11c48a": {
+          "type": "tabList",
+          "settings": {
+            "id": "Details",
+            "title": "Details"
+          }
+        },
+        "0395baad-38ec-451d-a7de-99141191f970": {
+          "type": "tabList",
+          "settings": {
+            "id": "Specs",
+            "title": "Specs"
+          }
+        },
+        "82eba803-5c28-4f60-b14e-9c2f51647862": {
+          "type": "tabList",
+          "settings": {
+            "id": "Instructions",
+            "title": "Instructions"
+          }
+        },
+        "b97da34e-2dfb-44cd-bd6c-0219f3eb366d": {
+          "type": "tabList",
+          "disabled": true,
+          "settings": {
+            "id": "Reviews",
+            "title": "Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "929fa863-ee60-44fa-b456-086682bc46d9",
+        "969a4275-fc5c-4d64-a4cd-4aa69b11c48a",
+        "0395baad-38ec-451d-a7de-99141191f970",
+        "82eba803-5c28-4f60-b14e-9c2f51647862",
+        "b97da34e-2dfb-44cd-bd6c-0219f3eb366d"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "bg_color": "#f5f5f5"
+      }
+    },
+    "bcba6450-eca9-4631-86af-0e8dde3ba74c": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Overview",
+        "heading": "",
+        "subheading": "",
+        "code": "",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 31,
+        "padding_bottom": 27,
+        "padding_top_mb": 30,
+        "padding_bottom_mb": 20
+      }
+    },
+    "b87ea3f6-1bcd-47ef-af97-03c9690a6fef": {
+      "type": "custom-content",
+      "blocks": {
+        "536623c6-f850-4dd7-97f2-9039ebac15bf": {
+          "type": "video",
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "7f967583-8d43-4fcd-b2f9-eea196a53524": {
+          "type": "text",
+          "settings": {
+            "title": "Full Adjustments & Full Support",
+            "subheading": "",
+            "text": "<p>Customizable Comfort & Ergonomic Movement</p>",
+            "od-icon": true,
+            "html1": "<strong>6 Adjustments</strong>\n<p>Ergonomic Setting</p>",
+            "html2": "<strong>UP TO 135°</strong>\n<p>Wide Range</p>",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "large",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "odinlake_order_1",
+            "animations": "inherit"
+          }
+        },
+        "d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/A_1-PC.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "odinlake_order_0",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "536623c6-f850-4dd7-97f2-9039ebac15bf",
+        "7f967583-8d43-4fcd-b2f9-eea196a53524",
+        "d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 33,
+        "use_scroll_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": ""
+      }
+    },
+    "3a8db962-80eb-48eb-9c21-d1a00ac3f7ab": {
+      "type": "video",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "video_type": "external",
+        "video_link": "https://youtu.be/Ga2uBTLveYA",
+        "ratio": "16:9",
+        "image": "shopify://shop_images/maxresdefault_10.jpg",
+        "video_title": "",
+        "text_size": "medium",
+        "text_color": "white",
+        "play_style": "solid",
+        "play_size": "medium",
+        "width": "1200px",
+        "autoplay": false,
+        "loop": false,
+        "muted": false,
+        "show_controls": false,
+        "padding_top": 48,
+        "padding_bottom": 54,
+        "custom_class": "",
+        "animations": "fade-in"
+      }
+    },
+    "92020a03-0125-4779-b0d4-76969489eb53": {
+      "type": "icon-box",
+      "blocks": {
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-1": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_1.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>Height Adjustable Backrest</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-2": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_2.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>Dynamic Lumbar Support</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-3": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_4.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>3D Adjustbale Armrest</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "3af9049c-2155-4d0f-94df-789fc1e4f86f": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_3.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>135° Recline Angle</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "eb3e0c81-95ae-4daa-b5bf-b1029c589b15": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_5.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>2D Adjustable Headrest</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "2e1510cf-09f9-4dce-baa8-84b63f00c3e4": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-icon_6.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>Depth Adjustable Seat</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-1",
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-2",
+        "template--16510511349928__92020a03-0125-4779-b0d4-76969489eb53-iconbox-3",
+        "3af9049c-2155-4d0f-94df-789fc1e4f86f",
+        "eb3e0c81-95ae-4daa-b5bf-b1029c589b15",
+        "2e1510cf-09f9-4dce-baa8-84b63f00c3e4"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "item_per_row": 6,
+        "item_gap": 16,
+        "item_gap_mobile": 6,
+        "card_color_scheme": "",
+        "card_style": "vertical",
+        "image_max_width": "50px",
+        "content_alignment": "center",
+        "hover_effect": "scaling-up",
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "use_scroll_mobile": false,
+        "use_grid_column_mb": true,
+        "padding_top": 38,
+        "padding_bottom": 28,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "88279309-7787-487d-bcca-86a836fde1e9": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Details",
+        "heading": "Details",
+        "subheading": "",
+        "code": "<hr style=\" margin: 0rem 0; height:3px; \">",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 23,
+        "padding_top_mb": 41,
+        "padding_bottom_mb": 13
+      }
+    },
+    "fbd7fb5b-2b9a-40ee-8353-1a087b0195e3": {
+      "type": "custom-content",
+      "blocks": {
+        "100e9b49-40b4-4f5c-ba79-88ff896f1029": {
+          "type": "video",
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/07758e13b0d0414091740a35c22b7d3d.mp4",
+            "shopify_video": "shopify://files/videos/odinlake-electric-standing-desk-s450-rebound-when-encountering-resistance.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "odinlake_order_0",
+            "animations": "inherit"
+          }
+        },
+        "a88e5c36-4773-434d-a82c-35a21028901c": {
+          "type": "text",
+          "settings": {
+            "title": "Multi-protection Alerts",
+            "subheading": "",
+            "text": "<p>Experience the pinnacle of workspace safety with the OdinLake Standing Desk S450. Equipped with cutting-edge collision, overload, and overheating protections, this desk ensures a secure and efficient work environment. Embrace a worry-free, productive workday with the S450's advanced safety features.</p>",
+            "od-icon": true,
+            "html1": "<p><strong>Crash protection</strong></p>",
+            "html2": "<p><strong>Overload protection</strong></p>",
+            "html3": "<p><strong>Over hot protection</strong></p>",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "odinlake_order_1",
+            "animations": "inherit"
+          }
+        },
+        "1bc6721a-ea2a-4f88-90a8-60ec9570cc21": {
+          "type": "text",
+          "settings": {
+            "title": "Heavy-duty Steel Construction",
+            "subheading": "",
+            "text": "<p>S450 masterfully crafted with heavy-duty steel for unmatched durability and stability. Designed to endure, this desk stands as a testament to robust construction, meeting the demands of dynamic work environments with ease and reliability.</p>",
+            "od-icon": true,
+            "html1": "<p><strong>Load bearing</strong></p>\n<p>275 lbs</p>",
+            "html2": "<p><strong>Legs</strong></p>\n<p>3-section legs</p>",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "odinlake_order_3",
+            "animations": "inherit"
+          }
+        },
+        "fecc26b8-f306-4046-9b1a-f47ef3184598": {
+          "type": "video",
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/c8cfcc732b1b4a27a5603b0a33448b90.mp4",
+            "shopify_video": "shopify://files/videos/odinlake-electric-standing-desk-s450-frame.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "odinlake_order_2",
+            "animations": "inherit"
+          }
+        },
+        "5b124e87-9fb4-4432-920f-8f00e8ce2ef1": {
+          "type": "video",
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/fcb3b0850eb74f4f8ce46206df2fd610.mp4",
+            "shopify_video": "shopify://files/videos/odinlake-electric-standing-desk-s450-led-controller.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "odinlake_order_4",
+            "animations": "inherit"
+          }
+        },
+        "7012a69f-1017-4c29-b8d3-875f8baa94cf": {
+          "type": "text",
+          "settings": {
+            "title": "Advanced Keypad",
+            "subheading": "",
+            "text": "<p>Elevate your workspace with the OdinLake Standing Desk S450, featuring a state-of-the-art LED backpad keyboard. This intuitive interface offers three preset height options for effortless customization, along with a silent mode setting for undisturbed work. Experience the perfect blend of technology and ergonomics, tailored for your comfort and efficiency.</p>",
+            "od-icon": true,
+            "html1": "<p><strong>LED backlight</strong></p>",
+            "html2": "<p><strong>Silent design</strong></p>",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "odinlake_order_5",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "100e9b49-40b4-4f5c-ba79-88ff896f1029",
+        "a88e5c36-4773-434d-a82c-35a21028901c",
+        "1bc6721a-ea2a-4f88-90a8-60ec9570cc21",
+        "fecc26b8-f306-4046-9b1a-f47ef3184598",
+        "5b124e87-9fb4-4432-920f-8f00e8ce2ef1",
+        "7012a69f-1017-4c29-b8d3-875f8baa94cf"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "scheme-cee058e4-58e3-46aa-9af9-219dadc79066",
+        "content_color_scheme": "scheme-cee058e4-58e3-46aa-9af9-219dadc79066",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 70,
+        "gap_mobile": 33,
+        "use_scroll_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": ""
+      }
+    },
+    "3971d5f7-9c84-46e8-a111-99ef50a004a8": {
+      "type": "custom-content",
+      "blocks": {
+        "ce09aa30-851f-4e75-bda7-a91d4f14bc68": {
+          "type": "video",
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "87978908-0a8c-4a0d-a8d2-f727e562f077": {
+          "type": "text",
+          "settings": {
+            "title": "WireControl™ Mechanism",
+            "subheading": "",
+            "text": "<p>Our chair revolutionizes adjustability with a unique control method inspired by bicycle brake lines. This innovative design eliminates the hassle of searching for adjustment levers. Now, you can easily make adjustments without bending over, offering a seamless, labor-saving experience. It's all about convenience and efficiency, tailored for the modern user.</p>",
+            "od-icon": true,
+            "html1": "<p><strong>Seat Height</strong></p>\n<p>18.5-22.5 inches</p>",
+            "html2": "<p><strong>Backrest Tilt</strong></p>\n<p></p><p>90°-135°</p>",
+            "html3": "<p><strong>Seat Depth</strong></p>\n<p></p><p>2 inches</p>",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "ce09aa30-851f-4e75-bda7-a91d4f14bc68",
+        "87978908-0a8c-4a0d-a8d2-f727e562f077"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 70,
+        "gap_mobile": 33,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 100,
+        "custom_class": ""
+      }
+    },
+    "3559e629-5448-4dec-866e-5a80bfb6eb51": {
+      "type": "custom-content",
+      "blocks": {
+        "88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4": {
+          "type": "text",
+          "settings": {
+            "title": "FlexBreath™ Mesh",
+            "subheading": "",
+            "text": "<p>Experience the ultimate in comfort and durability with our Korean mesh material. Designed for breathability, it ensures you stay comfortable even during long hours of use. Remarkably long-lasting, this premium mesh maintains its form and function for up to 15 years, offering you consistent comfort and support year after year. It's the perfect blend of style, comfort, and longevity for your seating needs.</p>",
+            "od-icon": false,
+            "html1": "<p><strong>Seat Height</strong></p>\n<p>18.5-22.5 inches</p>",
+            "html2": "<p><strong>Backrest Tilt</strong></p>\n<p></p><p>90°-135°</p>",
+            "html3": "<p><strong>Seat Depth</strong></p>\n<p></p><p>2 inches</p>",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "odinlake_order_1",
+            "animations": "inherit"
+          }
+        },
+        "0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-ergo-plus-743-product-page-1024V1-mesh.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "odinlake_order_0",
+            "animations": "inherit"
+          }
+        },
+        "cf0016ed-90c7-4bd5-b115-337b1839a82f": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_type": "shopify",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
+            "video_link": "",
+            "ratio": "16:9",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4",
+        "0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee",
+        "cf0016ed-90c7-4bd5-b115-337b1839a82f"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "div,p {color: #fff !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 70,
+        "gap_mobile": 33,
+        "use_scroll_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": ""
+      }
+    },
+    "832e5c71-a6c3-4015-adbb-22101576c556": {
+      "type": "icon-box",
+      "blocks": {
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-1": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/A_6-2.jpg",
+            "image_by_url": "",
+            "title": "Four Gear Reclining Freedom",
+            "description": "<p>OdinLake 518 presents a four-gear reclining system, granting users the autonomy to define their comfort. Seamlessly transition between upright work modes or reclined relaxation, with settings reaching up to 135 degrees. Adapt to any task or break with this tailored back-angle flexibility.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-2": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/A_6-1.jpg",
+            "image_by_url": "",
+            "title": "Universal Height Customization",
+            "description": "<p>With the 518, achieve the perfect seating elevation using its 4-inch height adjustment range. Designed to cater to a broad spectrum of users, it ensures an ergonomically sound position for most individuals. Fine-tune your seating height for optimal comfort and posture alignment.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-3": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/A_7_74ab3f31-00fd-4bce-8838-9838e404e49a.jpg",
+            "image_by_url": "",
+            "title": "3D Customization Armrest",
+            "description": "<p>Elevate your arm support with the OdinLake 518's 3D armrest. It offers dynamic adjustability in three dimensions: up and down, rotation, and back and forth. This feature ensures personalized comfort, allowing users to find the perfect arm position for any task or relaxation moment.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "65d3a0bb-8fdc-4600-b43f-ef52a72ced01": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/A_5-1_565dd12b-45f5-4133-8010-622fe9c6c884.jpg",
+            "image_by_url": "",
+            "title": "5-Gear Adjustable Backrest",
+            "description": "<p>The OdinLake 518 boasts a backrest with five distinct adjustment settings over a 2.7-inch range. This allows users to pinpoint their preferred support level, catering to diverse comfort needs. Tailor your sitting experience with precision, ensuring optimal posture and comfort throughout the day.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "4a921b0a-1b44-45f7-a815-a6eee4c620c5": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/A_5-2_00cef637-93a9-4e42-b483-6975939e6b2b.jpg",
+            "image_by_url": "",
+            "title": "Seat Cushion Adjustment",
+            "description": "<p>Optimize your seating depth with the OdinLake 518's front and rear seat cushion adjustment. This feature allows users to slide the cushion to achieve the ideal leg support, accommodating varying leg lengths and seating preferences. Tailored comfort ensures reduced leg fatigue during extended periods.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-1",
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-2",
+        "template--16510511349928__832e5c71-a6c3-4015-adbb-22101576c556-iconbox-3",
+        "65d3a0bb-8fdc-4600-b43f-ef52a72ced01",
+        "4a921b0a-1b44-45f7-a815-a6eee4c620c5"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "item_per_row": 3,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_color_scheme": "",
+        "card_style": "vertical",
+        "image_max_width": "",
+        "content_alignment": "start",
+        "hover_effect": "none",
+        "enable_slider": true,
+        "show_pagination": true,
+        "show_navigation": true,
+        "use_scroll_mobile": true,
+        "use_grid_column_mb": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "31b05af6-fa95-4fde-93f9-cc3bf3caf5af": {
+      "type": "custom-content",
+      "blocks": {
+        "template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OdinLake-Standing-Desk-S450-product-page-1024V1-motor4-1.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Powerful Dual Motors for Superior Performance",
+            "subheading": "",
+            "text": "<p>These powerful engines provide an impressive lifting capacity of 275lbs, ensuring smooth, reliable adjustments for a wide range of setups. Coupled with a promise of long service life, the S450's motor system is designed for both strength and durability, making it an ideal choice for dynamic and demanding work environments.</p>",
+            "od-icon": true,
+            "html1": "<strong>Long Life</strong>\n<p>Up to 15 years</p>",
+            "html2": "<strong>Load</strong>\n<p>800 N x 2</p>",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-image-1",
+        "template--16510511349928__31b05af6-fa95-4fde-93f9-cc3bf3caf5af-text-1"
+      ],
+      "custom_css": [
+        "div,p {color: #fff !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "scheme-5c9c1015-f301-42c5-9629-a7cbf0ebabbe",
+        "content_color_scheme": "scheme-5c9c1015-f301-42c5-9629-a7cbf0ebabbe",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "69b7c485-a28e-4b57-8df9-bd11029536e3": {
+      "type": "custom-content",
+      "blocks": {
+        "template--16571974353064__69b7c485-a28e-4b57-8df9-bd11029536e3-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Diverse Colors, Premium Quality",
+            "subheading": "",
+            "text": "<p>OdinLake electric standing desk S450 provides 4 colors desktop. The desktop of S450 is 1\" thick, durable and easy to clean.</p>",
+            "od-icon": true,
+            "html1": "<strong>Colors</strong>\n<p>4 varieties</p>",
+            "html2": "<strong>Desk Thick</strong>\n<p>1 inch</p>",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "odinlake_order_0",
+            "animations": "inherit"
+          }
+        },
+        "template--16571974353064__69b7c485-a28e-4b57-8df9-bd11029536e3-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OdinLake-Standing-Desk-S450-product-page-1024V1-deaktop-color1_488c48d7-2272-4b1a-846c-25c0ed04b092.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "odinlake_order_1",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "template--16571974353064__69b7c485-a28e-4b57-8df9-bd11029536e3-text-1",
+        "template--16571974353064__69b7c485-a28e-4b57-8df9-bd11029536e3-image-1"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "ab3808d2-e290-4dd3-a358-440f551a0a8d": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Specs",
+        "heading": "Specs",
+        "subheading": "",
+        "code": "<hr style=\" margin: 0rem 0; height:3px;\">",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "padding_top_mb": 60,
+        "padding_bottom_mb": 0
+      }
+    },
+    "71e11a33-1b82-4e81-8a6d-0609dd81faf8": {
+      "type": "jd-structure-tab",
+      "blocks": {
+        "f107fe56-75e4-4252-93fd-2cfda8fc5dc0": {
+          "type": "tabList",
+          "settings": {
+            "id": "1",
+            "title": "Parts"
+          }
+        },
+        "4239c4f2-11d4-4e46-b0d6-fc4038921adc": {
+          "type": "tabList",
+          "settings": {
+            "id": "2",
+            "title": "Frame Specs"
+          }
+        },
+        "63e15df5-4a38-4f75-b46a-af43b4f60cdf": {
+          "type": "tabList",
+          "settings": {
+            "id": "3",
+            "title": "Desktop Specs"
+          }
+        }
+      },
+      "block_order": [
+        "f107fe56-75e4-4252-93fd-2cfda8fc5dc0",
+        "4239c4f2-11d4-4e46-b0d6-fc4038921adc",
+        "63e15df5-4a38-4f75-b46a-af43b4f60cdf"
+      ],
+      "settings": {
+        "id": "",
+        "header": ""
+      }
+    },
+    "bdc157e6-50e3-490f-a740-87a64df85c7a": {
+      "type": "jd-product-material",
+      "blocks": {
+        "e915be50-2596-4d1b-a900-e20e21dc7018": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/OdinLake-Standing-Desk-S450-product-page-1024V1-part-2.jpg",
+            "structureList_title": "Desk Top",
+            "structureList_text": "<p>Warp-proof MDF wood</p>",
+            "structureList_title1": "Thick",
+            "structureList_text1": "<p>1 Inch</p>",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "top",
+            "range": 39,
+            "m_location": "top",
+            "m_range": 39,
+            "location1": "left",
+            "range1": 40,
+            "m_location1": "left",
+            "m_range1": 40
+          }
+        },
+        "35a73c62-f7ac-4aff-a42a-ae640007d658": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/OdinLake-Standing-Desk-S450-product-page-1024V1-part-1.jpg",
+            "structureList_title": "Leg",
+            "structureList_text": "<p>3 Stage Leg</p>",
+            "structureList_title1": "",
+            "structureList_text1": "",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "top",
+            "range": 70,
+            "m_location": "top",
+            "m_range": 70,
+            "location1": "left",
+            "range1": 25,
+            "m_location1": "left",
+            "m_range1": 25
+          }
+        },
+        "717b3e07-f515-493d-93bd-266715bf49ac": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/OdinLake-Standing-Desk-S450-product-page-1024V1-part-4.jpg",
+            "structureList_title": "Motor",
+            "structureList_text": "<p>Dual</p>",
+            "structureList_title1": "Load",
+            "structureList_text1": "<p>800 N x 2</p>",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "bottom",
+            "range": 59,
+            "m_location": "bottom",
+            "m_range": 43,
+            "location1": "right",
+            "range1": 32,
+            "m_location1": "right",
+            "m_range1": 32
+          }
+        },
+        "98044adc-02b9-4c02-b809-06f19a98f34c": {
+          "type": "structureList",
+          "settings": {
+            "structureList_img": "shopify://shop_images/OdinLake-Standing-Desk-S450-product-page-1024V1-part-3.jpg",
+            "structureList_title": "Keypad",
+            "structureList_text": "<p>3 preset heights</p>",
+            "structureList_title1": "",
+            "structureList_text1": "",
+            "structureList_title2": "",
+            "structureList_text2": "",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "bottom",
+            "range": 54,
+            "m_location": "bottom",
+            "m_range": 54,
+            "location1": "right",
+            "range1": 20,
+            "m_location1": "right",
+            "m_range1": 20
+          }
+        }
+      },
+      "block_order": [
+        "e915be50-2596-4d1b-a900-e20e21dc7018",
+        "35a73c62-f7ac-4aff-a42a-ae640007d658",
+        "717b3e07-f515-493d-93bd-266715bf49ac",
+        "98044adc-02b9-4c02-b809-06f19a98f34c"
+      ],
+      "settings": {
+        "structure_img": "shopify://shop_images/1_3.jpg",
+        "structure_img1": "shopify://shop_images/1_3.jpg"
+      }
+    },
+    "69aa2c88-28cd-4106-8e6a-5501839b403b": {
+      "type": "jd-product-weight",
+      "blocks": {
+        "00c64ec8-610c-4d61-a640-6b26ad7dd586": {
+          "type": "structureList",
+          "settings": {
+            "structureList_title": "Lifting speed",
+            "structureList_text": "<p>1.2\"/sec</p>",
+            "structureList_title1": "Lifting capacity",
+            "structureList_text1": "<p>275 lbs</p>",
+            "structureList_title2": "Noise level",
+            "structureList_text2": "<p>50dB</p>"
+          }
+        },
+        "4c4fea9f-f423-47d9-8b96-ade30af67cbe": {
+          "type": "structureList",
+          "settings": {
+            "structureList_title": "Applicable desktop",
+            "structureList_text": "<p>43\"-72\"</p>",
+            "structureList_title1": "Frame foot width",
+            "structureList_text1": "<p>25.4\"</p>",
+            "structureList_title2": "Material",
+            "structureList_text2": "<p>SPCC steel</p>"
+          }
+        }
+      },
+      "block_order": [
+        "00c64ec8-610c-4d61-a640-6b26ad7dd586",
+        "4c4fea9f-f423-47d9-8b96-ade30af67cbe"
+      ],
+      "settings": {
+        "structure_img": "shopify://shop_images/odinlake-standing-desk-specs_933f4664-5b02-4dc9-b79b-5f06cb0787ff.jpg"
+      }
+    },
+    "ef4ea5d8-e378-4fb5-bef1-f51adf961720": {
+      "type": "jd-product-size",
+      "blocks": {
+        "db802867-7512-4fcc-a927-64ca64814f00": {
+          "type": "structureList",
+          "settings": {
+            "structureList_title": "Dimensions",
+            "structureList_text": "<p>47\"L x 24\"W x 1\"H<br/>55\"L x 27.5\"W x 1\"H<br/>60\"L x 30\"W x 1\"H</p>",
+            "structureList_title1": "Material",
+            "structureList_text1": "<p>Warp-proof MDF wood</p>",
+            "structureList_title2": "Shipping Weight",
+            "structureList_text2": "<p>47\"x24\" : 30 lbs<br/>55\"x27.5\" : 41 lbs<br/>60\"x30\" : 47 lbs</p>",
+            "background": "#0075ea",
+            "outside": "#0075ea",
+            "location": "top",
+            "range": 0,
+            "location1": "left",
+            "range1": 0
+          }
+        }
+      },
+      "block_order": [
+        "db802867-7512-4fcc-a927-64ca64814f00"
+      ],
+      "settings": {
+        "structure_img": "shopify://shop_images/OdinLake_Standing_Desktop_Size_56ad1055-291e-49e1-91e6-18c0697c59b4.jpg"
+      }
+    },
+    "840249ae-921a-495b-b02a-e47b2524f0da": {
+      "type": "odinlake-title",
+      "settings": {
+        "container": "container-fluid",
+        "point": "Instructions",
+        "heading": "Instructions",
+        "subheading": "",
+        "code": "<hr style=\" margin: 0rem 0; height:3px;\">",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 20,
+        "padding_top_mb": 60,
+        "padding_bottom_mb": 20
+      }
+    },
+    "57761bd2-9d0c-4a8e-a651-070365291ca9": {
+      "type": "custom-content",
+      "blocks": {
+        "740fc7f1-4f4b-4b90-9e71-820101785358": {
+          "type": "video",
+          "settings": {
+            "video_type": "external",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "video_link": "https://www.youtube.com/watch?v=2sHV3gRmP4o",
+            "ratio": "16:9",
+            "image": "shopify://shop_images/OdinLake_Standing_Desk_S450_Assembly_Video_Cover.jpg",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "0d1e4754-ae40-425f-8616-707e692539b0": {
+          "type": "text",
+          "settings": {
+            "title": "Installation Manual",
+            "subheading": "",
+            "text": "<p><strong>Installation Manual:</strong> <a href=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/OdinLake_Standing_Desk_S450_Installation_Manual_01152024.pdf?v=1705307432\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0603/7431/9272/files/OdinLake_Standing_Desk_S450_Installation_Manual_01152024.pdf?v=1705307432\">Download</a></p><p>You can install your {{ product.title }} according to this video and installation manual, if you have any installation questions please contact us at customers@odinlake.com</p>",
+            "od-icon": false,
+            "html1": "",
+            "html2": "",
+            "html3": "",
+            "width": "50%",
+            "alignment": "center",
+            "align_text": "left",
+            "text_size": "medium",
+            "text_color": "black",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "740fc7f1-4f4b-4b90-9e71-820101785358",
+        "0d1e4754-ae40-425f-8616-707e692539b0"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 70,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "2a855bd1-af06-4cb7-b58e-d250f3597ef8": {
+      "type": "odinlake-title",
+      "disabled": true,
+      "settings": {
+        "container": "container-fluid",
+        "point": "Reviews",
+        "heading": "Reviews",
+        "subheading": "",
+        "code": "<hr style=\" margin: 0rem 0; height:3px;\">",
+        "description": "",
+        "description2": "",
+        "header_alignment": "left",
+        "bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 20,
+        "padding_top_mb": 60,
+        "padding_bottom_mb": 20
+      }
+    },
+    "170253203295be7cb8": {
+      "type": "apps",
+      "blocks": {
+        "6d198e95-118c-4c22-812b-23a518a47db6": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "6d198e95-118c-4c22-812b-23a518a47db6"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "product-details-tabs",
+    "ab67b24d-7db3-41dd-b6e0-2a19c0041fa8",
+    "bcba6450-eca9-4631-86af-0e8dde3ba74c",
+    "b87ea3f6-1bcd-47ef-af97-03c9690a6fef",
+    "3a8db962-80eb-48eb-9c21-d1a00ac3f7ab",
+    "92020a03-0125-4779-b0d4-76969489eb53",
+    "88279309-7787-487d-bcca-86a836fde1e9",
+    "fbd7fb5b-2b9a-40ee-8353-1a087b0195e3",
+    "3971d5f7-9c84-46e8-a111-99ef50a004a8",
+    "3559e629-5448-4dec-866e-5a80bfb6eb51",
+    "832e5c71-a6c3-4015-adbb-22101576c556",
+    "31b05af6-fa95-4fde-93f9-cc3bf3caf5af",
+    "69b7c485-a28e-4b57-8df9-bd11029536e3",
+    "ab3808d2-e290-4dd3-a358-440f551a0a8d",
+    "71e11a33-1b82-4e81-8a6d-0609dd81faf8",
+    "bdc157e6-50e3-490f-a740-87a64df85c7a",
+    "69aa2c88-28cd-4106-8e6a-5501839b403b",
+    "ef4ea5d8-e378-4fb5-bef1-f51adf961720",
+    "840249ae-921a-495b-b02a-e47b2524f0da",
+    "57761bd2-9d0c-4a8e-a651-070365291ca9",
+    "2a855bd1-af06-4cb7-b58e-d250f3597ef8",
+    "170253203295be7cb8"
+  ]
+}
