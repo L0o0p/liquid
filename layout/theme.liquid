@@ -87,6 +87,7 @@
     </script>
     {% render 'theme-data' %}
     {% include 'pagefly-app-header' %}
+    {{ 'custom-footer.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body

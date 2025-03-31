@@ -1,0 +1,382 @@
+<footer class="custom-footer-container">
+  <div class="custom-footer-content">
+    <div class="custom-footer-main">
+      <!-- 订阅部分 -->
+      <div class="custom-footer-subscribe">
+        <h3>{{ section.settings.footer_title }}</h3>
+        <p>{{ section.settings.subscribe_text }}</p>
+
+        {%- form 'customer', id: 'custom-footer-newsletter-form', class: 'custom-footer-newsletter-form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="custom-email-container">
+            <div class="email-icon">
+              {% render 'icon-email' %}
+            </div>
+            <div class="custom-email-input">
+              <input
+                type="email"
+                name="contact[email]"
+                placeholder="{{ section.settings.email_placeholder }}"
+                required
+              >
+            </div>
+          </div>
+        {%- endform -%}
+        <!-- 社交媒体图标部分 -->
+        <div class="footer-social-icons">
+          <!-- YouTube -->
+          {% if section.settings.show_youtube or section.settings.social_youtube_link != blank %}
+            <a
+              href="{{ section.settings.social_youtube_link | default: '#' }}"
+              class="social-icon-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube"
+            >
+              <div class="social-icon-circle">
+                <img
+                  src="{{ 'youtube.png' | asset_url }}"
+                  alt="YouTube"
+                  class="social-icon"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                >
+              </div>
+            </a>
+          {% endif %}
+
+          <!-- Twitter -->
+          {% if section.settings.show_twitter or section.settings.social_twitter_link != blank %}
+            <a
+              href="{{ section.settings.social_twitter_link | default: '#' }}"
+              class="social-icon-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="Twitter"
+            >
+              <div class="social-icon-circle">
+                <img
+                  src="{{ 'twitter.png' | asset_url }}"
+                  alt="Twitter"
+                  class="social-icon"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                >
+              </div>
+            </a>
+          {% endif %}
+
+          <!-- TikTok -->
+          {% if section.settings.show_tiktok or section.settings.social_tiktok_link != blank %}
+            <a
+              href="{{ section.settings.social_tiktok_link | default: '#' }}"
+              class="social-icon-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok"
+            >
+              <div class="social-icon-circle">
+                <img
+                  src="{{ 'tiktok.png' | asset_url }}"
+                  alt="TikTok"
+                  class="social-icon"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                >
+              </div>
+            </a>
+          {% endif %}
+
+          <!-- LinkedIn -->
+          {% if section.settings.show_linkedin or section.settings.social_linkedin_link != blank %}
+            <a
+              href="{{ section.settings.social_linkedin_link | default: '#' }}"
+              class="social-icon-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <div class="social-icon-circle">
+                <img
+                  src="{{ 'linkedIn.png' | asset_url }}"
+                  alt="LinkedIn"
+                  class="social-icon"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                >
+              </div>
+            </a>
+          {% endif %}
+
+          <!-- Instagram -->
+          {% if section.settings.show_instagram or section.settings.social_instagram_link != blank %}
+            <a
+              href="{{ section.settings.social_instagram_link | default: '#' }}"
+              class="social-icon-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <div class="social-icon-circle">
+                <img
+                  src="{{ 'instgram.png' | asset_url }}"
+                  alt="Instagram"
+                  class="social-icon"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                >
+              </div>
+            </a>
+          {% endif %}
+
+          <!-- Facebook -->
+          {% if section.settings.show_facebook or section.settings.social_facebook_link != blank %}
+            <a
+              href="{{ section.settings.social_facebook_link | default: '#' }}"
+              class="social-icon-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+              <div class="social-icon-circle">
+                <img
+                  src="{{ 'facebook.png' | asset_url }}"
+                  alt="Facebook"
+                  class="social-icon"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                >
+              </div>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- 链接块循环 -->
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'link_list' %}
+            <div class="custom-footer-links" {{ block.shopify_attributes }}>
+              <h4>{{ block.settings.heading }}</h4>
+              {% if block.settings.menu != blank %}
+                <ul>
+                  {% for link in linklists[block.settings.menu].links %}
+                    <li>
+                      <a href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+  <!-- 底部信息 -->
+  <div class="custom-footer-bottom">
+    <div class="custom-footer-content">
+      <div class="custom-copyright">{{ section.settings.copyright_text }}</div>
+      <div class="custom-language-payment">
+        <div class="custom-language-selector">
+          {% if section.settings.show_locale_selector and shop.published_locales.size > 1 %}
+            <div class="custom-localization-form">
+              {%- form 'localization', id: 'CustomFooterLanguageForm', class: 'localization-form' -%}
+                <div>
+                  {{ localization.country.flag.emoji }}
+                  {{ localization.country.name }} ({{ localization.country.currency.iso_code }}
+                  {{ localization.country.currency.symbol }})
+                </div>
+                <div>{{ localization.language.endonym_name }}</div>
+              {%- endform -%}
+            </div>
+          {% endif %}
+        </div>
+
+        {% if section.settings.show_payment_icons %}
+          <div class="custom-payment-icons">
+            {% for type in shop.enabled_payment_types %}
+              <div class="custom-payment-icon">
+                {{ type | payment_type_svg_tag }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "自定义页脚",
+  "class": "section",
+  "tag": "footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "footer_title",
+      "label": "页脚标题",
+      "default": "OdinLake"
+    },
+    {
+      "type": "text",
+      "id": "subscribe_text",
+      "label": "订阅文本",
+      "default": "输入您的电子邮件以率先了解新产品信息。"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "电子邮件输入框占位符",
+      "default": "输入您的电子邮件"
+    },
+    {
+      "type": "url",
+      "id": "social_youtube_link",
+      "label": "YouTube链接"
+    },
+    {
+      "type": "url",
+      "id": "social_twitter_link",
+      "label": "Twitter链接"
+    },
+    {
+      "type": "url",
+      "id": "social_tiktok_link",
+      "label": "TikTok链接"
+    },
+    {
+      "type": "url",
+      "id": "social_linkedin_link",
+      "label": "LinkedIn链接"
+    },
+    {
+      "type": "url",
+      "id": "social_instagram_link",
+      "label": "Instagram链接"
+    },
+    {
+      "type": "url",
+      "id": "social_facebook_link",
+      "label": "Facebook链接"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "版权文本",
+      "default": "© 2025 OdinLake Inc. 保留所有权利"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "显示语言选择器",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "显示支付图标",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "社交媒体显示控制"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_youtube",
+      "label": "显示YouTube图标",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_twitter",
+      "label": "显示Twitter图标",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tiktok",
+      "label": "显示TikTok图标",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_linkedin",
+      "label": "显示LinkedIn图标",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_instagram",
+      "label": "显示Instagram图标",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_facebook",
+      "label": "显示Facebook图标",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "链接列表",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "标题",
+          "default": "链接列表"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "菜单",
+          "info": "此菜单显示在页脚中"
+        },
+        {
+          "type": "image_picker",
+          "id": "social_youtube_icon",
+          "label": "YouTube图标"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OdinLake页脚",
+      "blocks": [
+        {
+          "type": "link_list",
+          "settings": {
+            "heading": "产品",
+            "menu": "footer"
+          }
+        },
+        {
+          "type": "link_list",
+          "settings": {
+            "heading": "关于我们",
+            "menu": "footer"
+          }
+        },
+        {
+          "type": "link_list",
+          "settings": {
+            "heading": "支持",
+            "menu": "footer"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
