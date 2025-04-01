@@ -1,0 +1,117 @@
+{{ 'full-image-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="full-image-banner" style="background-color: {{ section.settings.background_color }};">
+  <div class="banner-container">
+    <div class="banner-image-container">
+      {% if section.settings.banner_image != blank %}
+        {{ section.settings.banner_image | image_url: width: 2000 | image_tag: 
+            loading: 'eager',
+            alt: section.settings.banner_image.alt | default: 'Banner image',
+            class: 'banner-image',
+            widths: '375, 550, 750, 1100, 1500, 2000',
+            sizes: '100vw'
+        }}
+      {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'banner-image placeholder' }}
+      {% endif %}
+      
+      {% if section.settings.show_button %}
+        <a href="{{ section.settings.button_link }}" class="shop-button" 
+           style="
+             top: {{ section.settings.button_top_position }}%; 
+             left: {{ section.settings.button_left_position }}%;
+             background-color: {{ section.settings.button_bg_color }};
+             color: {{ section.settings.button_text_color }};
+           ">
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Full Image Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image",
+      "info": "Upload a complete banner image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#EDF4FC"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "button_top_position",
+      "label": "Button Vertical Position",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 63,
+      "info": "Percentage from the top"
+    },
+    {
+      "type": "range",
+      "id": "button_left_position",
+      "label": "Button Horizontal Position",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 57,
+      "info": "Percentage from the left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Full Image Banner",
+      "settings": {
+        "show_button": true,
+        "button_text": "Shop Now",
+        "button_top_position": 63,
+        "button_left_position": 57
+      }
+    }
+  ]
+}
+{% endschema %}

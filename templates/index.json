@@ -1,29 +1,17 @@
 {
   "sections": {
-    "co-creation-banner": {
-      "type": "co-creation-banner",
+   "full-image-banner": {
+      "type": "full-image-banner",
       "settings": {
-        "background_color": "#F8F9FC",
-        "show_build_text": true,
-        "build_text": "BUILD WITH US L1PRO",
-        "product_label": "L1PRO",
-        "label_bg_color": "#0066FF",
-        "label_text_color": "#FFFFFF",
-        "title_text": "Co-Creation",
-        "title_color": "#000000",
-        "subtitle": "U DESIGN, WE BUILD, BIG REWARDS",
-        "subtitle_color": "#666666",
-        "voice_text": "UR Voice Matters to US",
-        "voice_text_color": "#888888",
+        "banner_image": null,  // 修改这里，设置为 null 而不是字符串
+        "background_color": "#EDF4FC",
+        "show_button": true,
         "button_text": "Shop Now",
         "button_link": "/collections/all",
-        "button_bg_color": "#333333",
+        "button_bg_color": "#555555",
         "button_text_color": "#FFFFFF",
-        "show_limited_tag": true,
-        "show_gift_icon": true,
-        "gift_icon": "🎁",
-        "limited_text": "Limited 20 Creator Spots",
-        "limited_text_color": "#666666"
+        "button_top_position": 63,
+        "button_left_position": 57
       }
     },
     "media-testimonials": {
@@ -282,7 +270,7 @@
     }
   },
   "order": [
-    "co-creation-banner",
+    "full-image-banner",
     "style_selector",
     "cocreate",
     "media-testimonials",

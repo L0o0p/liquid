@@ -2,13 +2,14 @@
   <div class="contact-container">
     <div class="header">
       <div class="contact-label">
-          <img src="{{ 'video.png' | asset_url }}" alt="Previous" width="32" height="32">
+        <img src="{{ 'video.png' | asset_url }}" alt="Previous" width="32" height="32">
         {{ section.settings.label_text }}
       </div>
-      <h1>{{ section.settings.heading_line1 }}</h1>
-      <h1>{{ section.settings.heading_line2 }}</h1>
     </div>
-
+    <div class="title">
+    <h1>{{ section.settings.heading_line1 }}</h1>
+    <h1>{{ section.settings.heading_line2 }}</h1>
+</div>
     {%- form 'contact', id: 'contactForm', class: 'contact-form' -%}
       {%- if form.posted_successfully? -%}
         <div class="success-message" id="successMessage">
@@ -37,18 +38,35 @@
 
         <div class="form-row">
           <div class="form-group">
-            <input type="text" id="name" name="contact[name]" placeholder="{{ section.settings.name_placeholder }}" required>
+            <input
+              type="text"
+              id="name"
+              name="contact[name]"
+              placeholder="{{ section.settings.name_placeholder }}"
+              required
+            >
             <div class="error" id="nameError">{{ section.settings.name_error }}</div>
           </div>
 
           <div class="form-group">
-            <input type="email" id="email" name="contact[email]" placeholder="{{ section.settings.email_placeholder }}" required>
+            <input
+              type="email"
+              id="email"
+              name="contact[email]"
+              placeholder="{{ section.settings.email_placeholder }}"
+              required
+            >
             <div class="error" id="emailError">{{ section.settings.email_error }}</div>
           </div>
         </div>
 
         <div class="form-group">
-          <textarea id="message" name="contact[body]" placeholder="{{ section.settings.message_placeholder }}" required></textarea>
+          <textarea
+            id="message"
+            name="contact[body]"
+            placeholder="{{ section.settings.message_placeholder }}"
+            required
+          ></textarea>
           <div class="error" id="messageError">{{ section.settings.message_error }}</div>
         </div>
 
