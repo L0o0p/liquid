@@ -1,38 +1,29 @@
 {
   "sections": {
-        "cocreate": {
-      "type": "cocreate",
+    "co-creation-banner": {
+      "type": "co-creation-banner",
       "settings": {
-        "section_width": 1200,
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "section_padding_sides": 20,
-        "gap": 60,
-        "grayscale": true,
-        "image_border_radius": 8,
-        "show_tag": true,
-        "tag_text": "Activity",
-        "tag_bg_color": "#FFF7E6",
-        "tag_text_color": "#FFB020",
-        "title": "Co-create with Us",
-        "title_size": 36,
-        "title_color": "#111111",
-        "limited_text": "Limited to 20 participants--be part of the innovation!",
-        "limited_text_color": "#2F80ED",
-        "description": "<p>Discover the perfect balance of science and comfort. Join our exclusive co-creation program for the L1 Pro ergonomic chair and help shape a product designed for your ultimate sitting experience.</p>",
-        "description_size": 16,
-        "description_color": "#666666",
-        "button_text": "Co-Create",
-        "button_link": "/pages/cocreate",
-        "button_bg_color": "#111111",
+        "background_color": "#F8F9FC",
+        "show_build_text": true,
+        "build_text": "BUILD WITH US L1PRO",
+        "product_label": "L1PRO",
+        "label_bg_color": "#0066FF",
+        "label_text_color": "#FFFFFF",
+        "title_text": "Co-Creation",
+        "title_color": "#000000",
+        "subtitle": "U DESIGN, WE BUILD, BIG REWARDS",
+        "subtitle_color": "#666666",
+        "voice_text": "UR Voice Matters to US",
+        "voice_text_color": "#888888",
+        "button_text": "Shop Now",
+        "button_link": "/collections/all",
+        "button_bg_color": "#333333",
         "button_text_color": "#FFFFFF",
-        "button_hover_color": "#333333",
-        "mobile_padding_top": 40,
-        "mobile_padding_bottom": 40,
-        "mobile_padding_sides": 20,
-        "mobile_gap": 30,
-        "mobile_title_size": 28,
-        "mobile_description_size": 16
+        "show_limited_tag": true,
+        "show_gift_icon": true,
+        "gift_icon": "🎁",
+        "limited_text": "Limited 20 Creator Spots",
+        "limited_text_color": "#666666"
       }
     },
     "media-testimonials": {
@@ -221,8 +212,78 @@
         "button_color": "#666666"
       }
     },
+    "cocreate": {
+      "type": "cocreate",
+      "settings": {
+        "section_width": 1200,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_padding_sides": 20,
+        "gap": 60,
+        "grayscale": true,
+        "image_border_radius": 8,
+        "show_tag": true,
+        "tag_text": "Activity",
+        "tag_bg_color": "#FFF7E6",
+        "tag_text_color": "#FFB020",
+        "title": "Co-create with Us",
+        "title_size": 36,
+        "title_color": "#111111",
+        "limited_text": "Limited to 20 participants--be part of the innovation!",
+        "limited_text_color": "#2F80ED",
+        "description": "<p>Discover the perfect balance of science and comfort. Join our exclusive co-creation program for the L1 Pro ergonomic chair and help shape a product designed for your ultimate sitting experience.</p>",
+        "description_size": 16,
+        "description_color": "#666666",
+        "button_text": "Co-Create",
+        "button_link": "/pages/cocreate",
+        "button_bg_color": "#111111",
+        "button_text_color": "#FFFFFF",
+        "button_hover_color": "#333333",
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40,
+        "mobile_padding_sides": 20,
+        "mobile_gap": 30,
+        "mobile_title_size": 28,
+        "mobile_description_size": 16
+      }
+    },
+    "style_selector": {
+      "type": "style-selector",
+      "blocks": {
+        "style_card_1": {
+          "type": "style_card",
+          "settings": {
+            "series_name": "L Series",
+            "pantone_code": "PANTONE 2727 C",
+            "button_text": "Submit",
+            "button_link": "/collections/l-series"
+          }
+        },
+        "style_card_2": {
+          "type": "style_card",
+          "settings": {
+            "series_name": "O Series",
+            "pantone_code": "PANTONE 1232 C",
+            "button_text": "Submit",
+            "button_link": "/collections/o-series"
+          }
+        }
+      },
+      "block_order": [
+        "style_card_1",
+        "style_card_2"
+      ],
+      "settings": {
+        "title": "Choosing Your Style",
+        "show_category_tag": true,
+        "category_text": "Category",
+        "first_selected": true
+      }
+    }
   },
   "order": [
+    "co-creation-banner",
+    "style_selector",
     "cocreate",
     "media-testimonials",
     "what-next-steps",

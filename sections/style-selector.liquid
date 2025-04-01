@@ -1,0 +1,170 @@
+{{ 'style-selector.css' | asset_url | stylesheet_tag }}
+<div class="style-section">
+  <div class="style-container">
+    {% if section.settings.show_category_tag %}
+      <div class="category-tag">
+        <div class="category-tag-content">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+          {{ section.settings.category_text }}
+        </div>
+      </div>
+    {% endif %}
+
+    <h2 class="style-title">{{ section.settings.title }}</h2>
+
+    <div class="style-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'style_card' %}
+          <div
+            class="style-card{% if forloop.first and section.settings.first_selected %} active{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.pantone_code != blank %}
+              <div class="pantone-tag">{{ block.settings.pantone_code }}</div>
+            {% endif %}
+
+            {% if block.settings.chair_image != blank %}
+              {{
+                block.settings.chair_image
+                | image_url: width: 600
+                | image_tag:
+                  loading: 'lazy',
+                  alt: block.settings.series_name,
+                  class: 'chair-image',
+                  widths: '275, 550, 710, 1100',
+                  sizes: '(min-width: 750px) 600px, 100vw'
+              }}
+            {% else %}
+              {{ 'product-1' | placeholder_svg_tag: 'chair-image placeholder-svg' }}
+            {% endif %}
+
+            <div class="card-bottom">
+              <div class="series-name">{{ block.settings.series_name }}</div>
+              {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                <a href="{{ block.settings.button_link }}" class="submit-button">
+                  {{ block.settings.button_text }}
+                </a>
+              {% else %}
+                <button class="submit-button">{{ block.settings.button_text | default: 'Submit' }}</button>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script>
+  // Add card selection functionality
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.style-card');
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        // Remove active state from all cards
+        cards.forEach((c) => c.classList.remove('active'));
+        // Add active state to current card
+        card.classList.add('active');
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Style Selector",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Choosing Your Style"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_category_tag",
+      "label": "Show Category Tag",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "category_text",
+      "label": "Category Text",
+      "default": "Category"
+    },
+    {
+      "type": "checkbox",
+      "id": "first_selected",
+      "label": "First Card Selected by Default",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Style Card",
+      "type": "style_card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "series_name",
+          "label": "Series Name",
+          "default": "L Series"
+        },
+        {
+          "type": "text",
+          "id": "pantone_code",
+          "label": "Pantone Code",
+          "default": "PANTONE 2727 C"
+        },
+        {
+          "type": "image_picker",
+          "id": "chair_image",
+          "label": "Chair Image"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Submit"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Style Selector",
+      "blocks": [
+        {
+          "type": "style_card",
+          "settings": {
+            "series_name": "L Series",
+            "pantone_code": "PANTONE 2727 C",
+            "button_text": "Submit"
+          }
+        },
+        {
+          "type": "style_card",
+          "settings": {
+            "series_name": "O Series",
+            "pantone_code": "PANTONE 1232 C",
+            "button_text": "Submit"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

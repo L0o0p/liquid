@@ -1,32 +1,30 @@
 .custom-footer-container {
   background-color: #E9F0F8;
-  padding: 40px 0;
+  padding: 40px 0 0;
   font-family: Arial, sans-serif;
-  height: 651px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 .custom-footer-content {
   max-width: 1600px;
   margin: 0 auto;
   width: 100%;
-
+  padding: 0 40px;
 }
 
 .custom-footer-main {
-  display: grid;
-  grid-template-columns: 300px repeat(4, 1fr);
-  gap: 40px;
-  margin-bottom: 40px;
-    display: flex;
+  display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-.custom-footer-subscribe{
+.custom-footer-subscribe {
   max-width: 232px;
+  width: 100%;
 }
 
 .custom-footer-subscribe h3 {
@@ -44,26 +42,26 @@
 .custom-email-input {
   width: 100%;
   padding: 12px;
-  /* border: 0px solid #ddd; */
-  border-radius: 4px;
+  border-radius: 8px;
   margin-bottom: 15px;
   background-color: white;
-  border-radius: 8px;
-
 }
 
-input{
+input {
   border-width: 0px !important;
-  color:gray;
-  margin-left: 31.5px
-;
+  color: gray;
+  margin-left: 31.5px;
+  width: calc(100% - 45px);
 }
+
 input::placeholder {
-  color:#B9C8C8/* 半透明白色 */
+  color: #B9C8C8;
 }
-input:focus{
-outline: none;
+
+input:focus {
+  outline: none;
 }
+
 .custom-email-container {
   position: relative;
   display: flex;
@@ -76,36 +74,14 @@ outline: none;
   top: 40%;
   transform: translateY(-50%);
   z-index: 2;
-  pointer-events: none; 
+  pointer-events: none;
   height: 19.5px;
   width: 19.5px;
 }
 
-.custom-social-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.custom-social-icon {
-  width: 36px;
-  height: 36px;
-  background: #eee;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  text-decoration: none;
-  color: #333;
-}
-
-.custom-social-icon:hover {
-  background: #ddd;
-}
-
-.custom-footer-links{
+.custom-footer-links {
   max-width: 160px;
+  width: 100%;
 }
 
 .custom-footer-links h4 {
@@ -136,34 +112,27 @@ outline: none;
 }
 
 .custom-footer-bottom {
-  position: absolute;
-  bottom: 0;
   background-color: #58595B;
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid #eee;
+  padding: 20px 0;
   width: 100%;
-  height: 48px;
-
+  height: auto;
+  min-height: 48px;
 }
 
-.custom-footer-content{
-  max-width: 1600px;
+.bottom-bar-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .custom-copyright {
-  color: #666;
-  color:white;
+  color: white;
   font-size: 14px;
 }
 
 .custom-language-payment {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
 }
@@ -179,6 +148,7 @@ outline: none;
 .custom-payment-icons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .custom-payment-icon {
@@ -191,80 +161,13 @@ outline: none;
   justify-content: center;
 }
 
-@media (max-width: 1024px) {
-  .custom-footer-main {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .custom-footer-main {
-    grid-template-columns: 1fr;
-  }
-
-  .custom-footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-}
-
 /* 社交媒体图标样式 */
 .footer-social-icons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.social-icon-link {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  overflow: hidden; /* 确保图标不超出圆形容器 */
-}
-
-.social-icon-link:hover {
-  /* background-color: rgba(221, 227, 227, 0.9); */
-  transform: translateY(-2px);
-}
-
-.social-icon {
-  width: 20px; /* 图标大小 */
-  height: 20px;
-  display: block;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-  .footer-social-icons {
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .social-icon-link {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .social-icon {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* 社交媒体图标样式 */
-.footer-social-icons {
-  display: flex;
-  justify-content: space-between; /* 六等分关键属性 */
-  align-items: center;
-  width: 100%; /* 确保容器占满整行 */
-  flex-wrap: nowrap; /* 防止换行 */
-  gap: 0; /* 移除间距，由 space-between 自动处理 */
   width: 100%;
+  margin-top: 20px;
 }
 
 .social-icon-link {
@@ -285,8 +188,8 @@ outline: none;
 }
 
 .social-icon {
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
   object-fit: cover;
 }
 
@@ -295,84 +198,136 @@ outline: none;
   transform: translateY(-2px);
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-  .footer-social-icons {
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .social-icon-circle {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .social-icon {
-    width: 18px;
-    height: 18px;
-  }
-}
-
 /* 本地化表单容器样式 */
 .custom-localization-form {
   width: 100%;
 }
 
-/* 表单自身样式 */
 .custom-localization-form form {
   display: flex;
-  justify-content: space-between; /* 水平分布的关键 */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-/* 表单内的div元素样式 */
 .custom-localization-form form > div {
-  position: relative; /* 用于下拉菜单定位 */
+  position: relative;
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.2s ease;
 }
 
-/* 鼠标悬停效果 */
 .custom-localization-form form > div:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 可选：添加一个小图标指示下拉功能 */
-.custom-localization-form form > div::after {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-left: 6px;
-  border-right: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
-  transform: rotate(45deg);
-  vertical-align: middle;
-  transition: transform 0.2s ease;
+/* 响应式样式 */
+@media (max-width: 1280px) {
+  .custom-footer-main {
+    gap: 30px;
+  }
+  
+  .custom-footer-content {
+    padding: 0 30px;
+  }
 }
 
-/* 可选：悬停时旋转指示器 */
-.custom-localization-form form > div:hover::after {
-  transform: rotate(-135deg);
+@media (max-width: 1024px) {
+  .custom-footer-main {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  
+  .custom-footer-subscribe, 
+  .custom-footer-links {
+    flex: 0 0 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+  }
 }
 
-/* 响应式调整 */
+@media (max-width: 768px) {
+  .custom-footer-container {
+    padding: 30px 0 0;
+    height: auto;
+  }
+  
+  .custom-footer-content {
+    padding: 0 20px;
+  }
+  
+  .custom-footer-main {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .custom-footer-subscribe, 
+  .custom-footer-links {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  
+  .bottom-bar-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .custom-language-payment {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .custom-copyright {
+    padding-bottom: 10px;
+  }
+  
+  .social-icon-circle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 @media (max-width: 480px) {
+  .custom-footer-container {
+    padding: 20px 0 0;
+  }
+  
+  .custom-footer-content {
+    padding: 0 15px;
+  }
+  
+  .footer-social-icons {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  
+  .social-icon-circle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .custom-email-input {
+    padding: 10px;
+  }
+  
+  .custom-language-selector,
+  .custom-payment-icons {
+    width: 100%;
+    justify-content: center;
+  }
+  
   .custom-localization-form form {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
   }
   
   .custom-localization-form form > div {
     width: 100%;
+    text-align: center;
   }
-}
-
-.bottom-bar-content{
-  display: flex;
-  align-items: center;
 }

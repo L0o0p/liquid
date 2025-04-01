@@ -1,75 +1,88 @@
 .journey-continued {
   position: relative;
-  min-height: 1000px;
+  min-height: 600px; /* 减小最小高度，使其在小屏幕上更合理 */
   display: flex;
   align-items: center;
   background: #ffffff;
-  padding: 20px;
-  overflow-x: hidden;
+  padding: 60px 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 1000px;
+
 }
 
-/* Top background pattern */
-.journey-continued__bg-pattern-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 300px;
-  background-image: url("{{ 'wave-top.svg' | asset_url }}");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-}
-
-/* Bottom background pattern */
+/* 背景波浪样式 */
+.journey-continued__bg-pattern-top,
 .journey-continued__bg-pattern-bottom {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 300px;
-  background-image: url("{{ 'wave-buttom.svg' | asset_url }}");
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
   z-index: 0;
+  overflow: visible;
+}
+
+.journey-continued__bg-pattern-top {
+  top: 0;
+  height: 255px;
+}
+
+.journey-continued__bg-pattern-bottom {
+  bottom: 0;
+  height: 231px;
+}
+
+/* 控制SVG位置 */
+.journey-continued__bg-pattern-top svg {
+  position: absolute;
+  left: -35%;
+  width: 160%; /* 增加宽度确保在大屏幕上也能覆盖 */
+  height: 100%;
+}
+
+.journey-continued__bg-pattern-bottom svg {
+  position: absolute;
+  right: -25%;
+  width: 160%; /* 增加宽度确保在大屏幕上也能覆盖 */
+  height: 100%;
 }
 
 .journey-continued__container {
-  max-width: 1200px;
+  max-width: 1400px; /* 增加最大宽度以适应1920px宽度 */
   margin: 0 auto;
-  padding: 40px;
+  padding: clamp(20px, 5vw, 40px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   position: relative;
   z-index: 1;
+  gap: clamp(30px, 5vw, 60px); /* 添加间距，并使其响应式 */
 }
 
 .journey-continued__content {
   flex: 1;
-  max-width: 1000px;
+  max-width: 600px; /* 限制内容宽度 */
 }
 
 .journey-continued__heading {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: clamp(28px, 5vw, 48px); /* 响应式字体大小 */
+  margin-bottom: clamp(15px, 3vw, 20px);
   font-style: italic;
+  line-height: 1.2;
 }
 
 .journey-continued__text {
-  font-size: 24px;
-  color:#000000;
-  margin-bottom: 30px;
-    font-weight: 500;
-
+  font-size: clamp(18px, 3vw, 24px);
+  color: #000000;
+  margin-bottom: clamp(20px, 4vw, 30px);
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 .journey-continued__form-group {
   display: flex;
   gap: 10px;
   max-width: 400px;
-  max-height: 48px;
+  width: 100%;
 }
 
 .journey-continued__input {
@@ -79,6 +92,8 @@
   border-radius: 25px;
   font-size: 16px;
   outline: none;
+  width: 100%;
+  min-height: 48px;
 }
 
 .journey-continued__button {
@@ -89,6 +104,8 @@
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s;
+  white-space: nowrap;
+  min-height: 48px;
 }
 
 .journey-continued__button:hover {
@@ -97,14 +114,22 @@
 
 .journey-continued__illustration {
   flex: 1;
-  max-width: 692px;
+  max-width: 600px; /* 限制图片容器的最大宽度 */
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.journey-continued__image {
+  width: 100%;
+  height: auto;
+  max-width: 550px;
+  object-fit: contain;
 }
 
 .journey-continued__floating-element {
-  width: 200px;
-  height: 200px;
   position: relative;
+  transition: transform 0.5s ease-in-out;
 }
 
 .journey-continued__success {
@@ -117,7 +142,30 @@
   margin-bottom: 15px;
 }
 
+/* 平板设备 */
+@media (max-width: 1024px) {
+  .journey-continued {
+    min-height: 500px;
+    padding: 40px 20px;
+  }
+  
+  .journey-continued__container {
+    gap: 30px;
+  }
+  
+  .journey-continued__bg-pattern-top,
+  .journey-continued__bg-pattern-bottom {
+    height: 180px;
+  }
+}
+
+/* 平板和大手机 */
 @media (max-width: 768px) {
+  .journey-continued {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
   .journey-continued__container {
     flex-direction: column;
     text-align: center;
@@ -126,42 +174,86 @@
 
   .journey-continued__content {
     margin-bottom: 40px;
+    max-width: 100%;
   }
 
   .journey-continued__form-group {
     margin: 0 auto;
-    flex-direction: column;
+    max-width: 100%;
   }
 
-  .journey-continued__heading {
-    font-size: 36px;
-  }
-
-  .journey-continued__text {
-    font-size: 20px;
+  .journey-continued__illustration {
+    max-width: 450px; /* 在平板上减小图片大小 */
+    width: 100%;
   }
 
   .journey-continued__bg-pattern-top,
   .journey-continued__bg-pattern-bottom {
     height: 150px;
   }
+  
+  .journey-continued__bg-pattern-top svg, 
+  .journey-continued__bg-pattern-bottom svg {
+    width: 200%; /* 在平板上增加SVG的宽度 */
+  }
+
+    .journey-continued__bg-pattern-top svg {
+    bottom:25%
+  }
+
+  .journey-continued__bg-pattern-bottom svg {
+    bottom:-25%
+  }
 }
 
+@media (max-width: 1024px) {
+    .journey-continued__bg-pattern-top svg {
+    bottom:15%
+  }
+
+  .journey-continued__bg-pattern-bottom svg {
+    bottom:-25%
+  }
+}
+
+/* 手机设备 */
 @media (max-width: 480px) {
+  .journey-continued {
+    padding: 40px 15px;
+  }
+
   .journey-continued__container {
     padding: 15px;
   }
 
-  .journey-continued__heading {
-    font-size: 28px;
+  .journey-continued__form-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .journey-continued__button {
+    width: 100%;
   }
 
-  .journey-continued__text {
-    font-size: 18px;
+  .journey-continued__illustration {
+    max-width: 300px; /* 在手机上进一步减小图片大小 */
   }
 
   .journey-continued__bg-pattern-top,
   .journey-continued__bg-pattern-bottom {
     height: 100px;
   }
+  
+  .journey-continued__bg-pattern-top svg {
+    left: -50%;
+    width: 250%; /* 在手机上增加SVG的宽度 */
+    /* bottom: 30%; */
+  }
+  
+  .journey-continued__bg-pattern-bottom svg {
+    right: -50%;
+    width: 250%;
+    bottom: -30%;
+  }
 }
+
