@@ -31,6 +31,7 @@
           "settings": {
             "series_name": "L Series",
             "pantone_code": "PANTONE 2727 C",
+            "chair_image": "shopify://shop_images/chair_style_blue.png",
             "button_text": "Submit",
             "button_link": "/collections/l-series"
           }
@@ -40,6 +41,7 @@
           "settings": {
             "series_name": "O Series",
             "pantone_code": "PANTONE 1232 C",
+            "chair_image": "shopify://shop_images/chair_style_gray.png",
             "button_text": "Submit",
             "button_link": "/collections/o-series"
           }
