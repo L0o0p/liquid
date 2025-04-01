@@ -83,6 +83,9 @@
   gap: 10px;
   max-width: 400px;
   width: 100%;
+  border:#AFB7BF 1px solid;
+  border-radius:999px;
+  box-sizing: border-box;
 }
 
 .journey-continued__input {
@@ -94,6 +97,7 @@
   outline: none;
   width: 100%;
   min-height: 48px;
+  margin-left: 0 !important;
 }
 
 .journey-continued__button {
@@ -103,9 +107,13 @@
   border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
   transition: background 0.3s;
   white-space: nowrap;
   min-height: 48px;
+  border:#58595B 2px solid;
+  background-color: #58595B !important;
+
 }
 
 .journey-continued__button:hover {
