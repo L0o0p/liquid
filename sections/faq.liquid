@@ -61,6 +61,7 @@
     font-size: 42px;
     font-weight: bold;
     flex: 0 0 400px;
+    margin-top:12px;
   }
 
   .faq-list {
@@ -148,7 +149,7 @@
           style="--column-gap: {{ section.settings.column_gap }}px;"
         >
       {% endif %}
-      
+
       {% if image != blank %}
         {% liquid
           assign image_height = image.width | divided_by: image.aspect_ratio | round
@@ -168,13 +169,13 @@
           }}
         </div>
       {% endif %}
-      
+
       {% if image != blank %}<div class="m-collapsible__content-wrapper">{% endif %}
-      
+
       <!-- FAQ Style Layout -->
       <div class="faq-container">
         <h2 class="faq-title">{{ section.settings.heading }}</h2>
-        
+
         <div class="faq-list">
           {% for block in section.blocks %}
             <div class="faq-item" {{ block.shopify_attributes }}>
@@ -192,6 +193,7 @@
                   {% when 'liquid' %}
                     {{ block.settings.custom_liquid }}
                   {% else %}
+
                 {% endcase %}
               </div>
             </div>
@@ -199,7 +201,7 @@
         </div>
       </div>
       <!-- End FAQ Style Layout -->
-      
+
       {% if image != blank %}</div>{% endif %}
       {% if image != blank %}</div>{% endif %}
     </div>
@@ -207,18 +209,18 @@
 {% endif %}
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const questions = document.querySelectorAll('.faq-question');
 
-    questions.forEach(question => {
+    questions.forEach((question) => {
       question.addEventListener('click', () => {
         const answer = question.nextElementSibling;
         const icon = question.querySelector('.faq-icon');
-        
+
         answer.classList.toggle('active');
         icon.classList.toggle('active');
 
-        questions.forEach(q => {
+        questions.forEach((q) => {
           if (q !== question) {
             q.nextElementSibling.classList.remove('active');
             q.querySelector('.faq-icon').classList.remove('active');
@@ -229,18 +231,18 @@
 
     // Support for Shopify's section rendering events
     if (typeof Shopify !== 'undefined' && Shopify.designMode) {
-      document.addEventListener('shopify:section:load', function(event) {
+      document.addEventListener('shopify:section:load', function (event) {
         const sectionQuestions = event.detail.sectionContainer.querySelectorAll('.faq-question');
-        
-        sectionQuestions.forEach(question => {
+
+        sectionQuestions.forEach((question) => {
           question.addEventListener('click', () => {
             const answer = question.nextElementSibling;
             const icon = question.querySelector('.faq-icon');
-            
+
             answer.classList.toggle('active');
             icon.classList.toggle('active');
 
-            sectionQuestions.forEach(q => {
+            sectionQuestions.forEach((q) => {
               if (q !== question) {
                 q.nextElementSibling.classList.remove('active');
                 q.querySelector('.faq-icon').classList.remove('active');
