@@ -1,14 +1,40 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
+        "cocreate": {
+      "type": "cocreate",
+      "settings": {
+        "section_width": 1200,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_padding_sides": 20,
+        "gap": 60,
+        "grayscale": true,
+        "image_border_radius": 8,
+        "show_tag": true,
+        "tag_text": "Activity",
+        "tag_bg_color": "#FFF7E6",
+        "tag_text_color": "#FFB020",
+        "title": "Co-create with Us",
+        "title_size": 36,
+        "title_color": "#111111",
+        "limited_text": "Limited to 20 participants--be part of the innovation!",
+        "limited_text_color": "#2F80ED",
+        "description": "<p>Discover the perfect balance of science and comfort. Join our exclusive co-creation program for the L1 Pro ergonomic chair and help shape a product designed for your ultimate sitting experience.</p>",
+        "description_size": 16,
+        "description_color": "#666666",
+        "button_text": "Co-Create",
+        "button_link": "/pages/cocreate",
+        "button_bg_color": "#111111",
+        "button_text_color": "#FFFFFF",
+        "button_hover_color": "#333333",
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40,
+        "mobile_padding_sides": 20,
+        "mobile_gap": 30,
+        "mobile_title_size": 28,
+        "mobile_description_size": 16
+      }
+    },
     "media-testimonials": {
       "type": "media-testimonials",
       "blocks": {
@@ -194,13 +220,14 @@
         "accent_color": "#ffa726",
         "button_color": "#666666"
       }
-    }
+    },
   },
   "order": [
+    "cocreate",
     "media-testimonials",
     "what-next-steps",
     "faq_qBUVeN",
     "contact_form_new_HbjYa3",
-    "journey_continued_BrtNff"
+    "journey_continued_BrtNff",
   ]
 }
