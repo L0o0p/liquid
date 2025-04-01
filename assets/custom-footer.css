@@ -142,6 +142,7 @@ outline: none;
   display: flex;
   align-items: center;
   padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 1px solid #eee;
   width: 100%;
   height: 48px;
@@ -310,4 +311,68 @@ outline: none;
     width: 18px;
     height: 18px;
   }
+}
+
+/* 本地化表单容器样式 */
+.custom-localization-form {
+  width: 100%;
+}
+
+/* 表单自身样式 */
+.custom-localization-form form {
+  display: flex;
+  justify-content: space-between; /* 水平分布的关键 */
+  align-items: center;
+  width: 100%;
+}
+
+/* 表单内的div元素样式 */
+.custom-localization-form form > div {
+  position: relative; /* 用于下拉菜单定位 */
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+/* 鼠标悬停效果 */
+.custom-localization-form form > div:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* 可选：添加一个小图标指示下拉功能 */
+.custom-localization-form form > div::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+/* 可选：悬停时旋转指示器 */
+.custom-localization-form form > div:hover::after {
+  transform: rotate(-135deg);
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+  .custom-localization-form form {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .custom-localization-form form > div {
+    width: 100%;
+  }
+}
+
+.bottom-bar-content{
+  display: flex;
+  align-items: center;
 }
