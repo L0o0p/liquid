@@ -151,30 +151,53 @@
         "step-2": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/what-steps-2.jpg",
             "title": "Setup Your Profile",
             "description": "<p>Complete your profile with all necessary information.</p>"
-          }
-        },
-        "step_mGq6Wr": {
-          "type": "step",
-          "settings": {
-            "title": "Register OdinLake Account",
-            "description": "<p>To register an OdinLake account, follow these simple steps to get started with our services. By creating an account, you'll gain access to personalized features, exclusive updates, and seamless management of your preferences. Enjoy a tailored experience designed to enhance your interaction with our platform.</p>"
           }
         },
         "step-3": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/what-steps-3.jpg",
+            "title": "Register OdinLake Account",
+            "description": "<p>To register an OdinLake account, follow these simple steps to get started with our services. By creating an account, you'll gain access to personalized features, exclusive updates, and seamless management of your preferences. Enjoy a tailored experience designed to enhance your interaction with our platform.</p>"
+          }
+        },
+        "step-4": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/what-steps-4.jpg",
             "title": "Start Using Services",
             "description": "<p>Begin using all the amazing features and services we offer.</p>"
           }
-        }
+        },
+                "step-5": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/what-steps-5.jpg",
+            "title": "Start Using Services",
+            "description": "<p>Begin using all the amazing features and services we offer.</p>"
+          }
+        },
+                "step-6": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/what-steps-6.jpg",
+            "title": "Start Using Services",
+            "description": "<p>Begin using all the amazing features and services we offer.</p>"
+          }
+        },
       },
       "block_order": [
         "step-1",
         "step-2",
-        "step_mGq6Wr",
-        "step-3"
+        "step-3",
+        "step-4",
+        "step-5",
+        "step-6"
+
+
       ],
       "settings": {
         "title": "What Next"
