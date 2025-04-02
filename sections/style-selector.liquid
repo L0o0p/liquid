@@ -42,10 +42,55 @@
 
             <div class="card-bottom">
               <div class="series-name">{{ block.settings.series_name }}</div>
-              {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                <a href="{{ block.settings.button_link }}" class="submit-button">
+              {% if block.settings.button_text != blank %}
+                <a href="javascript:void(0);" class="submit-button" id="open-modal-button-{{ block.id }}">
                   {{ block.settings.button_text }}
                 </a>
+
+                <!-- 模态弹窗容器 -->
+                <div id="custom-modal-{{ block.id }}" class="custom-modal-container" style="display: none;">
+                  <div class="custom-modal-overlay"></div>
+
+                  <!-- 未注册用户看到的注册弹窗 -->
+                  <div class="custom-modal registration-modal" style="display: none;">
+                    <button class="custom-modal-close">×</button>
+                    <div class="modal-split">
+                      <div class="modal-image-side">
+                        <img src="{{ 'registration-image.jpg' | asset_url }}" alt="Sign up" class="registration-image">
+                        <div class="brand-slogan">MAKE POSSIBILITY WITH ODINLAKE</div>
+                      </div>
+                      <div class="modal-content-side">
+                        <h2>One More Step</h2>
+                        <p>Sign up account to co-create with us</p>
+
+                        <form class="signup-form" id="signup-form-{{ block.id }}">
+                          <div class="form-field">
+                            <input type="text" id="name-{{ block.id }}" placeholder="Name" required>
+                          </div>
+                          <div class="form-field">
+                            <input type="email" id="email-{{ block.id }}" placeholder="Email" required>
+                          </div>
+                          <button type="submit" class="signup-button">Sign Up</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 已注册用户或注册成功看到的内容 -->
+                  <div class="custom-modal success-modal" style="display: none;">
+                    <button class="custom-modal-close">×</button>
+                    <div class="success-content">
+                      <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="12" fill="#2196F3"/>
+                          <path d="M9 12.5L11 14.5L15.5 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <h2>All Good</h2>
+                      <p>Thanks for choosing our product</p>
+                    </div>
+                  </div>
+                </div>
               {% else %}
                 <button class="submit-button">{{ block.settings.button_text | default: 'Submit' }}</button>
               {% endif %}
@@ -56,19 +101,287 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* 模态弹窗样式 */
+  .custom-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .custom-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .custom-modal {
+    position: relative;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 90%;
+    width: 800px;
+  }
+
+  .custom-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    z-index: 10;
+  }
+
+  /* 注册模态弹窗 */
+  .modal-split {
+    display: flex;
+  }
+
+  .modal-image-side {
+    flex: 1;
+    position: relative;
+    background-color: #e6f0f9;
+  }
+
+  .registration-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .brand-slogan {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    white-space: nowrap;
+  }
+
+  .modal-content-side {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal-content-side h2 {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+    color: #000;
+  }
+
+  .modal-content-side p {
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    color: #666;
+  }
+
+  .signup-form {
+    width: 100%;
+  }
+
+  .form-field {
+    margin-bottom: 16px;
+  }
+
+  .form-field input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+  }
+
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #606060;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+
+  /* 成功模态弹窗 */
+  .success-modal {
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+  }
+
+  .success-modal h2 {
+    font-size: 24px;
+    margin: 16px 0 8px;
+    color: #000;
+  }
+
+  .success-modal p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  }
+
+  /* 响应式调整 */
+  @media (max-width: 767px) {
+    .modal-split {
+      flex-direction: column;
+    }
+
+    .modal-image-side {
+      height: 200px;
+    }
+
+    .brand-slogan {
+      transform: none;
+      bottom: 10px;
+    }
+  }
+</style>
+
 <script>
-  // Add card selection functionality
+  // 卡片选择功能
   document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.style-card');
 
     cards.forEach((card) => {
       card.addEventListener('click', () => {
-        // Remove active state from all cards
+        // 移除所有卡片的活跃状态
         cards.forEach((c) => c.classList.remove('active'));
-        // Add active state to current card
+        // 为当前卡片添加活跃状态
         card.classList.add('active');
       });
     });
+
+    // 模态弹窗功能
+    {% for block in section.blocks %}
+      {% if block.type == 'style_card' and block.settings.button_text != blank %}
+        const modalButton{{ block.id }} = document.getElementById('open-modal-button-{{ block.id }}');
+        const modal{{ block.id }} = document.getElementById('custom-modal-{{ block.id }}');
+
+        if (modalButton{{ block.id }} && modal{{ block.id }}) {
+          const closeButtons{{ block.id }} = modal{{ block.id }}.querySelectorAll('.custom-modal-close');
+          const overlay{{ block.id }} = modal{{ block.id }}.querySelector('.custom-modal-overlay');
+          const registrationModal{{ block.id }} = modal{{ block.id }}.querySelector('.registration-modal');
+          const successModal{{ block.id }} = modal{{ block.id }}.querySelector('.success-modal');
+          const signupForm{{ block.id }} = document.getElementById('signup-form-{{ block.id }}');
+
+          // 检查用户是否已注册
+          const checkUserRegistration{{ block.id }} = function() {
+            {% if customer %}
+              return true; // 用户已登录
+            {% else %}
+              // 这里可以添加额外检查，比如检查cookie等
+              return false; // 用户未登录
+            {% endif %}
+          };
+
+          // 打开模态弹窗并显示相应内容
+          modalButton{{ block.id }}.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation(); // 防止触发卡片点击事件
+
+            const isRegistered = checkUserRegistration{{ block.id }}();
+
+            if (isRegistered) {
+              registrationModal{{ block.id }}.style.display = 'none';
+              successModal{{ block.id }}.style.display = 'block';
+
+              // 可选：如果配置了链接且用户已注册，延迟后跳转
+              {% if block.settings.button_link != blank %}
+              setTimeout(function() {
+                window.location.href = "{{ block.settings.button_link }}";
+              }, 2000);
+              {% endif %}
+            } else {
+              registrationModal{{ block.id }}.style.display = 'block';
+              successModal{{ block.id }}.style.display = 'none';
+            }
+
+            modal{{ block.id }}.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+          });
+
+          // 处理注册表单提交
+          if (signupForm{{ block.id }}) {
+            signupForm{{ block.id }}.addEventListener('submit', function(e) {
+              e.preventDefault();
+
+              const nameInput = document.getElementById('name-{{ block.id }}');
+              const emailInput = document.getElementById('email-{{ block.id }}');
+
+              // 在这里可以添加发送数据到Shopify API的代码
+              // 这里仅做演示，直接显示成功消息
+
+              // 隐藏注册表单，显示成功消息
+              registrationModal{{ block.id }}.style.display = 'none';
+              successModal{{ block.id }}.style.display = 'block';
+
+              // 可选：存储用户信息到localStorage，下次可以检查
+              localStorage.setItem('userRegistered', 'true');
+              localStorage.setItem('userName', nameInput.value);
+              localStorage.setItem('userEmail', emailInput.value);
+
+              // 可选：如果配置了链接，延迟后跳转
+              {% if block.settings.button_link != blank %}
+              setTimeout(function() {
+                window.location.href = "{{ block.settings.button_link }}";
+              }, 2000);
+              {% endif %}
+            });
+          }
+
+          // 关闭模态弹窗
+          const closeModal{{ block.id }} = function() {
+            modal{{ block.id }}.style.display = 'none';
+            document.body.style.overflow = '';
+          };
+
+          if (closeButtons{{ block.id }}.length > 0) {
+            closeButtons{{ block.id }}.forEach(button => {
+              button.addEventListener('click', closeModal{{ block.id }});
+            });
+          }
+
+          if (overlay{{ block.id }}) {
+            overlay{{ block.id }}.addEventListener('click', closeModal{{ block.id }});
+          }
+        }
+      {% endif %}
+    {% endfor %}
   });
 </script>
 
