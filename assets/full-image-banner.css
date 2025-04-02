@@ -66,6 +66,7 @@
 @media (max-width: 767px) {
   .banner-image-container {
     height: 600px; /* Shorter height on mobile */
+    margin: 0;
   }
   
   .shop-button {

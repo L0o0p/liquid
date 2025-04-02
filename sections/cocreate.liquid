@@ -140,7 +140,14 @@
     .cocreate-button:hover {
       background-color: {{ section.settings.button_hover_color }};
     }
-
+  @media (max-width: 1366px) {
+    .cocreate-image{
+      width:70%;
+    }
+    .cocreate-content{
+      width:70%;
+    }
+    }
     @media (max-width: 768px) {
       .cocreate-container {
         flex-direction: column;

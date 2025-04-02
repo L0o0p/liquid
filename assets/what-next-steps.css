@@ -153,6 +153,11 @@
     background: #3b82f6;
 }
 
+    @media (max-width: 1366px) {
+  .container {
+  padding:64px}
+  }
+
 @media (max-width: 768px) {
     .slide {
         grid-template-columns: 1fr;

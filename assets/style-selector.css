@@ -122,8 +122,7 @@
   transition: background-color 0.3s;
   display: none;
   text-decoration: none;
-  display: flex !important;
-  justify-content: center;
+
 }
 
 .submit-button:hover {
@@ -133,6 +132,11 @@
 .style-card.active .submit-button {
   display: block;
 }
+
+    @media (max-width: 1366px) {
+  .style-container {
+  padding:64px}
+  }
 
 /* 平板设备 */
 @media (max-width: 1280px) {

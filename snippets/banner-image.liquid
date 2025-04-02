@@ -1,0 +1,13 @@
+<img
+  srcset="
+    {{ mobile_image | file_url }} {{ mobile_width }}w,
+    {{ desktop_image | file_url }} {{ desktop_width }}w
+  "
+  sizes="(max-width: {{ mobile_width }}px) {{ mobile_width }}px, 100vw"
+  src="{{ desktop_image | file_url }}"
+  alt="{{ alt_text }}"
+  class="{{ class }}"
+  loading="eager"
+  width="{{ desktop_width }}"
+  height="auto"
+>

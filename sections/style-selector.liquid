@@ -62,7 +62,9 @@
               <div class="series-name">{{ block.settings.series_name }}</div>
               {% if block.settings.button_text != blank %}
                 <a href="javascript:void(0);" class="submit-button" id="open-modal-button-{{ block.id }}">
-                  {{ block.settings.button_text }}
+                  <div style="display: flex; justify-content: center;align-item:center;height:100%;margin-top:4px">
+                    {{ block.settings.button_text }}
+                  </div>
                 </a>
 
                 <!-- 模态弹窗容器 -->
@@ -164,7 +166,7 @@
 
   /* 确认选择后隐藏提交按钮 */
   .style-card.confirmed .submit-button {
-    display: none;
+    display: none !important;
   }
 
   /* 模态弹窗样式 */
