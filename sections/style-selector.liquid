@@ -4,9 +4,21 @@
     {% if section.settings.show_category_tag %}
       <div class="category-tag">
         <div class="category-tag-content">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          <svg width="32" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_287_1913)">
+            <path d="M5.5 8H27.5" stroke="#F09A38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 16H14.5" stroke="#F09A38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 24H16.5" stroke="#F09A38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.5 22C25.7091 22 27.5 20.2091 27.5 18C27.5 15.7909 25.7091 14 23.5 14C21.2909 14 19.5 15.7909 19.5 18C19.5 20.2091 21.2909 22 23.5 22Z" stroke="#F09A38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26.3281 20.8288L29.4994 24" stroke="#F09A38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_287_1913">
+            <rect width="32" height="32" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+            </defs>
           </svg>
+
           {{ section.settings.category_text }}
         </div>
       </div>
@@ -24,9 +36,9 @@
           >
             <!-- 成功选择后显示的标记 -->
             <div class="confirmed-selection-mark">
-              <img src="{{ 'checkmark-badge.png' | asset_url }}" alt="Selected" width="32" height="32">
+              <img src="{{ 'picked.png' | asset_url }}" alt="Selected" width="32" height="32">
             </div>
-            
+
             {% if block.settings.pantone_code != blank %}
               <div class="pantone-tag">{{ block.settings.pantone_code }}</div>
             {% endif %}
@@ -113,47 +125,48 @@
   .style-card {
     position: relative;
     transition: all 0.3s ease;
+    background-color: #e9f0f8;
   }
-  
+
   /* 临时选中态样式 */
   .style-card.active {
     border: 2px solid rgba(33, 150, 243, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   /* 成功选择后的样式 */
   .style-card.confirmed {
-    border: 2px solid #4CAF50;
+    border: 2px solid #4caf50;
     background-color: rgba(76, 175, 80, 0.05);
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
   }
-  
+
   /* 成功选择标记样式 */
   .confirmed-selection-mark {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 32px;
-    height: 32px;
+    top: 20px;
+    right: 20px;
+    width: 126px;
+    height: 126px;
     z-index: 5;
     display: none; /* 默认隐藏 */
   }
-  
+
   .confirmed-selection-mark img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
-  
+
   .style-card.confirmed .confirmed-selection-mark {
     display: block; /* 确认选择后显示 */
   }
-  
+
   /* 确认选择后隐藏提交按钮 */
   .style-card.confirmed .submit-button {
     display: none;
   }
-  
+
   /* 模态弹窗样式 */
   .custom-modal-container {
     position: fixed;
