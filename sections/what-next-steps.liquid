@@ -21,12 +21,9 @@
                 loading="lazy"
               >
             {% else %}
-              <img
-                src="{{ 'what-steps-' | append: forloop.index | append: '.png' | asset_url }}"
-                alt="Step {{ forloop.index }}: {{ block.settings.title }}"
-                class="slide-image"
-                loading="lazy"
-              >
+              <div class="slide-image placeholder-image">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
             {% endif %}
             <div class="slide-content">
               <h2 class="step-number">Step {{ forloop.index }}:</h2>
@@ -86,8 +83,7 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Step Image",
-          "info": "Leave blank to use default image (what-steps-1.png through what-steps-6.png)"
+          "label": "Step Image"
         },
         {
           "type": "text",
@@ -109,46 +105,13 @@
       "name": "What Next Steps",
       "blocks": [
         {
-          "type": "step",
-          "settings": {
-            "title": "Step One Title",
-            "description": "<p>Description for step one</p>"
-          }
+          "type": "step"
         },
         {
-          "type": "step",
-          "settings": {
-            "title": "Step Two Title",
-            "description": "<p>Description for step two</p>"
-          }
+          "type": "step"
         },
         {
-          "type": "step",
-          "settings": {
-            "title": "Step Three Title",
-            "description": "<p>Description for step three</p>"
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "title": "Step Four Title",
-            "description": "<p>Description for step four</p>"
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "title": "Step Five Title",
-            "description": "<p>Description for step five</p>"
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "title": "Step Six Title",
-            "description": "<p>Description for step six</p>"
-          }
+          "type": "step"
         }
       ]
     }
