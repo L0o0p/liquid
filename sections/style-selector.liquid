@@ -20,7 +20,13 @@
           <div
             class="style-card{% if forloop.first and section.settings.first_selected %} active{% endif %}"
             {{ block.shopify_attributes }}
+            data-block-id="{{ block.id }}"
           >
+            <!-- 成功选择后显示的标记 -->
+            <div class="confirmed-selection-mark">
+              <img src="{{ 'checkmark-badge.png' | asset_url }}" alt="Selected" width="32" height="32">
+            </div>
+            
             {% if block.settings.pantone_code != blank %}
               <div class="pantone-tag">{{ block.settings.pantone_code }}</div>
             {% endif %}
@@ -103,6 +109,51 @@
 </div>
 
 <style>
+  /* 卡片基本样式 */
+  .style-card {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  /* 临时选中态样式 */
+  .style-card.active {
+    border: 2px solid rgba(33, 150, 243, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 成功选择后的样式 */
+  .style-card.confirmed {
+    border: 2px solid #4CAF50;
+    background-color: rgba(76, 175, 80, 0.05);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+  }
+  
+  /* 成功选择标记样式 */
+  .confirmed-selection-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    z-index: 5;
+    display: none; /* 默认隐藏 */
+  }
+  
+  .confirmed-selection-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .style-card.confirmed .confirmed-selection-mark {
+    display: block; /* 确认选择后显示 */
+  }
+  
+  /* 确认选择后隐藏提交按钮 */
+  .style-card.confirmed .submit-button {
+    display: none;
+  }
+  
   /* 模态弹窗样式 */
   .custom-modal-container {
     position: fixed;
@@ -273,18 +324,45 @@
 </style>
 
 <script>
-  // 卡片选择功能
+  // 卡片选择功能和模态弹窗功能
   document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.style-card');
 
+    // 点击卡片临时选择功能
     cards.forEach((card) => {
-      card.addEventListener('click', () => {
-        // 移除所有卡片的活跃状态
-        cards.forEach((c) => c.classList.remove('active'));
-        // 为当前卡片添加活跃状态
-        card.classList.add('active');
+      card.addEventListener('click', function(e) {
+        // 如果卡片已经是确认状态，不再允许更改选择
+        if (this.classList.contains('confirmed')) {
+          return;
+        }
+        
+        // 移除所有卡片的临时选中状态
+        cards.forEach((c) => {
+          if (!c.classList.contains('confirmed')) {
+            c.classList.remove('active');
+          }
+        });
+        
+        // 为当前卡片添加临时选中状态
+        this.classList.add('active');
       });
     });
+
+    // 从本地存储恢复确认选择的状态
+    function restoreConfirmedSelection() {
+      const confirmedCardId = localStorage.getItem('confirmedCardId');
+      if (confirmedCardId) {
+        const confirmedCard = document.querySelector(`.style-card[data-block-id="${confirmedCardId}"]`);
+        if (confirmedCard) {
+          // 移除active类，添加confirmed类
+          confirmedCard.classList.remove('active');
+          confirmedCard.classList.add('confirmed');
+        }
+      }
+    }
+    
+    // 页面加载时恢复选择状态
+    restoreConfirmedSelection();
 
     // 模态弹窗功能
     {% for block in section.blocks %}
@@ -304,8 +382,8 @@
             {% if customer %}
               return true; // 用户已登录
             {% else %}
-              // 这里可以添加额外检查，比如检查cookie等
-              return false; // 用户未登录
+              // 检查本地存储
+              return localStorage.getItem('userRegistered') === 'true';
             {% endif %}
           };
 
@@ -320,12 +398,26 @@
               registrationModal{{ block.id }}.style.display = 'none';
               successModal{{ block.id }}.style.display = 'block';
 
+              // 标记当前卡片为确认选择状态
+              const currentCard = document.querySelector('.style-card[data-block-id="{{ block.id }}"]');
+              if (currentCard) {
+                // 移除所有卡片的确认状态
+                cards.forEach((c) => {
+                  c.classList.remove('confirmed');
+                  c.classList.remove('active');
+                });
+                
+                // 为当前卡片添加确认状态
+                currentCard.classList.add('confirmed');
+                localStorage.setItem('confirmedCardId', '{{ block.id }}');
+              }
+
               // 可选：如果配置了链接且用户已注册，延迟后跳转
-              {% if block.settings.button_link != blank %}
+              {% comment %} {% if block.settings.button_link != blank %}
               setTimeout(function() {
                 window.location.href = "{{ block.settings.button_link }}";
               }, 2000);
-              {% endif %}
+              {% endif %} {% endcomment %}
             } else {
               registrationModal{{ block.id }}.style.display = 'block';
               successModal{{ block.id }}.style.display = 'none';
@@ -350,17 +442,31 @@
               registrationModal{{ block.id }}.style.display = 'none';
               successModal{{ block.id }}.style.display = 'block';
 
-              // 可选：存储用户信息到localStorage，下次可以检查
+              // 标记当前卡片为确认选择状态
+              const currentCard = document.querySelector('.style-card[data-block-id="{{ block.id }}"]');
+              if (currentCard) {
+                // 移除所有卡片的确认状态和临时选中状态
+                cards.forEach((c) => {
+                  c.classList.remove('confirmed');
+                  c.classList.remove('active');
+                });
+                
+                // 为当前卡片添加确认状态
+                currentCard.classList.add('confirmed');
+              }
+
+              // 存储用户信息和确认选择的卡片ID到localStorage
               localStorage.setItem('userRegistered', 'true');
               localStorage.setItem('userName', nameInput.value);
               localStorage.setItem('userEmail', emailInput.value);
+              localStorage.setItem('confirmedCardId', '{{ block.id }}');
 
               // 可选：如果配置了链接，延迟后跳转
-              {% if block.settings.button_link != blank %}
+              {% comment %} {% if block.settings.button_link != blank %}
               setTimeout(function() {
                 window.location.href = "{{ block.settings.button_link }}";
               }, 2000);
-              {% endif %}
+              {% endif %} {% endcomment %}
             });
           }
 
