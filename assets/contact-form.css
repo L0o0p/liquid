@@ -5,13 +5,13 @@
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-  height: 936px;
 }
 
 .contact-container {
   width: 100%;
   max-width: 1000px;
   padding: 40px;
+  height: 936px;
 }
 
 .header {
@@ -23,13 +23,16 @@ title{
 }
 
 .contact-label {
-  color: #ff9800;
+  padding: 20px 8px;
+  color: #F9A000;
   font-size: 16px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 8px;
   font-weight: 700;
+  border: #F9A000 1px solid;
+  width: 140px;
 }
 
 .contact-label::before {
@@ -55,6 +58,26 @@ title{
   .form-row {
     flex-direction: column;
   }
+}
+
+@media (max-width:768px) {
+
+  .contact-container {
+    height: 616px;
+    width: 100%;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.contact-label {
+  font-size: 16px;
+  padding: 4px 4px;
+  flex-wrap: nowrap;
+}
+
+
 }
 
 .form-group {

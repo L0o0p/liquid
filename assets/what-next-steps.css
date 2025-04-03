@@ -155,12 +155,18 @@
 
     @media (max-width: 1366px) {
   .container {
-  padding:64px}
+  padding:64px
+}
   }
 
 @media (max-width: 768px) {
+    .container {
+        height: 736px;
+  padding:64px
+    }
+
     .slide {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
     }
 
     .slide-content {
@@ -178,4 +184,18 @@
     .step-title {
         font-size: 1.25rem;
     }
+    .nav-button{
+        display: none;
+    }
+
+    .indicators {
+justify-content: space-between;
+width: 100%;
+gap: 12px;
+    }
+
+    .indicator {
+    width: 100%;
+    border-radius:0
+}
 }

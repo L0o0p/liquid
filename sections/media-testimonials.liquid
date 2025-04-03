@@ -1,226 +1,227 @@
 {%- style -%}
- .media-testimonials {
-  padding: clamp(40px, 5vw, 80px) clamp(20px, 8vw, 160px);
-  background-color: #f0f7fd;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.page-width {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.media-testimonials__heading {
-  font-size: clamp(22px, 4vw, 28px);
-  color: #0091ff;
-  margin-bottom: clamp(20px, 4vw, 40px);
-  font-weight: 700;
-}
-
-.media-testimonials__quote {
-  font-size: clamp(16px, 3vw, 24px);
-  line-height: 1.6;
-  max-width: 1280px;
-  margin: 0 auto clamp(30px, 5vw, 50px);
-  font-weight: 300;
-  width: 100%;
-}
-
-.media-testimonials__logos-container {
-  position: relative;
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1280px;
-}
-
-.media-testimonials__logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
-  overflow: hidden;
-  position: relative;
-  height: clamp(50px, 10vw, 72px);
-}
-
-.media-testimonials__logos-wrapper {
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-
-.media-testimonials__logo {
-  height: clamp(30px, 8vw, 60px);
-  margin: 0 clamp(10px, 2vw, 20px);
-  flex: 0 0 auto;
-  opacity: {{ section.settings.inactive_logo_opacity }};
-  transition: opacity 0.3s ease;
-  cursor: pointer;
-}
-
-.media-testimonials__logo.active {
-  opacity: 1;
-}
-
-.media-testimonials__nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  z-index: 5;
-  display: flex;
-  justify-content: space-between;
-  pointer-events: none;
-  max-width: 1280px; /* 确保导航与引用宽度一致 */
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.media-testimonials__nav-button {
-  width: clamp(36px, 8vw, 56px);
-  height: clamp(36px, 8vw, 56px);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  pointer-events: auto;
-  background: white;
-}
-
-.media-testimonials__nav-button img {
-  width: 100%;
-  height: auto;
-}
-
-.media-testimonials__slides {
-  position: relative;
-  overflow: hidden;
-  min-height: clamp(80px, 20vw, 120px);
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.media-testimonials__slide {
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.media-testimonials__slide.active {
-  opacity: 1;
-  position: relative;
-}
-
-.prev-button {
-  position: absolute;
-  left: 0;
-}
-
-.next-button {
-  position: absolute;
-  right: 0;
-}
-
-/* 平板设备 */
-@media screen and (max-width: 1280px) {
-  .media-testimonials__nav,
-  .media-testimonials__quote,
-  .media-testimonials__slides,
-  .media-testimonials__logos-container {
-    max-width: 90%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .media-testimonials {
-    padding: 60px 40px;
-  }
-  
-  .media-testimonials__nav-button {
-    width: 44px;
-    height: 44px;
-  }
-  
-  .media-testimonials__logos {
-    max-width: 600px;
-  }
-}
-
-/* 小平板设备 */
-@media screen and (max-width: 767px) {
-  .media-testimonials {
-    padding: 40px 20px;
+   .media-testimonials {
+    padding: clamp(40px, 5vw, 80px) clamp(20px, 8vw, 160px);
+    background-color: #f0f7fd;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
-  .media-testimonials__logos {
-    height: 60px;
-    position: relative;
-    max-width: 100%;
+  .page-width {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
-  .media-testimonials__logo {
-    height: 30px;
-    margin: 0 8px;
-  }
-
-  .media-testimonials__quote {
-    padding: 0 10px;
-  }
-  
-  .media-testimonials__nav-button {
-    width: 36px;
-    height: 36px;
-  }
-}
-
-/* 手机设备 */
-@media screen and (max-width: 480px) {
-  .media-testimonials {
-    padding: 30px 15px;
-  }
-  
   .media-testimonials__heading {
-    margin-bottom: 20px;
+    font-size: clamp(22px, 4vw, 28px);
+    color: #0091ff;
+    margin-bottom: clamp(20px, 4vw, 40px);
+    font-weight: 700;
   }
-  
-  .media-testimonials__logos {
-    height: 50px;
-  }
-  
-  .media-testimonials__logo {
-    height: 25px;
-    margin: 0 6px;
-  }
-  
-  .media-testimonials__nav-button {
-    width: 32px;
-    height: 32px;
-  }
-  
+
   .media-testimonials__quote {
-    margin-bottom: 25px;
+    font-size: clamp(16px, 3vw, 24px);
+    line-height: 1.6;
+    max-width: 1280px;
+    margin: 0 auto clamp(30px, 5vw, 50px);
+    font-weight: 300;
+    width: 100%;
   }
-}
+
+  .media-testimonials__logos-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
+  .media-testimonials__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    position: relative;
+    height: clamp(50px, 10vw, 72px);
+  }
+
+  .media-testimonials__logos-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .media-testimonials__logo {
+    height: clamp(30px, 8vw, 60px);
+    margin: 0 clamp(10px, 2vw, 20px);
+    flex: 0 0 auto;
+    opacity: {{ section.settings.inactive_logo_opacity }};
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+
+  .media-testimonials__logo.active {
+    opacity: 1;
+  }
+
+  .media-testimonials__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    max-width: 1280px; /* 确保导航与引用宽度一致 */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .media-testimonials__nav-button {
+    width: clamp(36px, 8vw, 56px);
+    height: clamp(36px, 8vw, 56px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    pointer-events: auto;
+    background: white;
+  }
+
+  .media-testimonials__nav-button img {
+    width: 100%;
+    height: auto;
+  }
+
+  .media-testimonials__slides {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(80px, 20vw, 120px);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .media-testimonials__slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .media-testimonials__slide.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  .prev-button {
+    position: absolute;
+    left: 0;
+  }
+
+  .next-button {
+    position: absolute;
+    right: 0;
+  }
+
+  /* 平板设备 */
+  @media screen and (max-width: 1280px) {
+    .media-testimonials__nav,
+    .media-testimonials__quote,
+    .media-testimonials__slides,
+    .media-testimonials__logos-container {
+      max-width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .media-testimonials {
+      padding: 60px 40px;
+    }
+
+    .media-testimonials__nav-button {
+      width: 44px;
+      height: 44px;
+    }
+
+    .media-testimonials__logos {
+      max-width: 600px;
+    }
+  }
+
+  /* 小平板设备 */
+  @media screen and (max-width: 768px) {
+    .media-testimonials {
+      padding: 40px 20px;
+    }
+
+    .media-testimonials__logos {
+      height: 60px;
+      position: relative;
+      max-width: 100%;
+    }
+
+    .media-testimonials__logo {
+      height: 30px;
+      margin: 0 8px;
+    }
+
+    .media-testimonials__quote {
+      padding: 0 10px;
+      font-size:20px !important;
+    }
+
+    .media-testimonials__nav-button {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  /* 手机设备 */
+  @media screen and (max-width: 480px) {
+    .media-testimonials {
+      padding: 30px 15px;
+    }
+
+    .media-testimonials__heading {
+      margin-bottom: 20px;
+    }
+
+    .media-testimonials__logos {
+      height: 50px;
+    }
+
+    .media-testimonials__logo {
+      height: 25px;
+      margin: 0 6px;
+    }
+
+    .media-testimonials__nav-button {
+      width: 32px;
+      height: 32px;
+    }
+
+    .media-testimonials__quote {
+      margin-bottom: 25px;
+    }
+  }
 {%- endstyle -%}
 
 <div class="media-testimonials" id="media-testimonials-{{ section.id }}">
   <div class="page-width">
-<h2 class="media-testimonials__heading">
-  {{ section.settings.heading | default: "What the Globe is Saying" }}
-</h2>
+    <h2 class="media-testimonials__heading">
+      {{ section.settings.heading | default: 'What the Globe is Saying' }}
+    </h2>
 
     <div class="media-testimonials__slides">
       {% for block in section.blocks %}

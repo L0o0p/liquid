@@ -12,7 +12,6 @@
     "full-image-banner": {
       "type": "full-image-banner",
       "settings": {
-        "banner_image": "shopify://shop_images/full-image-banner.png",
         "background_color": "#edf4fc",
         "show_button": true,
         "button_text": "Shop Now",
@@ -172,7 +171,7 @@
             "description": "<p>Begin using all the amazing features and services we offer.</p>"
           }
         },
-                "step-5": {
+        "step-5": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/what-steps-5.jpg",
@@ -180,14 +179,14 @@
             "description": "<p>Begin using all the amazing features and services we offer.</p>"
           }
         },
-                "step-6": {
+        "step-6": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/what-steps-6.jpg",
             "title": "Start Using Services",
             "description": "<p>Begin using all the amazing features and services we offer.</p>"
           }
-        },
+        }
       },
       "block_order": [
         "step-1",
@@ -196,8 +195,6 @@
         "step-4",
         "step-5",
         "step-6"
-
-
       ],
       "settings": {
         "title": "What Next"
@@ -292,7 +289,7 @@
         "heading_line2": "Hear From You",
         "name_placeholder": "Name",
         "email_placeholder": "Email",
-        "message_placeholder": "Leave some message here",
+        "message_placeholder": "Leave some message here render1",
         "name_error": "Please enter your name",
         "email_error": "Please enter a valid email address",
         "message_error": "Please enter your message",

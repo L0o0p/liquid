@@ -63,9 +63,9 @@
   transform: translate(-50%, -50%) scale(1.05);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .banner-image-container {
-    height: 600px; /* Shorter height on mobile */
+    height: 400px; /* Shorter height on mobile */
     margin: 0;
   }
   

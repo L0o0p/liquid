@@ -1,7 +1,7 @@
 .style-section {
   width: 100%;
   max-width: 100%;
-  min-height: 1212px;
+  height: 1212px;
   margin: 0 auto;
   padding: 60px 20px;
   display: flex;
@@ -102,6 +102,7 @@
   flex-wrap: wrap;
   gap: 12px;
 }
+.inbutton{display: flex; justify-content: center;align-item:center;height:100%;margin-top:4px}
 
 .series-name {
     font-size: 24px;
@@ -133,11 +134,6 @@
   display: block;
 }
 
-    @media (max-width: 1366px) {
-  .style-container {
-  padding:64px}
-  }
-
 /* 平板设备 */
 @media (max-width: 1280px) {
   .style-section {
@@ -160,19 +156,44 @@
 @media (max-width: 768px) {
   .style-section {
     padding: 30px 16px;
+    max-height: 656px !important;
   }
-  
+  .style-container{
+    max-width: 640px;
+    max-height: 644px;
+  }
+
+  .category-tag{
+    height: 40px;
+    padding: 4px 0px;
+  }
+
+   .category-tag-content svg{
+    /* height: 16px;
+    width: 16px; */
+  }
+
+  .category-tag-content{
+    height: 16px;
+    padding: 20px 8px;
+    font-weight: 700;
+    
+  }
+
   .style-title {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
   
   .style-grid {
     gap: 16px;
+    flex-wrap: nowrap;
+    height: 380px;
   }
   
   .style-card {
     width: 100%;
-    min-height: 450px;
+    max-width: 308px;
+    min-height: 380px;
   }
   
   .pantone-tag {
@@ -181,15 +202,37 @@
   }
   
   .card-bottom {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap !important;
   }
+
+  .series-name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.inbutton{
+  margin: 0;
+  font-size: 14px;
+}
   
   .style-card.active .submit-button {
-    width: 100%;
     text-align: center;
+    width: 120px;
+    height: 40px;
   }
+
+  .chair-image{
+  }
+
+.confirmed-selection-mark {
+  width: 72px !important;
+  height: 72px !important;
 }
+
+  }
+
+
 
 /* 手机设备 */
 @media (max-width: 480px) {
