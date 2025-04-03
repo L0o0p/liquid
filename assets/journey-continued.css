@@ -64,14 +64,14 @@
 }
 
 .journey-continued__heading {
-  font-size: clamp(28px, 5vw, 48px); /* 响应式字体大小 */
+  font-size: clamp(28px, 32px, 48px); /* 响应式字体大小 */
   margin-bottom: clamp(15px, 3vw, 20px);
   font-style: italic;
   line-height: 1.2;
 }
 
 .journey-continued__text {
-  font-size: clamp(18px, 3vw, 24px);
+  font-size: clamp(18px, 32px, 24px);
   color: #000000;
   margin-bottom: clamp(20px, 4vw, 30px);
   font-weight: 500;
@@ -171,13 +171,13 @@
 @media (max-width: 768px) {
   .journey-continued {
     min-height: auto;
-    padding: 60px 20px;
+    padding: 64px;
+    height: 480px;
   }
 
   .journey-continued__container {
-    flex-direction: column;
     text-align: center;
-    padding: 20px;
+    padding: 0px;
   }
 
   .journey-continued__content {
@@ -186,12 +186,34 @@
   }
 
   .journey-continued__form-group {
+    height: 40px;
     margin: 0 auto;
     max-width: 100%;
   }
 
+  .journey-continued__heading {
+    font-size: 24px;
+            margin-bottom: 12px;
+        margin-top: 36px;
+  }
+  .journey-continued__text {
+    font-size: 18px;
+
+  }
+
+  .journey-continued__form-group input{
+min-height: 0px;
+  }
+
+  .journey-continued__button {
+min-height: 0px;
+    font-size: 14px;
+    margin-top: 0px;
+    line-height: 100%;
+  }
+
   .journey-continued__illustration {
-    max-width: 450px; /* 在平板上减小图片大小 */
+    max-width: 328px; /* 在平板上减小图片大小 */
     width: 100%;
   }
 

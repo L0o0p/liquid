@@ -152,6 +152,19 @@
   }
 }
 
+@media (max-width:1080px) {
+  .style-section {
+    height: 856px;
+      margin-top: 72px;
+  margin-bottom: 72px;
+
+  }
+  .style-container {
+    padding: 64px;
+
+  }
+}
+
 /* 小平板/大手机 */
 @media (max-width: 768px) {
   .style-section {
@@ -161,6 +174,7 @@
   .style-container{
     max-width: 640px;
     max-height: 644px;
+    padding: 0;
   }
 
   .category-tag{

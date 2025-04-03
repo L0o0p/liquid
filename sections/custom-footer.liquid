@@ -159,23 +159,25 @@
       </div>
 
       <!-- 链接块循环 -->
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'link_list' %}
-            <div class="custom-footer-links" {{ block.shopify_attributes }}>
-              <h4>{{ block.settings.heading }}</h4>
-              {% if block.settings.menu != blank %}
-                <ul>
-                  {% for link in linklists[block.settings.menu].links %}
-                    <li>
-                      <a href="{{ link.url }}">{{ link.title }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </div>
-        {% endcase %}
-      {% endfor %}
+      <div class="links-block">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'link_list' %}
+              <div class="custom-footer-links" {{ block.shopify_attributes }}>
+                <h4>{{ block.settings.heading }}</h4>
+                {% if block.settings.menu != blank %}
+                  <ul>
+                    {% for link in linklists[block.settings.menu].links %}
+                      <li>
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
     </div>
   </div>
   <!-- 底部信息 -->
@@ -186,6 +188,8 @@
         <div class="custom-language-selector">
           {% if section.settings.show_locale_selector and shop.published_locales.size > 1 %}
             <div class="custom-localization-form">
+                <img src="{{ 'usa-icon.png' | asset_url }}" alt="Previous" width="32" height="32">
+                <div class="custom-localization-form-text">{{ section.settings.label_text }}</div>
               {%- form 'localization', id: 'CustomFooterLanguageForm', class: 'localization-form' -%}
                 <div>
                   {{ localization.country.flag.emoji }}
@@ -380,4 +384,3 @@
   ]
 }
 {% endschema %}
-

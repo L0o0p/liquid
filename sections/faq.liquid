@@ -36,9 +36,16 @@
 
     @media (max-width: 1366px) {
   .faq-container {
-  padding:64px}
+  padding:64px
+}
   }
-  @media (min-width: 768px) {
+
+      @media (max-width: 1080px) {
+    .container{
+height:850px
+}
+  }
+@media (min-width: 768px) {
     .m-collapsible__wrapper {
       grid-template-columns: 1fr 1fr;
       column-gap: var(--column-gap);
@@ -46,7 +53,7 @@
     }
 
     .container{
-      justify-content:flex-start;
+      {% comment %} justify-content:flex-start; {% endcomment %}
     }
 
     .faq-container {
@@ -60,7 +67,7 @@
         font-size: 32px;
         flex-wrap: wrap !important;
     }
-  }
+  } 
   @media (max-width: 767px) {
     .m-collapsible__image {
       margin-bottom: 24px;

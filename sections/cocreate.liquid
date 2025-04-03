@@ -57,142 +57,181 @@
 </div>
 
 {% style %}
-      .cocreate-container {
-        display: flex;
-        align-items: center;
-        width:100%;
-        margin:0;
-        /* max-width: {{ section.settings.section_width }}px; */
-        /* margin: 0 auto; */
-        gap: {{ section.settings.gap }}px;
-        height:100%;
-        min-height:928px
-      }
-
-
-      .cocreate-image img {
-        width: 100%;
-        height: 100%;
-        {% if section.settings.grayscale %}
-          filter: grayscale(100%);
-        {% endif %}
-      }
-
-    .cocreate-image,
-    .cocreate-content {
-      /* flex: 1; */
-      width: 50%;
-    }
-
-      .cocreate-content {
-        flex: 1;
-        max-width: 500px;
-      }
-
-      .activity-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 4px 12px;
-        border-radius: 4px;
-        margin-bottom: 20px;
-        color: {{ section.settings.tag_text_color }};
-        font-size: 14px;
-      }
-
-      .activity-tag svg {
-        width: 32px;
-        height: 32px;
-      }
-
-      .cocreate-title {
-        font-size: {{ section.settings.title_size }}px;
-        font-weight: 600;
-        margin-bottom: 16px;
-        color: {{ section.settings.title_color }};
-      }
-
-      .limited-text {
-        color: {{ section.settings.limited_text_color }};
-        font-size: 16px;
-        margin-bottom: 20px;
-      }
-
-      .cocreate-description {
-        color: {{ section.settings.description_color }};
-        font-size: {{ section.settings.description_size }}px;
-        line-height: 1.6;
-        margin-bottom: 32px;
-      }
-
-      .cocreate-button {
-        display: inline-block;
-        padding: 12px 32px;
-        background-color: {{ section.settings.button_bg_color }};
-        background-color:#58595B;
-        color: {{ section.settings.button_text_color }};
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: background-color 0.3s;
-      }
-
-      .cocreate-button:hover {
-        background-color: {{ section.settings.button_hover_color }};
-      }
-    @media (max-width: 1366px) {
-      .cocreate-image{
-        width:70%;
-      }
-      .cocreate-content{
-        width:70%;
-      }
-      }
-      @media (max-width: 768px) {
         .cocreate-container {
-          height:879px;
-          max-width:100%;
-          flex-direction: column;
-          gap: {{ section.settings.mobile_gap }}px;
+          display: flex;
+          align-items: center;
+          width:100%;
+          margin:0;
+          /* max-width: {{ section.settings.section_width }}px; */
+          /* margin: 0 auto; */
+          gap: {{ section.settings.gap }}px;
+          height:100%;
+          height:928px
         }
 
-         .cocreate-image {
-          width: 100%;
-          height:400px
-        }
 
         .cocreate-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
+          width: 100%;
+          height: 100%;
+          {% if section.settings.grayscale %}
+            filter: grayscale(100%);
+          {% endif %}
+        }
+
+      .cocreate-image,
+      .cocreate-content {
+        /* flex: 1; */
+        width: 50%;
+      }
 
         .cocreate-content {
-        /* max-width: 100%; */
-        max-width: 640px;
-        display: flex
-;
-        flex-direction: column;
-        align-items: center;
-    }
+          flex: 1;
+          max-width: 500px;
+        }
 
-    .cocreate-button {
-    display: flex;
-    width: 180px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40px;
-}
+        .activity-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 4px 12px;
+          border-radius: 4px;
+          margin-bottom: 20px;
+          color: {{ section.settings.tag_text_color }};
+          font-size: 14px;
+        }
+
+        .activity-tag svg {
+          width: 32px;
+          height: 32px;
+        }
 
         .cocreate-title {
-          font-size: {{ section.settings.mobile_title_size }}px;
+          font-size: {{ section.settings.title_size }}px;
+          font-weight: 600;
+          margin-bottom: 16px;
+          color: {{ section.settings.title_color }};
+        }
+
+        .limited-text {
+          color: {{ section.settings.limited_text_color }};
+          font-size: 16px;
+          margin-bottom: 20px;
         }
 
         .cocreate-description {
-          font-size: {{ section.settings.mobile_description_size }}px;
+          color: {{ section.settings.description_color }};
+          font-size: {{ section.settings.description_size }}px;
+          line-height: 1.6;
+          margin-bottom: 32px;
         }
+
+        .cocreate-button {
+          display: inline-block;
+          padding: 12px 32px;
+          background-color: {{ section.settings.button_bg_color }};
+          background-color:#58595B;
+          color: {{ section.settings.button_text_color }};
+          border-radius: 999px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: background-color 0.3s;
+        }
+
+        .cocreate-button:hover {
+          background-color: {{ section.settings.button_hover_color }};
+        }
+   /* 新增 1080px 断点适配 */
+  @media (max-width: 1080px) {
+    .cocreate-container {
+      /* 保持横向布局但缩小整体宽度 */
+      max-width: 1000px; /* 比桌面端稍窄 */
+      padding: 0; /* 增加侧边安全间距 */
+      gap:24px;
+      height: 650px ;
+    }
+
+    .cocreate-image {
+      width: 55%; /* 比 1366px 的 70% 更紧凑 */
+      height:100%
+    }
+
+    .cocreate-content {
+      width: 55%; /* 比 1366px 的 70% 更紧凑 */
+    }
+
+            .cocreate-image img {
+          object-fit: cover !important}
+    .cocreate-content {
+      max-width: 380px; /* 适度缩小内容区域 */
+    }
+
+    .cocreate-title {
+      /* 阶梯式缩小标题字号 */
+      font-size: calc({{ section.settings.title_size }}px * 0.85); /* 例如 36px → 30px */
+    }
+
+    .cocreate-description {
+      /* 文本字号微调 */
+      font-size: calc({{ section.settings.description_size }}px * 0.95); /* 例如 16px → 15px */
+      line-height: 1.5; /* 紧凑行高 */
+    }
+
+    .cocreate-button {
+      /* 按钮尺寸优化 */
+      padding: 10px 28px; /* 稍小于桌面端 */
+      font-size: 14px; /* 明确字号 */
+    }
+
+    /* 保持图片比例 */
+    .cocreate-image img {
+      object-fit: contain; /* 避免超宽屏裁剪 */
+    }
+  }
+        @media (max-width: 768px) {
+          .cocreate-container {
+            height:879px;
+            max-width:100%;
+            flex-direction: column;
+            gap: {{ section.settings.mobile_gap }}px;
+          }
+
+           .cocreate-image {
+            width: 100%;
+            height:400px
+          }
+
+          .cocreate-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+          .cocreate-content {
+          /* max-width: 100%; */
+          max-width: 640px;
+          display: flex
+  ;
+          flex-direction: column;
+          align-items: center;
       }
+
+      .cocreate-button {
+      display: flex;
+      width: 180px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 40px;
+  }
+
+          .cocreate-title {
+            font-size: {{ section.settings.mobile_title_size }}px;
+          }
+
+          .cocreate-description {
+            font-size: {{ section.settings.mobile_description_size }}px;
+          }
+        }
 {% endstyle %}
 
 {% schema %}
