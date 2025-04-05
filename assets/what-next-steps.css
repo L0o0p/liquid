@@ -220,6 +220,12 @@ gap: 12px;
     .container {
         padding: 64px 20px !important;
     }
+
+    .description-header {
+        padding: 4px 4px;
+        width: 140px;
+    }
+
     .slide {
         display: flex;
         flex-direction: column;
