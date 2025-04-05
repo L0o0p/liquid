@@ -70,8 +70,11 @@
 }
 
 .journey-continued__heading {
-  font-weight: 500;
   font-size: clamp(28px, 32px, 48px);
+  font-family: 'Platypi-SemiBoldItalic', sans-serif;
+  font-weight: 500;
+ white-space:nowrap;
+  font-size: 80px;
   /* 响应式字体大小 */
   margin-bottom: clamp(15px, 3vw, 20px);
   font-style: italic;
