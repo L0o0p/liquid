@@ -3,7 +3,10 @@
     <div class="custom-footer-main">
       <!-- 订阅部分 -->
       <div class="custom-footer-subscribe">
-        <h3>{{ section.settings.footer_title }}</h3>
+        {% comment %} <div class="h3-title"> {% endcomment %}
+        <img src="{{ 'odinlake.png' | asset_url }}" alt="Selected" width="32" height="32">
+        {% comment %} <h3>{{ section.settings.footer_title }}</h3> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
         <p>{{ section.settings.subscribe_text }}</p>
 
         {%- form 'customer', id: 'custom-footer-newsletter-form', class: 'custom-footer-newsletter-form' -%}
@@ -164,9 +167,12 @@
           {% case block.type %}
             {% when 'link_list' %}
               <div class="custom-footer-links" {{ block.shopify_attributes }}>
-                <h4>{{ block.settings.heading }}</h4>
+                <h4 class="mobile-toggle">
+                  {{ block.settings.heading -}}
+                  <span class="toggle-icon">▼</span>
+                </h4>
                 {% if block.settings.menu != blank %}
-                  <ul>
+                  <ul class="links-list">
                     {% for link in linklists[block.settings.menu].links %}
                       <li>
                         <a href="{{ link.url }}">{{ link.title }}</a>
@@ -188,8 +194,8 @@
         <div class="custom-language-selector">
           {% if section.settings.show_locale_selector and shop.published_locales.size > 1 %}
             <div class="custom-localization-form">
-                <img src="{{ 'usa-icon.png' | asset_url }}" alt="Previous" width="32" height="32">
-                <div class="custom-localization-form-text">{{ section.settings.label_text }}</div>
+              {% comment %} <img src="{{ 'usa-icon.png' | asset_url }}" alt="Previous" width="32" height="32"> {% endcomment %}
+              <div class="custom-localization-form-text">{{ section.settings.label_text }}</div>
               {%- form 'localization', id: 'CustomFooterLanguageForm', class: 'localization-form' -%}
                 <div>
                   {{ localization.country.flag.emoji }}
@@ -215,7 +221,33 @@
     </div>
   </div>
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 移动端点击交互
+    const toggles = document.querySelectorAll('.mobile-toggle');
 
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', function () {
+        const parent = this.closest('.custom-footer-links');
+        parent.classList.toggle('active');
+
+        // 关闭其他展开的菜单
+        document.querySelectorAll('.custom-footer-links').forEach((item) => {
+          if (item !== parent) item.classList.remove('active');
+        });
+      });
+    });
+
+    // 窗口大小变化时重置状态
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 480) {
+        document.querySelectorAll('.custom-footer-links').forEach((item) => {
+          item.classList.remove('active');
+        });
+      }
+    });
+  });
+</script>
 {% schema %}
 {
   "name": "自定义页脚",

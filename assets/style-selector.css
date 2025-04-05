@@ -169,11 +169,11 @@
 @media (max-width: 768px) {
   .style-section {
     padding: 30px 16px;
-    max-height: 656px !important;
+    height: 656px !important;
   }
   .style-container{
     max-width: 640px;
-    max-height: 644px;
+    height: 644px;
     padding: 0;
   }
 
@@ -251,20 +251,45 @@
 /* 手机设备 */
 @media (max-width: 480px) {
   .style-section {
-    padding: 20px 12px;
+    padding: 20px;
+    height: 960px! important;
+    margin:  40px 0;
+  }
+
+  .style-container{
+    height: 100%;
   }
   
   .category-tag {
     margin-bottom: 12px;
   }
-  
-  .style-title {
-    margin-bottom: 20px;
+
+  .category-tag-content {
+    height: 16px;
+    padding: 15px 8px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .category-tag svg {
+    width: 16.5px;
+    height: 16.5px;
   }
   
+  .style-title {
+    margin-bottom: 32px;
+  }
+  
+.style-grid{
+  display: flex;
+  flex-direction: column;
+height: 100%;
+}
+
   .style-card {
     padding: 16px;
     min-height: 350px;
+    max-width: 100% ;
   }
   
   .pantone-tag {
@@ -274,5 +299,10 @@
   
   .series-name {
     font-size: 16px;
+  }
+
+  .inbutton{
+    font-weight: 500;
+            margin-top: 2px;
   }
 }

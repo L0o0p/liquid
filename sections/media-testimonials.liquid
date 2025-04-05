@@ -195,6 +195,8 @@
 
     .media-testimonials__heading {
       margin-bottom: 20px;
+      font-size:14px;
+      font-weight:700
     }
 
     .media-testimonials__logos {
@@ -213,6 +215,13 @@
 
     .media-testimonials__quote {
       margin-bottom: 25px;
+      font-size:16px !important;
+      font-weight:300px
+    }
+
+    .media-testimonials__nav, .media-testimonials__quote, .media-testimonials__slides, .media-testimonials__logos-container {
+      max-width: 100%;
+      margin-bottom: 16px;
     }
   }
 {%- endstyle -%}
@@ -280,12 +289,14 @@
 
     <div class="media-testimonials__logos-container">
       <div class="media-testimonials__nav">
-        <button class="media-testimonials__nav-button prev" aria-label="Previous">
-          <img src="{{ 'prev.png' | asset_url }}" alt="Previous" width="56" height="56">
-        </button>
-        <button class="media-testimonials__nav-button next" aria-label="Next">
-          <img src="{{ 'next.png' | asset_url }}" alt="Next" width="56" height="56">
-        </button>
+        {% comment %}
+          <button class="media-testimonials__nav-button prev" aria-label="Previous">
+            <img src="{{ 'prev.png' | asset_url }}" alt="Previous" width="56" height="56">
+          </button>
+          <button class="media-testimonials__nav-button next" aria-label="Next">
+            <img src="{{ 'next.png' | asset_url }}" alt="Next" width="56" height="56">
+          </button>
+        {% endcomment %}
       </div>
 
       <div class="media-testimonials__logos">

@@ -6,6 +6,13 @@
 
 {{ 'journey-continued.css' | asset_url | stylesheet_tag }}
 <style>
+    {% comment %} /* 桌面端（宽度 ≥ 481px）时反转顺序 */
+  @media (min-width: 481px) {
+    .journey-continued__container {
+      flex-direction: column-reverse; /* 桌面端顺序：B → A */
+    }
+  } {% endcomment %}
+
   .journey-continued {
     position: relative;
     overflow: hidden; /* 添加这行确保超出部分被隐藏 */
