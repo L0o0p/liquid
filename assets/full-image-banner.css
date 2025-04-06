@@ -106,4 +106,30 @@
     left: 50% !important;
     width: 60%;
   }
+
+  .chair-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    object-fit: contain;
 }
+}
+
+@media (max-width: 430px) {
+
+  .chair-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    flex-grow: 1;
+    object-fit: contain;
+}
+
+  .shop-button {
+    top: 90% !important;
+    left: 50% !important;
+    width: 60%;
+  }
+}
+

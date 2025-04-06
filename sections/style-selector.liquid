@@ -42,7 +42,7 @@
             {% if block.settings.pantone_code != blank %}
               <div class="pantone-tag">{{ block.settings.pantone_code }}</div>
             {% endif %}
-
+<div class="chair-image-container">
             {% if block.settings.chair_image != blank %}
               {{
                 block.settings.chair_image
@@ -57,7 +57,7 @@
             {% else %}
               {{ 'product-1' | placeholder_svg_tag: 'chair-image placeholder-svg' }}
             {% endif %}
-
+</div>
             <div class="card-bottom">
               <div class="series-name">{{ block.settings.series_name }}</div>
               {% if block.settings.button_text != blank %}

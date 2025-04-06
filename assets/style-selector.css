@@ -87,6 +87,10 @@
   color: #666;
 }
 
+.chair-image-container {
+    margin-bottom: 32px;
+}
+
 .chair-image {
   width: 100%;
   height: auto;
@@ -163,6 +167,10 @@
     padding: 64px;
 
   }
+
+  .chair-image-container {
+    margin-bottom: 16px;
+}
 }
 
 /* 小平板/大手机 */
@@ -237,6 +245,7 @@
   }
 
   .chair-image{
+    height: 100%;
   }
 
 .confirmed-selection-mark {
@@ -291,7 +300,11 @@ height: 100%;
     min-height: 350px;
     max-width: 100% ;
   }
-  
+  .chair-image-container {
+    max-width: 350px;
+    max-height: 300px;
+    margin-bottom: 20px;
+}
   .pantone-tag {
     font-size: 10px;
     padding: 2px 6px;
