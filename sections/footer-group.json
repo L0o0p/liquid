@@ -22,28 +22,28 @@
         "products_links": {
           "type": "link_list",
           "settings": {
-            "heading": "产品",
+            "heading": "Products",
             "menu": "footer"
           }
         },
         "about_links": {
           "type": "link_list",
           "settings": {
-            "heading": "关于我们",
+            "heading": "About",
             "menu": "footer"
           }
         },
         "support_links": {
           "type": "link_list",
           "settings": {
-            "heading": "支持",
+            "heading": "Service",
             "menu": "footer"
           }
         },
         "additional_links": {
           "type": "link_list",
           "settings": {
-            "heading": "资源中心",
+            "heading": "Support",
             "menu": "footer-resources"
           }
         }
