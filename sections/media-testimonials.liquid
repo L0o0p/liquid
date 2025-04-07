@@ -33,7 +33,6 @@
 
   .media-testimonials__logos-container {
     position: relative;
-    display: flex;
     width: 100%;
     margin: 0 auto;
     max-width: 1280px;
@@ -45,7 +44,6 @@
     justify-content: center;
     margin: 0 auto;
     width: 100%;
-    max-width: 1000px;
     overflow: hidden;
     position: relative;
     height: clamp(50px, 10vw, 72px);
@@ -54,53 +52,33 @@
   .media-testimonials__logos-wrapper {
     display: flex;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
+    touch-action: pan-x;
+    width: 100%;
   }
 
   .media-testimonials__logo {
     height: clamp(30px, 8vw, 60px);
-    margin: 0 clamp(10px, 2vw, 20px);
-    flex: 0 0 auto;
+    flex: 0 0 25%; /* Important: Each logo takes exactly 25% of the width */
     opacity: {{ section.settings.inactive_logo_opacity }};
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .media-testimonials__logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
   }
 
   .media-testimonials__logo.active {
     opacity: 1;
-  }
-
-  .media-testimonials__nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-    max-width: 1280px; /* 确保导航与引用宽度一致 */
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-
-  .media-testimonials__nav-button {
-    width: clamp(36px, 8vw, 56px);
-    height: clamp(36px, 8vw, 56px);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    pointer-events: auto;
-    background: white;
-  }
-
-  .media-testimonials__nav-button img {
-    width: 100%;
-    height: auto;
+    transform: scale(1.05);
   }
 
   .media-testimonials__slides {
@@ -117,26 +95,17 @@
     width: 100%;
     opacity: 0;
     transition: opacity 0.5s ease;
+    pointer-events: none;
   }
 
   .media-testimonials__slide.active {
     opacity: 1;
     position: relative;
-  }
-
-  .prev-button {
-    position: absolute;
-    left: 0;
-  }
-
-  .next-button {
-    position: absolute;
-    right: 0;
+    pointer-events: auto;
   }
 
   /* 平板设备 */
   @media screen and (max-width: 1280px) {
-    .media-testimonials__nav,
     .media-testimonials__quote,
     .media-testimonials__slides,
     .media-testimonials__logos-container {
@@ -148,15 +117,6 @@
     .media-testimonials {
       padding: 60px 40px;
     }
-
-    .media-testimonials__nav-button {
-      width: 44px;
-      height: 44px;
-    }
-
-    .media-testimonials__logos {
-      max-width: 600px;
-    }
   }
 
   /* 小平板设备 */
@@ -167,23 +127,15 @@
 
     .media-testimonials__logos {
       height: 60px;
-      position: relative;
-      max-width: 100%;
     }
 
     .media-testimonials__logo {
-      height: 30px;
-      margin: 0 8px;
+      flex: 0 0 25%; /* Show 2 logos on tablets */
     }
 
     .media-testimonials__quote {
       padding: 0 10px;
-      font-size:20px !important;
-    }
-
-    .media-testimonials__nav-button {
-      width: 36px;
-      height: 36px;
+      font-size: 20px !important;
     }
   }
 
@@ -195,8 +147,8 @@
 
     .media-testimonials__heading {
       margin-bottom: 20px;
-      font-size:14px;
-      font-weight:700
+      font-size: 14px;
+      font-weight: 700;
     }
 
     .media-testimonials__logos {
@@ -205,21 +157,15 @@
 
     .media-testimonials__logo {
       height: 25px;
-      margin: 0 6px;
-    }
-
-    .media-testimonials__nav-button {
-      width: 32px;
-      height: 32px;
     }
 
     .media-testimonials__quote {
       margin-bottom: 25px;
-      font-size:16px !important;
-      font-weight:300px
+      font-size: 16px !important;
+      font-weight: 300;
     }
 
-    .media-testimonials__nav, .media-testimonials__quote, .media-testimonials__slides, .media-testimonials__logos-container {
+    .media-testimonials__quote, .media-testimonials__slides, .media-testimonials__logos-container {
       max-width: 100%;
       margin-bottom: 16px;
     }
@@ -288,129 +234,112 @@
     </div>
 
     <div class="media-testimonials__logos-container">
-      <div class="media-testimonials__nav">
-        {% comment %}
-          <button class="media-testimonials__nav-button prev" aria-label="Previous">
-            <img src="{{ 'prev.png' | asset_url }}" alt="Previous" width="56" height="56">
-          </button>
-          <button class="media-testimonials__nav-button next" aria-label="Next">
-            <img src="{{ 'next.png' | asset_url }}" alt="Next" width="56" height="56">
-          </button>
-        {% endcomment %}
-      </div>
-
       <div class="media-testimonials__logos">
         <div class="media-testimonials__logos-wrapper">
           <!-- Original logos from section blocks -->
           {% for block in section.blocks %}
-            {% if block.settings.logo != blank %}
-              <img
-                src="{{ block.settings.logo | image_url: width: 200 }}"
-                alt="{{ block.settings.logo_name }}"
-                class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
-                data-index="{{ forloop.index0 }}"
-                loading="lazy"
-                width="auto"
-                height="60"
-              >
-            {% elsif block.settings.logo_url != blank %}
-              <img
-                src="{{ block.settings.logo_url }}"
-                alt="{{ block.settings.logo_name }}"
-                class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
-                data-index="{{ forloop.index0 }}"
-                loading="lazy"
-                width="auto"
-                height="60"
-              >
-            {% elsif block.settings.logo_asset != blank %}
-              <img
-                src="{{ block.settings.logo_asset | asset_url }}"
-                alt="{{ block.settings.logo_name }}"
-                class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
-                data-index="{{ forloop.index0 }}"
-                loading="lazy"
-                width="auto"
-                height="60"
-              >
-            {% else %}
-              <!-- Fallback if no logo is set in the block -->
-              <img
-                src="https://via.placeholder.com/180x60?text=Logo {{ forloop.index }}"
-                alt="Media Logo {{ forloop.index }}"
-                class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
-                data-index="{{ forloop.index0 }}"
-                loading="lazy"
-                width="auto"
-                height="60"
-              >
-            {% endif %}
+            <div class="media-testimonials__logo{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}">
+              {% if block.settings.logo != blank %}
+                <img
+                  src="{{ block.settings.logo | image_url: width: 200 }}"
+                  alt="{{ block.settings.logo_name }}"
+                  loading="lazy"
+                  width="auto"
+                  height="60"
+                >
+              {% elsif block.settings.logo_url != blank %}
+                <img
+                  src="{{ block.settings.logo_url }}"
+                  alt="{{ block.settings.logo_name }}"
+                  loading="lazy"
+                  width="auto"
+                  height="60"
+                >
+              {% elsif block.settings.logo_asset != blank %}
+                <img
+                  src="{{ block.settings.logo_asset | asset_url }}"
+                  alt="{{ block.settings.logo_name }}"
+                  loading="lazy"
+                  width="auto"
+                  height="60"
+                >
+              {% else %}
+                <!-- Fallback if no logo is set in the block -->
+                <img
+                  src="https://via.placeholder.com/180x60?text=Logo {{ forloop.index }}"
+                  alt="Media Logo {{ forloop.index }}"
+                  loading="lazy"
+                  width="auto"
+                  height="60"
+                >
+              {% endif %}
+            </div>
           {% endfor %}
 
           <!-- Additional placeholder logos -->
-          <img
-            src="{{ 'com_1.png' | asset_url }}"
-            alt="Forbes"
-            class="media-testimonials__logo"
-            data-index="{{ section.blocks.size }}"
-            loading="lazy"
-            width="auto"
-            height="60"
-          >
-          <img
-            src="{{ 'com_2.png' | asset_url }}"
-            alt="TechRadar"
-            class="media-testimonials__logo"
-            data-index="{{ section.blocks.size | plus: 1 }}"
-            loading="lazy"
-            width="auto"
-            height="60"
-          >
-          <img
-            src="{{ 'com_3.png' | asset_url }}"
-            alt="Wired"
-            class="media-testimonials__logo"
-            data-index="{{ section.blocks.size | plus: 2 }}"
-            loading="lazy"
-            width="auto"
-            height="60"
-          >
-          <img
-            src="{{ 'com_4.png' | asset_url }}"
-            alt="CNN"
-            class="media-testimonials__logo"
-            data-index="{{ section.blocks.size | plus: 3 }}"
-            loading="lazy"
-            width="auto"
-            height="60"
-          >
-          <img
-            src="{{ 'com_5.png' | asset_url }}"
-            alt="Bloomberg"
-            class="media-testimonials__logo"
-            data-index="{{ section.blocks.size | plus: 4 }}"
-            loading="lazy"
-            width="auto"
-            height="60"
-          >
-          <img
-            src="{{ 'com_1.png' | asset_url }}"
-            alt="Fast Company"
-            class="media-testimonials__logo"
-            data-index="{{ section.blocks.size | plus: 5 }}"
-            loading="lazy"
-            width="auto"
-            height="60"
-          >
-          <img
-            src="{{ 'com_1.png' | asset_url }}"
-            alt="Wall Street Journal"
-            class="media-testimonials__logo"
-            data-index="{{ section.blocks.size | plus: 6 }}"
-            loading="lazy"
-            width="auto"
-            height="60"
-          >
+          <div class="media-testimonials__logo" data-index="{{ section.blocks.size }}">
+            <img
+              src="{{ 'com_1.png' | asset_url }}"
+              alt="Forbes"
+              loading="lazy"
+              width="auto"
+              height="60"
+            >
+          </div>
+          <div class="media-testimonials__logo" data-index="{{ section.blocks.size | plus: 1 }}">
+            <img
+              src="{{ 'com_2.png' | asset_url }}"
+              alt="TechRadar"
+              loading="lazy"
+              width="auto"
+              height="60"
+            >
+          </div>
+          <div class="media-testimonials__logo" data-index="{{ section.blocks.size | plus: 2 }}">
+            <img
+              src="{{ 'com_3.png' | asset_url }}"
+              alt="Wired"
+              loading="lazy"
+              width="auto"
+              height="60"
+            >
+          </div>
+          <div class="media-testimonials__logo" data-index="{{ section.blocks.size | plus: 3 }}">
+            <img
+              src="{{ 'com_4.png' | asset_url }}"
+              alt="CNN"
+              loading="lazy"
+              width="auto"
+              height="60"
+            >
+          </div>
+          <div class="media-testimonials__logo" data-index="{{ section.blocks.size | plus: 4 }}">
+            <img
+              src="{{ 'com_5.png' | asset_url }}"
+              alt="Bloomberg"
+              loading="lazy"
+              width="auto"
+              height="60"
+            >
+          </div>
+          <div class="media-testimonials__logo" data-index="{{ section.blocks.size | plus: 5 }}">
+            <img
+              src="{{ 'com_1.png' | asset_url }}"
+              alt="Fast Company"
+              loading="lazy"
+              width="auto"
+              height="60"
+            >
+          </div>
+          <div class="media-testimonials__logo" data-index="{{ section.blocks.size | plus: 6 }}">
+            <img
+              src="{{ 'com_1.png' | asset_url }}"
+              alt="Wall Street Journal"
+              loading="lazy"
+              width="auto"
+              height="60"
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -422,21 +351,29 @@
     const testimonialContainer = document.getElementById('media-testimonials-{{ section.id }}');
     const slides = testimonialContainer.querySelectorAll('.media-testimonials__slide');
     const logos = testimonialContainer.querySelectorAll('.media-testimonials__logo');
-    const prevButton = testimonialContainer.querySelector('.media-testimonials__nav-button.prev');
-    const nextButton = testimonialContainer.querySelector('.media-testimonials__nav-button.next');
     const logosWrapper = testimonialContainer.querySelector('.media-testimonials__logos-wrapper');
+    const logosContainer = testimonialContainer.querySelector('.media-testimonials__logos');
     
-    let currentIndex = 0; // Currently displayed testimonial
-    let startPosition = 0; // First logo position in the visible set
+    // Constants
+    const DESKTOP_ITEMS_PER_VIEW = 4; // Always show 4 logos on desktop
+    const TABLET_ITEMS_PER_VIEW = 2;  // Show 2 logos on tablets
+    const logoCount = logos.length;
     
-    const visibleLogos = 4; // Number of logos visible at once
-    const logoWidth = 100; // Approximate width of each logo + margins
+    // State variables
+    let currentSlideIndex = 0;
+    let currentGroupIndex = 0;
+    let startX = 0;
+    let isDragging = false;
+    let autoplayInterval;
     
-    // Initialize with first logo active and first testimonial showing
-    showTestimonial(0);
+    // Get current items per view based on screen size
+    function getItemsPerView() {
+      return window.innerWidth <= 768 ? TABLET_ITEMS_PER_VIEW : DESKTOP_ITEMS_PER_VIEW;
+    }
     
-    // This function changes which testimonial is displayed
+    // This function shows a specific testimonial
     function showTestimonial(index) {
+      // Normalize the index
       if (index < 0) index = slides.length - 1;
       if (index >= slides.length) index = 0;
       
@@ -448,52 +385,150 @@
       logos.forEach(logo => logo.classList.remove('active'));
       logos[index].classList.add('active');
       
-      currentIndex = index;
+      // Make sure the active logo is visible
+      const itemsPerView = getItemsPerView();
+      const groupIndex = Math.floor(index / itemsPerView);
+      goToGroup(groupIndex);
+      
+      currentSlideIndex = index;
     }
     
-    // This function shifts which logos are visible
-    function updateLogoVisibility() {
-      const translateValue = -startPosition * logoWidth;
-      logosWrapper.style.transform = `translateX(${translateValue}px)`;
+    // This function shifts to a specific group of logos
+    function goToGroup(groupIndex) {
+      const itemsPerView = getItemsPerView();
+      const totalGroups = Math.ceil(logoCount / itemsPerView);
+      
+      // Normalize group index
+      if (groupIndex < 0) groupIndex = totalGroups - 1;
+      if (groupIndex >= totalGroups) groupIndex = 0;
+      
+      // Calculate the percentage to translate
+      const translatePercentage = -(groupIndex * 100) + '%';
+      logosWrapper.style.transform = `translateX(${translatePercentage})`;
+      
+      currentGroupIndex = groupIndex;
     }
     
-    // Setup click event for logos
+    // Setup logo click handlers
     logos.forEach(logo => {
       logo.addEventListener('click', function() {
         const index = parseInt(this.dataset.index);
         showTestimonial(index);
+        resetAutoplay();
       });
     });
     
-    // Setup navigation - ONLY moves the logo slider
-    prevButton.addEventListener('click', function() {
-      if (startPosition > 0) {
-        startPosition--;
-        updateLogoVisibility();
-      }
-    });
+    // Setup touch/mouse drag functionality
+    logosContainer.addEventListener('mousedown', startDrag);
+    logosContainer.addEventListener('touchstart', startDrag, { passive: true });
     
-    nextButton.addEventListener('click', function() {
-      if (startPosition < logos.length - visibleLogos) {
-        startPosition++;
-        updateLogoVisibility();
-      }
-    });
+    window.addEventListener('mousemove', drag);
+    window.addEventListener('touchmove', drag, { passive: false });
     
-    // Auto rotation if enabled
-    {% if section.settings.autoplay %}
-      let interval = setInterval(function() {
-        showTestimonial(currentIndex + 1);
-      }, {{ section.settings.autoplay_speed | times: 1000 }});
+    window.addEventListener('mouseup', endDrag);
+    window.addEventListener('touchend', endDrag);
+    
+    function startDrag(e) {
+      isDragging = true;
+      startX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
       
+      // Disable transition during drag for immediate response
+      logosWrapper.style.transition = 'none';
+      
+      // Clear autoplay during interaction
+      clearInterval(autoplayInterval);
+    }
+    
+    function drag(e) {
+      if (!isDragging) return;
+      
+      // Prevent default during drag to stop page scrolling
+      if (e.cancelable && Math.abs(e.type.includes('mouse') ? e.pageX - startX : e.touches[0].pageX - startX) > 5) {
+        e.preventDefault();
+      }
+      
+      const currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+      const diff = currentX - startX;
+      
+      // Get current transform value
+      const transform = window.getComputedStyle(logosWrapper).getPropertyValue('transform');
+      const matrix = new DOMMatrix(transform);
+      const currentTranslate = matrix.m41;
+      
+      // Apply the drag offset
+      logosWrapper.style.transform = `translateX(${currentTranslate + diff}px)`;
+      
+      // Update starting position for next drag calculation
+      startX = currentX;
+    }
+    
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      
+      // Restore transition
+      logosWrapper.style.transition = 'transform 0.5s ease';
+      
+      // Calculate the nearest group
+      const itemsPerView = getItemsPerView();
+      const containerWidth = logosContainer.offsetWidth;
+      const groupWidth = containerWidth;
+      
+      // Get current transform value
+      const transform = window.getComputedStyle(logosWrapper).getPropertyValue('transform');
+      const matrix = new DOMMatrix(transform);
+      const currentTranslate = matrix.m41;
+      
+      // Calculate the target group index
+      const targetGroupIndex = Math.round(-currentTranslate / groupWidth);
+      const totalGroups = Math.ceil(logoCount / itemsPerView);
+      
+      // Clamp to valid range
+      const clampedGroupIndex = Math.max(0, Math.min(totalGroups - 1, targetGroupIndex));
+      
+      // Go to the nearest group
+      goToGroup(clampedGroupIndex);
+      
+      // Restart autoplay
+      resetAutoplay();
+    }
+    
+    // Handle responsive changes
+    window.addEventListener('resize', function() {
+      // When screen size changes, we need to recalculate the current group
+      // to ensure we're still showing the correct set of logos
+      const itemsPerView = getItemsPerView();
+      const groupIndex = Math.floor(currentSlideIndex / itemsPerView);
+      goToGroup(groupIndex);
+    });
+    
+    // Initialize autoplay if enabled
+    function startAutoplay() {
+      {% if section.settings.autoplay %}
+        autoplayInterval = setInterval(function() {
+          // Advance to next slide
+          showTestimonial(currentSlideIndex + 1);
+        }, {{ section.settings.autoplay_speed | times: 1000 }});
+      {% endif %}
+    }
+    
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+    
+    // Start with first testimonial and autoplay
+    showTestimonial(0);
+    startAutoplay();
+    
+    // Pause autoplay on hover if enabled
+    {% if section.settings.autoplay %}
       testimonialContainer.addEventListener('mouseenter', function() {
-        clearInterval(interval);
+        clearInterval(autoplayInterval);
       });
       
       testimonialContainer.addEventListener('mouseleave', function() {
-        interval = setInterval(function() {
-          showTestimonial(currentIndex + 1);
-        }, {{ section.settings.autoplay_speed | times: 1000 }});
+        startAutoplay();
       });
     {% endif %}
   });

@@ -39,25 +39,30 @@
               <img src="{{ 'picked.png' | asset_url }}" alt="Selected" width="32" height="32">
             </div>
 
+            <!-- 不可选状态提示 -->
+            <div class="locked-overlay">
+              <div class="locked-message">Already Selected</div>
+            </div>
+
             {% if block.settings.pantone_code != blank %}
               <div class="pantone-tag">{{ block.settings.pantone_code }}</div>
             {% endif %}
-<div class="chair-image-container">
-            {% if block.settings.chair_image != blank %}
-              {{
-                block.settings.chair_image
-                | image_url: width: 600
-                | image_tag:
-                  loading: 'lazy',
-                  alt: block.settings.series_name,
-                  class: 'chair-image',
-                  widths: '275, 550, 710, 1100',
-                  sizes: '(min-width: 750px) 600px, 100vw'
-              }}
-            {% else %}
-              {{ 'product-1' | placeholder_svg_tag: 'chair-image placeholder-svg' }}
-            {% endif %}
-</div>
+            <div class="chair-image-container">
+              {% if block.settings.chair_image != blank %}
+                {{
+                  block.settings.chair_image
+                  | image_url: width: 600
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: block.settings.series_name,
+                    class: 'chair-image',
+                    widths: '275, 550, 710, 1100',
+                    sizes: '(min-width: 750px) 600px, 100vw'
+                }}
+              {% else %}
+                {{ 'product-1' | placeholder_svg_tag: 'chair-image placeholder-svg' }}
+              {% endif %}
+            </div>
             <div class="card-bottom">
               <div class="series-name">{{ block.settings.series_name }}</div>
               {% if block.settings.button_text != blank %}
@@ -119,6 +124,14 @@
         {% endif %}
       {% endfor %}
     </div>
+
+    <!-- 已选择提示信息 -->
+    {% comment %} <div id="selection-locked-message" class="selection-locked-message" style="display: none;">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#F09A38"/>
+      </svg>
+      <span>Your style selection has been confirmed and cannot be changed.</span>
+    </div> {% endcomment %}
   </div>
 </div>
 
@@ -138,9 +151,16 @@
 
     /* 成功选择后的样式 */
     .style-card.confirmed {
-      {% comment %} border: 2px solid #4caf50; {% endcomment %}
-      {% comment %} background-color: rgba(76, 175, 80, 0.05); {% endcomment %}
-      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+      border: 2px solid #0091FF;
+      box-shadow: 0 4px 12px rgba(120, 154, 173, 0.2);
+      pointer-events: auto; /* 允许事件，以便显示提示信息 */
+    }
+
+    /* 其他卡片在有确认选择时的样式 */
+    .style-card.disabled {
+      opacity: 0.6;
+      pointer-events: none; /* 禁用点击 */
+      filter: grayscale(30%);
     }
 
     /* 成功选择标记样式 */
@@ -167,6 +187,59 @@
     /* 确认选择后隐藏提交按钮 */
     .style-card.confirmed .submit-button {
       display: none !important;
+    }
+
+    /* 不可选状态遮罩 */
+    .locked-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      {% comment %} background-color: rgba(0, 0, 0, 0.05); {% endcomment %}
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 4;
+    }
+
+    .locked-message {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .style-card.confirmed:hover .locked-message {
+      opacity: 1;
+    }
+
+    /* 已选择状态全局提示信息 */
+    .selection-locked-message {
+      margin-top: 20px;
+      padding: 12px 16px;
+      background-color: #FFF8E1;
+      border-left: 4px solid #F09A38;
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .selection-locked-message svg {
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+
+    .selection-locked-message span {
+      font-size: 14px;
+      color: #333;
     }
 
     /* 模态弹窗样式 */
@@ -221,8 +294,7 @@
     }
 
     .modal-image-side {
-      {% comment %} flex: 1; {% endcomment %}
-       width:60%;
+      width:60%;
       position: relative;
       background-color: #e6f0f9;
     }
@@ -249,7 +321,6 @@
     }
 
     .modal-content-side {
-      {% comment %} flex: 1; {% endcomment %}
       padding: 40px;
       display: flex;
       flex-direction: column;
@@ -276,7 +347,7 @@
       display: flex;
       flex-direction: column;
       gap:16px
-  }
+    }
 
     .form-field {
       margin-bottom: 16px;
@@ -288,7 +359,6 @@
       width: 100%;
       padding: 12px 16px;
       border: 1px solid #e0e0e0;
-      {% comment %} border-radius: 8px; {% endcomment %}
       font-size: 14px;
       background-color: #f5f5f5;
       margin:0
@@ -350,107 +420,149 @@
     }
 
     /* 移动端优化 (最大480px) */
-@media screen and (max-width: 480px) {
-  /* 弹窗容器 */
-  .custom-modal {
-    width: 95% !important;
-    max-width: none;
-    border-radius: 8px;
-    max-height: 600px;
-    display: flex;
-    flex-direction: column;
-  }
+    @media screen and (max-width: 480px) {
+      /* 弹窗容器 */
+      .custom-modal {
+        width: 95% !important;
+        max-width: none;
+        border-radius: 8px;
+        max-height: 600px;
+        display: flex;
+        flex-direction: column;
+      }
 
-  /* 分栏布局改为垂直堆叠 */
-  .modal-split {
-    flex-direction: column;
-    height: 100%;
-  }
+      /* 分栏布局改为垂直堆叠 */
+      .modal-split {
+        flex-direction: column;
+        height: 100%;
+      }
 
-  /* 图片区域调整 */
-  .modal-image-side {
-    width: 100% !important;
-    height: 180px !important;
-    flex-shrink: 0;
-  }
+      /* 图片区域调整 */
+      .modal-image-side {
+        width: 100% !important;
+        height: 180px !important;
+        flex-shrink: 0;
+      }
 
-  /* 品牌标语调整 */
-  .brand-slogan {
-    transform: none !important;
-    position: static;
-    text-align: center;
-    padding: 12px;
-    font-size: 14px !important;
-    color: #333 !important;
-    background: rgba(255,255,255,0.9);
-    margin-top: -40px;
-    border-radius: 4px;
-  }
+      /* 品牌标语调整 */
+      .brand-slogan {
+        transform: none !important;
+        position: static;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px !important;
+        color: #333 !important;
+        background: rgba(255,255,255,0.9);
+        margin-top: -40px;
+        border-radius: 4px;
+      }
 
-  /* 内容区域调整 */
-  .modal-content-side {
-    width: 100% !important;
-    max-width: none;
-    padding: 24px 16px !important;
-    overflow-y: auto;
-  }
+      /* 内容区域调整 */
+      .modal-content-side {
+        width: 100% !important;
+        max-width: none;
+        padding: 24px 16px !important;
+        overflow-y: auto;
+      }
 
-  /* 标题优化 */
-  .modal-content-side h2 {
-    font-size: 32px !important;
-    line-height: 1.2;
-  }
+      /* 标题优化 */
+      .modal-content-side h2 {
+        font-size: 32px !important;
+        line-height: 1.2;
+      }
 
-  /* 输入框优化 */
-  .form-field input {
-    padding: 16px !important;
-    font-size: 16px !important;
-  }
+      /* 输入框优化 */
+      .form-field input {
+        padding: 16px !important;
+        font-size: 16px !important;
+      }
 
-  /* 提交按钮优化 */
-  .signup-button {
-    height: 56px !important;
-    font-size: 18px !important;
-    margin-top: 16px !important;
-  }
+      /* 提交按钮优化 */
+      .signup-button {
+        height: 56px !important;
+        font-size: 18px !important;
+        margin-top: 16px !important;
+      }
 
-  /* 成功图标调整 */
-  .success-icon {
-    width: 80px !important;
-    height: 80px !important;
-  }
+      /* 成功图标调整 */
+      .success-icon {
+        width: 80px !important;
+        height: 80px !important;
+      }
 
-  /* 关闭按钮优化 */
-  .custom-modal-close {
-    top: 8px;
-    right: 8px;
-    font-size: 32px;
-    padding: 8px;
-  }
+      /* 关闭按钮优化 */
+      .custom-modal-close {
+        top: 8px;
+        right: 8px;
+        font-size: 32px;
+        padding: 8px;
+      }
 
-  /* 弹窗内容垂直居中 */
-  .modal-content-side {
-    justify-content: flex-start;
-  }
+      /* 弹窗内容垂直居中 */
+      .modal-content-side {
+        justify-content: flex-start;
+      }
 
-  /* 图片隐藏（可选） */
-  .modal-image-side {
-    {% comment %} display: none; {% endcomment %}
-  } 
-     .registration-image {
-object-position: 80% 16%;
+      /* 图片位置调整 */
+      .registration-image {
+        object-position: 80% 16%;
+      }
     }
-}
 </style>
 
 <script>
   // 卡片选择功能和模态弹窗功能
   document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.style-card');
+    const selectionLockedMessage = document.getElementById('selection-locked-message');
+    let hasConfirmedSelection = false;
+
+    // 检查是否已有确认选择
+    function checkForConfirmedSelection() {
+      const confirmedCardId = localStorage.getItem('confirmedCardId');
+      hasConfirmedSelection = !!confirmedCardId;
+      return hasConfirmedSelection;
+    }
+
+    // 应用已确认选择的UI状态
+    function applyConfirmedSelectionState() {
+      if (checkForConfirmedSelection()) {
+        // 显示全局提示信息
+        if (selectionLockedMessage) {
+          selectionLockedMessage.style.display = 'flex';
+        }
+
+        // 禁用所有未确认的卡片
+        cards.forEach((card) => {
+          const cardId = card.getAttribute('data-block-id');
+          const isConfirmed = cardId === localStorage.getItem('confirmedCardId');
+          
+          if (isConfirmed) {
+            card.classList.add('confirmed');
+            card.querySelector('.locked-overlay').style.display = 'flex';
+          } else {
+            card.classList.add('disabled');
+          }
+        });
+      }
+    }
 
     // 点击卡片临时选择功能
     cards.forEach((card) => {
+      // 添加锁定遮罩层显示逻辑
+      const lockedOverlay = document.createElement('div');
+      lockedOverlay.className = 'locked-overlay';
+      lockedOverlay.innerHTML = '<div class="locked-message">Selection cannot be changed</div>';
+      card.appendChild(lockedOverlay);
+
       card.addEventListener('click', function(e) {
+        // 如果已经有确认选择，阻止任何卡片选择
+        if (checkForConfirmedSelection()) {
+          e.preventDefault();
+          e.stopPropagation();
+          return;
+        }
+        
         // 如果卡片已经是确认状态，不再允许更改选择
         if (this.classList.contains('confirmed')) {
           return;
@@ -477,6 +589,12 @@ object-position: 80% 16%;
           // 移除active类，添加confirmed类
           confirmedCard.classList.remove('active');
           confirmedCard.classList.add('confirmed');
+          
+          // 标记为已有确认选择
+          hasConfirmedSelection = true;
+          
+          // 应用确认选择后的UI状态
+          applyConfirmedSelectionState();
         }
       }
     }
@@ -512,6 +630,11 @@ object-position: 80% 16%;
             e.preventDefault();
             e.stopPropagation(); // 防止触发卡片点击事件
 
+            // 如果已经有确认选择，阻止打开弹窗
+            if (hasConfirmedSelection && localStorage.getItem('confirmedCardId') !== '{{ block.id }}') {
+              return;
+            }
+
             const isRegistered = checkUserRegistration{{ block.id }}();
 
             if (isRegistered) {
@@ -521,7 +644,7 @@ object-position: 80% 16%;
               // 标记当前卡片为确认选择状态
               const currentCard = document.querySelector('.style-card[data-block-id="{{ block.id }}"]');
               if (currentCard) {
-                // 移除所有卡片的确认状态
+                // 移除所有卡片的确认状态和active状态
                 cards.forEach((c) => {
                   c.classList.remove('confirmed');
                   c.classList.remove('active');
@@ -530,14 +653,13 @@ object-position: 80% 16%;
                 // 为当前卡片添加确认状态
                 currentCard.classList.add('confirmed');
                 localStorage.setItem('confirmedCardId', '{{ block.id }}');
+                
+                // 更新全局状态
+                hasConfirmedSelection = true;
+                
+                // 应用确认选择后的UI状态
+                applyConfirmedSelectionState();
               }
-
-              // 可选：如果配置了链接且用户已注册，延迟后跳转
-              {% comment %} {% if block.settings.button_link != blank %}
-              setTimeout(function() {
-                window.location.href = "{{ block.settings.button_link }}";
-              }, 2000);
-              {% endif %} {% endcomment %}
             } else {
               registrationModal{{ block.id }}.style.display = 'block';
               successModal{{ block.id }}.style.display = 'none';
@@ -565,7 +687,7 @@ object-position: 80% 16%;
               // 标记当前卡片为确认选择状态
               const currentCard = document.querySelector('.style-card[data-block-id="{{ block.id }}"]');
               if (currentCard) {
-                // 移除所有卡片的确认状态和临时选中状态
+                // 移除所有卡片的确认状态和active状态
                 cards.forEach((c) => {
                   c.classList.remove('confirmed');
                   c.classList.remove('active');
@@ -580,13 +702,14 @@ object-position: 80% 16%;
               localStorage.setItem('userName', nameInput.value);
               localStorage.setItem('userEmail', emailInput.value);
               localStorage.setItem('confirmedCardId', '{{ block.id }}');
-
-              // 可选：如果配置了链接，延迟后跳转
-              {% comment %} {% if block.settings.button_link != blank %}
+              
+              // 更新全局状态
+              hasConfirmedSelection = true;
+              
+              // 应用确认选择后的UI状态
               setTimeout(function() {
-                window.location.href = "{{ block.settings.button_link }}";
-              }, 2000);
-              {% endif %} {% endcomment %}
+                applyConfirmedSelectionState();
+              }, 500);
             });
           }
 
@@ -610,7 +733,6 @@ object-position: 80% 16%;
     {% endfor %}
   });
 </script>
-
 {% schema %}
 {
   "name": "Style Selector",
