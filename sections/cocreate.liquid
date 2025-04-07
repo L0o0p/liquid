@@ -76,6 +76,7 @@
           {% if section.settings.grayscale %}
             filter: grayscale(100%);
           {% endif %}
+      object-fit: cover !important
         }
 
              .cocreate-image{
@@ -163,8 +164,10 @@
       width: 55%; /* 比 1366px 的 70% 更紧凑 */
     }
 
-            .cocreate-image img {
-          object-fit: cover !important}
+    .cocreate-image img {
+      object-fit: cover !important
+    }
+
     .cocreate-content {
       max-width: 380px; /* 适度缩小内容区域 */
     }

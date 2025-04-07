@@ -1,0 +1,149 @@
+{{ 'modal-styles.css' | asset_url | stylesheet_tag }}
+
+<!-- 注册弹窗容器 -->
+<div class="custom-modal-container" id="registration-modal" style="display: none;">
+  <div class="custom-modal-overlay"></div>
+
+  <!-- 未注册用户看到的注册弹窗 -->
+  <div class="custom-modal registration-modal">
+    <button class="custom-modal-close">×</button>
+    <div class="modal-split">
+      <div class="modal-image-side">
+        <img src="{{ 'registration-imag.png' | asset_url }}" alt="Sign up" class="registration-image" width="" height="">
+        <div class="brand-slogan">MAKE POSSIBILITY WITH ODINLAKE</div>
+      </div>
+      <div class="modal-content-side">
+        <h2>One More Step</h2>
+        <p>Sign up account to co-create with us</p>
+
+        <form class="signup-form" id="global-signup-form">
+          <div class="form-field">
+            <input type="text" id="signup-name" placeholder="Name" required>
+          </div>
+          <div class="form-field">
+            <input type="email" id="signup-email" placeholder="Email" required>
+          </div>
+          <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 成功模态弹窗 -->
+  <div class="custom-modal success-modal" style="display: none;">
+    <button class="custom-modal-close">×</button>
+    <div class="success-content">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="12" fill="#2196F3"/>
+          <path d="M9 12.5L11 14.5L15.5 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2>All Good</h2>
+      <p>Thanks for joining us</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* 模态弹窗样式 */
+  .custom-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .custom-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .custom-modal {
+    position: relative;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 90%;
+    width: 1247px;
+  }
+
+  /* 保持原有样式结构，移除卡片相关样式 */
+  /* ...保留原有的模态框样式代码... */
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const modalContainer = document.getElementById('registration-modal');
+  const closeButtons = modalContainer.querySelectorAll('.custom-modal-close');
+  const overlay = modalContainer.querySelector('.custom-modal-overlay');
+  const registrationModal = modalContainer.querySelector('.registration-modal');
+  const successModal = modalContainer.querySelector('.success-modal');
+  const signupForm = document.getElementById('global-signup-form');
+
+  // 打开弹窗的通用方法
+  window.openRegistrationModal = function() {
+    const isRegistered = checkUserRegistration();
+    
+    if (isRegistered) {
+      registrationModal.style.display = 'none';
+      successModal.style.display = 'block';
+    } else {
+      registrationModal.style.display = 'block';
+      successModal.style.display = 'none';
+    }
+    
+    modalContainer.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  };
+
+  // 检查用户注册状态
+  function checkUserRegistration() {
+    {% if customer %}
+      return true;
+    {% else %}
+      return localStorage.getItem('userRegistered') === 'true';
+    {% endif %}
+  }
+
+  // 表单提交处理
+  signupForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('signup-name').value;
+    const email = document.getElementById('signup-email').value;
+
+    // 这里可以添加实际的注册逻辑
+    console.log('User registered:', { name, email });
+
+    // 显示成功状态
+    registrationModal.style.display = 'none';
+    successModal.style.display = 'block';
+
+    // 存储注册信息
+    localStorage.setItem('userRegistered', 'true');
+    localStorage.setItem('userName', name);
+    localStorage.setItem('userEmail', email);
+  });
+
+  // 关闭弹窗
+  function closeModal() {
+    modalContainer.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // 绑定关闭事件
+  closeButtons.forEach(btn => btn.addEventListener('click', closeModal));
+  overlay.addEventListener('click', closeModal);
+});
+</script>

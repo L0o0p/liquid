@@ -177,6 +177,10 @@
   .journey-continued__bg-pattern-bottom {
     height: 180px;
   }
+
+  .journey-continued__heading{
+    font-size: 40px;
+  }
 }
 
 /* 平板和大手机 */
@@ -204,7 +208,7 @@
   }
 
   .journey-continued__heading {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 12px;
     margin-top: 36px;
   }
@@ -233,7 +237,7 @@
 
   .journey-continued__bg-pattern-top,
   .journey-continued__bg-pattern-bottom {
-    height: 150px;
+    height: 150px !important;
   }
 
   .journey-continued__bg-pattern-top svg,
@@ -251,7 +255,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .journey-continued__bg-pattern-top svg {
     bottom: 15%
   }

@@ -1,26 +1,33 @@
 {{ 'full-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'modal-styles.css' | asset_url | stylesheet_tag }}
+
 {% comment %} 默认图片URL - 当编辑器中没有设置时使用这些 {% endcomment %}
-  {% assign desktop_image_url = section.settings.desktop_image | default: "banner-web.png" | asset_url %}
-  {% assign mobile_image_url = section.settings.mobile_image | default: "banner-mobile.jpeg" | asset_url %}
+{% assign desktop_image_url = section.settings.desktop_image | default: 'banner-web.JPG' | asset_url %}
+{% assign mobile_image_url = section.settings.mobile_image | default: 'banner-mobile.jpeg' | asset_url %}
+
 <div class="full-image-banner" style="background-color: {{ section.settings.background_color }};">
   <div class="banner-container">
     <div class="banner-image-container">
       <picture>
         <source media="(max-width: 767px)" srcset="{{ mobile_image_url }}">
         <source media="(min-width: 768px)" srcset="{{ desktop_image_url }}">
-        <img src="{{ desktop_image_url }}" alt="Banner Image" class="banner-image">
+        <img src="{{ desktop_image_url }}" alt="Banner Image" class="banner-image" width="" height="">
       </picture>
 
       {% if section.settings.show_button %}
         <a
           href="{{ section.settings.button_link }}"
           class="shop-button"
-          {% comment %} style="
-            top: {{ section.settings.button_top_position }}%;
-            left: {{ section.settings.button_left_position }}%;
-            background-color: {{ section.settings.button_bg_color }};
-            color: {{ section.settings.button_text_color }};
-          " {% endcomment %}
+          onclick="handleShopButtonClick(event, this)"
+          data-original-link="{{ section.settings.button_link }}"
+          {% comment %}
+            style="
+              top: {{ section.settings.button_top_position }}%;
+              left: {{ section.settings.button_left_position }}%;
+              background-color: {{ section.settings.button_bg_color }};
+              color: {{ section.settings.button_text_color }};
+            "
+          {% endcomment %}
         >
           {{ section.settings.button_text }}
         </a>
@@ -28,6 +35,61 @@
     </div>
   </div>
 </div>
+
+<!-- 引入注册弹窗组件 -->
+{% render 'registration-modal' %}
+
+<script>
+  // 全局点击处理函数
+  function handleShopButtonClick(event, button) {
+    event.preventDefault();
+    const originalLink = button.dataset.originalLink;
+
+    // 检查注册状态
+    const isRegistered = {% if customer %}true{% else %}localStorage.getItem('userRegistered') === 'true'{% endif %};
+
+    if(isRegistered) {
+      window.location.href = originalLink;
+    } else {
+      // 存储当前按钮的原始链接
+      window.pendingNavigationLink = originalLink;
+      openRegistrationModal();
+    }
+  }
+
+  // 修改后的注册提交逻辑
+  document.addEventListener('DOMContentLoaded', function () {
+    const signupForm = document.getElementById('global-signup-form');
+
+    if(signupForm) {
+      signupForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('signup-name').value;
+        const email = document.getElementById('signup-email').value;
+
+        // 模拟注册成功
+        console.log('User registered:', { name, email });
+
+        // 隐藏注册表单，显示成功消息
+        document.querySelector('.registration-modal').style.display = 'none';
+        document.querySelector('.success-modal').style.display = 'block';
+
+        // 存储用户信息
+        localStorage.setItem('userRegistered', 'true');
+        localStorage.setItem('userName', name);
+        localStorage.setItem('userEmail', email);
+
+        // 2秒后跳转
+        setTimeout(() => {
+          if(window.pendingNavigationLink) {
+            window.location.href = window.pendingNavigationLink;
+          }
+        }, 2000);
+      });
+    }
+  });
+</script>
 
 {% schema %}
 {
