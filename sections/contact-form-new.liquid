@@ -1,4 +1,14 @@
 <div class="contact-form-section">
+  <div class="contact-lace-top-b">
+    {% render 'contact-lace-top-b' %}
+  </div>
+  <div class="contact-lace-top-a">
+    {% render 'contact-lace-top-a' %}
+  </div>
+
+  <div class="contact-lace-bottom">
+    {% render 'contact-lace-bottom' %}
+  </div>
   <div class="contact-container">
     <div class="header">
       <div class="contact-label">
@@ -7,9 +17,9 @@
       </div>
     </div>
     <div class="title">
-    <h1>{{ section.settings.heading_line1 }}</h1>
-    <h1>{{ section.settings.heading_line2 }}</h1>
-</div>
+      <h1>{{ section.settings.heading_line1 }}</h1>
+      <h1>{{ section.settings.heading_line2 }}</h1>
+    </div>
     {%- form 'contact', id: 'contactForm', class: 'contact-form' -%}
       {%- if form.posted_successfully? -%}
         <div class="success-message" id="successMessage">

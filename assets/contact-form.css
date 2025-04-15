@@ -1,10 +1,24 @@
 .contact-form-section {
   font-family: Arial, sans-serif;
-  background-color: #E9F0F8;
+  background-color: #E3F0FF;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
+    position: relative;
+}
+.contact-lace-top-b,.contact-lace-top-a{
+    position: absolute;
+    z-index: 100;
+    top: -2px;
+}
+.contact-lace-top-a{
+    z-index: 101;
+}
+.contact-lace-bottom{
+    position: absolute;
+    z-index: 100;
+    bottom: -2px;
 }
 
 .contact-container {
@@ -16,6 +30,8 @@
     flex-direction: column;
     justify-content: center;
 }
+
+
 
 .header {
   margin-bottom: 20px;

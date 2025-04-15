@@ -1,12 +1,19 @@
 {%- style -%}
    .media-testimonials {
     padding: clamp(40px, 5vw, 80px) clamp(20px, 8vw, 160px);
-    background-color: #f0f7fd;
+    background-color: #C9E2FF;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    position:relative;
+  }
+
+  .media-lace{
+    position:absolute;
+    z-index:100;
+    bottom:-2px
   }
 
   .page-width {
@@ -173,6 +180,9 @@
 {%- endstyle -%}
 
 <div class="media-testimonials" id="media-testimonials-{{ section.id }}">
+  <div class="media-lace">
+    {% render 'media-lace' %}
+  </div>
   <div class="page-width">
     <h2 class="media-testimonials__heading">
       {{ section.settings.heading | default: 'What the Globe is Saying' }}
@@ -238,7 +248,10 @@
         <div class="media-testimonials__logos-wrapper">
           <!-- Original logos from section blocks -->
           {% for block in section.blocks %}
-            <div class="media-testimonials__logo{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}">
+            <div
+              class="media-testimonials__logo{% if forloop.first %} active{% endif %}"
+              data-index="{{ forloop.index0 }}"
+            >
               {% if block.settings.logo != blank %}
                 <img
                   src="{{ block.settings.logo | image_url: width: 200 }}"

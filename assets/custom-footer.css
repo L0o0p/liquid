@@ -1,9 +1,16 @@
 .custom-footer-container {
   background-color: #E9F0F8;
+  background: radial-gradient(248.2% 178.81% at 48.62% 139.78%, rgba(233, 240, 248, 0.64) 22.76%, rgba(93, 158, 230, 0.64) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   padding: 40px 0 0;
   font-family: Arial, sans-serif;
   width: 100%;
   position: relative;
+}
+
+.footer-lace{
+  position: absolute;
+  z-index: 100;
+  top: -2px;
 }
 
 .custom-footer-content {

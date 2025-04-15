@@ -4,9 +4,16 @@
 {% comment %} 默认图片URL - 当编辑器中没有设置时使用这些 {% endcomment %}
 {% assign desktop_image_url = section.settings.desktop_image | default: 'banner-web.JPG' | asset_url %}
 {% assign mobile_image_url = section.settings.mobile_image | default: 'banner-mobile.jpeg' | asset_url %}
+{% assign banner_lace = section.settings.mobile_image | default: 'banner-lace.svg' | asset_url %}
 
 <div class="full-image-banner" style="background-color: {{ section.settings.background_color }};">
   <div class="banner-container">
+    <div class="banner-lace">
+      {% comment %} <svg width="1920" height="127" viewBox="0 0 1920 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0C0 0 287.745 102 479 102C670.255 102 766.745 0.162025 958 0C1150.02 -0.162672 1246.98 102 1439 102C1631.02 102 1920 0 1920 0V127H0V0Z" fill="white"/>
+      </svg> {% endcomment %}
+       {% render 'banner-lace' %}
+    </div>
     <div class="banner-image-container">
       <picture>
         <source media="(max-width: 767px)" srcset="{{ mobile_image_url }}">
@@ -107,6 +114,12 @@
       "type": "image_picker",
       "id": "mobile_image",
       "label": "Mobile Banner Image",
+      "info": "Recommended size: 800x1000"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_lace",
+      "label": "banner-lace",
       "info": "Recommended size: 800x1000"
     },
     {

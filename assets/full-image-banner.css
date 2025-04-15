@@ -12,6 +12,18 @@
   position: relative;
 }
 
+.banner-lace {
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    z-index: 100;
+}
+
+.banner-lace img{
+  width: 100%;
+  object-fit: cover;
+}
+
 .banner-image-container {
   margin-top: 60px;
   margin-bottom: 60px;

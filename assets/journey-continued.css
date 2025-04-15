@@ -12,41 +12,14 @@
 
 }
 
-/* 背景波浪样式 */
-.journey-continued__bg-pattern-top,
-.journey-continued__bg-pattern-bottom {
-  position: absolute;
-  width: 100%;
-  z-index: 0;
-  overflow: visible;
-}
+
 
 .journey-continued__bg-pattern-top {
   top: 0;
   height: 255px;
 }
 
-.journey-continued__bg-pattern-bottom {
-  bottom: 0;
-  height: 231px;
-}
 
-/* 控制SVG位置 */
-.journey-continued__bg-pattern-top svg {
-  position: absolute;
-  left: -35%;
-  width: 160%;
-  /* 增加宽度确保在大屏幕上也能覆盖 */
-  height: 100%;
-}
-
-.journey-continued__bg-pattern-bottom svg {
-  position: absolute;
-  right: -25%;
-  width: 160%;
-  /* 增加宽度确保在大屏幕上也能覆盖 */
-  height: 100%;
-}
 
 .journey-continued__container {
   max-width: 1400px;
@@ -173,10 +146,7 @@
     gap: 30px;
   }
 
-  .journey-continued__bg-pattern-top,
-  .journey-continued__bg-pattern-bottom {
-    height: 180px;
-  }
+
 
   .journey-continued__heading{
     font-size: 40px;
@@ -235,34 +205,10 @@
     width: 100%;
   }
 
-  .journey-continued__bg-pattern-top,
-  .journey-continued__bg-pattern-bottom {
-    height: 150px !important;
-  }
-
-  .journey-continued__bg-pattern-top svg,
-  .journey-continued__bg-pattern-bottom svg {
-    width: 200%;
-    /* 在平板上增加SVG的宽度 */
-  }
-
-  .journey-continued__bg-pattern-top svg {
-    bottom: 25%
-  }
-
-  .journey-continued__bg-pattern-bottom svg {
-    bottom: -25%
-  }
 }
 
 @media (max-width: 1080px) {
-  .journey-continued__bg-pattern-top svg {
-    bottom: 15%
-  }
 
-  .journey-continued__bg-pattern-bottom svg {
-    bottom: -25%
-  }
 }
 
 /* 手机设备 */
@@ -272,21 +218,8 @@
     height: 764px;
   }
 
-  .journey-continued__bg-pattern-top svg {
-    position: absolute;
-    left: -30%;
-    top: -30%;
-    width: 120%;
-    height: 100%;
-  }
 
-  .journey-continued__bg-pattern-bottom svg {
-    position: absolute;
-    right: 4% !important;
-    width: 100%;
-    height: 100%;
-    bottom: -35% !important;
-  }
+
 
   .journey-continued__container {
     padding: 0px;
@@ -327,22 +260,5 @@
     /* 在手机上进一步减小图片大小 */
   }
 
-  .journey-continued__bg-pattern-top,
-  .journey-continued__bg-pattern-bottom {
-    height: 100px;
-  }
-
-  .journey-continued__bg-pattern-top svg {
-    left: -50%;
-    width: 250%;
-    /* 在手机上增加SVG的宽度 */
-    /* bottom: 30%; */
-  }
-
-  .journey-continued__bg-pattern-bottom svg {
-    right: -50%;
-    width: 250%;
-    bottom: -30%;
-  }
 
 }

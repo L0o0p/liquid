@@ -28,23 +28,12 @@
     /* 其他现有样式... */
   }
 
-  .journey-continued__bg-pattern-top,
-  .journey-continued__bg-pattern-bottom {
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-    overflow: visible; /* 改为visible允许SVG超出div边界 */
-  }
 
   .journey-continued__bg-pattern-top {
     top: 0;
     height: 255px; /* 调整为您SVG的实际高度 */
   }
 
-  .journey-continued__bg-pattern-bottom {
-    bottom: 0;
-    height: 231px; /* 调整为您SVG的实际高度 */
-  }
 
   /* 新增：控制SVG位置的样式 */
   .journey-continued__bg-pattern-top svg {
@@ -54,20 +43,9 @@
     height: 100%;
   }
 
-  .journey-continued__bg-pattern-bottom svg {
-    position: absolute;
-    right: -25%; /* 负值使SVG向右移动 */
-    width: 100%; /* 略微放大以确保覆盖 */
-    height: 100%;
-  }
 </style>
 <div class="journey-continued">
-  <div class="journey-continued__bg-pattern-top">
-    {% render 'wave-top-svg' %}
-  </div>
-  <div class="journey-continued__bg-pattern-bottom">
-    {% render 'wave-bottom-svg' %}
-  </div>
+
 
   <div class="journey-continued__container">
     <div class="journey-continued__content">
