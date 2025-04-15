@@ -16,6 +16,7 @@
     z-index: 101;
 }
 .contact-lace-bottom{
+    pointer-events: none;
     position: absolute;
     z-index: 100;
     bottom: -2px;
@@ -79,7 +80,10 @@ title {}
 
 @media (max-width:1080px) {
   .contact-container {
-    height: 760px;
+    height: 860px;
+  }
+  .banner-lace {
+    bottom:-2px
   }
 }
 
@@ -138,7 +142,7 @@ title {}
 }
 
 .submit-btn {
-  background-color: #58595B;
+  background-color: #F73326;
   color: white;
   padding: 12px 30px;
   border: none;
@@ -152,7 +156,8 @@ title {}
 }
 
 .submit-btn:hover {
-  background-color: #555;
+  background-color: white;
+  color: #F73326;
 }
 
 .error {

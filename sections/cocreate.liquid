@@ -78,18 +78,20 @@
           /* margin: 0 auto; */
           gap: {{ section.settings.gap }}px;
           height:100%;
-          height:928px;
+          height:1080px;
           position: relative;
           background-color:#ecf5ff
         }
 
         .cocreate-lace-top{
+          pointer-events: none;
           position: absolute;
           top: -12px;
           z-index: 100;
         }
 
         .cocreate-lace-bottom-c,.cocreate-lace-bottom-b,.cocreate-lace-bottom-a{
+          pointer-events: none;
           position: absolute;
           bottom: -2px;
           z-index: 100;
@@ -167,7 +169,7 @@
           display: inline-block;
           padding: 12px 32px;
           background-color: {{ section.settings.button_bg_color }};
-          background-color:#58595B;
+          background-color:#F73326;
           color: {{ section.settings.button_text_color }};
           border-radius: 999px;
           text-decoration: none;
@@ -177,15 +179,18 @@
 
         .cocreate-button:hover {
           background-color: {{ section.settings.button_hover_color }};
+          background-color:white;
+          color:#F73326;
+          box-shadow: 0.5 black;
         }
    /* 新增 1080px 断点适配 */
   @media (max-width: 1080px) {
     .cocreate-container {
       /* 保持横向布局但缩小整体宽度 */
-      max-width: 1000px; /* 比桌面端稍窄 */
+     /* max-width: 1000px; /* 比桌面端稍窄 */
       padding: 0; /* 增加侧边安全间距 */
       gap:24px;
-      height: 650px ;
+      height: 850px ;
     }
 
     .cocreate-image {
@@ -510,7 +515,7 @@
       "type": "color",
       "id": "button_bg_color",
       "label": "Button Background Color",
-      "default": "#58595B"
+      "default": "#F73326"
     },
     {
       "type": "color",

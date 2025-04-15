@@ -25,11 +25,11 @@
 }
 
 .banner-image-container {
-  margin-top: 60px;
+  margin-top: 0px;
   margin-bottom: 60px;
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 960px;
   /* Fixed height of 1000px */
   display: flex;
   justify-content: center;
@@ -54,7 +54,7 @@
 .shop-button {
   position: absolute;
   display: inline-block;
-  background-color: #555;
+  background-color: #F73326;
   color: white;
   padding: 12px 36px;
   border-radius: 30px;
@@ -72,12 +72,13 @@
 
   top: 63%;
   left: 50%;
-  background-color: #555555;
+  background-color: #F73326;
   color: #ffffff;
 }
 
 .shop-button:hover {
-  background-color: #777;
+  background-color: white;
+  color: #F73326;
   transform: translate(-50%, -50%) scale(1.05);
 }
 
@@ -101,7 +102,7 @@
 
 @media (max-width:1080px) {
   .banner-image-container {
-    margin-top: 60px;
+    margin-top: 0px;
     margin-bottom: 0px;
     height: 624px;
   }

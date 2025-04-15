@@ -73,7 +73,7 @@
 }
 
 .style-card.active {
-  border: 2px solid #0066FF;
+  border: 2px solid #F73326;
 }
 
 .pantone-tag {
@@ -114,7 +114,7 @@
 }
 
 .submit-button {
-  background-color: #0091FF;
+  background-color: #F73326;
   color: white;
   border: none;
   border-radius: 999px;
@@ -131,7 +131,8 @@
 }
 
 .submit-button:hover {
-  background-color: #0052CC;
+  background-color: white;
+  color: #F73326;
 }
 
 .style-card.active .submit-button {
