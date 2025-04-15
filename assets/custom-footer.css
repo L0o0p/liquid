@@ -11,7 +11,14 @@
   position: absolute;
   z-index: 100;
   top: -2px;
+  width: 100%;
 }
+
+.footer-lace svg{
+    display:block;
+    width: 100%;
+    height: auto; /* 让高度根据宽度自动调整 */
+  }
 
 .custom-footer-content {
   max-width: 1600px;

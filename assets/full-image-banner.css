@@ -17,11 +17,15 @@
     bottom: -60px;
     width: 100%;
     z-index: 100;
+    left: 0; /* 确保从左边开始 */
+    right: 0; /* 确保延伸到右边 */
+    overflow: hidden; /* 防止可能的溢出 */
 }
 
-.banner-lace img{
-  width: 100%;
-  object-fit: cover;
+.banner-lace svg{
+    display: block; /* 重要：移除底部间隙 */
+    width: 100%;
+    height: auto; /* 让高度根据宽度自动调整 */
 }
 
 .banner-image-container {
@@ -101,6 +105,16 @@
 
 
 @media (max-width:1080px) {
+.banner-lace {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 100;
+    left: 0; /* 确保从左边开始 */
+    right: 0; /* 确保延伸到右边 */
+    overflow: hidden; /* 防止可能的溢出 */
+}
+
   .banner-image-container {
     margin-top: 0px;
     margin-bottom: 0px;
