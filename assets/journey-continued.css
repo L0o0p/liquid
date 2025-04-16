@@ -67,7 +67,7 @@
   gap: 10px;
   max-width: 400px;
   width: 100%;
-  border: #12A89D 1px solid;
+  border: #FD6020 1px solid;
   border-radius: 999px;
   box-sizing: border-box;
 }
@@ -95,20 +95,20 @@
   transition: background 0.3s;
   white-space: nowrap;
   min-height: 48px;
-  border: #12A89D 2px solid;
-  background-color: #12A89D !important;
+  border: #FD6020 2px solid;
+  background-color: #FD6020 !important;
 
 }
 
 .journey-continued__button:hover {
   opacity: 0.9;
   background-color: white !important;
-  color: #12A89D;
+  color: #FD6020;
 }
 
 .journey-continued__form-group input::placeholder {
   opacity: 0.5;
-  color: #12A89D;
+  color: #FD6020;
 }
 
 .journey-continued__illustration {

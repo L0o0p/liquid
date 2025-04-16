@@ -20,7 +20,7 @@
 
     /* 其他卡片在有确认选择时的样式 */
     .style-card.disabled {
-      opacity: 0.6;
+      opacity: 0;
       pointer-events: none; /* 禁用点击 */
       filter: grayscale(30%);
     }

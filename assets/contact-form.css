@@ -43,12 +43,13 @@
 }
 
 
-
 .header {
   margin-bottom: 20px;
 }
 
-title {}
+ h1 {
+  color:#12A89D;
+}
 
 .contact-label {
   padding: 20px 8px;
@@ -81,7 +82,7 @@ title {}
 .contact-form-section h1 {
   font-size: 48px;
   margin: 0;
-  color: #000;
+  color: #12A89D;
   line-height: 1.2;
   font-weight: 500;
 }

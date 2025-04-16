@@ -1,5 +1,5 @@
 <div class="container cbd" id="steps-guide-{{ section.id }}">
-  <div class="description-header">
+  {% comment %} <div class="description-header">
        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_213_2371)">
           <path d="M20 14L14 10V18L20 14Z" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -13,7 +13,7 @@
           </defs>
         </svg>
     <span class="description-text">Description</span>
-  </div>
+  </div> {% endcomment %}
 
   <h1 class="title">{{ section.settings.title }}</h1>
 
@@ -48,7 +48,7 @@
   <div class="navigation">
     <button class="nav-button prev" aria-label="Previous slide">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M15 18l-6-6 6-6" stroke="#FD6020" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </button>
 
@@ -66,7 +66,7 @@
 
     <button class="nav-button next" aria-label="Next slide">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M9 6l6 6-6 6" stroke="#FD6020" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </button>
   </div>

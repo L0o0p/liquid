@@ -1,7 +1,7 @@
 {{ 'style-selector.css' | asset_url | stylesheet_tag }}
 <div class="style-section">
   <div class="style-container">
-    {% if section.settings.show_category_tag %}
+    {% comment %} {% if section.settings.show_category_tag %}
       <div class="category-tag">
         <div class="category-tag-content">
           <svg width="32" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +22,7 @@
           {{ section.settings.category_text }}
         </div>
       </div>
-    {% endif %}
+    {% endif %} {% endcomment %}
 
     <h2 class="style-title">{{ section.settings.title }}</h2>
 
@@ -142,7 +142,7 @@
   .style-card {
     position: relative;
     transition: all 0.3s ease;
-    background-color: #e9f0f8;
+    background-color: #FFFFFF;
   }
 
   /* 临时选中态样式 */
@@ -160,7 +160,7 @@
 
   /* 其他卡片在有确认选择时的样式 */
   .style-card.disabled {
-    opacity: 0.6;
+    opacity: 0.9;
     pointer-events: none; /* 禁用点击 */
     filter: grayscale(30%);
   }

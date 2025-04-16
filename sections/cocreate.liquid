@@ -31,7 +31,7 @@
   </div>
 
   <div class="cocreate-content">
-    {% if section.settings.show_tag %}
+    {% comment %} {% if section.settings.show_tag %}
       <div class="activity-tag">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_213_2371)">
@@ -48,7 +48,7 @@
 
         {{ section.settings.tag_text }}
       </div>
-    {% endif %}
+    {% endif %} {% endcomment %}
 
     <h2 class="cocreate-title">{{ section.settings.title }}</h2>
 
@@ -161,12 +161,14 @@
           font-weight: 600;
           margin-bottom: 16px;
           color: {{ section.settings.title_color }};
+          color:#12A89D
         }
 
         .limited-text {
           color: {{ section.settings.limited_text_color }};
           font-size: 16px;
           margin-bottom: 20px;
+          color:#12A89D
         }
 
         .cocreate-description {

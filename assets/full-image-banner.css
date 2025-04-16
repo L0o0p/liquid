@@ -3,7 +3,7 @@
   overflow: hidden;
   position: relative;
   /* background-color: #e7f0f9; */
-  background-color: #E9F0F8;
+  /* background-color: #E9F0F8; */
 }
 
 .banner-container {
@@ -14,9 +14,9 @@
 
 .banner-lace {
     position: absolute;
-    bottom: -60px;
+    bottom: -2px;
     width: 100%;
-    z-index: 100;
+    z-index: 200;
     left: 0; /* 确保从左边开始 */
     right: 0; /* 确保延伸到右边 */
     overflow: hidden; /* 防止可能的溢出 */
@@ -58,7 +58,6 @@
 .shop-button {
   position: absolute;
   display: inline-block;
-  background-color: #12A89D;
   color: white;
   padding: 12px 36px;
   border-radius: 30px;
@@ -76,13 +75,13 @@
 
   top: 63%;
   left: 50%;
-  background-color: #12A89D;
+  background-color: #FD6020;
   color: #ffffff;
 }
 
 .shop-button:hover {
   background-color: white;
-  color: #12A89D;
+  color: #FD6020;
   transform: translate(-50%, -50%) scale(1.05);
 }
 
