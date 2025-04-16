@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #D5E7B3;
 }
 
 .style-container {
@@ -16,6 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* background: #D5E7B3; */
 }
 
 .category-tag {
@@ -73,7 +75,7 @@
 }
 
 .style-card.active {
-  border: 2px solid #F73326;
+  border: 2px solid #12A89D;
 }
 
 .pantone-tag {
@@ -114,7 +116,7 @@
 }
 
 .submit-button {
-  background-color: #F73326;
+  background-color: #12A89D;
   color: white;
   border: none;
   border-radius: 999px;
@@ -132,7 +134,7 @@
 
 .submit-button:hover {
   background-color: white;
-  color: #F73326;
+  color: #12A89D;
 }
 
 .style-card.active .submit-button {

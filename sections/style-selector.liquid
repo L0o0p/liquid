@@ -126,388 +126,390 @@
     </div>
 
     <!-- 已选择提示信息 -->
-    {% comment %} <div id="selection-locked-message" class="selection-locked-message" style="display: none;">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#F09A38"/>
-      </svg>
-      <span>Your style selection has been confirmed and cannot be changed.</span>
-    </div> {% endcomment %}
+    {% comment %}
+      <div id="selection-locked-message" class="selection-locked-message" style="display: none;">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#F09A38"/>
+        </svg>
+        <span>Your style selection has been confirmed and cannot be changed.</span>
+      </div>
+    {% endcomment %}
   </div>
 </div>
 
 <style>
-    /* 卡片基本样式 */
-    .style-card {
-      position: relative;
-      transition: all 0.3s ease;
-      background-color: #e9f0f8;
-    }
+  /* 卡片基本样式 */
+  .style-card {
+    position: relative;
+    transition: all 0.3s ease;
+    background-color: #e9f0f8;
+  }
 
-    /* 临时选中态样式 */
-    .style-card.active {
-      border: 2px solid #F73326;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+  /* 临时选中态样式 */
+  .style-card.active {
+    border: 2px solid #12A89D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-    /* 成功选择后的样式 */
-    .style-card.confirmed {
-      border: 2px solid #F73326;
-      box-shadow: 0 4px 12px rgba(120, 154, 173, 0.2);
-      pointer-events: auto; /* 允许事件，以便显示提示信息 */
-    }
+  /* 成功选择后的样式 */
+  .style-card.confirmed {
+    border: 2px solid #12A89D;
+    box-shadow: 0 4px 12px rgba(120, 154, 173, 0.2);
+    pointer-events: auto; /* 允许事件，以便显示提示信息 */
+  }
 
-    /* 其他卡片在有确认选择时的样式 */
-    .style-card.disabled {
-      opacity: 0.6;
-      pointer-events: none; /* 禁用点击 */
-      filter: grayscale(30%);
-    }
+  /* 其他卡片在有确认选择时的样式 */
+  .style-card.disabled {
+    opacity: 0.6;
+    pointer-events: none; /* 禁用点击 */
+    filter: grayscale(30%);
+  }
 
-    /* 成功选择标记样式 */
-    .confirmed-selection-mark {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 126px;
-      height: 126px;
-      z-index: 5;
-      display: none; /* 默认隐藏 */
-    }
+  /* 成功选择标记样式 */
+  .confirmed-selection-mark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 126px;
+    height: 126px;
+    z-index: 5;
+    display: none; /* 默认隐藏 */
+  }
 
-    .confirmed-selection-mark img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+  .confirmed-selection-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .style-card.confirmed .confirmed-selection-mark {
-      display: block; /* 确认选择后显示 */
-    }
+  .style-card.confirmed .confirmed-selection-mark {
+    display: block; /* 确认选择后显示 */
+  }
 
-    /* 确认选择后隐藏提交按钮 */
-    .style-card.confirmed .submit-button {
-      display: none !important;
-    }
+  /* 确认选择后隐藏提交按钮 */
+  .style-card.confirmed .submit-button {
+    display: none !important;
+  }
 
-    /* 不可选状态遮罩 */
-    .locked-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      {% comment %} background-color: rgba(0, 0, 0, 0.05); {% endcomment %}
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 4;
-    }
+  /* 不可选状态遮罩 */
+  .locked-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    {% comment %} background-color: rgba(0, 0, 0, 0.05); {% endcomment %}
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+  }
 
-    .locked-message {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 500;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
+  .locked-message {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
-    .style-card.confirmed:hover .locked-message {
-      opacity: 1;
-    }
+  .style-card.confirmed:hover .locked-message {
+    opacity: 1;
+  }
 
-    /* 已选择状态全局提示信息 */
-    .selection-locked-message {
-      margin-top: 20px;
-      padding: 12px 16px;
-      background-color: #FFF8E1;
-      border-left: 4px solid #F09A38;
-      display: flex;
-      align-items: center;
-      border-radius: 4px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  /* 已选择状态全局提示信息 */
+  .selection-locked-message {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background-color: #FFF8E1;
+    border-left: 4px solid #F09A38;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .selection-locked-message svg {
-      margin-right: 8px;
-      flex-shrink: 0;
-    }
+  .selection-locked-message svg {
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
 
-    .selection-locked-message span {
-      font-size: 14px;
-      color: #333;
-    }
+  .selection-locked-message span {
+    font-size: 14px;
+    color: #333;
+  }
 
-    /* 模态弹窗样式 */
-    .custom-modal-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
+  /* 模态弹窗样式 */
+  .custom-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
 
-    .custom-modal-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+  .custom-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-    .custom-modal {
-      position: relative;
-      background-color: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      max-width: 90%;
-      width: 1247px;
-    }
+  .custom-modal {
+    position: relative;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 90%;
+    width: 1247px;
+  }
 
-    .custom-modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: #999;
-      line-height: 1;
-      z-index: 10;
-    }
+  .custom-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    z-index: 10;
+  }
 
-    /* 注册模态弹窗 */
+  /* 注册模态弹窗 */
+  .modal-split {
+    display: flex;
+    width:100%
+  }
+
+  .modal-image-side {
+    width:60%;
+    position: relative;
+    background-color: #e6f0f9;
+  }
+
+  .registration-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .brand-slogan {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    white-space: nowrap;
+  }
+
+  .modal-content-side {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:527px;
+    width: 40%;
+  }
+
+  .modal-content-side h2 {
+    font-size: 56px;
+    font-weight:500
+    margin: 0 0 8px 0;
+    color: #000;
+  }
+
+  .modal-content-side p {
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    color: #666;
+  }
+
+  .signup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:16px
+  }
+
+  .form-field {
+    margin-bottom: 16px;
+    padding:0;
+    overflow:hidden
+  }
+
+  .form-field input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    margin:0
+  }
+
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #606060;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 24px;
+    height:48px
+  }
+
+  /* 成功模态弹窗 */
+  .success-modal {
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+  }
+
+  .success-modal h2 {
+    font-size: 24px;
+    margin: 16px 0 8px;
+    color: #000;
+  }
+
+  .success-modal p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  }
+
+  /* 响应式调整 */
+  @media (max-width: 767px) {
     .modal-split {
-      display: flex;
-      width:100%
+      flex-direction: column;
     }
 
     .modal-image-side {
-      width:60%;
-      position: relative;
-      background-color: #e6f0f9;
-    }
-
-    .registration-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+      height: 200px;
     }
 
     .brand-slogan {
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      width: 100%;
+      transform: none;
+      bottom: 10px;
+    }
+  }
+
+  /* 移动端优化 (最大480px) */
+  @media screen and (max-width: 480px) {
+    /* 弹窗容器 */
+    .custom-modal {
+      width: 95% !important;
+      max-width: none;
+      border-radius: 8px;
+      max-height: 600px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 分栏布局改为垂直堆叠 */
+    .modal-split {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* 图片区域调整 */
+    .modal-image-side {
+      width: 100% !important;
+      height: 180px !important;
+      flex-shrink: 0;
+    }
+
+    /* 品牌标语调整 */
+    .brand-slogan {
+      transform: none !important;
+      position: static;
       text-align: center;
-      font-size: 12px;
-      font-weight: bold;
-      color: #666;
-      transform: rotate(-90deg);
-      transform-origin: left bottom;
-      white-space: nowrap;
-    }
-
-    .modal-content-side {
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      max-width:527px;
-      width: 40%;
-    }
-
-    .modal-content-side h2 {
-      font-size: 56px;
-      font-weight:500
-      margin: 0 0 8px 0;
-      color: #000;
-    }
-
-    .modal-content-side p {
-      font-size: 16px;
-      margin: 0 0 30px 0;
-      color: #666;
-    }
-
-    .signup-form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap:16px
-    }
-
-    .form-field {
-      margin-bottom: 16px;
-      padding:0;
-      overflow:hidden
-    }
-
-    .form-field input {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1px solid #e0e0e0;
-      font-size: 14px;
-      background-color: #f5f5f5;
-      margin:0
-    }
-
-    .signup-button {
-      width: 100%;
       padding: 12px;
-      background-color: #606060;
-      color: white;
-      border: none;
-      border-radius: 999px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 24px;
-      height:48px
+      font-size: 14px !important;
+      color: #333 !important;
+      background: rgba(255,255,255,0.9);
+      margin-top: -40px;
+      border-radius: 4px;
     }
 
-    /* 成功模态弹窗 */
-    .success-modal {
-      padding: 40px;
-      text-align: center;
-      max-width: 400px;
+    /* 内容区域调整 */
+    .modal-content-side {
+      width: 100% !important;
+      max-width: none;
+      padding: 24px 16px !important;
+      overflow-y: auto;
     }
 
+    /* 标题优化 */
+    .modal-content-side h2 {
+      font-size: 32px !important;
+      line-height: 1.2;
+    }
+
+    /* 输入框优化 */
+    .form-field input {
+      padding: 16px !important;
+      font-size: 16px !important;
+    }
+
+    /* 提交按钮优化 */
+    .signup-button {
+      height: 56px !important;
+      font-size: 18px !important;
+      margin-top: 16px !important;
+    }
+
+    /* 成功图标调整 */
     .success-icon {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 20px;
+      width: 80px !important;
+      height: 80px !important;
     }
 
-    .success-modal h2 {
-      font-size: 24px;
-      margin: 16px 0 8px;
-      color: #000;
+    /* 关闭按钮优化 */
+    .custom-modal-close {
+      top: 8px;
+      right: 8px;
+      font-size: 32px;
+      padding: 8px;
     }
 
-    .success-modal p {
-      font-size: 16px;
-      color: #666;
-      margin: 0;
+    /* 弹窗内容垂直居中 */
+    .modal-content-side {
+      justify-content: flex-start;
     }
 
-    /* 响应式调整 */
-    @media (max-width: 767px) {
-      .modal-split {
-        flex-direction: column;
-      }
-
-      .modal-image-side {
-        height: 200px;
-      }
-
-      .brand-slogan {
-        transform: none;
-        bottom: 10px;
-      }
+    /* 图片位置调整 */
+    .registration-image {
+      object-position: 80% 16%;
     }
-
-    /* 移动端优化 (最大480px) */
-    @media screen and (max-width: 480px) {
-      /* 弹窗容器 */
-      .custom-modal {
-        width: 95% !important;
-        max-width: none;
-        border-radius: 8px;
-        max-height: 600px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* 分栏布局改为垂直堆叠 */
-      .modal-split {
-        flex-direction: column;
-        height: 100%;
-      }
-
-      /* 图片区域调整 */
-      .modal-image-side {
-        width: 100% !important;
-        height: 180px !important;
-        flex-shrink: 0;
-      }
-
-      /* 品牌标语调整 */
-      .brand-slogan {
-        transform: none !important;
-        position: static;
-        text-align: center;
-        padding: 12px;
-        font-size: 14px !important;
-        color: #333 !important;
-        background: rgba(255,255,255,0.9);
-        margin-top: -40px;
-        border-radius: 4px;
-      }
-
-      /* 内容区域调整 */
-      .modal-content-side {
-        width: 100% !important;
-        max-width: none;
-        padding: 24px 16px !important;
-        overflow-y: auto;
-      }
-
-      /* 标题优化 */
-      .modal-content-side h2 {
-        font-size: 32px !important;
-        line-height: 1.2;
-      }
-
-      /* 输入框优化 */
-      .form-field input {
-        padding: 16px !important;
-        font-size: 16px !important;
-      }
-
-      /* 提交按钮优化 */
-      .signup-button {
-        height: 56px !important;
-        font-size: 18px !important;
-        margin-top: 16px !important;
-      }
-
-      /* 成功图标调整 */
-      .success-icon {
-        width: 80px !important;
-        height: 80px !important;
-      }
-
-      /* 关闭按钮优化 */
-      .custom-modal-close {
-        top: 8px;
-        right: 8px;
-        font-size: 32px;
-        padding: 8px;
-      }
-
-      /* 弹窗内容垂直居中 */
-      .modal-content-side {
-        justify-content: flex-start;
-      }
-
-      /* 图片位置调整 */
-      .registration-image {
-        object-position: 80% 16%;
-      }
-    }
+  }
 </style>
 
 <script>

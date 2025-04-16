@@ -5,7 +5,8 @@
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-    position: relative;
+  position: relative;
+  background-color: #D5E7B3;
 }
 .contact-lace-top-b,.contact-lace-top-a{
     position: absolute;
@@ -155,7 +156,7 @@ title {}
 }
 
 .submit-btn {
-  background-color: #F73326;
+  background-color: #12A89D;
   color: white;
   padding: 12px 30px;
   border: none;
@@ -170,7 +171,7 @@ title {}
 
 .submit-btn:hover {
   background-color: white;
-  color: #F73326;
+  color: #12A89D;
 }
 
 .error {

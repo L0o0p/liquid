@@ -58,7 +58,7 @@
 .shop-button {
   position: absolute;
   display: inline-block;
-  background-color: #F73326;
+  background-color: #12A89D;
   color: white;
   padding: 12px 36px;
   border-radius: 30px;
@@ -76,13 +76,13 @@
 
   top: 63%;
   left: 50%;
-  background-color: #F73326;
+  background-color: #12A89D;
   color: #ffffff;
 }
 
 .shop-button:hover {
   background-color: white;
-  color: #F73326;
+  color: #12A89D;
   transform: translate(-50%, -50%) scale(1.05);
 }
 
