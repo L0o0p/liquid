@@ -162,8 +162,8 @@
 @media (max-width:1080px) {
   .style-section {
     height: 856px;
-      margin-top: 72px;
-  margin-bottom: 72px;
+      /* margin-top: 72px;
+  margin-bottom: 72px; */
 
   }
   .style-container {
