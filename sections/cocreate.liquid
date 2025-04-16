@@ -31,24 +31,26 @@
   </div>
 
   <div class="cocreate-content">
-    {% comment %} {% if section.settings.show_tag %}
-      <div class="activity-tag">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_213_2371)">
-          <path d="M20 14L14 10V18L20 14Z" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M27 6H5C4.44772 6 4 6.44772 4 7V21C4 21.5523 4.44772 22 5 22H27C27.5523 22 28 21.5523 28 21V7C28 6.44772 27.5523 6 27 6Z" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4 26H28" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_213_2371">
-          <rect width="32" height="32" fill="white"/>
-          </clipPath>
-          </defs>
-        </svg>
+    {% comment %}
+      {% if section.settings.show_tag %}
+        <div class="activity-tag">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_213_2371)">
+            <path d="M20 14L14 10V18L20 14Z" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M27 6H5C4.44772 6 4 6.44772 4 7V21C4 21.5523 4.44772 22 5 22H27C27.5523 22 28 21.5523 28 21V7C28 6.44772 27.5523 6 27 6Z" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 26H28" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_213_2371">
+            <rect width="32" height="32" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
 
-        {{ section.settings.tag_text }}
-      </div>
-    {% endif %} {% endcomment %}
+          {{ section.settings.tag_text }}
+        </div>
+      {% endif %}
+    {% endcomment %}
 
     <h2 class="cocreate-title">{{ section.settings.title }}</h2>
 
@@ -87,7 +89,7 @@
           pointer-events: none;
           position: absolute;
           top: -12px;
-          z-index: 100;
+          z-index: 50;
           width: 100%;
         }
 
@@ -104,16 +106,16 @@
           pointer-events: none;
           position: absolute;
           bottom: -2px;
-          z-index: 100;
+          z-index: 50;
           width: 100%;
         }
 
         .cocreate-lace-bottom-b{
-          z-index: 101;
+          z-index: 51;
         }
 
         .cocreate-lace-bottom-a{
-          z-index: 102;
+          z-index: 52;
         }
 
         .cocreate-image img {

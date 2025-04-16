@@ -9,7 +9,7 @@
 
 .footer-lace{
   position: absolute;
-  z-index: 100;
+  z-index: 50;
   top: -2px;
   width: 100%;
 }

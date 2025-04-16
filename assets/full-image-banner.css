@@ -16,7 +16,7 @@
     position: absolute;
     bottom: -2px;
     width: 100%;
-    z-index: 200;
+    z-index: 50;
     left: 0; /* 确保从左边开始 */
     right: 0; /* 确保延伸到右边 */
     overflow: hidden; /* 防止可能的溢出 */
@@ -108,7 +108,7 @@
     position: absolute;
     bottom: 0px;
     width: 100%;
-    z-index: 100;
+    z-index: 50;
     left: 0; /* 确保从左边开始 */
     right: 0; /* 确保延伸到右边 */
     overflow: hidden; /* 防止可能的溢出 */
