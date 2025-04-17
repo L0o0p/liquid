@@ -227,6 +227,7 @@
   }
 
   .title {
+  font-family: 'DMSerifDisplay-Regular';
     display: flex;
     flex-direction: column;
     gap: 12px;

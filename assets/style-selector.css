@@ -47,6 +47,7 @@
 }
 
 .style-title {
+  font-family: 'DMSerifDisplay-Regular';
   font-size: clamp(24px, 5vw, 56px);
   font-weight: 500;
   margin-bottom: 40px;
