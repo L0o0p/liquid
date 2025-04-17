@@ -265,7 +265,8 @@
   .style-section {
     padding: 20px;
     height: 960px! important;
-    margin:  40px 0;
+    /* margin:  40px 0; */
+    padding: 90px 20px;
   }
 
   .style-container{
