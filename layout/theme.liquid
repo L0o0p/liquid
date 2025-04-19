@@ -142,3 +142,14 @@
     {{ 'https://cdn.shopify.com/s/files/1/0693/0287/8457/files/odinlake.js' | script_tag }}
   </body>
 </html>
+
+{{ 'journey-continued.css' | asset_url | stylesheet_tag }}
+{% style %}
+  /* 在现有CSS文件中添加 */
+  @font-face {
+    font-family: 'DMSerifDisplay-Regular';
+    src: url('{{ "DMSerifDisplay-Regular.ttf" | asset_url }}') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+  }
+{% endstyle %}

@@ -124,7 +124,7 @@
           "type": "gift_card",
           "settings": {
             "title": "Activity Gift Name",
-            "image":"shopify://shop_images/airphone-active.png",
+            "image": "shopify://shop_images/airphone-active.png",
             "subtitle": "double line"
           }
         },
@@ -132,7 +132,7 @@
           "type": "gift_card",
           "settings": {
             "title": "Activity Gift Name",
-            "image":"shopify://shop_images/airphone.png",
+            "image": "shopify://shop_images/airphone.png",
             "subtitle": "double line"
           }
         },
@@ -140,7 +140,7 @@
           "type": "gift_card",
           "settings": {
             "title": "Activity Gift Name",
-            "image":"shopify://shop_images/airphone.png",
+            "image": "shopify://shop_images/airphone.png",
             "subtitle": "double line"
           }
         }
@@ -156,7 +156,7 @@
       "settings": {
         "background_color": "#6EC9CA",
         "active_color": "#28a598",
-        "inactive_color": "#7bbfbb",
+        "inactive_color": "#B2E3E4",
         "tab1_title": "Instagram",
         "tab2_title": "TikTok"
       }
