@@ -124,7 +124,7 @@
           "type": "gift_card",
           "settings": {
             "title": "Activity Gift Name",
-            "image":"shopify://shop_images/airphone.png",
+            "image":"shopify://shop_images/airphone-active.png",
             "subtitle": "double line"
           }
         },
@@ -132,7 +132,7 @@
           "type": "gift_card",
           "settings": {
             "title": "Activity Gift Name",
-            "image":"shopify://shop_images/co-create-with-us.png",
+            "image":"shopify://shop_images/airphone.png",
             "subtitle": "double line"
           }
         },
@@ -140,7 +140,7 @@
           "type": "gift_card",
           "settings": {
             "title": "Activity Gift Name",
-            "image":"shopify://shop_images/co-create-with-us.png",
+            "image":"shopify://shop_images/airphone.png",
             "subtitle": "double line"
           }
         }
