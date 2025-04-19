@@ -80,7 +80,8 @@
 }
 
 .contact-form-section h1 {
-  font-size: 48px;
+  font-size: 48px;  
+  font-family: "DMSerifDisplay-Regular" !important;
   margin: 0;
   color: #12A89D;
   line-height: 1.2;
@@ -227,7 +228,7 @@
   }
 
   .title {
-  font-family: 'DMSerifDisplay-Regular';
+  font-family: "DMSerifDisplay-Regular";
     display: flex;
     flex-direction: column;
     gap: 12px;

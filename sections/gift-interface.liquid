@@ -432,50 +432,58 @@
     </div>
 
     <div class="cards-container">
-      {% assign gift_cards = section.blocks | where: 'type', 'gift_card' %}
-      {% for card in gift_cards %}
-        <div
-          class="card {% if forloop.index == 1 %}active{% else %}inactive{% endif %}"
-          data-index="{{ forloop.index0 }}"
-        >
-          <div class="card-image">
-            <div class="card-lace">
-              {% if forloop.index == 1 %}
-                <svg width="320" height="37" viewBox="0 0 320 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 16C0 16 47.9575 32.8661 79.8333 32.8661C111.709 32.8661 127.791 16.0268 159.667 16C191.67 15.9731 207.83 32.8661 239.833 32.8661C271.837 32.8661 320 16 320 16V37H0V16Z" fill="#12A89D"/>
-                  <path opacity="0.4" d="M0 0C0 0 47.9575 29.7165 79.8333 29.7165C111.709 29.7165 127.791 0.0472041 159.667 0C191.67 -0.0473926 207.83 29.7165 239.833 29.7165C271.837 29.7165 320 0 320 0V37H0V0Z" fill="#12A89D"/>
-                </svg>
+      {% for card in section.blocks %}
+        {% if card.type == 'gift_card' %}
+          <div
+            class="card {% if forloop.index == 1 %}active{% else %}inactive{% endif %}"
+            data-index="{{ forloop.index0 }}"
+          >
+            <div class="card-image">
+              <div class="card-lace">
+                {% if forloop.index == 1 %}
+                  <svg width="320" height="37" viewBox="0 0 320 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16C0 16 47.9575 32.8661 79.8333 32.8661C111.709 32.8661 127.791 16.0268 159.667 16C191.67 15.9731 207.83 32.8661 239.833 32.8661C271.837 32.8661 320 16 320 16V37H0V16Z" fill="#12A89D"/>
+                    <path opacity="0.4" d="M0 0C0 0 47.9575 29.7165 79.8333 29.7165C111.709 29.7165 127.791 0.0472041 159.667 0C191.67 -0.0473926 207.83 29.7165 239.833 29.7165C271.837 29.7165 320 0 320 0V37H0V0Z" fill="#12A89D"/>
+                  </svg>
 
+                {% else %}
+                  <svg width="320" height="37" viewBox="0 0 320 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16C0 16 47.9575 32.8661 79.8333 32.8661C111.709 32.8661 127.791 16.0268 159.667 16C191.67 15.9731 207.83 32.8661 239.833 32.8661C271.837 32.8661 320 16 320 16V37H0V16Z" fill="#B2E3E4"/>
+                    <path opacity="0.4" d="M0 0C0 0 47.9575 29.7165 79.8333 29.7165C111.709 29.7165 127.791 0.0472041 159.667 0C191.67 -0.0473926 207.83 29.7165 239.833 29.7165C271.837 29.7165 320 0 320 0V37H0V0Z" fill="#B2E3E4"/>
+                  </svg>
+                {% endif %}
+              </div>
+              {% if card.settings.image != blank %}
+                {{
+                  card.settings.image
+                  | image_url: width: 600
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: card.settings.title,
+                    class: 'gift-card-img',
+                    widths: '275, 550, 710, 1100',
+                    sizes: '(min-width: 750px) 600px, 100vw'
+                }}
+              {% elsif card.settings.image_url != blank %}
+                <img
+                  src="{{ card.settings.image_url }}"
+                  alt="{{ card.settings.title }}"
+                  loading="lazy"
+                  class="gift-card-img"
+                  height=""
+                  width=""
+                >
               {% else %}
-                <svg width="320" height="37" viewBox="0 0 320 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 16C0 16 47.9575 32.8661 79.8333 32.8661C111.709 32.8661 127.791 16.0268 159.667 16C191.67 15.9731 207.83 32.8661 239.833 32.8661C271.837 32.8661 320 16 320 16V37H0V16Z" fill="#B2E3E4"/>
-                  <path opacity="0.4" d="M0 0C0 0 47.9575 29.7165 79.8333 29.7165C111.709 29.7165 127.791 0.0472041 159.667 0C191.67 -0.0473926 207.83 29.7165 239.833 29.7165C271.837 29.7165 320 0 320 0V37H0V0Z" fill="#B2E3E4"/>
-                </svg>
+                {{ 'product-1' | placeholder_svg_tag: 'gift-placeholder placeholder-svg' }}
               {% endif %}
             </div>
-            {% if card.settings.image != blank %}
-              {% assign img_url = card.settings.image | image_url: width: 300 %}
-              {% assign img_alt = card.settings.title | escape %}
-
-              {{
-                img_url
-                | image_tag:
-                  loading: 'lazy',
-                  alt: img_alt,
-                  class: 'gift-card-img',
-                  widths: '150, 300, 450',
-                  sizes: '(min-width: 750px) 230px, 100vw'
-              }}
-            {% else %}
-              {{ 'gift' | placeholder_svg_tag: 'placeholder-svg gift-placeholder' }}
-            {% endif %}
+            <div class="card-info">
+              <div class="card-title">{{ card.settings.title }}</div>
+              <div class="card-subtitle">{{ card.settings.subtitle }}</div>
+            </div>
           </div>
-          <div class="card-info">
-            <div class="card-title">{{ card.settings.title }}</div>
-            <div class="card-subtitle">{{ card.settings.subtitle }}</div>
-          </div>
-        </div>
-      {% endfor %}
+        {% endif -%}
+      {%- endfor %}
     </div>
   </div>
 </div>
@@ -555,6 +563,8 @@
 {% schema %}
 {
   "name": "Gift Interface",
+  "tag": "section",
+  "class": "section",
   "settings": [
     {
       "type": "color",
@@ -616,7 +626,7 @@
     {
       "type": "gift_card",
       "name": "Gift Card",
-      "limit": 6,
+      "limit": 3,
       "settings": [
         {
           "type": "text",
@@ -634,6 +644,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Image URL",
+          "info": "Upload image in Files section and paste URL here"
         }
       ]
     }
@@ -641,27 +657,7 @@
   "presets": [
     {
       "name": "Gift Interface",
-      "category": "Interactive",
-      "blocks": [
-        {
-          "type": "indicator"
-        },
-        {
-          "type": "indicator"
-        },
-        {
-          "type": "indicator"
-        },
-        {
-          "type": "gift_card"
-        },
-        {
-          "type": "gift_card"
-        },
-        {
-          "type": "gift_card"
-        }
-      ]
+      "category": "Interactive"
     }
   ]
 }
