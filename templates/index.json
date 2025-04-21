@@ -132,7 +132,7 @@
       "type": "gift_card",
       "settings": {
         "title": "Wireless Earbuds",
-        "image": "shopify://shop_images/airphone.png",
+        "image": "shopify://shop_images/airphone-active.png",
         "subtitle": "Noise Cancellation"
       }
     },
@@ -140,7 +140,7 @@
       "type": "gift_card",
       "settings": {
         "title": "Gaming Headset",
-        "image": "shopify://shop_images/airphone.png",
+        "image": "shopify://shop_images/airphone-active.png",
         "subtitle": "Surround Sound"
       }
     }
