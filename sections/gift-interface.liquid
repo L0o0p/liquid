@@ -520,17 +520,44 @@ document.addEventListener('DOMContentLoaded', function () {
   const cards = document.querySelectorAll('.card');
   const indicators = document.querySelectorAll('.icon-circle');
   const progressIndicator = document.querySelector('.progress-indicator');
+  
+  // 标记是否使用API数据
+  let usingApiData = false;
 
-  // 获取当前进度百分比的函数
-  function getCurrentProgress() {
-    // 在实际应用中，应该替换为真实的进度计算逻辑
-    return 33; // 示例：33% 进度（第一个里程碑）
-    // return 66; // 示例：66% 进度（第二个里程碑）
-    // return 100; // 示例：100% 进度（第三个里程碑）
+  // 从后端API获取进度数据的函数
+  async function fetchProgressFromAPI() {
+    try {
+      // 这里替换为实际的API端点
+      const response = await fetch('/api/gift-progress');
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch progress data');
+      }
+      
+      const data = await response.json();
+      usingApiData = true; // 标记我们现在使用API数据
+      // 假设API返回的数据格式包含 currentProgress 字段
+      return data.currentProgress; // 返回进度百分比 (0-100)
+    } catch (error) {
+      console.error('Error fetching progress:', error);
+      usingApiData = false; // API调用失败，不使用API数据
+      // 如果API调用失败，返回默认值或之前缓存的值
+      return getLocalProgress(); 
+    }
+  }
+
+  // 备用方法，用于在API不可用时提供进度
+  function getLocalProgress() {
+    // 可以从localStorage获取之前缓存的进度值
+    const cachedProgress = localStorage.getItem('giftProgress');
+    return cachedProgress ? parseFloat(cachedProgress) : 33;
   }
 
   // 根据进度更新 UI 的函数
   function updateUIBasedOnProgress(progressPercent) {
+    // 缓存进度到localStorage（可选）
+    localStorage.setItem('giftProgress', progressPercent);
+    
     // 更新进度条
     progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
 
@@ -542,6 +569,8 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < milestones.length; i++) {
       if (progressPercent >= milestones[i]) {
         achievedMilestones = i + 1;
+      } else {
+        break; // 一旦找到未达到的里程碑，立即退出循环
       }
     }
 
@@ -566,27 +595,60 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 初始化 UI，基于当前进度
-  const currentProgress = getCurrentProgress();
-  updateUIBasedOnProgress(currentProgress);
+  // 初始化函数 - 从API获取进度数据并更新UI
+  async function initializeProgressUI() {
+    try {
+      // 尝试从API获取进度
+      const progress = await fetchProgressFromAPI();
+      // 更新UI
+      updateUIBasedOnProgress(progress);
+    } catch (error) {
+      console.error('Failed to initialize progress UI:', error);
+      // 使用默认值初始化
+      updateUIBasedOnProgress(33);
+    }
+  }
 
-  // 添加点击处理，用于测试
+  // 定期检查进度更新的函数
+  function setupProgressPolling(intervalMs = 60000) { // 默认1分钟检查一次
+    setInterval(async () => {
+      try {
+        // 只有当API可用时才进行轮询
+        if (usingApiData) {
+          const latestProgress = await fetchProgressFromAPI();
+          updateUIBasedOnProgress(latestProgress);
+        }
+      } catch (error) {
+        console.error('Error updating progress:', error);
+      }
+    }, intervalMs);
+  }
+
+  // 初始化UI并设置进度轮询
+  initializeProgressUI();
+  setupProgressPolling();
+
+  // 添加点击处理 - 始终可用，但如果使用API数据则不触发UI更新
   cards.forEach((card, index) => {
     card.addEventListener('click', function () {
-      // 点击卡片模拟达到对应的里程碑
-      const clickedMilestone = index + 1;
-      let simulatedProgress;
-      
-      // 设置对应的进度值
-      if (clickedMilestone === 1) {
-        simulatedProgress = 33.33;
-      } else if (clickedMilestone === 2) {
-        simulatedProgress = 66.67;
+      // 只有在不使用API数据时，点击才会更新UI
+      if (!usingApiData) {
+        const clickedMilestone = index + 1;
+        let simulatedProgress;
+        
+        // 设置对应的进度值
+        if (clickedMilestone === 1) {
+          simulatedProgress = 33.33;
+        } else if (clickedMilestone === 2) {
+          simulatedProgress = 66.67;
+        } else {
+          simulatedProgress = 100;
+        }
+        
+        updateUIBasedOnProgress(simulatedProgress);
       } else {
-        simulatedProgress = 100;
+        console.log('Interface is using API data. Click interactions are disabled.');
       }
-      
-      updateUIBasedOnProgress(simulatedProgress);
     });
   });
 
