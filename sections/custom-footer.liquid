@@ -1,3 +1,5 @@
+{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+
 <footer class="custom-footer-container">
   <div class="footer-lace">
     {% render 'footer-lace' %}
@@ -253,7 +255,7 @@
 </script>
 {% schema %}
 {
-  "name": "自定义页脚",
+  "name": "Custom Footer",
   "class": "section",
   "tag": "footer",
   "settings": [
@@ -391,26 +393,26 @@
   ],
   "presets": [
     {
-      "name": "OdinLake页脚",
+    "name": "Custom Footer",
       "blocks": [
         {
           "type": "link_list",
           "settings": {
-            "heading": "产品",
+            "heading": "Product",
             "menu": "footer"
           }
         },
         {
           "type": "link_list",
           "settings": {
-            "heading": "关于我们",
+            "heading": "About",
             "menu": "footer"
           }
         },
         {
           "type": "link_list",
           "settings": {
-            "heading": "支持",
+            "heading": "Services",
             "menu": "footer"
           }
         }

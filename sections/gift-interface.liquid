@@ -516,151 +516,152 @@
 </div>
 
 {% javascript %}
-document.addEventListener('DOMContentLoaded', function () {
-  const cards = document.querySelectorAll('.card');
-  const indicators = document.querySelectorAll('.icon-circle');
-  const progressIndicator = document.querySelector('.progress-indicator');
-  
-  // 标记是否使用API数据
-  let usingApiData = false;
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
+    const indicators = document.querySelectorAll('.icon-circle');
+    const progressIndicator = document.querySelector('.progress-indicator');
 
-  // 从后端API获取进度数据的函数
-  async function fetchProgressFromAPI() {
-    try {
-      // 这里替换为实际的API端点
-      const response = await fetch('/api/gift-progress');
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch progress data');
-      }
-      
-      const data = await response.json();
-      usingApiData = true; // 标记我们现在使用API数据
-      // 假设API返回的数据格式包含 currentProgress 字段
-      return data.currentProgress; // 返回进度百分比 (0-100)
-    } catch (error) {
-      console.error('Error fetching progress:', error);
-      usingApiData = false; // API调用失败，不使用API数据
-      // 如果API调用失败，返回默认值或之前缓存的值
-      return getLocalProgress(); 
-    }
-  }
+    // 标记是否使用API数据
+    let usingApiData = false;
 
-  // 备用方法，用于在API不可用时提供进度
-  function getLocalProgress() {
-    // 可以从localStorage获取之前缓存的进度值
-    const cachedProgress = localStorage.getItem('giftProgress');
-    return cachedProgress ? parseFloat(cachedProgress) : 33;
-  }
-
-  // 根据进度更新 UI 的函数
-  function updateUIBasedOnProgress(progressPercent) {
-    // 缓存进度到localStorage（可选）
-    localStorage.setItem('giftProgress', progressPercent);
-    
-    // 更新进度条
-    progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
-
-    // 定义里程碑阈值
-    const milestones = [33.33, 66.67, 100];
-    
-    // 计算当前达到的里程碑数量
-    let achievedMilestones = 0;
-    for (let i = 0; i < milestones.length; i++) {
-      if (progressPercent >= milestones[i]) {
-        achievedMilestones = i + 1;
-      } else {
-        break; // 一旦找到未达到的里程碑，立即退出循环
-      }
-    }
-
-    // 更新指示器
-    indicators.forEach((indicator, index) => {
-      if (index < achievedMilestones) {
-        indicator.classList.add('active');
-      } else {
-        indicator.classList.remove('active');
-      }
-    });
-
-    // 更新卡片
-    cards.forEach((card, index) => {
-      if (index < achievedMilestones) {
-        card.classList.add('active');
-        card.classList.remove('inactive');
-      } else {
-        card.classList.remove('active');
-        card.classList.add('inactive');
-      }
-    });
-  }
-
-  // 初始化函数 - 从API获取进度数据并更新UI
-  async function initializeProgressUI() {
-    try {
-      // 尝试从API获取进度
-      const progress = await fetchProgressFromAPI();
-      // 更新UI
-      updateUIBasedOnProgress(progress);
-    } catch (error) {
-      console.error('Failed to initialize progress UI:', error);
-      // 使用默认值初始化
-      updateUIBasedOnProgress(33);
-    }
-  }
-
-  // 定期检查进度更新的函数
-  function setupProgressPolling(intervalMs = 60000) { // 默认1分钟检查一次
-    setInterval(async () => {
+    // 从后端API获取进度数据的函数
+    async function fetchProgressFromAPI() {
       try {
-        // 只有当API可用时才进行轮询
-        if (usingApiData) {
-          const latestProgress = await fetchProgressFromAPI();
-          updateUIBasedOnProgress(latestProgress);
+        // 这里替换为实际的API端点
+        const response = await fetch('/api/gift-progress');
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch progress data');
         }
+
+        const data = await response.json();
+        usingApiData = true; // 标记我们现在使用API数据
+        // 假设API返回的数据格式包含 currentProgress 字段
+        return data.currentProgress; // 返回进度百分比 (0-100)
       } catch (error) {
-        console.error('Error updating progress:', error);
+        console.error('Error fetching progress:', error);
+        usingApiData = false; // API调用失败，不使用API数据
+        // 如果API调用失败，返回默认值或之前缓存的值
+        return getLocalProgress();
       }
-    }, intervalMs);
-  }
+    }
 
-  // 初始化UI并设置进度轮询
-  initializeProgressUI();
-  setupProgressPolling();
+    // 备用方法，用于在API不可用时提供进度
+    function getLocalProgress() {
+      // 可以从localStorage获取之前缓存的进度值
+      const cachedProgress = localStorage.getItem('giftProgress');
+      return cachedProgress ? parseFloat(cachedProgress) : 33;
+    }
 
-  // 添加点击处理 - 始终可用，但如果使用API数据则不触发UI更新
-  cards.forEach((card, index) => {
-    card.addEventListener('click', function () {
-      // 只有在不使用API数据时，点击才会更新UI
-      if (!usingApiData) {
-        const clickedMilestone = index + 1;
-        let simulatedProgress;
-        
-        // 设置对应的进度值
-        if (clickedMilestone === 1) {
-          simulatedProgress = 33.33;
-        } else if (clickedMilestone === 2) {
-          simulatedProgress = 66.67;
+    // 根据进度更新 UI 的函数
+    function updateUIBasedOnProgress(progressPercent) {
+      // 缓存进度到localStorage（可选）
+      localStorage.setItem('giftProgress', progressPercent);
+
+      // 更新进度条
+      progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
+
+      // 定义里程碑阈值
+      const milestones = [33.33, 66.67, 100];
+
+      // 计算当前达到的里程碑数量
+      let achievedMilestones = 0;
+      for (let i = 0; i < milestones.length; i++) {
+        if (progressPercent >= milestones[i]) {
+          achievedMilestones = i + 1;
         } else {
-          simulatedProgress = 100;
+          break; // 一旦找到未达到的里程碑，立即退出循环
         }
-        
-        updateUIBasedOnProgress(simulatedProgress);
-      } else {
-        console.log('Interface is using API data. Click interactions are disabled.');
       }
-    });
-  });
 
-  // 社交媒体标签切换
-  const socialTabs = document.querySelectorAll('.social-tab');
-  socialTabs.forEach((tab) => {
-    tab.addEventListener('click', function () {
-      socialTabs.forEach((t) => t.classList.remove('active'));
-      this.classList.add('active');
+      // 更新指示器
+      indicators.forEach((indicator, index) => {
+        if (index < achievedMilestones) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+
+      // 更新卡片
+      cards.forEach((card, index) => {
+        if (index < achievedMilestones) {
+          card.classList.add('active');
+          card.classList.remove('inactive');
+        } else {
+          card.classList.remove('active');
+          card.classList.add('inactive');
+        }
+      });
+    }
+
+    // 初始化函数 - 从API获取进度数据并更新UI
+    async function initializeProgressUI() {
+      try {
+        // 尝试从API获取进度
+        const progress = await fetchProgressFromAPI();
+        // 更新UI
+        updateUIBasedOnProgress(progress);
+      } catch (error) {
+        console.error('Failed to initialize progress UI:', error);
+        // 使用默认值初始化
+        updateUIBasedOnProgress(33);
+      }
+    }
+
+    // 定期检查进度更新的函数
+    function setupProgressPolling(intervalMs = 60000) {
+      // 默认1分钟检查一次
+      setInterval(async () => {
+        try {
+          // 只有当API可用时才进行轮询
+          if (usingApiData) {
+            const latestProgress = await fetchProgressFromAPI();
+            updateUIBasedOnProgress(latestProgress);
+          }
+        } catch (error) {
+          console.error('Error updating progress:', error);
+        }
+      }, intervalMs);
+    }
+
+    // 初始化UI并设置进度轮询
+    initializeProgressUI();
+    setupProgressPolling();
+
+    // 添加点击处理 - 始终可用，但如果使用API数据则不触发UI更新
+    cards.forEach((card, index) => {
+      card.addEventListener('click', function () {
+        // 只有在不使用API数据时，点击才会更新UI
+        if (!usingApiData) {
+          const clickedMilestone = index + 1;
+          let simulatedProgress;
+
+          // 设置对应的进度值
+          if (clickedMilestone === 1) {
+            simulatedProgress = 33.33;
+          } else if (clickedMilestone === 2) {
+            simulatedProgress = 66.67;
+          } else {
+            simulatedProgress = 100;
+          }
+
+          updateUIBasedOnProgress(simulatedProgress);
+        } else {
+          console.log('Interface is using API data. Click interactions are disabled.');
+        }
+      });
+    });
+
+    // 社交媒体标签切换
+    const socialTabs = document.querySelectorAll('.social-tab');
+    socialTabs.forEach((tab) => {
+      tab.addEventListener('click', function () {
+        socialTabs.forEach((t) => t.classList.remove('active'));
+        this.classList.add('active');
+      });
     });
   });
-});
 {% endjavascript %}
 
 {% schema %}
@@ -698,6 +699,15 @@ document.addEventListener('DOMContentLoaded', function () {
       "id": "tab2_title",
       "label": "Second Tab Title",
       "default": "TikTok"
+    },
+    {
+      "type": "range",
+      "id": "current_progress",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 34,
+      "label": "当前进度 (%) - 33%激活第一张卡片，67%激活第二张，100%激活第三张"
     }
   ],
   "blocks": [
@@ -760,7 +770,64 @@ document.addEventListener('DOMContentLoaded', function () {
   "presets": [
     {
       "name": "Gift Interface",
-      "category": "Interactive"
+      "settings": {
+        "background_color": "#6EC9CA",
+        "active_color": "#28a598",
+        "inactive_color": "#B2E3E4",
+        "tab1_title": "Instagram",
+        "tab2_title": "TikTok",
+        "current_progress": 34
+      },
+      "blocks": [
+        {
+          "type": "indicator",
+          "settings": {
+            "title": "Entries",
+            "value": "100",
+            "icon_path": "M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"
+          }
+        },
+        {
+          "type": "indicator",
+          "settings": {
+            "title": "Following",
+            "value": "50",
+            "icon_path": "M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+          }
+        },
+        {
+          "type": "indicator",
+          "settings": {
+            "title": "Likes",
+            "value": "200",
+            "icon_path": "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          }
+        },
+        {
+          "type": "gift_card",
+          "settings": {
+            "title": "Bronze Gift",
+            "subtitle": "Entry level gift",
+            "image_url": "https://cdn.shopify.com/s/files/1/0000/0000/0000/files/bronze_gift.png"
+          }
+        },
+        {
+          "type": "gift_card",
+          "settings": {
+            "title": "Silver Gift",
+            "subtitle": "Mid-tier reward",
+            "image_url": "https://cdn.shopify.com/s/files/1/0000/0000/0000/files/silver_gift.png"
+          }
+        },
+        {
+          "type": "gift_card",
+          "settings": {
+            "title": "Gold Gift",
+            "subtitle": "Premium reward",
+            "image_url": "https://cdn.shopify.com/s/files/1/0000/0000/0000/files/gold_gift.png"
+          }
+        }
+      ]
     }
   ]
 }
