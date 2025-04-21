@@ -516,74 +516,89 @@
 </div>
 
 {% javascript %}
-  document.addEventListener('DOMContentLoaded', function () {
-    const cards = document.querySelectorAll('.card');
-    const indicators = document.querySelectorAll('.icon-circle');
-    const progressIndicator = document.querySelector('.progress-indicator');
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.card');
+  const indicators = document.querySelectorAll('.icon-circle');
+  const progressIndicator = document.querySelector('.progress-indicator');
 
-    // Mock function to simulate getting the current progress percentage (0-100)
-    // In a real application, you would calculate this based on your actual data
-    function getCurrentProgress() {
-      // Replace this with your actual progress calculation logic
-      return 33; // Example: 33% progress (first milestone)
-      // return 66; // Example: 66% progress (second milestone)
-      // return 85; // Example: 85% progress (third milestone)
+  // 获取当前进度百分比的函数
+  function getCurrentProgress() {
+    // 在实际应用中，应该替换为真实的进度计算逻辑
+    return 33; // 示例：33% 进度（第一个里程碑）
+    // return 66; // 示例：66% 进度（第二个里程碑）
+    // return 100; // 示例：100% 进度（第三个里程碑）
+  }
+
+  // 根据进度更新 UI 的函数
+  function updateUIBasedOnProgress(progressPercent) {
+    // 更新进度条
+    progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
+
+    // 定义里程碑阈值
+    const milestones = [33.33, 66.67, 100];
+    
+    // 计算当前达到的里程碑数量
+    let achievedMilestones = 0;
+    for (let i = 0; i < milestones.length; i++) {
+      if (progressPercent >= milestones[i]) {
+        achievedMilestones = i + 1;
+      }
     }
 
-    // Function to update UI based on progress
-    function updateUIBasedOnProgress(progressPercent) {
-      // Update progress bar
-      progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
-
-      // Calculate how many milestones have been achieved (3 milestones total)
-      const milestoneCount = 3;
-      const milestoneSize = 100 / milestoneCount;
-      const achievedMilestones = Math.floor(progressPercent / milestoneSize);
-
-      // Update indicators
-      indicators.forEach((indicator, index) => {
-        if (index <= achievedMilestones) {
-          indicator.classList.add('active');
-        } else {
-          indicator.classList.remove('active');
-        }
-      });
-
-      // Update cards
-      cards.forEach((card, index) => {
-        if (index <= achievedMilestones) {
-          card.classList.add('active');
-          card.classList.remove('inactive');
-        } else {
-          card.classList.remove('active');
-          card.classList.add('inactive');
-        }
-      });
-    }
-
-    // Initialize UI based on current progress
-    const currentProgress = getCurrentProgress();
-    updateUIBasedOnProgress(currentProgress);
-
-    // Optional: Add click handling to enable manual selection for testing
-    cards.forEach((card, index) => {
-      card.addEventListener('click', function () {
-        // For demonstration - clicking a card simulates reaching that milestone
-        const clickedMilestone = index + 1;
-        const simulatedProgress = clickedMilestone * (100 / 3);
-        updateUIBasedOnProgress(simulatedProgress);
-      });
+    // 更新指示器
+    indicators.forEach((indicator, index) => {
+      if (index < achievedMilestones) {
+        indicator.classList.add('active');
+      } else {
+        indicator.classList.remove('active');
+      }
     });
 
-    // Social tab switching remains the same
-    const socialTabs = document.querySelectorAll('.social-tab');
-    socialTabs.forEach((tab) => {
-      tab.addEventListener('click', function () {
-        socialTabs.forEach((t) => t.classList.remove('active'));
-        this.classList.add('active');
-      });
+    // 更新卡片
+    cards.forEach((card, index) => {
+      if (index < achievedMilestones) {
+        card.classList.add('active');
+        card.classList.remove('inactive');
+      } else {
+        card.classList.remove('active');
+        card.classList.add('inactive');
+      }
+    });
+  }
+
+  // 初始化 UI，基于当前进度
+  const currentProgress = getCurrentProgress();
+  updateUIBasedOnProgress(currentProgress);
+
+  // 添加点击处理，用于测试
+  cards.forEach((card, index) => {
+    card.addEventListener('click', function () {
+      // 点击卡片模拟达到对应的里程碑
+      const clickedMilestone = index + 1;
+      let simulatedProgress;
+      
+      // 设置对应的进度值
+      if (clickedMilestone === 1) {
+        simulatedProgress = 33.33;
+      } else if (clickedMilestone === 2) {
+        simulatedProgress = 66.67;
+      } else {
+        simulatedProgress = 100;
+      }
+      
+      updateUIBasedOnProgress(simulatedProgress);
     });
   });
+
+  // 社交媒体标签切换
+  const socialTabs = document.querySelectorAll('.social-tab');
+  socialTabs.forEach((tab) => {
+    tab.addEventListener('click', function () {
+      socialTabs.forEach((t) => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+});
 {% endjavascript %}
 
 {% schema %}
