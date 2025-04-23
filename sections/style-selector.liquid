@@ -47,7 +47,7 @@
             </div>
 
             {% if block.settings.pantone_code != blank %}
-              <div class="pantone-tag">{{ block.settings.pantone_code }}</div>
+              {% comment %} <div class="pantone-tag">{{ block.settings.pantone_code }}</div> {% endcomment %}
             {% endif %}
             <div class="chair-image-container">
               {% if block.settings.chair_image != blank %}

@@ -1,412 +1,422 @@
 {% style %}
-        .gift-interface {
-            margin: 0;
-            padding: 0;
-            background-color: {{ section.settings.background_color }};
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 1120px;
-            justify-content: start;
-            padding: 20px;
-            padding-top:96px;
-            overflow-x: hidden;
-              position:relative;
-          }
-
-            .gift-interface-lace{
-            position:absolute;
-            z-index:50;
-            bottom:-2px;
-             width: 100%;
-          }
-
-          .gift-interface-lace svg{
-            display:block;
-            width: 100%;
-            height: auto; /* 让高度根据宽度自动调整 */
-          }
-
-        .social-tabs {
-            display: flex;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50px;
-            padding: 5px;
-            margin-bottom: 50px;
-            width: 540px;
-            height:100px;
-            justify-content: space-around;
-          align-content: center;
-          flex-wrap: wrap;
-        }
-
-        .social-tab {
-            display: flex;
-            align-items: center;
-            padding: 8px 20px;
-            border-radius: 50px;
-            cursor: pointer;
-            width:240px;
-            height:80px;
-            justify-content: center;
-            gap:10px;
-            font-size:24px;
-            box-sizing:
-        }
-
-        .social-tab.active {
-            background-color: #6EC9CA;
-        }
-
-        .social-tab img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-        }
-
-        .social-tab span {
-            font-weight: bold;
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .entry-indicators {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            margin-bottom: 30px;
-        }
-
-        .entry-indicator {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-  .icon-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
-  }
-
-
-        .icon-circle.active {
-            background-color: {{ section.settings.active_color }};
-        }
-
-  .icon-circle svg {
-    width: 24px;
-    height: 24px;
-    fill: {{ section.settings.background_color }};
-    transition: fill 0.3s ease;
-  }
-
-        .icon-circle.active svg {
-            fill: white;
-        }
-
-        .entry-text {
-            color: white;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .entry-value {
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-    .progress-bar {
-      width: 100%;
-      height: 6px;
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 3px;
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-  .progress-indicator {
-    position: absolute;
-    height: 100%;
-    background-color: {{ section.settings.active_color }};
-    border-radius: 3px;
-    transition: width 0.5s ease-in-out;
-  }
-
-        .cards-container {
-            display: flex;
-            gap: 20px;
-            width: 100%;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-            /* height:420px */
-        }
-
-  .card {
-    width: 320px;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #f0f0f0;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 420px;
-  }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 230px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            position: relative;
-            height: 72%;
-        }
-
-        .card-lace{
-          position: absolute;
-          z-index: 50;
-          bottom: -5px;
-          width: 100%;
-        }
-
-        .card-lace svg{
-          display:block;
-          width: 100%;
-          height:auto
-        }
-        .card-lace.active svg{
-        color: {{ section.settings.active_color | default: '#28a598' }};
-      }
-
-      .card.active:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-
-  .card.inactive {
-    opacity: 0.8;
-    filter: grayscale(30%);
-  }
-
-  .card-lace svg {
-    color: {{ section.settings.inactive_color }};
-    transition: color 0.3s ease;
-  }
-
-  .card.active .card-lace svg {
-    color: {{ section.settings.active_color }};
-  }
-
-        .card-image img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-        /* 降低未激活卡片图片的饱和度 */
-  .card.inactive .card-image img,
-  .card.inactive .gift-placeholder {
-    filter: saturate(5%) brightness(90%);
-    transition: filter 0.3s ease;
-  }
-
-  /* 确保激活状态的卡片图片正常显示 */
-  .card.active .card-image img,
-  .card.active .gift-placeholder {
-    filter: saturate(100%) brightness(100%);
-    transition: filter 0.3s ease;
-  }
-
-
-        /* .wave-top {
-            width: 100%;
-            height: 36px;
-            position: relative;
-        }
-
-         .wave-top svg{
-          display:block;
-          width: 100%;
-          height: auto; /* 让高度根据宽度自动调整 */
-         /* } */
-
-        /* .wave-top::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 20px;
-            background: white;
-            border-radius: 0 0 50% 50% / 0 0 100% 100%;
-        } */
-
-        .card-info {
-           padding: 36px;
-            background-color: {{ section.settings.active_color }};
-            height: 80px;height:30%;
-            width:100%
-        }
-
-        .card.inactive .card-info {
-            background-color: {{ section.settings.inactive_color }};
-        }
-
-        .card.active .card-info {
-            background-color: {{ section.settings.active_color }};
-        }
-
-        .card.inactive .card-title,
-        .card.inactive .card-subtitle {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .card-title {
-            color: white;
-            font-size: 14px;
-            margin-bottom: 3px;
-        }
-
-        .card-subtitle {
-            color: white;
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        /* Vertical connecting lines between indicators */
-        .vertical-line {
-            width: 2px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.5);
-            margin: 0 auto;
-            display: none;
-        }
-
-          @media (max-width: 1080px) {
-        .gift-interface {
-            display: flex;
-            justify-content: center;
-          }
-         }
-
-        @media (max-width: 768px) {
-          .cards-container{
-            flex-direction: row;
-            flex-wrap: nowrap !important;
-            justify-content: space-around;
-          }
-         }
-
-        @media (max-width: 640px) {.cards-container {
-            flex: 1;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }}
-
-        /* Responsive adjustments for mobile layout (under 480px) */
-        @media (max-width: 480px) {
-          .gift-interface{
-            height:1200px
-          }
-
-            .social-tabs {
-                margin-bottom: 30px;
-                height:68px;
-                width:350px
-            }
-            .social-tab {
-                font-size: 16px;
-                height:48px;
-                width:160px
-            }
-            .main-container {
-                flex-direction: row;
-            }
-
-            .indicators-container {
-                width: 90px;
+            .gift-interface {
+                margin: 0;
+                padding: 0;
+                background-color: {{ section.settings.background_color }};
                 display: flex;
                 flex-direction: column;
-                margin-right: 15px;
+                align-items: center;
+                min-height: 1120px;
+                justify-content: start;
+                padding: 20px;
+                padding-top:96px;
+                overflow-x: hidden;
+                  position:relative;
+              }
+
+                .gift-interface-lace{
+                position:absolute;
+                z-index:50;
+                bottom:-2px;
+                 width: 100%;
+              }
+
+              .gift-interface-lace svg{
+                display:block;
+                width: 100%;
+                height: auto; /* 让高度根据宽度自动调整 */
+              }
+
+            .social-tabs {
+                display: flex;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 50px;
+                padding: 5px;
+                margin-bottom: 50px;
+                width: 820px;
+                height:68px;
+                justify-content: space-around;
+              align-content: center;
+              flex-wrap: wrap;
+              position:relative;
+            }
+
+            .social-tab {
+                display: flex;
+                align-items: center;
+                padding: 8px 20px;
+                border-radius: 50px;
+                cursor: pointer;
+                width:240px;
+                height:68px;
+                justify-content: center;
+                gap:10px;
+                font-size:24px;
+                z-index:2
+            }
+
+            .social-tab.active {
+                /* background-color: #6EC9CA; */
+            }
+
+            .social-tab img {
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+            }
+
+            .social-tab span {
+                font-weight: bold;
+                font-size:20px
+            }
+
+            .main-container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 1200px;
+            }
+
+            .entry-indicators {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .entry-indicator {
+                display: flex;
+                flex-direction: column;
                 align-items: center;
             }
 
+      .icon-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        transition: background-color 0.3s ease;
+      }
+
+
+            .icon-circle.active {
+                background-color: {{ section.settings.active_color }};
+            }
+
+      .icon-circle svg {
+        width: 24px;
+        height: 24px;
+        fill: {{ section.settings.background_color }};
+        transition: fill 0.3s ease;
+      }
+
+            .icon-circle.active svg {
+                fill: white;
+            }
+
+            .entry-text {
+                color: white;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .entry-value {
+                color: white;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+        .progress-bar {
+          width: 100%;
+          height: 68px;
+          background-color: rgba(255, 255, 255, 0.3);
+          border-radius: 3px;
+          margin-bottom: 50px;
+          position: relative;
+        }
+
+      .progress-indicator {
+    position: absolute;
+  height: 68px;
+      border: 6px solid rgba(255, 255, 255, 0.8);
+        background-color: #6EC9CA;
+        /* bottom: 5%; */
+        border-radius: 3px;
+        transition: width 0.5s ease-in-out;
+        border-radius: 999px;
+        top: 50%;
+        transform: translateY(-50%);
+        box-sizing: border-box;
+        padding: 20px;
+        z-index:0;
+      }
+
             .cards-container {
+                display: flex;
+                gap: 20px;
+                width: 100%;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                /* height:420px */
+            }
+
+      .card {
+        width: 320px;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        background-color: #f0f0f0;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        height: 420px;
+      }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+            .card-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 230px;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 20px;
+                position: relative;
+                height: 72%;
+            }
+
+            .card-lace{
+              position: absolute;
+              z-index: 50;
+              bottom: -5px;
+              width: 100%;
+            }
+
+            .card-lace svg{
+              display:block;
+              width: 100%;
+              height:auto
+            }
+            .card-lace.active svg{
+            color: {{ section.settings.active_color | default: '#28a598' }};
+          }
+
+          .card.active:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+
+      .card.inactive {
+        opacity: 0.8;
+        filter: grayscale(30%);
+      }
+
+      .card-lace svg {
+        color: {{ section.settings.inactive_color }};
+        transition: color 0.3s ease;
+      }
+
+      .card.active .card-lace svg {
+        color: {{ section.settings.active_color }};
+      }
+
+            .card-image img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            /* 降低未激活卡片图片的饱和度 */
+      .card.inactive .card-image img,
+      .card.inactive .gift-placeholder {
+        filter: saturate(5%) brightness(90%);
+        transition: filter 0.3s ease;
+      }
+
+      /* 确保激活状态的卡片图片正常显示 */
+      .card.active .card-image img,
+      .card.active .gift-placeholder {
+        filter: saturate(100%) brightness(100%);
+        transition: filter 0.3s ease;
+      }
+
+
+            /* .wave-top {
+                width: 100%;
+                height: 36px;
+                position: relative;
+            }
+
+             .wave-top svg{
+              display:block;
+              width: 100%;
+              height: auto; /* 让高度根据宽度自动调整 */
+             /* } */
+
+            /* .wave-top::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 20px;
+                background: white;
+                border-radius: 0 0 50% 50% / 0 0 100% 100%;
+            } */
+
+            .card-info {
+               padding: 36px;
+                background-color: {{ section.settings.active_color }};
+                height: 80px;height:30%;
+                width:100%
+            }
+
+            .card.inactive .card-info {
+                background-color: {{ section.settings.inactive_color }};
+            }
+
+            .card.active .card-info {
+                background-color: {{ section.settings.active_color }};
+            }
+
+            .card.inactive .card-title,
+            .card.inactive .card-subtitle {
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            .card-title {
+                color: white;
+                font-size: 14px;
+                margin-bottom: 3px;
+            }
+
+            .card-subtitle {
+                color: white;
+                font-size: 14px;
+                opacity: 0.9;
+            }
+
+            /* Vertical connecting lines between indicators */
+            .vertical-line {
+                width: 2px;
+                height: 80px;
+                background-color: rgba(255, 255, 255, 0.5);
+                margin: 0 auto;
+                display: none;
+            }
+
+              @media (max-width: 1080px) {
+            .gift-interface {
+                display: flex;
+                justify-content: center;
+              }
+             }
+
+            @media (max-width: 768px) {
+              .cards-container{
+                flex-direction: row;
+                flex-wrap: nowrap !important;
+                justify-content: space-around;
+              }
+             }
+
+            @media (max-width: 640px) {.cards-container {
                 flex: 1;
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
-            }
+            }}
 
-            .card {
-                width: 100%;
-                max-width: 230px;
-                margin-bottom: 15px;
-                height:300px
-            }
+            /* Responsive adjustments for mobile layout (under 480px) */
+            @media (max-width: 480px) {
+              .gift-interface{
+                height:1200px
+              }
 
-            .card-info{
-              padding: 8px 15px;
-            }
+                .social-tabs {
+                    margin-bottom: 30px;
+                    height:68px;
+                    width:420px
+                }
+                .social-tab {
+                    font-size: 16px;
+                    height:48px;
+                    width:160px
+                }
+                .main-container {
+                    flex-direction: row;
+                }
 
-            .entry-indicators {
-                flex-direction: column;
-                height: 100%;
-                margin-bottom: 0;
-                align-items: center;
-            }
+                .indicators-container {
+                    width: 90px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 15px;
+                    align-items: center;
+                }
 
-            .entry-indicator {
-                margin-bottom: 0;
-                width: 100%;
-                position: relative;
-                z-index: 2;
-            }
+                .cards-container {
+                    flex: 1;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                }
 
-            .icon-circle {
-                margin-bottom: 5px;
-            }
+                .card {
+                    width: 100%;
+                    max-width: 230px;
+                    margin-bottom: 15px;
+                    height:300px
+                }
 
-            .entry-text {
-                font-size: 12px;
-                margin-bottom: 2px;
-            }
+                .card-info{
+                  padding: 8px 15px;
+                }
 
-            .entry-value {
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
+                .entry-indicators {
+                    flex-direction: column;
+                    height: 100%;
+                    margin-bottom: 0;
+                    align-items: center;
+                }
 
-            .progress-bar {
-                display: none;
-            }
+                .entry-indicator {
+                    margin-bottom: 0;
+                    width: 100%;
+                    position: relative;
+                    z-index: 2;
+                }
 
-            .vertical-line {
-                display: block;
-            }
+                .icon-circle {
+                    margin-bottom: 5px;
+                }
 
-            /* Hide the horizontal progress bar */
-            .horizontal-progress {
-                display: none;
+                .entry-text {
+                    font-size: 12px;
+                    margin-bottom: 2px;
+                }
+
+                .entry-value {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+
+                .progress-bar {
+                    display: none;
+                }
+
+                .vertical-line {
+                    display: block;
+                }
+
+                /* Hide the horizontal progress bar */
+                .horizontal-progress {
+                    display: none;
+                }
             }
-        }
 {% endstyle %}
 
 <div class="gift-interface">
@@ -414,24 +424,39 @@
     {% render 'gift-interface-lace' %}
   </div>
   <div class="social-tabs">
+    <div class="progress-indicator" style="width: 33.33%; left: 0%;"></div>
     <div class="social-tab active">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#405DE6" />
-          <stop offset="30%" stop-color="#5851DB" />
-          <stop offset="50%" stop-color="#833AB4" />
-          <stop offset="70%" stop-color="#C13584" />
-          <stop offset="90%" stop-color="#E1306C" />
-          <stop offset="100%" stop-color="#FD1D1D" />
-        </linearGradient>
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.76 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#instagram-gradient)"/>
-      </svg>
+      <!--
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#405DE6" />
+            <stop offset="30%" stop-color="#5851DB" />
+            <stop offset="50%" stop-color="#833AB4" />
+            <stop offset="70%" stop-color="#C13584" />
+            <stop offset="90%" stop-color="#E1306C" />
+            <stop offset="100%" stop-color="#FD1D1D" />
+          </linearGradient>
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.76 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#instagram-gradient)"/>
+        </svg>
+      -->
       <span>{{ section.settings.tab1_title }}</span>
     </div>
+
     <div class="social-tab">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19.589 6.686a4.793 4.793 0 0 0-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" fill="#000000"/>
-      </svg>
+      <!--
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.589 6.686a4.793 4.793 0 0 0-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" fill="#000000"/>
+        </svg>
+      -->
+      <span>{{ section.settings.tab2_title }}</span>
+    </div>
+
+    <div class="social-tab">
+      <!--
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.589 6.686a4.793 4.793 0 0 0-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" fill="#000000"/>
+        </svg>
+      -->
       <span>{{ section.settings.tab2_title }}</span>
     </div>
   </div>
@@ -460,11 +485,13 @@
       </div>
     </div>
 
-    <div class="horizontal-progress">
-      <div class="progress-bar">
-        <div class="progress-indicator" style="width: 33.33%; left: 0%;"></div>
+    <!--
+      <div class="horizontal-progress">
+        <div class="progress-bar">
+          <div class="progress-indicator" style="width: 33.33%; left: 0%;"></div>
+        </div>
       </div>
-    </div>
+    -->
 
     <div class="cards-container">
       {% for card in section.blocks %}
@@ -516,152 +543,85 @@
 </div>
 
 {% javascript %}
-  document.addEventListener('DOMContentLoaded', function () {
-    const cards = document.querySelectorAll('.card');
-    const indicators = document.querySelectorAll('.icon-circle');
-    const progressIndicator = document.querySelector('.progress-indicator');
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.card');
+  const indicators = document.querySelectorAll('.icon-circle');
+  const progressIndicator = document.querySelector('.progress-indicator');
 
-    // 标记是否使用API数据
-    let usingApiData = false;
+  // 根据进度更新 UI 的函数
+  function updateUIBasedOnProgress(progressPercent) {
+    // 缓存进度到localStorage（可选）
+    localStorage.setItem('giftProgress', progressPercent);
 
-    // 从后端API获取进度数据的函数
-    async function fetchProgressFromAPI() {
-      try {
-        // 这里替换为实际的API端点
-        const response = await fetch('/api/gift-progress');
+    // 更新进度条
+    progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
 
-        if (!response.ok) {
-          throw new Error('Failed to fetch progress data');
-        }
+    // 定义里程碑阈值
+    const milestones = [33.33, 66.67, 100];
 
-        const data = await response.json();
-        usingApiData = true; // 标记我们现在使用API数据
-        // 假设API返回的数据格式包含 currentProgress 字段
-        return data.currentProgress; // 返回进度百分比 (0-100)
-      } catch (error) {
-        console.error('Error fetching progress:', error);
-        usingApiData = false; // API调用失败，不使用API数据
-        // 如果API调用失败，返回默认值或之前缓存的值
-        return getLocalProgress();
+    // 计算当前达到的里程碑数量
+    let achievedMilestones = 0;
+    for (let i = 0; i < milestones.length; i++) {
+      if (progressPercent >= milestones[i]) {
+        achievedMilestones = i + 1;
+      } else {
+        break; // 一旦找到未达到的里程碑，立即退出循环
       }
     }
 
-    // 备用方法，用于在API不可用时提供进度
-    function getLocalProgress() {
-      // 可以从localStorage获取之前缓存的进度值
-      const cachedProgress = localStorage.getItem('giftProgress');
-      return cachedProgress ? parseFloat(cachedProgress) : 33;
-    }
-
-    // 根据进度更新 UI 的函数
-    function updateUIBasedOnProgress(progressPercent) {
-      // 缓存进度到localStorage（可选）
-      localStorage.setItem('giftProgress', progressPercent);
-
-      // 更新进度条
-      progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
-
-      // 定义里程碑阈值
-      const milestones = [33.33, 66.67, 100];
-
-      // 计算当前达到的里程碑数量
-      let achievedMilestones = 0;
-      for (let i = 0; i < milestones.length; i++) {
-        if (progressPercent >= milestones[i]) {
-          achievedMilestones = i + 1;
-        } else {
-          break; // 一旦找到未达到的里程碑，立即退出循环
-        }
+    // 更新指示器
+    indicators.forEach((indicator, index) => {
+      if (index < achievedMilestones) {
+        indicator.classList.add('active');
+      } else {
+        indicator.classList.remove('active');
       }
-
-      // 更新指示器
-      indicators.forEach((indicator, index) => {
-        if (index < achievedMilestones) {
-          indicator.classList.add('active');
-        } else {
-          indicator.classList.remove('active');
-        }
-      });
-
-      // 更新卡片
-      cards.forEach((card, index) => {
-        if (index < achievedMilestones) {
-          card.classList.add('active');
-          card.classList.remove('inactive');
-        } else {
-          card.classList.remove('active');
-          card.classList.add('inactive');
-        }
-      });
-    }
-
-    // 初始化函数 - 从API获取进度数据并更新UI
-    async function initializeProgressUI() {
-      try {
-        // 尝试从API获取进度
-        const progress = await fetchProgressFromAPI();
-        // 更新UI
-        updateUIBasedOnProgress(progress);
-      } catch (error) {
-        console.error('Failed to initialize progress UI:', error);
-        // 使用默认值初始化
-        updateUIBasedOnProgress(33);
-      }
-    }
-
-    // 定期检查进度更新的函数
-    function setupProgressPolling(intervalMs = 60000) {
-      // 默认1分钟检查一次
-      setInterval(async () => {
-        try {
-          // 只有当API可用时才进行轮询
-          if (usingApiData) {
-            const latestProgress = await fetchProgressFromAPI();
-            updateUIBasedOnProgress(latestProgress);
-          }
-        } catch (error) {
-          console.error('Error updating progress:', error);
-        }
-      }, intervalMs);
-    }
-
-    // 初始化UI并设置进度轮询
-    initializeProgressUI();
-    setupProgressPolling();
-
-    // 添加点击处理 - 始终可用，但如果使用API数据则不触发UI更新
-    cards.forEach((card, index) => {
-      card.addEventListener('click', function () {
-        // 只有在不使用API数据时，点击才会更新UI
-        if (!usingApiData) {
-          const clickedMilestone = index + 1;
-          let simulatedProgress;
-
-          // 设置对应的进度值
-          if (clickedMilestone === 1) {
-            simulatedProgress = 33.33;
-          } else if (clickedMilestone === 2) {
-            simulatedProgress = 66.67;
-          } else {
-            simulatedProgress = 100;
-          }
-
-          updateUIBasedOnProgress(simulatedProgress);
-        } else {
-          console.log('Interface is using API data. Click interactions are disabled.');
-        }
-      });
     });
 
-    // 社交媒体标签切换
-    const socialTabs = document.querySelectorAll('.social-tab');
-    socialTabs.forEach((tab) => {
-      tab.addEventListener('click', function () {
-        socialTabs.forEach((t) => t.classList.remove('active'));
-        this.classList.add('active');
-      });
+    // 更新卡片
+    cards.forEach((card, index) => {
+      if (index < achievedMilestones) {
+        card.classList.add('active');
+        card.classList.remove('inactive');
+      } else {
+        card.classList.remove('active');
+        card.classList.add('inactive');
+      }
+    });
+  }
+
+  // 初始化
+  const cachedProgress = localStorage.getItem('giftProgress');
+  updateUIBasedOnProgress(cachedProgress ? parseFloat(cachedProgress) : 33.33);
+
+  // 添加点击处理 - 点击卡片更新进度
+  cards.forEach((card, index) => {
+    card.addEventListener('click', function() {
+      const clickedMilestone = index + 1;
+      let simulatedProgress;
+
+      // 设置对应的进度值
+      if (clickedMilestone === 1) {
+        simulatedProgress = 33.33;
+      } else if (clickedMilestone === 2) {
+        simulatedProgress = 66.67;
+      } else {
+        simulatedProgress = 100;
+      }
+
+      updateUIBasedOnProgress(simulatedProgress);
     });
   });
+
+  // 社交媒体标签切换
+  const socialTabs = document.querySelectorAll('.social-tab');
+  socialTabs.forEach((tab) => {
+    tab.addEventListener('click', function() {
+      socialTabs.forEach((t) => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+});
 {% endjavascript %}
 
 {% schema %}
@@ -808,7 +768,7 @@
           "settings": {
             "title": "Bronze Gift",
             "subtitle": "Entry level gift",
-            "image_url": "https://cdn.shopify.com/s/files/1/0000/0000/0000/files/bronze_gift.png"
+            "image_url": "//cdn.shopify.com/s/files/1/0603/7431/9272/files/airphone-active.png?v=1745032571"
           }
         },
         {
@@ -816,7 +776,7 @@
           "settings": {
             "title": "Silver Gift",
             "subtitle": "Mid-tier reward",
-            "image_url": "https://cdn.shopify.com/s/files/1/0000/0000/0000/files/silver_gift.png"
+            "image_url": "//cdn.shopify.com/s/files/1/0603/7431/9272/files/airphone-active.png?v=1745032571"
           }
         },
         {
@@ -824,7 +784,7 @@
           "settings": {
             "title": "Gold Gift",
             "subtitle": "Premium reward",
-            "image_url": "https://cdn.shopify.com/s/files/1/0000/0000/0000/files/gold_gift.png"
+            "image_url": "//cdn.shopify.com/s/files/1/0603/7431/9272/files/airphone-active.png?v=1745032571"
           }
         }
       ]

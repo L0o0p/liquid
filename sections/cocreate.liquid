@@ -17,7 +17,7 @@
       {% assign img_alt = section.settings.image.alt | escape %}
 
       {{
-          img_url
+        img_url
         | image_tag:
           loading: 'lazy',
           alt: img_alt,
@@ -344,7 +344,10 @@
   "presets": [
     {
       "name": "Co-Create Section",
-      "category": "Custom"
+      "category": "Custom",
+      "settings": {
+        "image":"shopify://shop_images/slider_2.png"
+      }
     }
   ]
 }
