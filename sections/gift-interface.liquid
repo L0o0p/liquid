@@ -424,7 +424,7 @@
     {% render 'gift-interface-lace' %}
   </div>
   <div class="social-tabs">
-    <div class="progress-indicator" style="width: 33.33%; left: 0%;"></div>
+    <div class="progress-indicator" style="width:  {{ section.settings.current_progress }}%; left: 0%;"></div>
     <div class="social-tab active">
       <!--
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -543,85 +543,65 @@
 </div>
 
 {% javascript %}
-document.addEventListener('DOMContentLoaded', function () {
-  const cards = document.querySelectorAll('.card');
-  const indicators = document.querySelectorAll('.icon-circle');
-  const progressIndicator = document.querySelector('.progress-indicator');
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
+    const indicators = document.querySelectorAll('.icon-circle');
+    const progressIndicator = document.querySelector('.progress-indicator');
 
-  // 根据进度更新 UI 的函数
-  function updateUIBasedOnProgress(progressPercent) {
-    // 缓存进度到localStorage（可选）
-    localStorage.setItem('giftProgress', progressPercent);
+    // Get the current progress from Shopify section settings
+    const currentProgress = {{ section.settings.current_progress }};
 
-    // 更新进度条
-    progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
+    // 根据进度更新 UI 的函数
+    function updateUIBasedOnProgress(progressPercent) {
+      // 更新进度条
+      progressIndicator.style.width = Math.min(progressPercent, 100) + '%';
 
-    // 定义里程碑阈值
-    const milestones = [33.33, 66.67, 100];
+      // 定义里程碑阈值
+      const milestones = [33.33, 66.67, 100];
 
-    // 计算当前达到的里程碑数量
-    let achievedMilestones = 0;
-    for (let i = 0; i < milestones.length; i++) {
-      if (progressPercent >= milestones[i]) {
-        achievedMilestones = i + 1;
-      } else {
-        break; // 一旦找到未达到的里程碑，立即退出循环
+      // 计算当前达到的里程碑数量
+      let achievedMilestones = 0;
+      for (let i = 0; i < milestones.length; i++) {
+        if (progressPercent >= milestones[i]) {
+          achievedMilestones = i + 1;
+        } else {
+          break; // 一旦找到未达到的里程碑，立即退出循环
+        }
       }
+
+      // 更新指示器
+      indicators.forEach((indicator, index) => {
+        if (index < achievedMilestones) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+
+      // 更新卡片
+      cards.forEach((card, index) => {
+        if (index < achievedMilestones) {
+          card.classList.add('active');
+          card.classList.remove('inactive');
+        } else {
+          card.classList.remove('active');
+          card.classList.add('inactive');
+        }
+      });
     }
 
-    // 更新指示器
-    indicators.forEach((indicator, index) => {
-      if (index < achievedMilestones) {
-        indicator.classList.add('active');
-      } else {
-        indicator.classList.remove('active');
-      }
-    });
+    // 初始化 - 使用 Shopify section settings 中的进度值
+    updateUIBasedOnProgress(currentProgress);
 
-    // 更新卡片
-    cards.forEach((card, index) => {
-      if (index < achievedMilestones) {
-        card.classList.add('active');
-        card.classList.remove('inactive');
-      } else {
-        card.classList.remove('active');
-        card.classList.add('inactive');
-      }
-    });
-  }
-
-  // 初始化
-  const cachedProgress = localStorage.getItem('giftProgress');
-  updateUIBasedOnProgress(cachedProgress ? parseFloat(cachedProgress) : 33.33);
-
-  // 添加点击处理 - 点击卡片更新进度
-  cards.forEach((card, index) => {
-    card.addEventListener('click', function() {
-      const clickedMilestone = index + 1;
-      let simulatedProgress;
-
-      // 设置对应的进度值
-      if (clickedMilestone === 1) {
-        simulatedProgress = 33.33;
-      } else if (clickedMilestone === 2) {
-        simulatedProgress = 66.67;
-      } else {
-        simulatedProgress = 100;
-      }
-
-      updateUIBasedOnProgress(simulatedProgress);
+    // 社交媒体标签切换
+    const socialTabs = document.querySelectorAll('.social-tab');
+    socialTabs.forEach((tab) => {
+      tab.addEventListener('click', function() {
+        socialTabs.forEach((t) => t.classList.remove('active'));
+        this.classList.add('active');
+      });
     });
   });
-
-  // 社交媒体标签切换
-  const socialTabs = document.querySelectorAll('.social-tab');
-  socialTabs.forEach((tab) => {
-    tab.addEventListener('click', function() {
-      socialTabs.forEach((t) => t.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
-});
 {% endjavascript %}
 
 {% schema %}
