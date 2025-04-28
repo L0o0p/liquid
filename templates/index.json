@@ -157,8 +157,9 @@
     "background_color": "#6EC9CA",
     "active_color": "#28a598",
     "inactive_color": "#B2E3E4",
-    "tab1_title": "Instagram",
-    "tab2_title": "TikTok"
+    "tab1_title": "Stage 1",
+    "tab2_title": "Stage 2",
+    "tab3_title": "Stage 3"
   }
 },
     "media-testimonials": {
@@ -268,87 +269,144 @@
         "title": "What Next"
       }
     },
-    "faq_qBUVeN": {
-      "type": "faq",
-      "blocks": {
-        "item_PzqrPz": {
-          "type": "item",
-          "settings": {
-            "header": "What is your question?",
-            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
-            "content_page": ""
-          }
-        },
-        "item_CYjfFD": {
-          "type": "item",
-          "settings": {
-            "header": "What is your question?",
-            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
-            "content_page": ""
-          }
-        },
-        "item_CdNHtL": {
-          "type": "item",
-          "settings": {
-            "header": "What is your question?",
-            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
-            "content_page": ""
-          }
-        },
-        "item_6JjjTg": {
-          "type": "item",
-          "settings": {
-            "header": "What is your question?",
-            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
-            "content_page": ""
-          }
-        },
-        "item_XzMNkx": {
-          "type": "item",
-          "settings": {
-            "header": "What is your question?",
-            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
-            "content_page": ""
-          }
-        },
-        "item_ECmAhF": {
-          "type": "item",
-          "settings": {
-            "header": "What is your question?",
-            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
-            "content_page": ""
-          }
-        },
-        "item_XbDmwr": {
-          "type": "item",
-          "settings": {
-            "header": "What is your question?",
-            "content": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>",
-            "content_page": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_PzqrPz",
-        "item_CYjfFD",
-        "item_CdNHtL",
-        "item_6JjjTg",
-        "item_XzMNkx",
-        "item_ECmAhF",
-        "item_XbDmwr"
-      ],
+"faq_qBUVeN": {
+  "type": "faq",
+  "blocks": {
+    // 第一组 - 6个问题
+    "item_1": {
+      "type": "item",
       "settings": {
-        "container": "container",
-        "color_scheme": "",
-        "image_position": "left",
-        "column_gap": 100,
-        "heading": "Frequently Asked Questions",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "animations": "inherit",
-        "custom_class": ""
+        "header": "第一组问题1",
+        "content": "<p>第一组答案1</p>",
+        "content_page": ""
       }
     },
+    "item_2": {
+      "type": "item",
+      "settings": {
+        "header": "第一组问题2",
+        "content": "<p>第一组答案2</p>",
+        "content_page": ""
+      }
+    },
+    "item_3": {
+      "type": "item",
+      "settings": {
+        "header": "第一组问题3",
+        "content": "<p>第一组答案3</p>",
+        "content_page": ""
+      }
+    },
+    "item_4": {
+      "type": "item",
+      "settings": {
+        "header": "第一组问题4",
+        "content": "<p>第一组答案4</p>",
+        "content_page": ""
+      }
+    },
+    "item_5": {
+      "type": "item",
+      "settings": {
+        "header": "第一组问题5",
+        "content": "<p>第一组答案5</p>",
+        "content_page": ""
+      }
+    },
+    "item_6": {
+      "type": "item",
+      "settings": {
+        "header": "第一组问题6",
+        "content": "<p>第一组答案6</p>",
+        "content_page": ""
+      }
+    },
+    // 第二组 - 7个问题
+    "item_7": {
+      "type": "item_2",
+      "settings": {
+        "header": "第二组问题1",
+        "content": "<p>第二组答案1</p>",
+        "content_page": ""
+      }
+    },
+    "item_8": {
+      "type": "item_2",
+      "settings": {
+        "header": "第二组问题2",
+        "content": "<p>第二组答案2</p>",
+        "content_page": ""
+      }
+    },
+    "item_9": {
+      "type": "item_2",
+      "settings": {
+        "header": "第二组问题3",
+        "content": "<p>第二组答案3</p>",
+        "content_page": ""
+      }
+    },
+    "item_10": {
+      "type": "item_2",
+      "settings": {
+        "header": "第二组问题4",
+        "content": "<p>第二组答案4</p>",
+        "content_page": ""
+      }
+    },
+    "item_11": {
+      "type": "item_2",
+      "settings": {
+        "header": "第二组问题5",
+        "content": "<p>第二组答案5</p>",
+        "content_page": ""
+      }
+    },
+    "item_12": {
+      "type": "item_2",
+      "settings": {
+        "header": "第二组问题6",
+        "content": "<p>第二组答案6</p>",
+        "content_page": ""
+      }
+    },
+    "item_13": {
+      "type": "item_2",
+      "settings": {
+        "header": "第二组问题7",
+        "content": "<p>第二组答案7</p>",
+        "content_page": ""
+      }
+    }
+  },
+  "block_order": [
+    "item_1",
+    "item_2",
+    "item_3",
+    "item_4",
+    "item_5",
+    "item_6",
+    "item_7",
+    "item_8",
+    "item_9",
+    "item_10",
+    "item_11",
+    "item_12",
+    "item_13"
+  ],
+  "settings": {
+    "container": "container",
+    "color_scheme": "",
+    "image_position": "left",
+    "column_gap": 100,
+    "heading": "常见问题（6个）",
+    "heading_2": "更多问题（7个）",
+    "padding_top": 0,
+    "padding_bottom": 0,
+    "animations": "inherit",
+    "custom_class": ""
+  }
+},
     "contact_form_new_HbjYa3": {
       "type": "contact-form-new",
       "settings": {

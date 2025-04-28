@@ -36,13 +36,22 @@
       }
 
     .container {
-      height: 780px;
+      height: 1270px;
   }
     .faq-title{
       font-size:64px;
       font-family: 'DMSerifDisplay-Regular';
       color: #FD6020;
+      margin-bottom:24px;
     }
+    .container-header{
+      {% comment %} display:flex;
+      flex-direction:column;
+      gap:8px; {% endcomment %}
+    font-size: 16px;
+    font-weight: bold;
+    flex: 0 0 400px;
+    margin-top: 12px;}
 
     @media (max-width: 1366px) {
       .faq-container {
@@ -79,7 +88,7 @@
 
       @media (max-width: 1080px) {
         .container{
-          height:850px
+          height: 850px;
         }
       }
 
@@ -208,7 +217,7 @@
     data-section-type="m-collapsible"
     data-section-id="{{ section.id }}"
   >
-    <div class="{{ container }} m-section-my m-section-py">
+    <div class="{{ container }} m-section-my m-section-py" style="gap:72px">
       {% if image != blank %}
         <div
           class="m-collapsible__wrapper m-collapsible--image-{{ image_position }}"
@@ -238,36 +247,67 @@
 
       {% if image != blank %}<div class="m-collapsible__content-wrapper">{% endif %}
 
-      <!-- FAQ Style Layout -->
+      <!-- 第一组 -->
       <div class="faq-container">
-        <h2 class="faq-title">{{ section.settings.heading }}</h2>
-
+        <div class="container-header">
+          <h2 class="faq-title">{{ section.settings.heading }}</h2>
+          <div class="faq-description">{{ section.settings.description }}</div>
+        </div>
         <div class="faq-list">
           {% for block in section.blocks %}
-            <div class="faq-item" {{ block.shopify_attributes }}>
-              <div class="faq-question" data-block-id="faq-question-{{ block.id }}">
-                <h3>{{ block.settings.header }}</h3>
-                <div class="faq-icon"></div>
+            {% if block.type == 'item' or block.type == 'liquid' %}
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>{{ block.settings.header }}</h3>
+                  <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                  {% case block.type %}
+                    {% when 'item' %}
+                      <div class="rte">
+                        {{ block.settings.content }}
+                        {{ block.settings.content_page.content }}
+                      </div>
+                    {% when 'liquid' %}
+                      {{ block.settings.custom_liquid }}
+                  {% endcase %}
+                </div>
               </div>
-              <div class="faq-answer">
-                {% case block.type %}
-                  {% when 'item' %}
-                    <div class="rte">
-                      {{ block.settings.content }}
-                      {{ block.settings.content_page.content }}
-                    </div>
-                  {% when 'liquid' %}
-                    {{ block.settings.custom_liquid }}
-                  {% else %}
-
-                {% endcase %}
-              </div>
-            </div>
+            {% endif %}
           {% endfor %}
         </div>
       </div>
-      <!-- End FAQ Style Layout -->
 
+      <!-- 第二组 -->
+      <div class="faq-container">
+        <div class="container-header">
+          <h2 class="faq-title">{{ section.settings.heading_2 }}</h2>
+          <div class="faq-description">{{ section.settings.description_2 }}</div>
+        </div>
+        <div class="faq-list">
+          {% for block in section.blocks %}
+            {% if block.type == 'item_2' or block.type == 'liquid_2' %}
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>{{ block.settings.header }}</h3>
+                  <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                  {% case block.type %}
+                    {% when 'item_2' %}
+                      <div class="rte">
+                        {{ block.settings.content }}
+                        {{ block.settings.content_page.content }}
+                      </div>
+                    {% when 'liquid_2' %}
+                      {{ block.settings.custom_liquid }}
+                  {% endcase %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
       {% if image != blank %}</div>{% endif %}
       {% if image != blank %}</div>{% endif %}
     </div>
@@ -384,13 +424,35 @@
     },
     {
       "type": "header",
-      "content": "FAQ Settings"
+      "content": "First FAQ Group Settings"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description Text",
+      "default": "Everything you need to know about L1 Pro Co-creation Activity"
     },
     {
       "type": "text",
       "id": "heading",
-      "label": "FAQ Title",
+      "label": "First FAQ Title",
       "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "header",
+      "content": "Second FAQ Group Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Second FAQ Title",
+      "default": "More Questions"
+    },
+    {
+      "type": "text",
+      "id": "description_2",
+      "label": "Description Text",
+      "default": "Everything you need to know about the Product and OdinLake"
     },
     {
       "type": "header",
@@ -461,7 +523,7 @@
   "blocks": [
     {
       "type": "item",
-      "name": "FAQ Item",
+      "name": "FAQ Item (Group 1)",
       "settings": [
         {
           "type": "text",
@@ -484,7 +546,47 @@
     },
     {
       "type": "liquid",
-      "name": "Custom liquid",
+      "name": "Custom liquid (Group 1)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Question",
+          "default": "Custom question with liquid"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom liquid"
+        }
+      ]
+    },
+    {
+      "type": "item_2",
+      "name": "FAQ Item (Group 2)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Question",
+          "default": "What is your question?"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Answer",
+          "default": "<p>Provide your answer here. This text can include formatting and will appear when the question is clicked.</p>"
+        },
+        {
+          "type": "page",
+          "id": "content_page",
+          "label": "Or use content from page"
+        }
+      ]
+    },
+    {
+      "type": "liquid_2",
+      "name": "Custom liquid (Group 2)",
       "settings": [
         {
           "type": "text",
@@ -504,16 +606,106 @@
     {
       "name": "FAQ Section",
       "blocks": [
+        // 第一组 - 6个问题
         {
-          "type": "item"
+          "type": "item",
+          "settings": {
+            "header": "第一组问题1",
+            "content": "<p>第一组答案1</p>"
+          }
         },
         {
-          "type": "item"
+          "type": "item",
+          "settings": {
+            "header": "第一组问题2",
+            "content": "<p>第一组答案2</p>"
+          }
         },
         {
-          "type": "item"
+          "type": "item",
+          "settings": {
+            "header": "第一组问题3",
+            "content": "<p>第一组答案3</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "header": "第一组问题4",
+            "content": "<p>第一组答案4</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "header": "第一组问题5",
+            "content": "<p>第一组答案5</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "header": "第一组问题6",
+            "content": "<p>第一组答案6</p>"
+          }
+        },
+        // 第二组 - 7个问题
+        {
+          "type": "item_2",
+          "settings": {
+            "header": "第二组问题1",
+            "content": "<p>第二组答案1</p>"
+          }
+        },
+        {
+          "type": "item_2",
+          "settings": {
+            "header": "第二组问题2",
+            "content": "<p>第二组答案2</p>"
+          }
+        },
+        {
+          "type": "item_2",
+          "settings": {
+            "header": "第二组问题3",
+            "content": "<p>第二组答案3</p>"
+          }
+        },
+        {
+          "type": "item_2",
+          "settings": {
+            "header": "第二组问题4",
+            "content": "<p>第二组答案4</p>"
+          }
+        },
+        {
+          "type": "item_2",
+          "settings": {
+            "header": "第二组问题5",
+            "content": "<p>第二组答案5</p>"
+          }
+        },
+        {
+          "type": "item_2",
+          "settings": {
+            "header": "第二组问题6",
+            "content": "<p>第二组答案6</p>"
+          }
+        },
+        {
+          "type": "item_2",
+          "settings": {
+            "header": "第二组问题7",
+            "content": "<p>第二组答案7</p>"
+          }
         }
-      ]
+      ],
+      "settings": {
+        "heading": "常见问题（6个）",
+        "description": "Everything you need to know about L1 Pro Co-creation Activity",
+        "heading_2": "更多问题（7个）",
+        "description_2": "Everything you need to know about L1 Pro Co-creation Activity"
+      }
     }
   ]
 }

@@ -15,8 +15,10 @@
     <span class="description-text">Description</span>
   </div> {% endcomment %}
 
-  <h1 class="title">{{ section.settings.title }}</h1>
-
+  <h1 class="title" style="border:none;
+    outline: none;
+    box-shadow: none;">{{ section.settings.title }}</h1>
+  <div class="step-description" >{{ section.settings.description }}</div>
   <div class="slider-container">
     <div class="slides-wrapper" id="slides-wrapper-{{ section.id }}">
       {% for block in section.blocks %}
@@ -82,6 +84,12 @@
       "id": "title",
       "label": "Section Title",
       "default": "What Next"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Section description",
+      "default": "how to join in Odinlake.We would guide you steps by steps"
     }
   ],
   "blocks": [

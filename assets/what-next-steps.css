@@ -9,10 +9,19 @@ section{
     flex-direction: column;
     /* align-items:center; */
     justify-content:center;
+    gap: 42px;
 }
 
 .cbd{
     height: 1200px !important;
+}
+
+.step-description{
+    color:black;
+    text-align: start;
+    width: 100%;
+font-size: 20px;
+    font-weight: 300;
 }
 
 .description-header {
@@ -45,7 +54,7 @@ section{
     font-family: 'DMSerifDisplay-Regular';
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
     color: #FD6020;
 }
 
