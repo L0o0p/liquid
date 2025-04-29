@@ -34,7 +34,7 @@
           "settings": {}
         },
         "4697a8e9-bdd8-45b1-ac07-88ccd1be6995": {
-          "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify://apps/stamped-product-reviews-ugc/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "use_metafields": false,
             "sku_tagtype": "sku",
@@ -1249,7 +1249,7 @@
       "type": "apps",
       "blocks": {
         "6d198e95-118c-4c22-812b-23a518a47db6": {
-          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify://apps/stamped-product-reviews-ugc/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
             "tags_exclude": "",

@@ -10,7 +10,7 @@
                 justify-content: start;
                 padding: 20px;
                 padding-top:96px;
-                overflow-x: hidden;
+                overflow: hidden;
                 position:relative;
                 gap: 48px;
               }
@@ -204,6 +204,23 @@
                 height: 72%;
             }
 
+            .img-lock{
+              position:absolute;
+              height:70%;
+              width:70%;
+              opacity:1;
+            }
+
+            .img-lock svg{
+              object-fit:cover;
+              height:100%;
+              width:100%;
+              display:block
+            }
+             .no{
+        display:none
+            }
+
             .card-lace{
               position: absolute;
               z-index: 50;
@@ -242,6 +259,7 @@
             .card-image img {
                 max-width: 100%;
                 max-height: 100%;
+                    object-fit: contain !important;
             }
             /* 降低未激活卡片图片的饱和度 */
       .card.inactive .card-image img,
@@ -311,11 +329,11 @@
                 flex-wrap: nowrap !important;
                 justify-content: space-around;
               }
-              
+
               .social-tabs {
                 width: 580px;
               }
-              
+
               .social-tab {
                 width: 180px;
               }
@@ -328,15 +346,16 @@
                 align-items: center;
                 gap: 15px;
               }
-              
+
               .description {
                 font-size: 16px;
+                color:black !important;
               }
-              
+
               .social-tabs {
                 width: 420px;
               }
-              
+
               .social-tab {
                 width: 130px;
                 font-size: 18px;
@@ -346,19 +365,26 @@
             /* Responsive adjustments for mobile layout (under 480px) */
             @media (max-width: 480px) {
               .gift-interface{
-                height:1200px
+                height:1500px
               }
 
                 .social-tabs {
                     margin-bottom: 20px;
-                    height:48px;
+                    height:52px;
                     width:320px
                 }
                 .social-tab {
                     font-size: 14px;
-                    height:40px;
+                    height:24px;
                     width:100px
                 }
+              .social-tab span{
+                    font-size: 14px;
+
+              }
+              .progress-indicator{
+                height:0px
+              }
                 .main-container {
                     flex-direction: row;
                 }
@@ -429,7 +455,7 @@
                 .horizontal-progress {
                     display: none;
                 }
-                
+
                 .description {
                   font-size: 14px;
                   padding: 0 15px;
@@ -492,6 +518,8 @@
             data-card-index="{{ forloop.index }}"
           >
             <div class="card-image">
+              <div class="img-lock {% if card.settings.is_active %}no{% endif %}">{% render 'img-lock' %}</div>
+
               <div class="card-lace">
                 <svg width="320" height="37" viewBox="0 0 320 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 16C0 16 47.9575 32.8661 79.8333 32.8661C111.709 32.8661 127.791 16.0268 159.667 16C191.67 15.9731 207.83 32.8661 239.833 32.8661C271.837 32.8661 320 16 320 16V37H0V16Z" fill="currentColor"/>
@@ -541,7 +569,7 @@
           t.classList.remove('active');
         });
         this.classList.add('active');
-        
+
         // 可以添加额外的功能，例如根据选择的标签显示不同的内容
         console.log('Tab ' + (index + 1) + ' selected');
       });

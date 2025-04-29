@@ -1,0 +1,654 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "fixed-sidebar": {
+      "type": "fixed-sidebar",
+      "settings": {
+        "background_color": "#FFFFFF"
+      },
+      "blocks": {
+        "icon-1": {
+          "type": "icon",
+          "settings": {
+            "is_active": true
+          }
+        },
+        "icon-2": {
+          "type": "icon",
+          "settings": {
+            "is_active": false
+          }
+        },
+        "icon-3": {
+          "type": "icon",
+          "settings": {
+            "is_active": false
+          }
+        },
+        "icon-4": {
+          "type": "icon",
+          "settings": {
+            "is_active": false
+          }
+        },
+        "icon-5": {
+          "type": "icon",
+          "settings": {
+            "is_active": false
+          }
+        },
+        "icon-6": {
+          "type": "icon",
+          "settings": {
+            "is_active": false
+          }
+        },
+        "icon-7": {
+          "type": "icon",
+          "settings": {
+            "is_active": false
+          }
+        },
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/inner_1.png",
+            "title": "Creator ID & Color Vote",
+            "description": "<p> To get started, you may need to register first. Don’t forget to vote for your favorite chair color—your choice will help shape the final design!</p>"
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/inner_2.png",
+            "title": "Confirming & Ordering",
+            "description": "<p> Once you've uploaded your email, we’ll review it carefully and notify you when it’s time to place your order. Once confirmed, you’ll be able to proceed with your purchase.</p>"
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/inner_3.png",
+            "title": "Manufacturing & Shipping",
+            "description": "<p>We’ll begin production based on the final color selected by the community. Once your chair is ready, we’ll notify you via email and move on to the shipping stage. We’ll keep you updated every step of the way to ensure a smooth experience.</p>"
+          }
+        },
+        "step-4": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/inner_4.png",
+            "title": "Your Voice Matters",
+            "description": "<p>We’d love to hear a more in-depth review from you! Tell us about the comfort, flexibility, design, and any standout features. Share your thoughts on Instagram or YouTube—your feedback means a lot to us, and the more you share, the more chances you’ll have to win!</p>"
+          }
+        },
+        "step-5": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/inner_5.png",
+            "title": "Shape. Share. Shine.",
+            "description": "<p>After receiving your chair, set it up and share your first impressions on Instagram or YouTube. Don’t forget to tag @odinlake_official—let us know you’ve posted, and we’ll take care of your reimbursement!</p>"
+          }
+        },
+        "step-6": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/inner_6.png",
+            "title": "Your Voice Matters",
+            "description": "<p>We’d love to hear a more in-depth review from you! Tell us about the comfort, flexibility, design, and any standout features. Share your thoughts on Instagram or YouTube—your feedback means a lot to us, and the more you share, the more chances you’ll have to win!</p>"
+          }
+        },
+        "step-7": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/inner_7.png",
+            "title": "Comprehensive Feedback and Pricing Guess",
+            "description": "<p>Overall Thoughts: Beyond the initial and deep-dive reviews, compile your comprehensive thoughts about the chair. Consider factors like ergonomics, build quality, design aesthetics, and potential improvements.Pricing Challenge: As part of your feedback, we invite you to guess the final retail price of our ergo chair. This is a fun way to engage with the product and share your perspective on its value.</p><p><strong>Note:</strong> Share your detailed feedback on social media and tag us! This step is crucial, as the $2000 prize will be awarded to the participant with the highest engagement. The second-place prize of $1000 will go to the next highest engagement, and prizes will continue for the following highest engagements.</p>"
+          }
+        },
+        "step-8": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/inner_8.png",
+            "title": "Crown the Champions",
+            "description": "<p>Once all the feedback is in, we’ll carefully review every submission. The final winners will be announced based on the total engagement your posts received on Instagram or YouTube. Stay tuned!</p>"
+          }
+        },
+      },
+      "block_order": [
+        "icon-1",
+        "icon-2",
+        "icon-3",
+        "icon-4",
+        "icon-5",
+        "icon-6",
+        "icon-7",
+        "step-1",
+        "step-2",
+        "step-3",
+        "step-4",
+        "step-5",
+        "step-8",
+      ]
+    },
+    "full-image-banner": {
+      "type": "full-image-banner",
+      "settings": {
+        "background_color": "#edf4fc",
+        "show_button": false,
+        "button_text": "",
+        "button_link": "",
+        "button_bg_color": "#555555",
+        "button_text_color": "#ffffff",
+        "button_top_position": 63,
+        "button_left_position": 57
+      }
+    },
+    "what-next-steps": {
+      "type": "what-next-steps",
+      "blocks": {
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/s1.png",
+            "title": "Register OdinLake Account",
+            "description": "<p>Claim Your Creator ID: Head over to our website and complete the registration process. This will secure your unique Creator ID, which is essential for tracking your participation and contributions throughout the event.</p>"
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/s2.png",
+            "title": "Order Your Chair",
+            "description": "<p>Special Price Offer: Lock in the L1 Pro chair at $50. Remember, this is not a non-refundable fee—the 100% deposit will be refunded to you after you complete Step 4.Order Confirmation: Once you’ve placed your order, you’ll receive a confirmation email with further instructions and a tracking number for your sample.</p>"
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/s3.png",
+            "title": "Receive Your Sample",
+            "description": "<p>Delivery Process: Your chair sample will be shipped to you soon after your order is confirmed. We’ll provide regular updates on the delivery process, so you’re always in the loop.Unboxing Experience: When your sample arrives, take note of the unboxing experience—this is part of your initial impression and feedback.</p>"
+          }
+        },
+        "step-4": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/s4.png",
+            "title": "Shape. Share. Shine. (Ur journey to win the Big prize!!)",
+            "description": "<p>Instagram Post: As soon as you’ve had a chance to set up and experience the chair, share your first impressions on Instagram/YouTube.Tag Us: Make sure to tag @odinlake_official in your post.Refund Claim: Instant $50 refund when the post goes live.This step is crucial as it confirms that you’ve experienced the product firsthand.</p>"
+          }
+        },
+        "step-5": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/s5.png",
+            "title": "Deep Dive Review",
+            "description": "<p>In-Depth Evaluation: After your initial experience, provide a detailed review of the chair. Discuss key aspects such as comfort, flexibility, design, and any unique features you notice.Content Format: You can share this review as a longer Instagram post, a video review on YouTube, or even a blog article if you prefer. The goal is to give us a clear picture of your experience and the chair's performance in daily use.</p>"
+          }
+        },
+        "step-6": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/s6.png",
+            "title": "Comprehensive Feedback and Pricing Guess",
+            "description": "<p>Overall Thoughts: Beyond the initial and deep-dive reviews, compile your comprehensive thoughts about the chair. Consider factors like ergonomics, build quality, design aesthetics, and potential improvements.Pricing Challenge: As part of your feedback, we invite you to guess the final retail price of our ergo chair. This is a fun way to engage with the product and share your perspective on its value.</p><p><strong>Note:</strong> Share your detailed feedback on social media and tag us! This step is crucial, as the $2000 prize will be awarded to the participant with the highest engagement. The second-place prize of $1000 will go to the next highest engagement, and prizes will continue for the following highest engagements.</p>"
+          }
+        },
+        "step_DmHne3": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/s7.png",
+            "title": "Crown the Champions",
+            "description": "<p>Final Selection: After all feedback is collected, we’ll review all submissions carefully.<br/>Announcement: Winners will be announced on our official channels. The winners might receive additional rewards, recognition on our website, or even exclusive offers on future products.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step-1",
+        "step-2",
+        "step-3",
+        "step-4",
+        "step-5",
+        "step-6",
+        "step_DmHne3"
+      ],
+      "settings": {
+        "title": "Here’s everything you need to know:",
+        "description": "how to join in Odinlake.We would guide you steps by steps"
+      }
+    },
+    "style_selector": {
+      "type": "style-selector",
+      "blocks": {
+        "style_card_1": {
+          "type": "style_card",
+          "settings": {
+            "series_name": "L1 Pro",
+            "pantone_code": "",
+            "chair_image": "shopify://shop_images/chair_style_blue.png",
+            "button_text": "Submit",
+            "button_link": "/collections/l-series"
+          }
+        },
+        "style_card_2": {
+          "type": "style_card",
+          "settings": {
+            "series_name": "L1 Pro",
+            "pantone_code": "PANTONE 1232 C",
+            "chair_image": "shopify://shop_images/chair_style_gray.png",
+            "button_text": "Submit",
+            "button_link": "/collections/o-series"
+          }
+        }
+      },
+      "block_order": [
+        "style_card_1",
+        "style_card_2"
+      ],
+      "settings": {
+        "title": "Choosing Your Style",
+        "show_category_tag": true,
+        "category_text": "Category",
+        "first_selected": true
+      }
+    },
+    "cocreate": {
+      "type": "cocreate",
+      "settings": {
+        "section_width": 1200,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_padding_sides": 20,
+        "gap": 60,
+        "image": "shopify://shop_images/ea9f1fd2f939a1f5fdf48ec7b0e4761599c2a35f.png",
+        "grayscale": true,
+        "image_border_radius": 8,
+        "show_tag": true,
+        "tag_text": "Activity",
+        "tag_bg_color": "#fff7e6",
+        "tag_text_color": "#ffb020",
+        "title": "Co-create with Us",
+        "title_size": 36,
+        "title_color": "#111111",
+        "limited_text": "Limited to 20 participants--be part of the innovation!",
+        "limited_text_color": "#2f80ed",
+        "description": "<p>Discover the perfect balance of science and comfort. Join our exclusive co-creation program for the L1 Pro ergonomic chair and help shape a product designed for your ultimate sitting experience.</p>",
+        "description_size": 16,
+        "description_color": "#666666",
+        "button_text": "Co-Create",
+        "button_link": "/pages/cocreate",
+        "button_bg_color": "#111111",
+        "button_text_color": "#ffffff",
+        "button_hover_color": "#333333",
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40,
+        "mobile_padding_sides": 20,
+        "mobile_gap": 30,
+        "mobile_title_size": 28,
+        "mobile_description_size": 16
+      }
+    },
+    "gift_interface": {
+      "type": "gift-interface",
+      "blocks": {
+        "indicator-1": {
+          "type": "indicator",
+          "settings": {
+            "title": "5 Amazon gift card",
+            "value": "5",
+            "icon_path": "M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z",
+            "is_active": true
+          }
+        },
+        "indicator-2": {
+          "type": "indicator",
+          "settings": {
+            "title": "20 OdinLake chair",
+            "value": "20",
+            "icon_path": "M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z",
+            "is_active": false
+          }
+        },
+        "indicator-3": {
+          "type": "indicator",
+          "settings": {
+            "title": "4 People for $5000",
+            "value": "4",
+            "icon_path": "M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2z",
+            "is_active": false
+          }
+        },
+        "card-1": {
+          "type": "gift_card",
+          "settings": {
+            "title": "50$ Amazon Gift card *5",
+            "subtitle": "",
+            "image": "shopify://shop_images/credit-card.png",
+            "image_url": "",
+            "is_active": true
+          }
+        },
+        "card-2": {
+          "type": "gift_card",
+          "settings": {
+            "title": "20 customized ",
+            "subtitle": "OdinLake L1 Pro Chair",
+            "image": "shopify://shop_images/chair.png",
+            "image_url": "",
+            "is_active": false
+          }
+        },
+        "card-3": {
+          "type": "gift_card",
+          "settings": {
+            "title": "Share $5000 bonus ",
+            "subtitle": "$2000 for 1st prise",
+            "image": "shopify://shop_images/cash.png",
+            "image_url": "",
+            "is_active": false
+          }
+        }
+      },
+      "block_order": [
+        "indicator-1",
+        "indicator-2",
+        "indicator-3",
+        "card-1",
+        "card-2",
+        "card-3"
+      ],
+      "custom_css": [
+        ".description {color: black;}"
+      ],
+      "settings": {
+        "description": "Discover the perfect balance of science and comfort. Join our exclusive co-creation program for the L1 Pro ergonomic chair and help shape a product designed for your ultimate sitting experience.",
+        "background_color": "#6ec9ca",
+        "active_color": "#28a598",
+        "inactive_color": "#b2e3e4",
+        "tab1_title": "Stage 1",
+        "tab2_title": "Stage 2",
+        "tab3_title": "Stage 3",
+        "current_progress": 34
+      }
+    },
+    "media-testimonials": {
+      "type": "media-testimonials",
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "time.png",
+            "logo_name": "Forbes",
+            "quote": "OdinLake’s Ergo Butterfly 753 sports an array of highly customizable components that effortlessly adjust to match your posture, making it your best bet if you work at a desk for long hours."
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "cnet.png",
+            "logo_name": "TechRadar",
+            "quote": "I like that the OdinLake has adjustable everything. From the arms to the seat and lumbar positions, it can all be tweaked to fit your sitting style."
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "toms.png",
+            "logo_name": "Wired",
+            "quote": "Super class, cute, comfortable. You can wear them with just about anything."
+          }
+        },
+        "testimonial-4": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "wired.png",
+            "logo_name": "Wired",
+            "quote": "The Ergo MAX747 is, all around, a great chair to sit in. The three-piece back provides great back support and comfort, and the easy-access paddles on either side of the seat make most adjustments quick and simple."
+          }
+        },
+        "testimonial-5": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "techradar.png",
+            "logo_name": "Wired",
+            "quote": "The OdinLake Ergo Plus 743 is a premium chair worth the investment if you're looking for a high quality ergonomic option with some impressive comfort features."
+          }
+        },
+        "testimonial-6": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "cv.png",
+            "logo_name": "Wired",
+            "quote": "The OdinLake Ergo PLUS 743 is out to prove that some office chairs are worth the splurge."
+          }
+        },
+        "testimonial-7": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "mmrpg.png",
+            "logo_name": "Wired",
+            "quote": "A good chair is an investment in your health and comfort and this is a very solid choice that is well worth considering."
+          }
+        },
+        "testimonial-8": {
+          "type": "testimonial",
+          "settings": {
+            "logo_url": "",
+            "logo_asset": "time.png",
+            "logo_name": "Wired",
+            "quote": "A good chair is an investment in your health and comfort and this is a very solid choice that is well worth considering."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3",
+        "testimonial-4",
+        "testimonial-5",
+        "testimonial-6",
+        "testimonial-7",
+        "testimonial-8"
+      ],
+      "settings": {
+        "heading": "What the Globe is Saying",
+        "inactive_logo_opacity": 0.5,
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "faq_qBUVeN": {
+      "type": "faq",
+      "blocks": {
+        "item_PzqrPz": {
+          "type": "item",
+          "settings": {
+            "header": "1,What is the L1 PRO campaign all about?",
+            "content": "<p>The L1 PRO campaign is your chance to shape the future of ergonomic chairs with OdinLake!From picking colors to choosing styles, and  joining our co-creation campaign, you’re not just a customer—you’re a designer. Plus, there are awesome rewards up for grabs, like Amazon gift cards and cash prizes!</p>",
+            "content_page": ""
+          }
+        },
+        "item_CYjfFD": {
+          "type": "item",
+          "settings": {
+            "header": "2,Who can participate?",
+            "content": "<p>Everyone can join the fun!Whether you’re voting for colors/styles or applying to be a co-creator,all you need is a passion for ergonomic design and a desire to get involved! Follow @odinlake_official on social media to stay in the loop with the latest updates.</p>",
+            "content_page": ""
+          }
+        },
+        "item_CdNHtL": {
+          "type": "item",
+          "settings": {
+            "header": "3,How do I stay updated on the campaign?",
+            "content": "<p>Follow @odinlake_official on social media and watch for posts tagged #L1PRO and #OdinLake to catch all the latest news, updates, and announcements.</p>",
+            "content_page": ""
+          }
+        },
+        "item_6JjjTg": {
+          "type": "item",
+          "settings": {
+            "header": "4,What do I win by voting (Color Voting/ Color Layout Voting)?",
+            "content": "<p>Every voting round gives five lucky participants a $50 Amazon Gift Card! Plus, your vote helps to decide on the final L1 PRO design—talk about bragging rights!</p>",
+            "content_page": ""
+          }
+        },
+        "item_XzMNkx": {
+          "type": "item",
+          "settings": {
+            "header": "5,When will the voting results be announced?",
+            "content": "<p>We will announce the lucky winners on our Instagram (@odinlake_official), Facebook, and official website. Each voting period will last for 7 days, and the winners will be revealed the following day. Congrats! If your name is listed as a winner, send a direct message (DM) to @odinlake_official on IG or market@odinlake.com with your details. We’ll get your reward sorted ASAP.</p>",
+            "content_page": ""
+          }
+        },
+        "item_ECmAhF": {
+          "type": "item",
+          "settings": {
+            "header": "6,What is the L1 PRO Co-Creation Event?",
+            "content": "<p>It’s the ultimate collaboration! We’re inviting 20 creators to design the future of the L1 PRO chair. Every co-creator gets $50 just for joining, and the top creator can win up to $2,000 in cash prizes based on their content.</p>",
+            "content_page": ""
+          }
+        },
+        "item_2_t887mC": {
+          "type": "item_2",
+          "settings": {
+            "header": "7,What kind of content do I need to create?",
+            "content": "<p>Show off your creativity! Share your ideas for the L1 PRO chair—designs, features, or how it fits your WFH/gaming setup. The best engaging content wins the top prizes.</p>",
+            "content_page": ""
+          }
+        },
+        "item_2_xqcCRB": {
+          "type": "item_2",
+          "settings": {
+            "header": "8,What are the prizes for the Co-Creation Event?",
+            "content": "<p>All co-creators will receive $50 for participating.Top prizes include:1st Place:($2,000), 2nd Place ($1,000), 3rd & 4th Place ($500 each). Each winner will be selected based on creativity and overall impact.</p>",
+            "content_page": ""
+          }
+        },
+        "item_2_YGKmVY": {
+          "type": "item_2",
+          "settings": {
+            "header": "9,How do I know if I’m one of the 20 co-creators?",
+            "content": "<p>We’ll announce the 20 selected co-creators on IG, our official account @odinlake_official and our official web after the sign-up period. If you’re in, you’ll also hear from us via DM.</p>",
+            "content_page": ""
+          }
+        },
+        "item_2_fKAq6N": {
+          "type": "item_2",
+          "settings": {
+            "header": "10,I won a Co-Creation prize—how do I claim it?",
+            "content": "<p>Winners will be listed in the final announcement post. DM @odinlake_official with your info to claim your cash reward—easy as that!</p>",
+            "content_page": ""
+          }
+        },
+        "item_2_VXBiYQ": {
+          "type": "item_2",
+          "settings": {
+            "header": "11,What makes the L1 PRO chair special?",
+            "content": "<p>To be honest, we're just as curious as you are—because the L1 PRO is all about YOU. This isn’t your typical chair. It’s designed by real users like you through voting and co-creation. Think ergonomic comfort, Insta-worthy style, and a throne built for your WFH hustle or gaming sessions. </p>",
+            "content_page": ""
+          }
+        },
+        "item_2_nf4eib": {
+          "type": "item_2",
+          "settings": {
+            "header": "12,When will the L1 PRO chair be available to buy?",
+            "content": "<p>Stay tuned! The final design will come to life after the campaign phases. Follow @odinlake_official on IG for launch updates.</p>",
+            "content_page": ""
+          }
+        },
+        "item_2_FXXbrd": {
+          "type": "item_2",
+          "settings": {
+            "header": "13,I missed a phase—can I still join?",
+            "content": "<p>Absolutely! </p>",
+            "content_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_PzqrPz",
+        "item_CYjfFD",
+        "item_CdNHtL",
+        "item_6JjjTg",
+        "item_XzMNkx",
+        "item_ECmAhF",
+        "item_2_t887mC",
+        "item_2_xqcCRB",
+        "item_2_YGKmVY",
+        "item_2_fKAq6N",
+        "item_2_VXBiYQ",
+        "item_2_nf4eib",
+        "item_2_FXXbrd"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "image_position": "left",
+        "column_gap": 100,
+        "heading": "Activity FAQ",
+        "description": "Everything you need to know about L1 Pro Co-creation Activity",
+        "heading_2": "General Questions",
+        "description_2": "Everything you need to know about the Product and OdinLake",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animations": "inherit",
+        "custom_class": ""
+      }
+    },
+    "contact_form_new_HbjYa3": {
+      "type": "contact-form-new",
+      "settings": {
+        "label_text": "Contact Us",
+        "heading_line1": "We Would Love",
+        "heading_line2": "Hear From You",
+        "name_placeholder": "Name",
+        "email_placeholder": "Email",
+        "message_placeholder": "Leave some message here render1",
+        "name_error": "Please enter your name",
+        "email_error": "Please enter a valid email address",
+        "message_error": "Please enter your message",
+        "submit_text": "Submit",
+        "success_message": "Thank you for your message! We'll get back to you soon."
+      }
+    },
+    "journey_continued_BrtNff": {
+      "type": "journey-continued",
+      "settings": {
+        "heading": "Journey Continued",
+        "text": "We will notify you when update",
+        "placeholder": "Email",
+        "button_text": "Subscribe",
+        "primary_color": "#2196f3",
+        "accent_color": "#ffa726",
+        "button_color": "#666666"
+      }
+    }
+  },
+  "order": [
+    "fixed-sidebar",
+    "full-image-banner",
+    "what-next-steps",
+    "style_selector",
+    "cocreate",
+    "gift_interface",
+    "media-testimonials",
+    "faq_qBUVeN",
+    "contact_form_new_HbjYa3",
+    "journey_continued_BrtNff"
+  ]
+}

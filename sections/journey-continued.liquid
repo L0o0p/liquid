@@ -1,20 +1,9 @@
-{% comment %}
-  Journey Continued Section
-  - A subscription form with floating animation
-  - Customizable headline, text, and colors
-{% endcomment %}
-
 {{ 'journey-continued.css' | asset_url | stylesheet_tag }}
 {% style %}
-  /* 在现有CSS文件中添加 */
-  @font-face {
-    font-family: 'Platypi-SemiBoldItalic';
-    src: url('{{ "Platypi-SemiBoldItalic.ttf" | asset_url }}') format('truetype');
-    font-weight: 500;
-    font-display: swap;
-  }
+  /* 预加载关键字体 */
 {% endstyle %}
-<style>
+
+{% style %}
     {% comment %} /* 桌面端（宽度 ≥ 481px）时反转顺序 */
   @media (min-width: 481px) {
     .journey-continued__container {
@@ -43,13 +32,27 @@
     height: 100%;
   }
 
-</style>
+  
+
+  
+  {% endstyle %}
 <div class="journey-continued">
 
 
   <div class="journey-continued__container">
     <div class="journey-continued__content">
-      <h2 class="journey-continued__heading">{{ section.settings.heading }}</h2>
+     
+      <h2 class="journey-continued__heading" >
+        <!-- {{ section.settings.heading }} -->
+               <img
+        src="{{ 'j-title.png' | asset_url }}"
+        alt="Journey Illustration"
+        class="journey-continued__image"
+        loading="lazy"
+        width="692px"
+        height="692px"
+      >
+        </h2>
       <div class="journey-continued__text">{{ section.settings.text }}</div>
 
       {%- form 'customer', id: 'JourneySubscribeForm', class: 'journey-continued__form' -%}

@@ -1,6 +1,13 @@
 section{
     background-color: #FFF4A9;
 }
+
+.cbd{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -20,8 +27,9 @@ section{
     color:black;
     text-align: start;
     width: 100%;
-font-size: 20px;
+    font-size: 20px;
     font-weight: 300;
+    overflow-y:auto
 }
 
 .description-header {
@@ -50,12 +58,15 @@ font-size: 20px;
     color: #f97316;
 }
 
-.title {
-    font-family: 'DMSerifDisplay-Regular';
+.h-title {
+    /* font-family: 'DMSerifDisplay-Regular'; */
     font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-weight: 600;
+    /* margin-bottom: 8px; */
     color: #FD6020;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .slider-container {
@@ -217,6 +228,9 @@ font-size: 20px;
     .step-title {
         font-size: 1.25rem;
     }
+  .step-description p{
+    font-size: 14px;
+  }
     .nav-button{
         display: none;
     }
@@ -243,6 +257,14 @@ gap: 12px;
         padding: 4px 4px;
         width: 140px;
     }
+    .step-description p{
+     font-size: clamp(14px, 2vw, 16px);
+       -webkit-line-clamp: 2; /* 移动端默认显示2行 */
+  }
+
+      .step-description {
+       -webkit-line-clamp: 2; /* 移动端默认显示2行 */
+  }
 
     .slider-container{
         min-height: 420px;
@@ -251,7 +273,6 @@ gap: 12px;
     .slide {
         display: flex;
         flex-direction: column;
-        height: 100%;
         padding-bottom: 32px;
     }
     
@@ -273,4 +294,8 @@ gap: 12px;
     .step-description {
         font-size: 14px;
     }
+    .step-description p{
+    font-size: 14px;
+     font-size: clamp(14px, 2vw, 16px);
+  }
 }

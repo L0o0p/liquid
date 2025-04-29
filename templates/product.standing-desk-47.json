@@ -43,6 +43,8 @@
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "credit-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
             "theme": "light",
             "topPadding": "0",
             "bottomPadding": "0",
@@ -56,7 +58,7 @@
           }
         },
         "foxkit_sales_boost_stock_countdown_htAFLX": {
-          "type": "shopify://apps/foxkit-aio-upsell/blocks/stock-countdown/13f41957-6b79-47c1-99a2-e52431f06fff",
+          "type": "shopify://apps/foxkit-sales-boost/blocks/stock-countdown/13f41957-6b79-47c1-99a2-e52431f06fff",
           "settings": {
             "product": "{{product}}"
           }
@@ -71,7 +73,7 @@
           }
         },
         "foxkit_sales_boost_countdown_timer_yHKczx": {
-          "type": "shopify://apps/foxkit-aio-upsell/blocks/countdown-timer/13f41957-6b79-47c1-99a2-e52431f06fff",
+          "type": "shopify://apps/foxkit-sales-boost/blocks/countdown-timer/13f41957-6b79-47c1-99a2-e52431f06fff",
           "settings": {
             "product": "{{product}}"
           }
@@ -1437,7 +1439,7 @@
       "type": "apps",
       "blocks": {
         "6d198e95-118c-4c22-812b-23a518a47db6": {
-          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify://apps/stamped-product-reviews-ugc/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
             "tags_exclude": "",

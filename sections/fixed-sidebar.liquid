@@ -1,0 +1,420 @@
+<!-- 引入 CSS 文件 -->
+{{ 'fixed-sidebar.css' | asset_url | stylesheet_tag }}
+{{ 'progress-info.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'progress-info.js' | asset_url }}" defer></script>
+
+<style>
+    /* 独立模态弹窗样式 */
+    .progress-modal-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .progress-modal {
+      background: white;
+      border-radius: 8px;
+      max-width: 1000px;
+      width: 90%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+      height: 828px;
+    }
+
+    /* 注册模态弹窗 */
+    .progress-modal-split {
+      display: flex;
+      width: 100%;
+      height: 828px; /* 固定高度，可根据需要调整 */
+      padding: 64px;
+      position: relative;
+      flex-direction: column !important;
+    }
+
+    .modal-image-side {
+      width: 60%;
+      position: relative;
+      background-color: #e6f0f9;
+    }
+
+    .registration-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-slogan {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+      color: #666;
+      transform: rotate(-90deg);
+      transform-origin: left bottom;
+      white-space: nowrap;
+    }
+
+    .modal-content-side {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 40%;
+      max-width: 527px;
+    }
+
+    .modal-content-side h2 {
+      font-size: 56px;
+      font-weight: 500;
+      margin: 0 0 8px 0;
+      color: #000;
+    }
+
+    .modal-content-side p {
+      font-size: 16px;
+      margin: 0 0 30px 0;
+      color: #666;
+    }
+
+    .signup-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .signup-button:hover {
+      background-color: #333;
+    }
+
+    .icon {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    {% comment %} .icon:hover {
+      transform: scale(1.05);
+    } {% endcomment %}
+    {% comment %} d/ {% endcomment %}
+     /* 轮播图导航按钮样式 */
+  .progress-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:#12A89D solid 2px !important;
+    {% comment %} background-color: rgba(255, 255, 255, 0.7); {% endcomment %}
+    border-radius: 50%;
+    {% comment %} box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); {% endcomment %}
+  }
+
+  .progress-nav-button.prev {
+    left: 20px;
+  }
+
+  .progress-nav-button.next {
+    right: 20px;
+  }
+
+  .progress-nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* 轮播图容器样式 */
+  .progress-slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .progress-slides-wrapper {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .progress-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .progress-slide-image {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .progress-slide-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .progress-slide-content {
+    height: 40%;
+    padding: 20px 0;
+  }
+
+  .progresstitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .progressdescription {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+
+  .progress-modal-overlay{
+      position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  cursor: pointer;
+  }
+</style>
+{% comment %} {% if customer %} {% endcomment %}
+<div class="sidebar">
+  <div class="icon-container">
+    {% for block in section.blocks %}
+      {% if block.type == 'icon' %}
+        <div class="icon {% if block.settings.is_active %}active{% endif %}" data-block-id="{{ block.id }}">
+          {% case forloop.index %}
+            {% when 1 -%}
+              {%- render 'sidebar-icon-1' %}
+            {% when 2 -%}
+              {%- render 'sidebar-icon-2' %}
+            {% when 3 -%}
+              {%- render 'sidebar-icon-3' %}
+            {% when 4 -%}
+              {%- render 'sidebar-icon-4' %}
+            {% when 5 -%}
+              {%- render 'sidebar-icon-5' %}
+            {% when 6 -%}
+              {%- render 'sidebar-icon-6' %}
+            {% when 7 -%}
+              {%- render 'sidebar-icon-7' %}
+          {% endcase %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% comment %} {% endif %} {% endcomment %}
+
+<!-- 独立于侧边栏的模态弹窗 -->
+{% for block in section.blocks %}
+  {% if block.type == 'icon' %}
+    <div id="custom-modal-{{ block.id }}" class="progress-modal-container" style="display: none;">
+      <div class="progress-modal-overlay"></div>
+      <div class="progress-modal">
+        {% comment %} <button class="custom-modal-close">×</button> {% endcomment %}
+        <div class="progress-modal-split">
+          <div class="progress-slider-container" id="sidebar-guide-{{ section.id }}">
+            <button class="progress-nav-button prev" aria-label="Previous slide">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18l-6-6 6-6" stroke="#FD6020" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+
+            <button class="progress-nav-button next" aria-label="Next slide">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 6l6 6-6 6" stroke="#FD6020" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="progress-slides-wrapper" id="progress-slides-wrapper-{{ section.id }}">
+              {% for block in section.blocks %}
+                {% if block.type == 'step' %}
+                  <div class="progress-slide" {{ block.shopify_attributes }}>
+                    <h3 class="progresstitle">{{ block.settings.title }}</h3>
+                    {% if block.settings.image != blank %}
+                      <div class="progress-slide-image">
+                        <img
+                          src="{{ block.settings.image | img_url: 'master' }}"
+                          alt="Step {{ forloop.index }}: {{ block.settings.title }}"
+                          loading="lazy"
+                          width=""
+                          height=""
+                        >
+                      </div>
+                    {% else %}
+                      <div class="progress-slide-image placeholder-image">
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    {% endif %}
+                    <div class="progress-slide-content">
+                      {% comment %} <div class="progressdescription"> {% endcomment %}
+                      {{ block.settings.description }}
+                      {% comment %} </div> {% endcomment %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="inner-icon-container">
+            {% for block in section.blocks %}
+              {% if block.type == 'icon' %}
+                <div
+                  class="inner-icon {% if block.settings.is_active %}active{% endif %}"
+                  data-block-id="{{ block.id }}"
+                >
+                  {% case forloop.index %}
+                    {% when 1 -%}
+                      {%- render 'sidebar-icon-1' %}
+                    {% when 2 -%}
+                      {%- render 'sidebar-icon-2' %}
+                    {% when 3 -%}
+                      {%- render 'sidebar-icon-3' %}
+                    {% when 4 -%}
+                      {%- render 'sidebar-icon-4' %}
+                    {% when 5 -%}
+                      {%- render 'sidebar-icon-5' %}
+                    {% when 6 -%}
+                      {%- render 'sidebar-icon-6' %}
+                    {% when 7 -%}
+                      {%- render 'sidebar-icon-7' %}
+                  {% endcase %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 为每个图标添加点击事件
+    {% for block in section.blocks %}
+      {% if block.type == 'icon' %}
+        (function() {
+          const iconElement = document.querySelector('.icon[data-block-id="{{ block.id }}"]');
+          const modal = document.getElementById('custom-modal-{{ block.id }}');
+
+          if (iconElement && modal) {
+            const closeButtons = modal.querySelectorAll('.progress-modal-close');
+            const overlay = modal.querySelector('.progress-modal-overlay');
+
+            // 图标点击事件
+            iconElement.addEventListener('click', function() {
+              modal.style.display = 'flex';
+              document.body.style.overflow = 'hidden';
+            });
+
+            // 关闭模态弹窗
+            const closeModal = function() {
+              modal.style.display = 'none';
+              document.body.style.overflow = '';
+            };
+
+            if (closeButtons.length > 0) {
+              closeButtons.forEach(button => {
+                button.addEventListener('click', closeModal);
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener('click', closeModal);
+            }
+          }
+        })();
+      {% endif %}
+    {% endfor %}
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Fixed Sidebar",
+  "max_blocks": 50,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon",
+      "limit": 7,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "is_active",
+          "label": "Activate Indicator",
+          "default": false,
+          "info": "Check to show this indicator in active state"
+        }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Step Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Register OdinLake Account"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Step Description",
+          "default": "<p>To register an OdinLake account, follow these simple steps to get started with our services. By creating an account, you'll gain access to personalized features, exclusive updates, and seamless management of your preferences. Enjoy a tailored experience designed to enhance your interaction with our platform.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

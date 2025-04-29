@@ -31,7 +31,7 @@
   }
 
   .media-testimonials__heading {
-  font-family: 'DMSerifDisplay-Regular';
+  
     font-size: clamp(22px, 4vw, 28px);
     color:#12A89D;
     margin-bottom: clamp(20px, 4vw, 40px);
@@ -213,7 +213,7 @@
       {% endfor %}
 
       <!-- Add placeholder testimonials to match expanded logo list -->
-      <div class="media-testimonials__slide" data-index="{{ section.blocks.size }}">
+      <!-- <div class="media-testimonials__slide" data-index="{{ section.blocks.size }}">
         <p class="media-testimonials__quote">
           "This ergonomic chair delivers exceptional comfort and support during long working hours. The adjustable
           features make it easy to find your perfect position."
@@ -254,7 +254,7 @@
           "After reviewing over 50 ergonomic chairs, OdinLake consistently ranks at the top for comfort, durability, and
           adjustability. A worthwhile investment for your home office."
         </p>
-      </div>
+      </div> -->
     </div>
 
     <div class="media-testimonials__logos-container">
@@ -304,7 +304,7 @@
           {% endfor %}
 
           <!-- Additional placeholder logos -->
-          <div class="media-testimonials__logo" data-index="{{ section.blocks.size }}">
+          <!-- <div class="media-testimonials__logo" data-index="{{ section.blocks.size }}">
             <img
               src="{{ 'com_1.png' | asset_url }}"
               alt="Forbes"
@@ -366,7 +366,7 @@
               width="auto"
               height="60"
             >
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -633,66 +633,8 @@
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "Media Testimonials",
-      "blocks": [
-        {
-          "type": "testimonial",
-          "settings": {
-            "logo_url": "shopify://shop_images/com_1.png",
-            "logo_name": "Business Today",
-            "quote": "An innovative product that sets new standards in the industry."
-          }
-        },
-        {
-          "type": "testimonial",
-          "settings": {
-            "logo_url": "shopify://shop_images/com_2.png",
-            "logo_name": "Tech Review",
-            "quote": "Exceptional quality and performance that exceeded our expectations."
-          }
-        },
-        {
-          "type": "testimonial",
-          "settings": {
-            "logo_url": "shopify://shop_images/com_3.png",
-            "logo_name": "Global News",
-            "quote": "A game-changing solution that addresses real customer needs."
-          }
-        },
-        {
-          "type": "testimonial",
-          "settings": {
-            "logo_url": "shopify://shop_images/com_4.png",
-            "logo_name": "Industry Weekly",
-            "quote": "Outstanding design combined with superior functionality."
-          }
-        },
-        {
-          "type": "testimonial",
-          "settings": {
-            "logo_url": "shopify://shop_images/com_5.png",
-            "logo_name": "Consumer Report",
-            "quote": "The perfect balance of value, quality, and performance."
-          }
-        },
-        {
-          "type": "testimonial",
-          "settings": {
-            "logo_url": "shopify://shop_images/com_6.png",
-            "logo_name": "Daily Express",
-            "quote": "Innovative features that truly enhance the user experience."
-          }
-        }
-      ]
-    }
-
-  ]
-}
-{% endschema %}
-
-     {% comment %} {
+    "presets": [
+ {
       "name": "Media Testimonials",
       "blocks": [
         {
@@ -757,6 +699,19 @@
             "logo_name": "Daily Express",
             "quote": "A good chair is an investment in your health and comfort and this is a very solid choice that is well worth considering. "
           }
-        }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "logo_asset": "time.png",
+            //"logo_url": "shopify://shop_images/time.jpg",
+            "logo_name": "Business Today",
+            "quote": "OdinLake’s Ergo Butterfly 753 sports an array of highly customizable components that effortlessly adjust to match your posture, making it your best bet if you work at a desk for long hours."
+          }
+        },
       ]
-    } {% endcomment %}
+    }
+
+  ]
+}
+{% endschema %}

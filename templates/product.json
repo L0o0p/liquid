@@ -137,6 +137,12 @@
           "settings": {
             "product": "{{product}}"
           }
+        },
+        "foxkit_aio_upsell_product_bundle_meFhqV": {
+          "type": "shopify://apps/foxkit-aio-upsell/blocks/product-bundle/13f41957-6b79-47c1-99a2-e52431f06fff",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -155,7 +161,8 @@
         "addons",
         "83435234-bc3b-4f0d-94be-c2d439fd4af7",
         "foxkit_sales_boost_stock_countdown_nqdWmy",
-        "foxkit_aio_upsell_countdown_timer_p66UFi"
+        "foxkit_aio_upsell_countdown_timer_p66UFi",
+        "foxkit_aio_upsell_product_bundle_meFhqV"
       ],
       "custom_css": [
         ".main-product__block {margin-top: 15px;}"
@@ -323,6 +330,20 @@
         "padding_bottom": 50,
         "custom_class": ""
       }
+    },
+    "174554630388824edc": {
+      "type": "apps",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
     }
   },
   "order": [
@@ -332,6 +353,7 @@
     "a28be12f-5f6a-4b24-9ac4-6b9f40b1817d",
     "716a39e3-edae-4fff-ae0d-2b12bba0faa0",
     "2a855bd1-af06-4cb7-b58e-d250f3597ef8",
-    "170253203295be7cb8"
+    "170253203295be7cb8",
+    "174554630388824edc"
   ]
 }

@@ -1,0 +1,94 @@
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    height: 424px;
+    width: 76px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+
+}
+
+.sidebar:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+
+}
+
+.icon-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 16px 0;
+    transition: all 0.3s ease;
+}
+
+.icon-container:hover {
+  transform: scale(1.01);
+}
+
+
+.icon {
+  /* width: 32px;
+  height: 32px; */
+  flex: 1;
+  /* margin: 5px; */
+  cursor: pointer;
+  border-right: #ccc 4px solid;
+  padding: 10px;
+  /* transition: all 0.2s ease; */
+}
+
+.icon.active{
+  border-right: #12A89D 4px solid;;
+}
+
+.icon.active svg path,.icon.active svg{
+  /* 在这里添加激活状态的样式 */
+  stroke: #12A89D;
+  /* fill:#12A89D */
+}
+.icon svg {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+/* .icon:hover {
+  pointer-events: cursor;
+  transform:
+    scale(1.2)
+  ;
+  opacity: 0.8;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.05));
+  border: white 4px solid;
+  border-radius: 12px;
+
+}
+
+.icon:hover svg {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.icon:hover svg path{
+  stroke:#12A89D;
+  stroke: #AFB7BF;
+} */
+
+.content {
+  margin-right: 60px;
+  padding: 20px;
+}

@@ -1,24 +1,15 @@
 <div class="container cbd" id="steps-guide-{{ section.id }}">
-  {% comment %} <div class="description-header">
-       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_213_2371)">
-          <path d="M20 14L14 10V18L20 14Z" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M27 6H5C4.44772 6 4 6.44772 4 7V21C4 21.5523 4.44772 22 5 22H27C27.5523 22 28 21.5523 28 21V7C28 6.44772 27.5523 6 27 6Z" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4 26H28" stroke="#F9A000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_213_2371">
-          <rect width="32" height="32" fill="white"/>
-          </clipPath>
-          </defs>
-        </svg>
-    <span class="description-text">Description</span>
-  </div> {% endcomment %}
-
-  <h1 class="title" style="border:none;
-    outline: none;
-    box-shadow: none;">{{ section.settings.title }}</h1>
-  <div class="step-description" >{{ section.settings.description }}</div>
+  <h1
+    class="h-title"
+    style="
+      border: none;
+      outline: none;
+      box-shadow: none;
+    "
+  >
+    {{ section.settings.title }}
+  </h1>
+  <div class="step-description">{{ section.settings.description }}</div>
   <div class="slider-container">
     <div class="slides-wrapper" id="slides-wrapper-{{ section.id }}">
       {% for block in section.blocks %}
@@ -30,6 +21,8 @@
                 alt="Step {{ forloop.index }}: {{ block.settings.title }}"
                 class="slide-image"
                 loading="lazy"
+                width=""
+                height=""
               >
             {% else %}
               <div class="slide-image placeholder-image">
@@ -172,7 +165,7 @@
       ]
     }
   ]
-} 
+}
 {% endschema %}
 
 {{ 'what-next-steps.css' | asset_url | stylesheet_tag }}

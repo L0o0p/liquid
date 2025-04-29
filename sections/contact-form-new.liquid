@@ -1,3 +1,6 @@
+{{ 'contact-form.css' | asset_url | stylesheet_tag }}
+
+
 <div class="contact-form-section">
   <div class="contact-lace-top-b">
     {% render 'contact-lace-top-b' %}
@@ -10,14 +13,12 @@
     {% render 'contact-lace-bottom' %}
   </div>
   <div class="contact-container">
-    {% comment %}
-      <div class="header">
-        <div class="contact-label">
-          <img src="{{ 'video.png' | asset_url }}" alt="Previous" width="32" height="32">
-          {{ section.settings.label_text }}
-        </div>
+    {% comment %} <div class="header">
+      <div class="contact-label">
+        <img src="{{ 'video.png' | asset_url }}" alt="Previous" width="32" height="32">
+        {{ section.settings.label_text }}
       </div>
-    {% endcomment %}
+    </div> {% endcomment %}
     <div class="title">
       <h1>{{ section.settings.heading_line1 }}</h1>
       <h1>{{ section.settings.heading_line2 }}</h1>

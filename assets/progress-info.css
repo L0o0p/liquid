@@ -1,0 +1,358 @@
+.inner-icon-container{
+  height: 62px;
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 0;
+}
+.inner-icon{
+  flex: 1;
+  cursor: pointer;
+  border-bottom: #ccc 4px solid;
+  padding: 10px;
+  /* transition: all 0.2s ease; */
+  display: flex;
+justify-content: center;
+}
+
+.inner-icon svg {
+  object-fit: cover;
+  height: 80%;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.inner-icon.active{
+  border-bottom: #12A89D 4px solid;;
+}
+
+.inner-icon.active svg path,.icon.active svg{
+  /* 在这里添加激活状态的样式 */
+  stroke: #12A89D;
+  /* fill:#12A89D */
+}
+
+.inner-icon:hover {
+  pointer-events: cursor;
+  /* transform: */
+    /* scale(1.2); */
+    /* rotate(15deg); */
+  opacity: 0.8;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.05));
+  border: white 4px solid;
+  border: none;
+  border-radius: 12px;
+}
+
+.inner-icon:hover svg {
+  transform: scale(1.2);
+  transform:
+    scale(1.2)
+    rotate(15deg);
+}
+
+.progress-description{
+    color:black;
+    text-align: start;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    overflow-y:auto
+}
+
+.description-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    border: #F09A38 1px solid;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+    color: #ffb020;
+    font-size: 14px;
+    width: 180px;
+    justify-content: space-evenly;
+}
+
+.description-icon {
+    color: #f97316;
+    width: 24px;
+    height: 24px;
+}
+
+.description-text {
+    color: #f97316;
+}
+
+.h-title {
+    /* font-family: 'DMSerifDisplay-Regular'; */
+    font-size: 2.5rem;
+    font-weight: 600;
+    /* margin-bottom: 8px; */
+    color: #FD6020;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.progress-slider-container {
+    position: relative;
+    background:#E9F0F8;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.progress-slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    background-color: white;
+}
+
+.progress-slide {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+}
+
+.progress-slide h3{
+    font-size: 40px;
+    color: #12A89D;
+    font-weight: 900;
+}
+
+.progress-slide-image{
+    height: 50%;
+}
+
+.progress-slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* aspect-ratio: 16/9; */
+
+  object-fit: cover;     /* 覆盖整个区域，可能裁剪部分图片 */
+  /* 或者 object-fit: contain; 完整显示图片，可能有空白区域 */
+  object-position: center; /* 控制图片的焦点位置 */
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e8f0;
+}
+
+.placeholder-svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.5;
+}
+
+.progress-slide-content {
+    padding: 48px;
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+}
+.progress-slide-content {
+    height: 40%;
+    padding: 40px 0;
+}
+
+.progress-slide-content p{
+ color: #12A89D;
+}
+
+.progress-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.progress-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.progress-description {
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.progress-description p {
+    margin-bottom: 1em;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.progress-nav-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #FD6020;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 40%;
+}
+
+.progress-nav-button svg path{
+    stroke: #12A89D;
+}
+
+
+.next{
+    right: 0;
+}
+
+
+.progress-nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 48px;
+    height: 4px;
+    background: #F7941D3D;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    /* background: #3b82f6; */
+    background: #F7941D;
+}
+
+    @media (max-width: 1366px) {
+  .container {
+  padding:64px
+}
+  }
+
+@media (max-width: 768px) {
+.cbd{
+    height: 736px !important;
+}
+
+    .container {
+        height: 736px;
+  padding:64px
+    }
+
+.progress-slider-container, .progress-slide{
+    height: 356px;
+}
+
+    .progress-slide-content {
+        padding: 24px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .progress-number {
+        font-size: 1.5rem;
+    }
+    
+    .progress-title {
+        font-size: 1.25rem;
+    }
+  .progress-description p{
+    font-size: 14px;
+  }
+    .progress-nav-button{
+        display: none;
+    }
+
+    .indicators {
+justify-content: space-between;
+width: 100%;
+gap: 12px;
+    }
+
+    .indicator {
+    width: 100%;
+    border-radius:0
+}
+}
+
+@media (max-width:480px) {
+    .container {
+        padding: 64px 20px !important;
+        height: 700px !important;
+    }
+
+    .description-header {
+        padding: 4px 4px;
+        width: 140px;
+    }
+    .progress-description p{
+     font-size: clamp(14px, 2vw, 16px);
+       -webkit-line-clamp: 2; /* 移动端默认显示2行 */
+  }
+
+      .progress-description {
+       -webkit-line-clamp: 2; /* 移动端默认显示2行 */
+  }
+
+    .progress-slider-container{
+        min-height: 420px;
+    }
+
+    .progress-slide{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 32px;
+    }
+    
+    .progress-slide-image{
+        height: 50%;
+    }
+
+    .progress-number {
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+
+    .progress-title{
+        font-weight: 500;
+        margin-bottom: 14px;
+    }
+
+    .progress-description {
+        font-size: 14px;
+    }
+    .progress-description p{
+    font-size: 14px;
+     font-size: clamp(14px, 2vw, 16px);
+  }
+}

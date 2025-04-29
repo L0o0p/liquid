@@ -47,7 +47,7 @@
             </div>
 
             {% if block.settings.pantone_code != blank %}
-              {% comment %} <div class="pantone-tag">{{ block.settings.pantone_code }}</div> {% endcomment %}
+              <!-- <div class="pantone-tag">{{ block.settings.pantone_code }}</div> -->
             {% endif %}
             <div class="chair-image-container">
               {% if block.settings.chair_image != blank %}
@@ -91,13 +91,20 @@
                         <p>Sign up account to co-create with us</p>
 
                         <form class="signup-form" id="signup-form-{{ block.id }}">
-                          <div class="form-field">
-                            <input type="text" id="name-{{ block.id }}" placeholder="Name" required>
-                          </div>
-                          <div class="form-field">
-                            <input type="email" id="email-{{ block.id }}" placeholder="Email" required>
-                          </div>
-                          <button type="submit" class="signup-button">Sign Up</button>
+                          <!--
+                            <div class="form-field">
+                              <input type="text" id="name-{{ block.id }}" placeholder="Name" required>
+                            </div>
+                            <div class="form-field">
+                              <input type="email" id="email-{{ block.id }}" placeholder="Email" required>
+                            </div>
+                          -->
+                          <!-- <button type="submit" class="signup-button">Sign Up</button> -->
+                          <a
+                            class="signup-button"
+                            href="/customer_authentication/login?return_to={{ "/pages/signup-successfully" | url_encode }}"
+                            >Sign Up</a
+                          >
                         </form>
                       </div>
                     </div>
@@ -379,8 +386,15 @@
     font-weight: 600;
     cursor: pointer;
     margin-top: 24px;
-    height:48px
+    height:48px;
+    text-align: center;
   }
+
+  .signup-button:hover{
+    background-color: #848484;
+    box-shadow:0px 4px 24px 0px rgba(0,0,0,.3);
+  }
+
 
   /* 成功模态弹窗 */
   .success-modal {
@@ -423,8 +437,16 @@
     }
   }
 
+  @media screen and (max-width: 768px) {
+  .submit-button{
+        text-align: center;
+        width: 120px !important;
+        height: 40px;
+  }}
+
   /* 移动端优化 (最大480px) */
   @media screen and (max-width: 480px) {
+
     /* 弹窗容器 */
     .custom-modal {
       width: 95% !important;
@@ -817,6 +839,7 @@
           "settings": {
             "series_name": "L Series",
             "pantone_code": "PANTONE 2727 C",
+            "chair_image": "shopify://shop_images/chair_style_blue.png",
             "button_text": "Submit"
           }
         },
@@ -825,6 +848,7 @@
           "settings": {
             "series_name": "O Series",
             "pantone_code": "PANTONE 1232 C",
+            "chair_image": "shopify://shop_images/chair_style_gray.png",
             "button_text": "Submit"
           }
         }

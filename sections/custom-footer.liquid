@@ -1,5 +1,11 @@
 {{ 'custom-footer.css' | asset_url | stylesheet_tag }}
 
+{%- if section.settings.show_country_selector or 
+      section.settings.show_currency_selector or 
+      section.settings.show_language_selector -%}
+  <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
 <footer class="custom-footer-container">
   <div class="footer-lace">
     {% render 'footer-lace' %}
@@ -196,21 +202,79 @@
     <div class="custom-footer-content bottom-bar-content">
       <div class="custom-copyright">{{ section.settings.copyright_text }}</div>
       <div class="custom-language-payment">
-        <div class="custom-language-selector">
-          {% if section.settings.show_locale_selector and shop.published_locales.size > 1 %}
+        <!-- 本地化选择器 -->
+        <div class="custom-localization">
+          {%- if section.settings.show_country_selector and localization.available_countries.size > 1 -%}
             <div class="custom-localization-form">
-              {% comment %} <img src="{{ 'usa-icon.png' | asset_url }}" alt="Previous" width="32" height="32"> {% endcomment %}
-              <div class="custom-localization-form-text">{{ section.settings.label_text }}</div>
-              {%- form 'localization', id: 'CustomFooterLanguageForm', class: 'localization-form' -%}
-                <div>
-                  {{ localization.country.flag.emoji }}
-                  {{ localization.country.name }} ({{ localization.country.currency.iso_code }}
-                  {{ localization.country.currency.symbol }})
+              {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+                <div class="localization-form__select">
+                  <h2 class="visually-hidden" id="FooterCountryLabel">
+                <!-- {{ 'localization.country_label' | t }} -->
+                </h2>
+                  <div class="localization-selector">
+                    <span class="localization-icon">{{ localization.country.flag.emoji }}</span>
+                    <select 
+                      class="localization-selector__select" 
+                      name="country_code" 
+                      aria-labelledby="FooterCountryLabel"
+                      data-country-selector
+                    >
+                      {%- for country in localization.available_countries -%}
+                        <option 
+                          value="{{ country.iso_code }}" 
+                          {%- if country.iso_code == localization.country.iso_code %} selected{% endif %}
+                        >
+                          {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                        </option>
+                      {%- endfor -%}
+                    </select>
+                    <span class="localization-arrow">
+                      <!-- {% render 'icon-caret' %} -->
+                    </span>
+                  </div>
                 </div>
-                <div>{{ localization.language.endonym_name }}</div>
+                <button class="button button--tertiary">
+                  <!-- {{ 'localization.update_country' | t }} -->
+                </button>
               {%- endform -%}
             </div>
-          {% endif %}
+          {%- endif -%}
+
+          {%- if section.settings.show_language_selector and localization.available_languages.size > 1 -%}
+            <div class="custom-localization-form">
+              {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+                <div class="localization-form__select">
+                  <h2 class="visually-hidden" id="FooterLanguageLabel">
+                    <!-- {{ 'localization.language_label' | t }} -->
+                  </h2>
+                  <div class="localization-selector">
+                    <!-- <span class="localization-icon">🌐</span> -->
+                    <select 
+                      class="localization-selector__select" 
+                      name="locale_code" 
+                      aria-labelledby="FooterLanguageLabel"
+                      data-language-selector
+                    >
+                      {%- for language in localization.available_languages -%}
+                        <option 
+                          value="{{ language.iso_code }}" 
+                          {%- if language.iso_code == localization.language.iso_code %} selected{% endif %}
+                        >
+                          {{ language.endonym_name | capitalize }}
+                        </option>
+                      {%- endfor -%}
+                    </select>
+                    <span class="localization-arrow">
+                      <!-- {% render 'icon-caret' %} -->
+                    </span>
+                  </div>
+                </div>
+                <button class="button button--tertiary">
+                  <!-- {{ 'localization.update_language' | t }} -->
+                </button>
+              {%- endform -%}
+            </div>
+          {%- endif -%}
         </div>
 
         {% if section.settings.show_payment_icons %}
@@ -226,6 +290,7 @@
     </div>
   </div>
 </footer>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     // 移动端点击交互
@@ -251,11 +316,29 @@
         });
       }
     });
+    
+    // 本地化选择器交互
+    const countrySelector = document.querySelector('[data-country-selector]');
+    const languageSelector = document.querySelector('[data-language-selector]');
+    
+    if (countrySelector) {
+      countrySelector.addEventListener('change', function() {
+        this.closest('form').submit();
+      });
+    }
+    
+    if (languageSelector) {
+      languageSelector.addEventListener('change', function() {
+        this.closest('form').submit();
+      });
+    }
   });
 </script>
+
 {% schema %}
 {
   "name": "Custom Footer",
+  // "type": "footer",
   "class": "section",
   "tag": "footer",
   "settings": [
@@ -276,6 +359,51 @@
       "id": "email_placeholder",
       "label": "电子邮件输入框占位符",
       "default": "输入您的电子邮件"
+    },
+    {
+      "type": "header",
+      "content": "本地化设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_selector",
+      "label": "显示国家/地区选择器",
+      "default": true,
+      "info": "允许客户选择不同的国家/地区和货币"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_language_selector",
+      "label": "显示语言选择器",
+      "default": true,
+      "info": "允许客户选择不同的网站语言"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "显示货币选择器",
+      "default": false,
+      "info": "允许客户选择不同的货币（国家/地区选择器已包含货币）"
+    },
+    {
+      "type": "header",
+      "content": "支付与版权"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "版权文本",
+      "default": "© 2025 OdinLake Inc. 保留所有权利"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "显示支付图标",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "社交媒体链接"
     },
     {
       "type": "url",
@@ -306,24 +434,6 @@
       "type": "url",
       "id": "social_facebook_link",
       "label": "Facebook链接"
-    },
-    {
-      "type": "text",
-      "id": "copyright_text",
-      "label": "版权文本",
-      "default": "© 2025 OdinLake Inc. 保留所有权利"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_locale_selector",
-      "label": "显示语言选择器",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "显示支付图标",
-      "default": true
     },
     {
       "type": "header",
@@ -382,24 +492,19 @@
           "id": "menu",
           "label": "菜单",
           "info": "此菜单显示在页脚中"
-        },
-        {
-          "type": "image_picker",
-          "id": "social_youtube_icon",
-          "label": "YouTube图标"
         }
       ]
     }
   ],
   "presets": [
     {
-    "name": "Custom Footer",
+      "name": "Custom Footer",
       "blocks": [
         {
           "type": "link_list",
           "settings": {
             "heading": "Product",
-            "menu": "footer"
+            "menu": "products"
           }
         },
         {
@@ -412,8 +517,15 @@
         {
           "type": "link_list",
           "settings": {
-            "heading": "Services",
-            "menu": "footer"
+            "heading": "Service",
+            "menu": "customer-service"
+          }
+        },
+        {
+          "type": "link_list",
+          "settings": {
+            "heading": "Support",
+            "menu": "support"
           }
         }
       ]

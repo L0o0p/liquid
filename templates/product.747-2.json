@@ -55,13 +55,6 @@
             "sale_badge_type": "fixed_amount"
           }
         },
-        "custom_text_waejPt": {
-          "type": "custom_text",
-          "disabled": true,
-          "settings": {
-            "content": "<p><strong>$60 Off For First Order</strong></p>"
-          }
-        },
         "90dc1f7c-db93-4484-81bd-f9329e3af95d": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
@@ -100,10 +93,6 @@
             "size_title": "Size"
           }
         },
-        "selleasy_lb_upsell_addon_block_GkA43j": {
-          "type": "shopify://apps/selleasy/blocks/lb-upsell-addon-block/790c1a03-a71f-4bc1-9869-00dad526d3c2",
-          "settings": {}
-        },
         "foxkit_sales_boost_stock_countdown_j4TMPx": {
           "type": "shopify://apps/foxkit-aio-upsell/blocks/stock-countdown/13f41957-6b79-47c1-99a2-e52431f06fff",
           "disabled": true,
@@ -117,6 +106,12 @@
             "content": "<p><strong>Best for 5'3\" - 6'3\" heights</strong></p><p><strong>Weight Capacity: 350 lbs / 158 kg</strong></p>"
           }
         },
+        "custom_text_waejPt": {
+          "type": "custom_text",
+          "settings": {
+            "content": "<p><strong>Tariffs may raise costs, but we’re committed to making premium ergonomic furniture accessible.</strong></p>"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -124,6 +119,12 @@
             "show_atc_button": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
+          }
+        },
+        "foxkit_aio_upsell_product_bundle_Tk9QQB": {
+          "type": "shopify://apps/foxkit-aio-upsell/blocks/product-bundle/13f41957-6b79-47c1-99a2-e52431f06fff",
+          "settings": {
+            "product": "odinlake-o2-ergo-max-747"
           }
         },
         "custom_liquid_YzGk4r": {
@@ -189,16 +190,16 @@
         "4697a8e9-bdd8-45b1-ac07-88ccd1be6995",
         "custom_liquid_6amLMU",
         "price",
-        "custom_text_waejPt",
         "90dc1f7c-db93-4484-81bd-f9329e3af95d",
         "collapsible_tab_a79C8b",
         "foxkit_sales_boost_countdown_timer_rmDWaw",
         "custom_liquid_yQ797U",
         "variant_picker",
-        "selleasy_lb_upsell_addon_block_GkA43j",
         "foxkit_sales_boost_stock_countdown_j4TMPx",
         "custom_text_HYarVj",
+        "custom_text_waejPt",
         "buy_buttons",
+        "foxkit_aio_upsell_product_bundle_Tk9QQB",
         "custom_liquid_YzGk4r",
         "reelup_shoppable_videos_reels_reelup_product_slider_wMwnCg",
         "b3e1b0e4-5000-4437-b7b9-0fdfc7c0238c",
@@ -691,36 +692,11 @@
             "block_custom_class": "odinlake_order_1",
             "animations": "inherit"
           }
-        },
-        "22be9d4a-0013-4822-a4d9-11a929c593bd": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video_type": "shopify",
-            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
-            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
-            "video_link": "",
-            "ratio": "16:9",
-            "video_title": "",
-            "text_size": "medium",
-            "text_color": "white",
-            "play_style": "solid",
-            "play_size": "medium",
-            "autoplay": true,
-            "loop": true,
-            "muted": true,
-            "show_controls": false,
-            "width": "50%",
-            "alignment": "start",
-            "block_custom_class": "",
-            "animations": "inherit"
-          }
         }
       },
       "block_order": [
         "e220c5ad-1353-408f-ae62-1bdd0fdaf529",
-        "a88e5c36-4773-434d-a82c-35a21028901c",
-        "22be9d4a-0013-4822-a4d9-11a929c593bd"
+        "a88e5c36-4773-434d-a82c-35a21028901c"
       ],
       "custom_css": [
         "div,p {color: #fff !important;}"
@@ -747,30 +723,6 @@
     "b87ea3f6-1bcd-47ef-af97-03c9690a6fef": {
       "type": "custom-content",
       "blocks": {
-        "536623c6-f850-4dd7-97f2-9039ebac15bf": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video_type": "shopify",
-            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
-            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
-            "video_link": "",
-            "ratio": "16:9",
-            "video_title": "",
-            "text_size": "medium",
-            "text_color": "white",
-            "play_style": "solid",
-            "play_size": "medium",
-            "autoplay": true,
-            "loop": true,
-            "muted": true,
-            "show_controls": false,
-            "width": "50%",
-            "alignment": "start",
-            "block_custom_class": "",
-            "animations": "inherit"
-          }
-        },
         "7f967583-8d43-4fcd-b2f9-eea196a53524": {
           "type": "text",
           "settings": {
@@ -807,7 +759,6 @@
         }
       },
       "block_order": [
-        "536623c6-f850-4dd7-97f2-9039ebac15bf",
         "7f967583-8d43-4fcd-b2f9-eea196a53524",
         "d7ce89fe-b649-4d6c-8ae8-1b8c8ed64d73"
       ],
@@ -866,36 +817,11 @@
             "block_custom_class": "odinlake_order_1",
             "animations": "inherit"
           }
-        },
-        "cf0016ed-90c7-4bd5-b115-337b1839a82f": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video_type": "shopify",
-            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
-            "shopify_video": "shopify://files/videos/743-wirecontrol-video.mp4",
-            "video_link": "",
-            "ratio": "16:9",
-            "video_title": "",
-            "text_size": "medium",
-            "text_color": "white",
-            "play_style": "solid",
-            "play_size": "medium",
-            "autoplay": true,
-            "loop": true,
-            "muted": true,
-            "show_controls": false,
-            "width": "50%",
-            "alignment": "start",
-            "block_custom_class": "",
-            "animations": "inherit"
-          }
         }
       },
       "block_order": [
         "0d2dca12-d01b-4eba-b73f-6c4cb2ed52ee",
-        "88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4",
-        "cf0016ed-90c7-4bd5-b115-337b1839a82f"
+        "88ef6ee9-ed64-47c9-8bab-9cbf95f6bab4"
       ],
       "custom_css": [
         "div,p {color: #fff !important;}"
@@ -1204,20 +1130,11 @@
             "id": "2",
             "title": "Frame Specs"
           }
-        },
-        "63e15df5-4a38-4f75-b46a-af43b4f60cdf": {
-          "type": "tabList",
-          "disabled": true,
-          "settings": {
-            "id": "3",
-            "title": "Desktop Specs"
-          }
         }
       },
       "block_order": [
         "f107fe56-75e4-4252-93fd-2cfda8fc5dc0",
-        "4239c4f2-11d4-4e46-b0d6-fc4038921adc",
-        "63e15df5-4a38-4f75-b46a-af43b4f60cdf"
+        "4239c4f2-11d4-4e46-b0d6-fc4038921adc"
       ],
       "settings": {
         "id": "",

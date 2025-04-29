@@ -9,442 +9,1065 @@
  */
 {
   "sections": {
-    "full-image-banner": {
-      "type": "full-image-banner",
-      "settings": {
-        "background_color": "#edf4fc",
-        "show_button": true,
-        "button_text": "Shop Now",
-        "button_link": "/collections/all",
-        "button_bg_color": "#555555",
-        "button_text_color": "#ffffff",
-        "button_top_position": 63,
-        "button_left_position": 57
-      }
-    },
-    "style_selector": {
-      "type": "style-selector",
+    "slider_fVnKKi": {
+      "type": "slider",
       "blocks": {
-        "style_card_1": {
-          "type": "style_card",
+        "video_slide_YcBdqa": {
+          "type": "video_slide",
           "settings": {
-            "series_name": "L Series",
-            "pantone_code": "PANTONE 2727 C",
-            "chair_image": "shopify://shop_images/chair_style_blue.png",
-            "button_text": "Submit",
-            "button_link": "/collections/l-series"
+            "video": "https://cdn.shopify.com/videos/c/o/v/267797b34ab24b1c9c9f937d98e20541.mp4",
+            "mb_background": "shopify://shop_images/OdinLake-Ergo-BUTTERFLY-753-Black-1025V1-ADS-8.jpg",
+            "content_in_container": false,
+            "content_position": "center middle",
+            "text_alignment": "center",
+            "text_size": "medium",
+            "text_color": "white",
+            "subheading": "OdinLake O3 (Ergo Butterfly 753)",
+            "title": "Butterfly trendy, better to the glory",
+            "description": "",
+            "image_link": "shopify://products/odinlake-o3-ergo-butterfly-753",
+            "button_text": " Pre-order now to get $150 OFF",
+            "button_link": "shopify://products/odinlake-o3-ergo-butterfly-753",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "show_footer": false,
+            "footer_alignment": "end",
+            "footer_text": "",
+            "footer_button": "",
+            "footer_link": "shopify://products/odinlake-o3-ergo-butterfly-753"
           }
         },
-        "style_card_2": {
-          "type": "style_card",
+        "slider_item_FjPQNE": {
+          "type": "slider_item",
           "settings": {
-            "series_name": "O Series",
-            "pantone_code": "PANTONE 1232 C",
-            "chair_image": "shopify://shop_images/chair_style_gray.png",
-            "button_text": "Submit",
-            "button_link": "/collections/o-series"
+            "background": "shopify://shop_images/O2_OFFICE_CHAIR.jpg",
+            "mb_background": "shopify://shop_images/DSC05341.jpg",
+            "content_in_container": true,
+            "content_position": "center middle",
+            "text_alignment": "center",
+            "text_size": "large",
+            "text_color": "white",
+            "subheading": "O2 (Ergo MAX 747)",
+            "title": "\"Great back support\" Three-Section Backrest Chair",
+            "description": "",
+            "image_link": "shopify://products/odinlake-o2-ergo-max-747",
+            "button_text": "Shop now",
+            "button_link": "shopify://products/odinlake-o2-ergo-max-747",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "second_button_text": "",
+            "second_button_link": "",
+            "second_button_style": "m-button--primary",
+            "second_button_size": "",
+            "show_footer": false,
+            "footer_alignment": "end",
+            "footer_text": "",
+            "footer_button": "",
+            "footer_link": ""
+          }
+        },
+        "slider_item_Npqt7Q": {
+          "type": "slider_item",
+          "settings": {
+            "background": "shopify://shop_images/10097280458585322197_1.jpg",
+            "mb_background": "shopify://shop_images/20250218-092701.jpg",
+            "content_in_container": true,
+            "content_position": "center middle",
+            "text_alignment": "center",
+            "text_size": "large",
+            "text_color": "white",
+            "subheading": "L2 (Ergo PRO 633)",
+            "title": "WFH in comfort with OdinLake",
+            "description": "",
+            "image_link": "shopify://products/l2-ergo-pro-633",
+            "button_text": "Buy for home",
+            "button_link": "shopify://products/l2-ergo-pro-633",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "second_button_text": "",
+            "second_button_link": "",
+            "second_button_style": "m-button--primary",
+            "second_button_size": "",
+            "show_footer": false,
+            "footer_alignment": "end",
+            "footer_text": "",
+            "footer_button": "",
+            "footer_link": ""
+          }
+        },
+        "slider_item_Myn3U7": {
+          "type": "slider_item",
+          "settings": {
+            "background": "shopify://shop_images/5_f0abead1-27a8-409c-bda8-70abf5d5df09.jpg",
+            "mb_background": "shopify://shop_images/518_d743fa4f-ce95-44fe-89e5-0752d15214ed.webp",
+            "content_in_container": true,
+            "content_position": "center middle",
+            "text_alignment": "center",
+            "text_size": "large",
+            "text_color": "white",
+            "subheading": "OdinLake L1 (Ergo UPGRADE 518)",
+            "title": "\"Full Control\" Best Office Chairs of 2024",
+            "description": "",
+            "image_link": "shopify://products/odinlakel1-ergo-upgrade-518",
+            "button_text": "Shop now",
+            "button_link": "shopify://products/odinlakel1-ergo-upgrade-518",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "second_button_text": "",
+            "second_button_link": "",
+            "second_button_style": "m-button--primary",
+            "second_button_size": "",
+            "show_footer": false,
+            "footer_alignment": "end",
+            "footer_text": "",
+            "footer_button": "",
+            "footer_link": ""
+          }
+        },
+        "slider_item_jdiXD8": {
+          "type": "slider_item",
+          "settings": {
+            "background": "shopify://shop_images/4_8283a0f3-32ac-4404-9f94-17305dc5948a.jpg",
+            "mb_background": "shopify://shop_images/brand_1.jpg",
+            "content_in_container": true,
+            "content_position": "center middle",
+            "text_alignment": "center",
+            "text_size": "large",
+            "text_color": "white",
+            "subheading": "O1 (Ergo PLUS 743)",
+            "title": "\"Attractive and Comfortable\"Flex Mesh Chair",
+            "description": "",
+            "image_link": "https://www.kickstarter.com/projects/814702335/odinlake-ergo-butterfly-753-dynamic-comfort-ergonomic-chair",
+            "button_text": "Shop now",
+            "button_link": "shopify://products/odinlake-o1-ergo-plus-743",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "second_button_text": "",
+            "second_button_link": "",
+            "second_button_style": "m-button--primary",
+            "second_button_size": "",
+            "show_footer": false,
+            "footer_alignment": "end",
+            "footer_text": "",
+            "footer_button": "",
+            "footer_link": ""
           }
         }
       },
       "block_order": [
-        "style_card_1",
-        "style_card_2"
+        "video_slide_YcBdqa",
+        "slider_item_FjPQNE",
+        "slider_item_Npqt7Q",
+        "slider_item_Myn3U7",
+        "slider_item_jdiXD8"
       ],
       "settings": {
-        "title": "Choosing Your Style",
-        "show_category_tag": true,
-        "category_text": "Category",
-        "first_selected": true
+        "container": "w-full",
+        "slideshow_height": "adapt",
+        "show_overlay": true,
+        "dots_position": "right",
+        "dots_color": "light",
+        "show_dots": true,
+        "show_arrows": true,
+        "autorotate": false,
+        "autorotate_speed": 10,
+        "use_content_above": true,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
-    "cocreate": {
-      "type": "cocreate",
-      "settings": {
-        "section_width": 1200,
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "section_padding_sides": 20,
-        "gap": 60,
-        "image": "shopify://shop_images/co-create-with-us.png",
-        "grayscale": true,
-        "image_border_radius": 8,
-        "show_tag": true,
-        "tag_text": "Activity",
-        "tag_bg_color": "#fff7e6",
-        "tag_text_color": "#ffb020",
-        "title": "Co-create with Us",
-        "title_size": 36,
-        "title_color": "#111111",
-        "limited_text": "Limited to 20 participants--be part of the innovation!",
-        "limited_text_color": "#2f80ed",
-        "description": "<p>Discover the perfect balance of science and comfort. Join our exclusive co-creation program for the L1 Pro ergonomic chair and help shape a product designed for your ultimate sitting experience.</p>",
-        "description_size": 16,
-        "description_color": "#666666",
-        "button_text": "Co-Create",
-        "button_link": "/pages/cocreate",
-        "button_bg_color": "#111111",
-        "button_text_color": "#ffffff",
-        "button_hover_color": "#333333",
-        "mobile_padding_top": 40,
-        "mobile_padding_bottom": 40,
-        "mobile_padding_sides": 20,
-        "mobile_gap": 30,
-        "mobile_title_size": 28,
-        "mobile_description_size": 16
-      }
-    },
-"gift_interface": {
-  "type": "gift-interface",
-  "blocks": {
-    "indicator-1": {
-      "type": "indicator",
-      "settings": {
-        "title": "Entry Reaches",
-        "value": "200",
-        "icon_path": "M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"
-      }
-    },
-    "indicator-2": {
-      "type": "indicator",
-      "settings": {
-        "title": "Share Count",
-        "value": "500",
-        "icon_path": "M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
-      }
-    },
-    "indicator-3": {
-      "type": "indicator",
-      "settings": {
-        "title": "Total Gifts",
-        "value": "1000",
-        "icon_path": "M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2z"
-      }
-    },
-    "card-1": {
-      "type": "gift_card",
-      "settings": {
-        "title": "Premium Headphones",
-        "image": "shopify://shop_images/airphone-active.png",
-        "subtitle": "Premium Quality"
-      }
-    },
-    "card-2": {
-      "type": "gift_card",
-      "settings": {
-        "title": "Wireless Earbuds",
-        "image": "shopify://shop_images/airphone-active.png",
-        "subtitle": "Noise Cancellation"
-      }
-    },
-    "card-3": {
-      "type": "gift_card",
-      "settings": {
-        "title": "Gaming Headset",
-        "image": "shopify://shop_images/airphone-active.png",
-        "subtitle": "Surround Sound"
-      }
-    }
-  },
-  "block_order": [
-    "indicator-1",
-    "indicator-2",
-    "indicator-3",
-    "card-1",
-    "card-2",
-    "card-3"
-  ],
-  "settings": {
-    "background_color": "#6EC9CA",
-    "active_color": "#28a598",
-    "inactive_color": "#B2E3E4",
-    "tab1_title": "Stage 1",
-    "tab2_title": "Stage 2",
-    "tab3_title": "Stage 3"
-  }
-},
-    "media-testimonials": {
-      "type": "media-testimonials",
+    "icon_box_dJ6abp": {
+      "type": "icon-box",
       "blocks": {
-        "testimonial-1": {
-          "type": "testimonial",
+        "iconbox_WaDPVk": {
+          "type": "iconbox",
           "settings": {
-            "logo_url": "",
-            "logo_asset": "com_1.png",
-            "logo_name": "Forbes",
-            "quote": "This ergonomic chair delivers exceptional comfort and support during long working hours. The adjustable features make it easy to find your perfect position."
+            "image": "shopify://shop_images/odinlake-icon-15-years-warranty2.png",
+            "image_by_url": "",
+            "title": "Up To 15 Years Warranty",
+            "description": "<p>Extra long warranty</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
           }
         },
-        "testimonial-2": {
-          "type": "testimonial",
+        "iconbox_9rpiYx": {
+          "type": "iconbox",
           "settings": {
-            "logo_url": "",
-            "logo_asset": "com_2.png",
-            "logo_name": "TechRadar",
-            "quote": "We've tested dozens of office chairs, and OdinLake stands out with its innovative design and premium quality materials. A top contender in the ergonomic chair market."
+            "image": "shopify://shop_images/odinlake-icon-30-days-return3.png",
+            "image_by_url": "",
+            "title": "30 Days Easy Return",
+            "description": "<p>Hassle-free return guarantee</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
           }
         },
-        "testimonial-3": {
-          "type": "testimonial",
+        "iconbox_DDWBUT": {
+          "type": "iconbox",
           "settings": {
-            "logo_url": "",
-            "logo_asset": "com_3.png",
-            "logo_name": "Wired",
-            "quote": "If you're looking for a chair that balances aesthetics with ergonomics, look no further. OdinLake delivers a product that's as stylish as it is comfortable."
+            "image": "shopify://shop_images/odinlake-icon-fast-shipping1.png",
+            "image_by_url": "",
+            "title": "Free Shipping",
+            "description": "<p>No extra cost</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
           }
         }
       },
       "block_order": [
-        "testimonial-1",
-        "testimonial-2",
-        "testimonial-3"
+        "iconbox_WaDPVk",
+        "iconbox_9rpiYx",
+        "iconbox_DDWBUT"
       ],
       "settings": {
-        "heading": "What the Globe is Saying",
-        "inactive_logo_opacity": 0.5,
-        "autoplay": true,
-        "autoplay_speed": 5
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "footer",
+        "item_per_row": 3,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_color_scheme": "footer",
+        "card_style": "horizontal",
+        "image_max_width": "60px",
+        "content_alignment": "start",
+        "hover_effect": "none",
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "use_scroll_mobile": false,
+        "use_grid_column_mb": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
-    "what-next-steps": {
-      "type": "what-next-steps",
+    "image_with_text_JDe8At": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "layout": "left",
+        "image_column_size": "6",
+        "image_overlap": false,
+        "show_image_reverse": false,
+        "hover_effect": false,
+        "image_animation": "none",
+        "image": "shopify://shop_images/20250416153742.jpg",
+        "link": "https://www.odinlake.com/blogs/ergonomic-chair/o3",
+        "link_2": "",
+        "second_image_offset_top": 10,
+        "title": "O3 Crowdfunding Triumph: Shipping Starts This Month.",
+        "sub_title": "Pre-order will ship with Eco-Friendly Packaging.",
+        "text": "<p>We’re thrilled to announce that the OdinLake O3 (Ergo Butterfly 753) Kickstarter campaign has concluded with incredible success, thanks to your amazing support! Shipments will begin rolling out this month, bringing your O3 chairs to you soon. For our new pre-order customers, we’re excited to share that your O3 will arrive in our newly optimized, eco-friendly packaging. By reducing foam usage, we’re staying true to our nature-first commitment, ensuring a sustainable and premium experience from unboxing to sitting in comfort.</p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "Know More",
+        "button_link": "https://www.odinlake.com/blogs/ergonomic-chair/o3",
+        "button_style": "m-button--link",
+        "button_size": "",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "featured_collection_UFG8KB": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Relieve back pain and boost productivity with our ergonomic chair",
+        "heading_size": "h2",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "color_scheme": "",
+        "container": "container-fluid",
+        "collection": "ergonomic-chairs",
+        "enable_flashsale": true,
+        "show_countdown": true,
+        "product_to_show": 5,
+        "items_per_row": 5,
+        "item_gap": 30,
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "hide_title": false,
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "show_button_on_header": false,
+        "button_type": "link",
+        "button_text": "",
+        "button_style": "m-button--primary",
+        "button_size": "",
+        "infinite_load": false,
+        "max_page_load": 5,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": false,
+        "item_gap_mobile": 16,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "16225316461d1cff80": {
+      "type": "collection-list",
       "blocks": {
-        "step-1": {
-          "type": "step",
+        "65e38235-f03b-43c9-8590-38c9c656e51c": {
+          "type": "collection_block",
           "settings": {
-            "image": "shopify://shop_images/what-steps-1.jpg",
-            "title": "Register OdinLake Account",
-            "description": "<p>To register an OdinLake account, follow these simple steps to get started with our services.</p>"
+            "collection": "ergonomic-chairs",
+            "title": "Ergonomic Chairs",
+            "item_image": "shopify://shop_images/ezgif-1-13e54758f4_1_add232f0-114e-4121-8ab5-1280ca28c7d5.jpg"
           }
         },
-        "step-2": {
-          "type": "step",
+        "694c01c9-a95f-4c09-9cf0-ec75f0131e98": {
+          "type": "collection_block",
           "settings": {
-            "image": "shopify://shop_images/what-steps-2.jpg",
-            "title": "Setup Your Profile",
-            "description": "<p>Complete your profile with all necessary information.</p>"
+            "collection": "standing-desk",
+            "title": "Standing Desk",
+            "item_image": "shopify://shop_images/ezgif-5-6b754ce1c2_1.jpg"
           }
         },
-        "step-3": {
-          "type": "step",
+        "16225316461d1cff80-1": {
+          "type": "collection_block",
           "settings": {
-            "image": "shopify://shop_images/what-steps-3.jpg",
-            "title": "Register OdinLake Account",
-            "description": "<p>To register an OdinLake account, follow these simple steps to get started with our services. By creating an account, you'll gain access to personalized features, exclusive updates, and seamless management of your preferences. Enjoy a tailored experience designed to enhance your interaction with our platform.</p>"
-          }
-        },
-        "step-4": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/what-steps-4.jpg",
-            "title": "Start Using Services",
-            "description": "<p>Begin using all the amazing features and services we offer.</p>"
-          }
-        },
-        "step-5": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/what-steps-5.jpg",
-            "title": "Start Using Services",
-            "description": "<p>Begin using all the amazing features and services we offer.</p>"
-          }
-        },
-        "step-6": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/what-steps-6.jpg",
-            "title": "Start Using Services",
-            "description": "<p>Begin using all the amazing features and services we offer.</p>"
+            "collection": "accessories",
+            "title": "",
+            "item_image": "shopify://shop_images/11130250_1_1.webp"
           }
         }
       },
       "block_order": [
-        "step-1",
-        "step-2",
-        "step-3",
-        "step-4",
-        "step-5",
-        "step-6"
+        "65e38235-f03b-43c9-8590-38c9c656e51c",
+        "694c01c9-a95f-4c09-9cf0-ec75f0131e98",
+        "16225316461d1cff80-1"
+      ],
+      "custom_css": [
+        ".m-collection-card__title {font-weight: 400;}",
+        "@media (max-width: 767px) {.m-slider-controls[class*=\"-bottom-left\"], .m-section__header {text-align: center; }}"
       ],
       "settings": {
-        "title": "What Next"
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "color_scheme": "",
+        "container": "container-fluid",
+        "layout": "grid",
+        "expanded": false,
+        "card_style": "standard",
+        "text_alignment": "center",
+        "hover_effect": "scaling-up",
+        "show_product_count": false,
+        "count_inline_title": false,
+        "image_rounded": false,
+        "items_per_row": 3,
+        "item_gap": 40,
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "autorotate": false,
+        "autorotate_speed": 4,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "mobile_gap": 16,
+        "hidden_slide_control_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": "sf-home__collection-list",
+        "animations": "inherit"
       }
     },
-"faq_qBUVeN": {
-  "type": "faq",
-  "blocks": {
-    // 第一组 - 6个问题
-    "item_1": {
-      "type": "item",
+    "custom_content_494XVD": {
+      "type": "custom-content",
+      "blocks": {
+        "html_dwpnwN": {
+          "type": "html",
+          "settings": {
+            "code": "<!-- TrustBox widget - Micro Combo -->\n<div class=\"trustpilot-widget\" data-locale=\"en-US\" data-template-id=\"5419b6ffb0d04a076446a9af\" data-businessunit-id=\"615bef02f24bca001d0cbb03\" data-style-height=\"20px\" data-style-width=\"100%\" data-theme=\"light\">\n  <a href=\"https://www.trustpilot.com/review/odinlake.com\" target=\"_blank\" rel=\"noopener\">Trustpilot</a>\n</div>\n<!-- End TrustBox widget -->",
+            "width": "100%",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "html_dwpnwN"
+      ],
       "settings": {
-        "header": "第一组问题1",
-        "content": "<p>第一组答案1</p>",
-        "content_page": ""
+        "heading": "What People Are Saying in Trustpilot",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "footer",
+        "content_color_scheme": "footer",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 0,
+        "custom_class": ""
       }
     },
-    "item_2": {
-      "type": "item",
+    "testimonials_pnyUnX": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_7bVRtk": {
+          "type": "testimonial",
+          "settings": {
+            "title": "OdinLake ErgoMax747",
+            "description": "<p>Concerning the chair (Ergo MAX 747), it’s comfortable, solid, and functions as described. I won’t go any further, there are other reviews you can reference. This review highlights OdinLake’s customer service. The chair, though packed well, arrived with a damaged switch. Unfortunately, it appeared that the shipper decided to bounce it all the way to my house. Having just experienced a similar situation with a company who left parts out of their packaging resulting in a month and counting wait for resolution, I wasn’t looking forward to having to deal with another. To my surprise, that was not the case. OdinLake’s customer service was quick to respond within hours and had a replacement part headed my way the following day. I couldn’t be happier with this level of customer service. Due to this alone, I will not hesitate to buy from OdinLake again. This experience has restored my faith in that there are companies out there that still believe in and back their products. As well built as the chair is, I don’t expect needing any further support any time soon. But if I do, I have confidence OdinLake will be there. So, if you’re contemplating about buying the 747, I say go for it. You won’t be disappointed in either the chair’s comfort, build, or operation, and as importantly, their customer service.</p><p><strong>Date of experience:</strong>March 08, 2025</p>",
+            "footer": "<p><strong>Clifton Johnson</strong></p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_TcaabB": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Finally, a perfect chair！",
+            "description": "<p>I’ve suffered many less than perfect office chairs over my life and at age 70, finally found the one that I’ve been looking for. I’ve been working on improving my posture and both my physical therapist and athletic trainer recommended getting an ergonomic office chair for when I am working in my office. After much research, I chose Odin for the available features and cost. I’ve now been using it for a week The adjustments are easy to use and the chair is comfortable. My posture while sitting in the chair is much improved. I’m happy with my purchase!</p><p><strong>Date of experience:</strong> February 13, 2025</p><p>UsefulShare</p>",
+            "footer": "<p><strong>Valued Customer</strong></p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_BaC37W": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Nice and pricey",
+            "description": "<p>There’s a lot of adjustments that can be made to fit most anyone. Once you get it dialed in, it’s like a 0 G chair. Chair is pretty solid and wasn’t difficult to put together. Don’t care for the casters so I had some rollerblade type to swap with however, the stock caster post is a different size than standard (come on guys, really?) so I found that the plastic cap that comes on the included casters fit right onto the rollerblade caster and will hold them in the base so keep those caps just in case. Wife really likes it. I don’t care for mesh chairs personally but, it wasn’t for me.</p><p><strong>Date of experience:</strong> December 30, 2024</p>",
+            "footer": "<p><strong>Glenn</strong></p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_a8Bf99": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Perfect Office Chair for Comfort and Support",
+            "description": "<p>I’m very happy with this ergonomic chair. It’s super comfortable and provides great lumbar support, which makes working for long hours much easier. The adjustable features are easy to use, and it looks sleek in my office. Highly recommend it!</p><p><strong>Date of experience:</strong> February 26, 2025</p><p>UsefulShareCJ</p>",
+            "footer": "<p><strong>Zeynep Kilic</strong></p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_ekWJNJ": {
+          "type": "testimonial",
+          "settings": {
+            "title": "A Perfect Chair for Working from Home",
+            "description": "<p>Working from home just becomes so much better with this Odinlake Chair - Ergo ART 643. I have a bad neck and back from a car accident back in September of last year and I hadn’t been able to sit and edit my photos or videos for too long. But now I can thank to this amazing chair. No neck or back pain or soreness at all and that’s a huge improvement for me.</p>",
+            "footer": "<p><strong>Tri D.</strong></p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_X8q9A4": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Such a great work chair!",
+            "description": "<p>This chair is truly incredible and I'm so happy with it! As someone who works long hours in front of a desk, this was the perfect chair to have for posture. I feel myself just sitting better and being able to spend more time working without muscle pain. The chair arrived so quickly and the setup process was very straightforward and easy. Not to mention its a great looking chair! Love the design!</p>",
+            "footer": "<p><strong>Kayleen S.</strong></p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_7bVRtk",
+        "testimonial_TcaabB",
+        "testimonial_BaC37W",
+        "testimonial_a8Bf99",
+        "testimonial_ekWJNJ",
+        "testimonial_X8q9A4"
+      ],
+      "custom_css": [
+        ".m-svg-icon {width: 12px; height: 12px;}",
+        ".m-stars {column-gap: 2px;}",
+        "@media (min-width: 1280px) {.m-testimonials__header {margin-bottom: 40px; }}",
+        "@media (max-width: 767px) {.m-testimonials__header {margin-bottom: 24px; } .m-section__header {text-align: center; }}"
+      ],
       "settings": {
-        "header": "第一组问题2",
-        "content": "<p>第一组答案2</p>",
-        "content_page": ""
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "scheme-cee058e4-58e3-46aa-9af9-219dadc79066",
+        "design": "testimonials-3",
+        "show_stars": true,
+        "autorotate": false,
+        "show_navigation": true,
+        "show_pagination": true,
+        "star_color": "#000000",
+        "item_color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
-    "item_3": {
-      "type": "item",
+    "custom_content_pg8hhf": {
+      "type": "custom-content",
+      "blocks": {
+        "video_kBm9QP": {
+          "type": "video",
+          "settings": {
+            "video_type": "external",
+            "shopify_video_url": "",
+            "video_link": "https://www.youtube.com/watch?v=wu4ARykfTwE&t=185s",
+            "ratio": "16:9",
+            "image": "shopify://shop_images/753001.jpg",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "show_controls": false,
+            "width": "33%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "video_LcACHz": {
+          "type": "video",
+          "settings": {
+            "video_type": "external",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "video_link": "https://www.youtube.com/watch?v=0Uegq_B1PsM",
+            "ratio": "16:9",
+            "image": "shopify://shop_images/0Uegq_B1PsM-HD.jpg",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "show_controls": false,
+            "width": "33%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "video_WcwApz": {
+          "type": "video",
+          "settings": {
+            "video_type": "external",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "video_link": "https://www.youtube.com/watch?v=uc-pSg5ZYeA",
+            "ratio": "16:9",
+            "image": "shopify://shop_images/uc-pSg5ZYeA-HD.jpg",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "show_controls": false,
+            "width": "33%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "video_DP4EG6": {
+          "type": "video",
+          "settings": {
+            "video_type": "external",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "video_link": "https://www.youtube.com/watch?v=P-NJIZGIl5s",
+            "ratio": "16:9",
+            "image": "shopify://shop_images/P-NJIZGIl5s-HD.jpg",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "show_controls": false,
+            "width": "33%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "video_bwLWMQ": {
+          "type": "video",
+          "settings": {
+            "video_type": "external",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "video_link": "https://www.youtube.com/watch?v=Vf1p2Gb07hk",
+            "ratio": "16:9",
+            "image": "shopify://shop_images/Vf1p2Gb07hk-HD.jpg",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "show_controls": false,
+            "width": "33%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "video_rQCjnh": {
+          "type": "video",
+          "settings": {
+            "video_type": "external",
+            "shopify_video_url": "https://cdn.shopify.com/videos/c/o/v/2ca8ea282541484db24045474360be83.mp4",
+            "video_link": "https://www.youtube.com/watch?v=5mFOShSH3DY",
+            "ratio": "16:9",
+            "image": "shopify://shop_images/5mFOShSH3DY-HD.jpg",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": false,
+            "loop": false,
+            "muted": false,
+            "show_controls": false,
+            "width": "33%",
+            "alignment": "start",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "video_kBm9QP",
+        "video_LcACHz",
+        "video_WcwApz",
+        "video_DP4EG6",
+        "video_bwLWMQ",
+        "video_rQCjnh"
+      ],
       "settings": {
-        "header": "第一组问题3",
-        "content": "<p>第一组答案3</p>",
-        "content_page": ""
+        "heading": "Voice from influencer",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": ""
       }
     },
-    "item_4": {
-      "type": "item",
+    "icon_box_9qwRzq": {
+      "type": "icon-box",
+      "blocks": {
+        "iconbox_VBKnV7": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-chair-from-customers_4.jpg",
+            "image_by_url": "",
+            "title": "",
+            "description": "",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_3UFwqB": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-chair-from-customers_6.jpg",
+            "image_by_url": "",
+            "title": "",
+            "description": "",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_HBrzpp": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-chair-from-customers_5.jpg",
+            "image_by_url": "",
+            "title": "",
+            "description": "",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_bhBq3f": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-chair-from-customers_3.jpg",
+            "image_by_url": "",
+            "title": "",
+            "description": "",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_kRr8re": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-chair-from-customers_2.jpg",
+            "image_by_url": "",
+            "title": "",
+            "description": "",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_UKCfAB": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/odinlake-chair-from-customers_1.jpg",
+            "image_by_url": "",
+            "title": "",
+            "description": "",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "iconbox_VBKnV7",
+        "iconbox_3UFwqB",
+        "iconbox_HBrzpp",
+        "iconbox_bhBq3f",
+        "iconbox_kRr8re",
+        "iconbox_UKCfAB"
+      ],
+      "disabled": true,
       "settings": {
-        "header": "第一组问题4",
-        "content": "<p>第一组答案4</p>",
-        "content_page": ""
+        "heading": "Take a look at our customers’ workspaces",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "item_per_row": 3,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_color_scheme": "scheme-e07e38a5-d701-4974-8b5e-6f2e0b72871a",
+        "card_style": "vertical",
+        "image_max_width": "",
+        "content_alignment": "center",
+        "hover_effect": "scaling-up",
+        "enable_slider": true,
+        "show_pagination": true,
+        "show_navigation": false,
+        "use_scroll_mobile": true,
+        "use_grid_column_mb": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
-    "item_5": {
-      "type": "item",
+    "icon_box_WwTgff": {
+      "type": "icon-box",
+      "blocks": {
+        "iconbox_mBrjCm": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/time.jpg",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>OdinLake’s Ergo Butterfly 753 sports an array of highly customizable components that effortlessly adjust to match your posture, making it your best bet if you work at a desk for long hours.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_Gk4FKg": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/20240813-140926.jpg",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>I like that the OdinLake has adjustable everything. From the arms to the seat and lumbar positions, it can all be tweaked to fit your sitting style.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_jMRtHN": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/press-logo-tomsguide.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>Super class, cute, comfortable. You can wear them with just about anything.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_rr7qRB": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/wired_-_logo.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>The Ergo MAX747 is, all around, a great chair to sit in. The three-piece back provides great back support and comfort, and the easy-access paddles on either side of the seat make most adjustments quick and simple.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_cfVDXw": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/press-logo-techradar.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>The OdinLake Ergo Plus 743 is a premium chair worth the investment if you're looking for a high quality ergonomic option with some impressive comfort features.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_RGH4yT": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/press-logo-creativeblog.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>The OdinLake Ergo PLUS 743 is out to prove that some office chairs are worth the splurge.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_dDmpgy": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/press-logo-mmorpg.png",
+            "image_by_url": "",
+            "title": "",
+            "description": "<p>A good chair is an investment in your health and comfort and this is a very solid choice that is well worth considering. </p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "iconbox_mBrjCm",
+        "iconbox_Gk4FKg",
+        "iconbox_jMRtHN",
+        "iconbox_rr7qRB",
+        "iconbox_cfVDXw",
+        "iconbox_RGH4yT",
+        "iconbox_dDmpgy"
+      ],
       "settings": {
-        "header": "第一组问题5",
-        "content": "<p>第一组答案5</p>",
-        "content_page": ""
+        "heading": "The press loves us too.",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "item_per_row": 4,
+        "item_gap": 30,
+        "item_gap_mobile": 30,
+        "card_color_scheme": "",
+        "card_style": "vertical",
+        "image_max_width": "80%",
+        "content_alignment": "center",
+        "hover_effect": "scaling-up",
+        "enable_slider": true,
+        "show_pagination": false,
+        "show_navigation": true,
+        "use_scroll_mobile": true,
+        "use_grid_column_mb": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
-    "item_6": {
-      "type": "item",
+    "blog_posts_8jDkDn": {
+      "type": "blog-posts",
+      "disabled": true,
       "settings": {
-        "header": "第一组问题6",
-        "content": "<p>第一组答案6</p>",
-        "content_page": ""
+        "heading": "Blog posts",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "scheme-e07e38a5-d701-4974-8b5e-6f2e0b72871a",
+        "blog": "ergonomic-chair",
+        "limit": 3,
+        "column": 3,
+        "column_gap": 30,
+        "mobile_gap": 10,
+        "article_image_aspect_ratio": "16/9",
+        "article_align_content": "text-left",
+        "article_show_tags": false,
+        "article_show_date": true,
+        "article_show_excerpt": true,
+        "article_show_button": true,
+        "show_button_on_header": false,
+        "button_link": "shopify://blogs/ergonomic-chair",
+        "button_text": "View More",
+        "button_style": "m-button--primary",
+        "button_size": "",
+        "use_scroll_mobile": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
-    // 第二组 - 7个问题
-    "item_7": {
-      "type": "item_2",
+    "17328802117884f8cb": {
+      "type": "apps",
       "settings": {
-        "header": "第二组问题1",
-        "content": "<p>第二组答案1</p>",
-        "content_page": ""
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": ""
       }
     },
-    "item_8": {
-      "type": "item_2",
+    "17370084801b4a4478": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_GQ6znr": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "Follow us @ Instagram",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_GQ6znr"
+      ],
       "settings": {
-        "header": "第二组问题2",
-        "content": "<p>第二组答案2</p>",
-        "content_page": ""
-      }
-    },
-    "item_9": {
-      "type": "item_2",
-      "settings": {
-        "header": "第二组问题3",
-        "content": "<p>第二组答案3</p>",
-        "content_page": ""
-      }
-    },
-    "item_10": {
-      "type": "item_2",
-      "settings": {
-        "header": "第二组问题4",
-        "content": "<p>第二组答案4</p>",
-        "content_page": ""
-      }
-    },
-    "item_11": {
-      "type": "item_2",
-      "settings": {
-        "header": "第二组问题5",
-        "content": "<p>第二组答案5</p>",
-        "content_page": ""
-      }
-    },
-    "item_12": {
-      "type": "item_2",
-      "settings": {
-        "header": "第二组问题6",
-        "content": "<p>第二组答案6</p>",
-        "content_page": ""
-      }
-    },
-    "item_13": {
-      "type": "item_2",
-      "settings": {
-        "header": "第二组问题7",
-        "content": "<p>第二组答案7</p>",
-        "content_page": ""
-      }
-    }
-  },
-  "block_order": [
-    "item_1",
-    "item_2",
-    "item_3",
-    "item_4",
-    "item_5",
-    "item_6",
-    "item_7",
-    "item_8",
-    "item_9",
-    "item_10",
-    "item_11",
-    "item_12",
-    "item_13"
-  ],
-  "settings": {
-    "container": "container",
-    "color_scheme": "",
-    "image_position": "left",
-    "column_gap": 100,
-    "heading": "常见问题（6个）",
-    "heading_2": "更多问题（7个）",
-    "padding_top": 0,
-    "padding_bottom": 0,
-    "animations": "inherit",
-    "custom_class": ""
-  }
-},
-    "contact_form_new_HbjYa3": {
-      "type": "contact-form-new",
-      "settings": {
-        "label_text": "Contact Us",
-        "heading_line1": "We Would Love",
-        "heading_line2": "Hear From You",
-        "name_placeholder": "Name",
-        "email_placeholder": "Email",
-        "message_placeholder": "Leave some message here render1",
-        "name_error": "Please enter your name",
-        "email_error": "Please enter a valid email address",
-        "message_error": "Please enter your message",
-        "submit_text": "Submit",
-        "success_message": "Thank you for your message! We'll get back to you soon."
-      }
-    },
-    "journey_continued_BrtNff": {
-      "type": "journey-continued",
-      "settings": {
-        "heading": "Journey Continued",
-        "text": "We will notify you when update",
-        "placeholder": "Email",
-        "button_text": "Subscribe",
-        "primary_color": "#2196f3",
-        "accent_color": "#ffa726",
-        "button_color": "#666666"
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "custom_class": ""
       }
     }
   },
   "order": [
-    "full-image-banner",
-    "style_selector",
-    "cocreate",
-    "gift_interface",
-    "media-testimonials",
-    "what-next-steps",
-    "faq_qBUVeN",
-    "contact_form_new_HbjYa3",
-    "journey_continued_BrtNff"
+    "slider_fVnKKi",
+    "icon_box_dJ6abp",
+    "image_with_text_JDe8At",
+    "featured_collection_UFG8KB",
+    "16225316461d1cff80",
+    "custom_content_494XVD",
+    "testimonials_pnyUnX",
+    "custom_content_pg8hhf",
+    "icon_box_9qwRzq",
+    "icon_box_WwTgff",
+    "blog_posts_8jDkDn",
+    "17328802117884f8cb",
+    "17370084801b4a4478"
   ]
 }
